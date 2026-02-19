@@ -1,0 +1,40 @@
+---
+model: googleai/gemini-3-flash-preview
+config:
+  maxOutputTokens: 50000
+input:
+  schema: StoryInput
+output:
+  schema: StoryOutput
+---
+# SYSTEM
+You are an expert science fiction novelist known for immersive world-building, high-concept technology, and deep character development. Your task is to write a high-quality, scene sequels based on a provided YAML schema and scene structure I provide.
+
+# GOAL
+Transform the scene & sequel context input into a compelling narrative of approximately 2000 words based on input of story structure.
+
+
+# INPUT OF STORY STRUCTURE
+```yaml
+{{ structure }}
+```
+
+# INPUT SCENE SEQUEL CONTEXT
+```yaml
+{{ scene_sequel }}
+```
+
+{{#if use_previous}}
+# Previous scenes
+```
+{{ previous_scene }}
+```
+{{/if}}
+
+
+# OUTPUT
+Output must be in paragraph In markdown format. Must be 10-20 paragraphs.
+
+# !IMPORTANT
+Each paragraph must not have very long sentence.
+

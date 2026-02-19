@@ -1,0 +1,138 @@
+name: Daily Generate and Release
+
+on:
+  schedule:
+    - cron: '0 0 * * *' # daily at 00:00 UTC
+  workflow_dispatch: {}
+
+jobs:
+  generate-and-release:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+          persist-credentials: true
+
+      - name: Set up Go
+        uses: actions/setup-go@v4
+        with:
+          go-version: '1.26'
+
+      - name: Set release tag
+        run: |
+          tag="v$(date -u +%Y.%m.%d)"
+          echo "RELEASE_TAG=$tag" >> $GITHUB_ENV
+          echo "Release tag: $tag"
+
+      - name: Build omni-archivist
+        run: |
+          go version
+          go build -o omni-archivist .
+
+      - name: Run generation commands
+        run: |
+          ./omni-archivist check artifacts
+          ./omni-archivist pick science_field
+          ./omni-archivist pick scifi_genre
+          ./omni-archivist pick vocabs_composition
+          ./omni-archivist write synopsis
+          ./omni-archivist write characters
+          ./omni-archivist write structure
+          ./omni-archivist write scene_structures
+          ./omni-archivist write story
+          ./omni-archivist write rewrite
+
+      - name: Commit generated artifacts
+        run: |
+          set -euo pipefail
+          git status --porcelain || true
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add artifacts || true
+          if git diff --staged --quiet; then
+            echo "No changes to commit"
+          else
+            git commit -m "chore: update artifacts from daily workflow $GITHUB_RUN_ID on $(date -u +%F)"
+            # Push to the same ref the workflow was triggered on
+            ref="${GITHUB_REF#refs/heads/}"
+            git push origin HEAD:${ref}
+          fi
+
+      - name: Create and push tag
+        run: |
+          set -euo pipefail
+          tag="${{ env.RELEASE_TAG }}"
+          echo "Creating tag: $tag"
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git tag -a "$tag" -m "Daily release $tag" || echo "Tag already exists, skipping"
+          git push origin "$tag" || echo "Failed to push tag"
+
+      - name: Prepare release metadata (using yq)
+        env:
+          GITHUB_WORKSPACE: ${{ github.workspace }}
+        run: |
+          set -euo pipefail
+          # install mikefarah yq
+          curl -sSL -o /usr/local/bin/yq https://github.com/mikefarah/yq/releases/latest/download/yq_linux_amd64
+          chmod +x /usr/local/bin/yq
+
+          latest=$(find artifacts -type f -name metadata.yml -print0 | xargs -0 stat -c '%Y %n' | sort -nr | head -n1 | cut -d' ' -f2- || true)
+          if [ -z "$latest" ]; then
+            echo "No metadata.yml found" >&2
+            exit 1
+          fi
+
+          title=$(yq e '.story.title // .story.subtitle // ""' "$latest")
+          if [ -z "$title" ]; then
+            title="Daily Release $(date -u +%F)"
+          fi
+          synopsis=$(yq e '.story.synopsis // .story.logline // .story.blurb // ""' "$latest")
+          dir=$(dirname "$latest")
+
+          # Write multi-line env vars safely
+          echo "RELEASE_TITLE<<EOF" >> $GITHUB_ENV
+          echo "$title" >> $GITHUB_ENV
+          echo "EOF" >> $GITHUB_ENV
+
+          echo "RELEASE_BODY<<EOF" >> $GITHUB_ENV
+          echo "$synopsis" >> $GITHUB_ENV
+          echo "EOF" >> $GITHUB_ENV
+
+          echo "RELEASE_DIR=$dir" >> $GITHUB_ENV
+
+      - name: Create GitHub Release
+        id: create_release
+        uses: actions/create-release@v1
+        with:
+          tag_name: ${{ env.RELEASE_TAG }}
+          release_name: ${{ env.RELEASE_TITLE }}
+          body: ${{ env.RELEASE_BODY }}
+          draft: false
+          prerelease: false
+
+      - name: Upload release assets
+        env:
+          UPLOAD_URL: ${{ steps.create_release.outputs.upload_url }}
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          RELEASE_DIR: ${{ env.RELEASE_DIR }}
+        run: |
+          set -euo pipefail
+          if [ -z "$UPLOAD_URL" ]; then echo "No upload URL"; exit 1; fi
+          base_url="${UPLOAD_URL%\{*}"
+          for f in metadata.yml story.md draft.md; do
+            path="$RELEASE_DIR/$f"
+            if [ -f "$path" ]; then
+              name=$(basename "$f")
+              url="$base_url?name=$name"
+              echo "Uploading $path to $url"
+              curl -s -X POST -H "Authorization: token $GITHUB_TOKEN" -H "Content-Type: application/octet-stream" --data-binary @"$path" "$url"
+            else
+              echo "Not found: $path"
+            fi
+          done

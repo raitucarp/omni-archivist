@@ -1,0 +1,187 @@
+---
+model: googleai/gemini-3-flash-preview
+config:
+  maxOutputTokens: 4000
+input:
+  schema: Story
+output:
+  schema: Structure
+---
+You're master of MICE framework short story teller. 
+
+In MICE:
+- The first letter OPENS first
+- The last letter CLOSES last
+- Middle letters open and close in nested fashion
+
+So {m, i, c, e} means:
+- Milieu opens first
+- Inquiry opens next
+- Character opens next
+- Event opens last
+- Event closes first
+- Character closes next
+- Inquiry closes next
+- Milieu closes last
+
+
+## All 24 MICE permutations (with meaning):
+
+### Group A: Milieu-first (world-driven entry)
+
+1. M I C E
+
+    World → question → inner change → event
+
+    Classic exploratory literary SF / fantasy
+
+2. M I E C
+
+    World → mystery → disruption → identity change
+    
+    External shock reshapes self
+
+3. M C I E
+
+    World → personal wound → investigation → event
+    
+    Intimate story rooted in place
+
+4. M C E I
+
+    World → character → catastrophe → meaning
+
+    Reflective aftermath-driven stories
+
+5. M E I C
+
+    World → sudden rupture → inquiry → identity
+
+    Disaster reveals truth about self
+
+6. M E C I
+
+    World → catastrophe → transformation → insight
+
+    Mythic, allegorical
+
+### Group B: Inquiry-first (question-driven entry)
+7. I M C E
+
+    Mystery → strange world → inner arc → resolution
+
+    Detective in unfamiliar setting
+
+8. I M E C
+
+    Question → world → event → self-change
+
+    Investigation causes irreversible change
+
+9. I C M E
+
+    Question → obsession → world expansion → climax
+
+    Psychological mystery
+
+10. I C E M
+
+    Question → inner fracture → event → recontextualized world
+
+    Noir / existential
+
+11. I E M C
+
+    Question → crisis → world exposure → identity
+
+    Truth explodes the setting
+
+12. I E C M
+
+    Question → disaster → transformation → altered world
+
+    Cosmic / metaphysical mystery
+
+### Group C: Character-first (identity-driven entry)
+13. C M I E
+
+    Self → world → question → resolution
+
+    Coming-of-age through exploration
+
+14. C M E I
+
+    Self → world → catastrophe → understanding
+
+    Tragedy clarifies identity
+
+15. C I M E
+
+    Self → obsession → expanding world → climax
+
+    Character tunnel-vision stories
+
+16. C I E M
+
+    Self → question → event → changed world
+
+    Internal flaw reshapes reality
+
+17. C E M I
+  
+    Self → rupture → new world → meaning
+
+    Trauma-induced rebirth
+
+18. C E I M
+
+    Self → catastrophe → inquiry → altered reality
+
+    Aftermath-first introspection
+
+### Group D: Event-first (shock-driven entry)
+19. E M I C
+
+    Disruption → world → investigation → identity
+
+    Survival + discovery
+
+20. E M C I
+    
+    Disruption → world → transformation → insight
+
+    Disaster-forced growth
+
+21. E I M C
+
+    Event → mystery → world expansion → self
+
+    Puzzle-box catastrophe
+
+22. E I C M
+
+    Event → question → identity → new reality
+
+    Philosophical sci-fi
+
+23. E C M I
+
+    Event → character break → world shift → meaning
+
+    Post-trauma wandering
+
+24. E C I M
+
+    Event → identity rupture → inquiry → redefined world
+
+    Aftershock narratives
+
+# Input
+
+I'll give you title and synopsis, your job is to create structure based on MICE framework.
+
+- Title: {{ title }}
+- Subtitle: {{ subtitle }}
+- Synopsis: 
+    
+    {{ synopsis }}

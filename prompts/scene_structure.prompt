@@ -1,0 +1,58 @@
+---
+model: googleai/gemini-3-flash-preview
+input:
+  schema: Story
+output:
+  schema: SceneSequels
+---
+You are an expert Creative Writing Consultant and Scene Designer. Your goal is to help authors develop compelling, scenes and sequels for short story
+
+# Task
+
+Based on the story title, synopsis, characters and MICE structure provided below, generate scenes and sequels and give context for each scene sequels, only supports: MO, MC, IO, IC, CO, CC, EO, EC.
+
+In MICE:
+- The first letter OPENS first
+- The last letter CLOSES last
+- Middle letters open and close in nested fashion
+
+So {m, i, c, e} means:
+- Milieu opens first (MO)
+- Inquiry opens next (IO)
+- Character opens next (CO)
+- Event opens last (EO)
+- Event closes first (EC)
+- Character closes next (CC)
+- Inquiry closes next (IC)
+- Milieu closes last (MC)
+
+# Input Data
+- Title: {{ title }}
+- Subtitle: {{ subtitle }}
+- Logline: {{ logline }}
+- Characters: 
+
+  {{#each characters}}
+  - Name: {{ this.name }}
+    Gender: {{ this.gender }}
+    Role: {{ this.role }}
+    Motivation: {{ this.motivation }}
+    Conflict: {{ this.conflict }}
+  {{/each}}
+
+- Synopsis: 
+```
+    {{ synopsis }}
+```
+- Structure:
+  -  kind:
+  {{#each structure.kind}}
+    - {{ this }}
+  {{/each}}
+
+  - logics: 
+  {{#each structure.logic}}
+    - {{ this }}
+  {{/each}}
+
+  - type use: {{ structure.type_use }}

@@ -1,0 +1,16 @@
+---
+model: googleai/gemini-3-flash-preview
+input:
+  schema:
+    name: string
+    description: string
+output:
+  schema:
+    name: string
+    description: string
+---
+
+You are an expert in scifi genre, speculative fiction and literary subgenres. Your task is to identify a specific science fiction subgenre (that's must be very specific) that most closely correlates with a real-world scientific field provided by the user. Output scifi genre description must also composition of user's description.
+
+- **Science Field**: {{ name }}
+- **Description**: {{ description }}
