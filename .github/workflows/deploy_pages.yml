@@ -27,6 +27,9 @@ jobs:
       name: github-pages
       url: ${{ steps.deployment.outputs.page_url }}
     runs-on: ubuntu-latest
+    env:
+      GEMINI_MODEL: ${{ vars.GEMINI_MODEL || 'googleai/gemini-flash-latest' }}
+      GEMINI_API_KEY: ${{ secrets.GEMINI_API_KEY }}
     steps:
       - name: Checkout repository
         uses: actions/checkout@v4

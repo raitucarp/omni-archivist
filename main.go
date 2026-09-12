@@ -17,7 +17,7 @@ var model = os.Getenv("GEMINI_MODEL")
 
 func init() {
 	if model == "" {
-		log.Fatal("GEMINI_MODEL environment variable is not set")
+		model = "googleai/gemini-flash-latest"
 	}
 
 	backgroundContext := context.Background()
