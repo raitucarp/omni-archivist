@@ -14,7 +14,7 @@ export default function HomePage() {
       <main className="max-w-6xl mx-auto px-4 sm:px-6 py-10 sm:py-16 space-y-16">
         {/* Hero Section */}
         <section className="p-8 sm:p-14 rounded-3xl bg-card/85 backdrop-blur-md border border-[#ee9b00]/30 shadow-2xl relative overflow-hidden">
-          <div className="absolute -top-16 -right-16 w-96 h-96 bg-radial from-[#ee9b00]/20 via-[#0a9396]/15 to-transparent pointer-events-none" />
+          <div className="absolute top-0 left-0 right-0 h-[2px] bg-gradient-to-r from-transparent via-[#ee9b00]/60 to-transparent" />
           
           <div className="max-w-3xl space-y-6">
             <span className="inline-block font-display text-xs sm:text-sm font-bold tracking-widest text-[#ee9b00] uppercase px-3 py-1 rounded-full bg-[#ee9b00]/15 border border-[#ee9b00]/30">

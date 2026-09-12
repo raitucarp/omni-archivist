@@ -13,32 +13,73 @@ interface SiteHeaderProps {
 
 export function SiteHeader({ storyTitle, activeTab, onTabChange }: SiteHeaderProps) {
   const [scrolled, setScrolled] = useState(false);
+  const [progress, setProgress] = useState(0);
 
   useEffect(() => {
+    let ticking = false;
     const handleScroll = () => {
-      setScrolled(window.scrollY > 280);
+      if (!ticking) {
+        window.requestAnimationFrame(() => {
+          setScrolled(window.scrollY > 280);
+
+          if (storyTitle) {
+            const prose = document.querySelector('.story-prose-body');
+            if (prose) {
+              const proseRect = prose.getBoundingClientRect();
+              const totalHeight = prose.scrollHeight;
+              const windowH = window.innerHeight;
+              const scrollOffset = -proseRect.top;
+              let p = 0;
+              if (totalHeight > 0) {
+                p = (scrollOffset / (totalHeight - windowH * 0.5)) * 100;
+                p = Math.max(0, Math.min(100, p));
+              }
+              setProgress(p);
+            }
+          }
+          ticking = false;
+        });
+        ticking = true;
+      }
     };
+
     window.addEventListener('scroll', handleScroll, { passive: true });
+    handleScroll();
     return () => window.removeEventListener('scroll', handleScroll);
-  }, []);
+  }, [storyTitle]);
 
   return (
     <header className="sticky top-0 z-50 w-full border-b border-border/80 bg-background/85 backdrop-blur-md transition-all duration-300">
-      <div className={`mx-auto flex items-center justify-between px-4 sm:px-6 py-3 transition-all ${storyTitle ? 'max-w-7xl' : 'max-w-6xl'}`}>
-        {/* Brand */}
-        <div className="flex items-center gap-3 min-w-0">
-          <Link href="/" className="flex items-center gap-2 group shrink-0">
-            <span className="text-xl text-[#ee9b00] drop-shadow-[0_0_8px_rgba(238,155,0,0.5)] transition-transform group-hover:scale-110">◈</span>
-            <span className="font-brand font-bold tracking-wider text-base sm:text-lg text-foreground">OMNI ARCHIVIST</span>
-            <span className="hidden sm:inline-block text-[11px] font-mono font-semibold px-2 py-0.5 rounded-full bg-[#0a9396]/15 text-[#94d2bd] border border-[#94d2bd]/30">
+      {/* 1. Topmost Reading Progress Bar (Crisp, unblurred, topmost in header) */}
+      {storyTitle && (
+        <div
+          className="absolute top-0 left-0 h-[3.5px] z-[100] transition-all duration-100 ease-out pointer-events-none"
+          style={{
+            width: `${progress}%`,
+            background: 'linear-gradient(90deg, #ee9b00 0%, #ca6702 35%, #94d2bd 70%, #0a9396 100%)',
+            boxShadow: '0 0 14px rgba(238, 155, 0, 0.95), 0 0 6px rgba(10, 147, 150, 0.8)',
+          }}
+          aria-hidden="true"
+        />
+      )}
+
+      <div className={`mx-auto flex items-center justify-between px-4 sm:px-6 py-2.5 sm:py-3 transition-all ${storyTitle ? 'max-w-7xl' : 'max-w-6xl'}`}>
+        {/* Brand (Subtle & Compact) & Scrolled Story Title (Prominent & Large) */}
+        <div className="flex items-center gap-2 sm:gap-3 min-w-0">
+          <Link href="/" className="flex items-center gap-1.5 group shrink-0" title="Omni Archivist Home">
+            <span className="text-base sm:text-lg text-[#ee9b00] drop-shadow-[0_0_8px_rgba(238,155,0,0.5)] transition-transform group-hover:scale-110">◈</span>
+            <span className="font-brand font-semibold tracking-wider text-xs sm:text-sm text-muted-foreground group-hover:text-foreground transition-colors">
+              OMNI ARCHIVIST
+            </span>
+            <span className="hidden lg:inline-block text-[10px] font-mono font-semibold px-1.5 py-0.5 rounded-full bg-[#0a9396]/15 text-[#94d2bd] border border-[#94d2bd]/30">
               12026 HE
             </span>
           </Link>
 
-          {/* Scrolled Title in Header */}
+          {/* Scrolled Title in Header - Larger, Bold, and Prominent */}
           {storyTitle && (
-            <div className={`hidden md:flex items-center gap-2 border-l border-border/60 pl-3 min-w-0 transition-all duration-300 ${scrolled ? 'opacity-100 translate-x-0' : 'opacity-0 -translate-x-2 pointer-events-none'}`}>
-              <span className="font-display font-semibold text-sm truncate max-w-md text-foreground/90">
+            <div className={`flex items-center gap-2 border-l border-border/60 pl-2.5 sm:pl-3 min-w-0 transition-all duration-300 ${scrolled ? 'opacity-100 translate-x-0' : 'opacity-0 -translate-x-2 pointer-events-none'}`}>
+              <span className="font-display font-bold text-sm sm:text-base lg:text-lg truncate max-w-[200px] sm:max-w-xs md:max-w-md lg:max-w-xl text-foreground">
                 {storyTitle}
               </span>
             </div>

@@ -123,18 +123,7 @@ export function ReadingCompanion() {
 
   return (
     <>
-      {/* 1. Progress Bar - Highest z-index at top */}
-      <div
-        className="fixed top-0 left-0 h-1 z-[100] transition-all duration-100 ease-out pointer-events-none"
-        style={{
-          width: `${progress}%`,
-          background: 'linear-gradient(90deg, #ee9b00 0%, #ca6702 35%, #94d2bd 70%, #0a9396 100%)',
-          boxShadow: '0 0 14px rgba(238, 155, 0, 0.85), 0 0 6px rgba(10, 147, 150, 0.7)',
-        }}
-        aria-hidden="true"
-      />
-
-      {/* 2. Bottom-Left: Font Size Controls */}
+      {/* 1. Bottom-Left: Font Size Controls */}
       <div className="fixed bottom-6 left-6 z-40 flex items-center gap-1.5 p-1.5 rounded-full bg-card/85 backdrop-blur-md border border-border/80 shadow-lg text-xs font-semibold">
         <span className="px-2 text-muted-foreground flex items-center gap-1">
           <Type className="w-3.5 h-3.5 text-[#ee9b00]" />

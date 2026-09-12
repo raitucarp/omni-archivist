@@ -15,6 +15,22 @@ interface StoryReaderViewProps {
 
 export function StoryReaderView({ story }: StoryReaderViewProps) {
   const [activeTab, setActiveTab] = useState<'story' | 'metadata'>('story');
+  const [scrollY, setScrollY] = useState(0);
+
+  React.useEffect(() => {
+    let ticking = false;
+    const handleScroll = () => {
+      if (!ticking) {
+        window.requestAnimationFrame(() => {
+          setScrollY(window.scrollY);
+          ticking = false;
+        });
+        ticking = true;
+      }
+    };
+    window.addEventListener('scroll', handleScroll, { passive: true });
+    return () => window.removeEventListener('scroll', handleScroll);
+  }, []);
 
   return (
     <>
@@ -24,24 +40,29 @@ export function StoryReaderView({ story }: StoryReaderViewProps) {
         onTabChange={(tab) => setActiveTab(tab)}
       />
 
-      {/* Dynamic Cover Ambient Backdrop (Visible in Story Tab) */}
+      {/* Dynamic Cover Ambient Backdrop (Persists & Blends Throughout Entire Story Scroll) */}
       {activeTab === 'story' && story.coverUrl && (
-        <>
+        <div className="fixed inset-0 pointer-events-none z-0 overflow-hidden" aria-hidden="true">
+          {/* 1. Ambient Blurred & Saturated Cover Layer */}
           <div
-            className="fixed -top-[20%] -left-[20%] w-[140%] h-[140%] bg-cover bg-top pointer-events-none z-0 transition-opacity duration-700 ease-out"
+            className="absolute -inset-10 bg-cover bg-center transition-all duration-300 ease-out"
             style={{
               backgroundImage: `url('${story.coverUrl}')`,
-              filter: 'blur(80px) saturate(2) brightness(0.48)',
-              opacity: 0.55,
+              filter: 'blur(60px) saturate(2.2) brightness(0.38)',
+              opacity: 0.72,
+              transform: `translateY(${Math.min(scrollY * 0.05, 50)}px) scale(1.08)`,
               willChange: 'transform',
             }}
-            aria-hidden="true"
           />
+          {/* 2. Soft Atmospheric Vignette (allowing cover hues to glow subtly behind text) */}
           <div
-            className="fixed inset-0 pointer-events-none z-[1] bg-[radial-gradient(circle_at_50%_15%,rgba(0,18,25,0.45)_0%,rgba(0,18,25,0.88)_55%,var(--background)_100%)]"
-            aria-hidden="true"
+            className="absolute inset-0 bg-[radial-gradient(ellipse_at_center,rgba(0,18,25,0.60)_0%,rgba(0,18,25,0.80)_60%,rgba(0,18,25,0.92)_100%)]"
           />
-        </>
+          {/* 3. Subtle Linear Depth Gradient from header to footer */}
+          <div
+            className="absolute inset-0 bg-gradient-to-b from-background/30 via-transparent to-background/80"
+          />
+        </div>
       )}
 
       <main className="relative z-10 max-w-4xl mx-auto px-4 sm:px-6 py-8 sm:py-12">
