@@ -346,7 +346,7 @@ const baseHeadTemplate = `
   <!-- Preconnect and Google Fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@500;700;900&family=Inter:wght@300;400;500;600;700&family=Newsreader:ital,opsz,wght@0,6..72,400;0,6..72,500;0,6..72,600;1,6..72,400;1,6..72,500&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@500;700;900&family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400;1,600&family=Inter:wght@300;400;500;600;700&family=Literata:ital,opsz,wght@0,7..72,400;0,7..72,500;0,7..72,600;0,7..72,700;1,7..72,400;1,7..72,500;1,7..72,600&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
   
   <link rel="stylesheet" href="{{ .AssetPrefix }}assets/css/style.css">
   <script src="{{ .AssetPrefix }}assets/js/theme.js"></script>
@@ -808,7 +808,7 @@ const siteCSS = `
 :root {
   --font-display: 'Space Grotesk', -apple-system, sans-serif;
   --font-brand: 'Cinzel', serif;
-  --font-prose: 'Newsreader', Georgia, serif;
+  --font-prose: 'Literata', 'Cormorant Garamond', Georgia, serif;
   --font-ui: 'Inter', -apple-system, sans-serif;
   
   --radius-sm: 6px;
@@ -1041,22 +1041,27 @@ body {
 }
 
 .hero-lead {
-  font-size: 1.25rem;
-  font-weight: 400;
+  font-family: var(--font-prose);
+  font-size: 1.45rem;
+  font-weight: 500;
+  font-style: italic;
   color: var(--accent-cyan);
-  max-width: 800px;
-  margin-bottom: 1.75rem;
-  line-height: 1.5;
+  max-width: 860px;
+  margin-bottom: 2rem;
+  line-height: 1.6;
 }
 
 .hero-essay {
-  font-size: 1.05rem;
-  color: var(--text-muted);
-  max-width: 860px;
+  font-family: var(--font-prose);
+  font-size: 1.32rem;
+  color: var(--text-main);
+  opacity: 0.94;
+  max-width: 880px;
   display: flex;
   flex-direction: column;
-  gap: 1rem;
-  line-height: 1.75;
+  gap: 1.25rem;
+  line-height: 1.9;
+  letter-spacing: 0.01em;
 }
 
 /* Archive & Volume Cards */
@@ -1240,10 +1245,11 @@ body {
 }
 
 .story-logline {
+  font-family: var(--font-prose);
   color: var(--text-muted);
-  font-size: 0.98rem;
-  line-height: 1.6;
-  margin-bottom: 0.75rem;
+  font-size: 1.18rem;
+  line-height: 1.7;
+  margin-bottom: 0.85rem;
 }
 
 .story-action {
@@ -1289,9 +1295,10 @@ body {
 }
 
 .empty-desc {
+  font-family: var(--font-prose);
   color: var(--text-muted);
-  font-size: 1.1rem;
-  line-height: 1.7;
+  font-size: 1.25rem;
+  line-height: 1.8;
   margin-bottom: 2rem;
 }
 
@@ -1406,12 +1413,13 @@ body {
 .story-logline-box {
   background: var(--bg-surface-elevated);
   border-left: 4px solid var(--accent-cyan);
-  padding: 1.5rem 1.75rem;
+  padding: 1.75rem 2rem;
   border-radius: 0 var(--radius-md) var(--radius-md) 0;
   margin-bottom: 3rem;
+  font-family: var(--font-prose);
   font-style: italic;
-  font-size: 1.15rem;
-  line-height: 1.7;
+  font-size: 1.35rem;
+  line-height: 1.8;
   color: var(--text-main);
   position: relative;
 }
@@ -1428,22 +1436,23 @@ body {
 /* Prose Body Typography */
 .story-prose-body {
   font-family: var(--font-prose);
-  font-size: 1.25rem; /* Larger font size as requested */
-  line-height: 1.85;
+  font-size: 1.42rem; /* Distinctly larger, unique literary prose font */
+  line-height: 1.95;
   color: var(--text-main);
   margin-bottom: 4rem;
+  letter-spacing: 0.005em;
 }
 
 .story-prose-body p {
-  margin-bottom: 1.75rem;
+  margin-bottom: 2rem;
 }
 
 .story-prose-body p:first-of-type::first-letter {
   font-family: var(--font-brand);
-  font-size: 3.5rem;
+  font-size: 4.2rem;
   float: left;
-  line-height: 0.85;
-  margin: 0.1rem 0.6rem 0 0;
+  line-height: 0.8;
+  margin: 0.15rem 0.8rem 0 0;
   color: var(--accent-cyan);
 }
 
