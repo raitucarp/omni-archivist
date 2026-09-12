@@ -348,7 +348,7 @@ const baseHeadTemplate = `
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@500;700;900&family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400;1,600&family=Inter:wght@300;400;500;600;700&family=Literata:ital,opsz,wght@0,7..72,400;0,7..72,500;0,7..72,600;0,7..72,700;1,7..72,400;1,7..72,500;1,7..72,600&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
   
-  <link rel="stylesheet" href="{{ .AssetPrefix }}assets/css/style.css">
+  <link rel="stylesheet" href="{{ .AssetPrefix }}assets/css/style.css?v=12026.2">
   <script src="{{ .AssetPrefix }}assets/js/theme.js"></script>
 </head>
 <body>
