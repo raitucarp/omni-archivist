@@ -5,6 +5,7 @@ import (
 	"os"
 
 	"github.com/raitucarp/omni-archivist/internal/cli/commands/check"
+	"github.com/raitucarp/omni-archivist/internal/cli/commands/compile"
 	"github.com/raitucarp/omni-archivist/internal/cli/commands/pick"
 	"github.com/raitucarp/omni-archivist/internal/cli/commands/write"
 	urfave "github.com/urfave/cli/v3"
@@ -38,10 +39,12 @@ func (app *App) commands() []*urfave.Command {
 	checkCmd := check.NewCheckCommand(app.ctx)
 	writeCmd := write.NewWriteCommand(app.ctx)
 	pickCmd := pick.NewPickCommand(app.ctx)
+	compileCmd := compile.NewCompileCommand(app.ctx)
 
 	return []*urfave.Command{
 		checkCmd.CliCommand(),
 		writeCmd.CliCommand(),
 		pickCmd.CliCommand(),
+		compileCmd.CliCommand(),
 	}
 }
