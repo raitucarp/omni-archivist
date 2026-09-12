@@ -85,10 +85,10 @@ export default async function VolumePage({ params }: VolumePageProps) {
                 <div className="flex flex-col justify-between space-y-3">
                   <div className="space-y-2">
                     <div className="flex items-center gap-2 flex-wrap">
-                      <span className="text-[11px] font-mono font-bold px-2 py-0.5 rounded-full bg-[#ee9b00]/15 text-[#ee9b00] border border-[#ee9b00]/30">
+                      <span className="text-[11px] font-mono font-bold px-2 py-0.5 rounded-full bg-[#bb3e03]/10 dark:bg-[#ee9b00]/15 text-[#bb3e03] dark:text-[#ee9b00] border border-[#bb3e03]/25 dark:border-[#ee9b00]/30">
                         {s.genre}
                       </span>
-                      <span className="text-[11px] font-mono px-2 py-0.5 rounded-full bg-[#0a9396]/15 text-[#94d2bd] border border-[#0a9396]/30">
+                      <span className="text-[11px] font-mono px-2 py-0.5 rounded-full bg-[#005f73]/10 dark:bg-[#0a9396]/15 text-[#005f73] dark:text-[#94d2bd] border border-[#005f73]/20 dark:border-[#0a9396]/30">
                         {s.scienceField}
                       </span>
                       <span className="text-[11px] font-mono text-muted-foreground">
@@ -99,7 +99,7 @@ export default async function VolumePage({ params }: VolumePageProps) {
                       </span>
                     </div>
 
-                    <h3 className="font-display font-bold text-xl sm:text-2xl text-foreground group-hover:text-[#ee9b00] transition-colors">
+                    <h3 className="font-display font-bold text-xl sm:text-2xl text-foreground group-hover:text-[#bb3e03] dark:group-hover:text-[#ee9b00] transition-colors">
                       <Link href={`/stories/${s.slug.join('/')}/`}>
                         {s.title}
                       </Link>
@@ -113,7 +113,7 @@ export default async function VolumePage({ params }: VolumePageProps) {
                   <div>
                     <Link
                       href={`/stories/${s.slug.join('/')}/`}
-                      className="text-xs font-semibold text-[#ee9b00] hover:text-[#94d2bd] transition-colors inline-flex items-center gap-1.5"
+                      className="text-xs font-semibold text-[#bb3e03] dark:text-[#ee9b00] hover:text-[#005f73] dark:hover:text-[#94d2bd] transition-colors inline-flex items-center gap-1.5"
                     >
                       <span>Read Transmission</span>
                       <ArrowRight className="w-4 h-4" />

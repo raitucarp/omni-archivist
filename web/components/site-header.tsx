@@ -67,11 +67,11 @@ export function SiteHeader({ storyTitle, activeTab, onTabChange }: SiteHeaderPro
         {/* Brand (Subtle & Compact) & Scrolled Story Title (Prominent & Large) */}
         <div className="flex items-center gap-2 sm:gap-3 min-w-0">
           <Link href="/" className="flex items-center gap-1.5 group shrink-0" title="Omni Archivist Home">
-            <span className="text-base sm:text-lg text-[#ee9b00] drop-shadow-[0_0_8px_rgba(238,155,0,0.5)] transition-transform group-hover:scale-110">◈</span>
+            <span className="text-base sm:text-lg text-[#bb3e03] dark:text-[#ee9b00] drop-shadow-[0_0_8px_rgba(238,155,0,0.5)] transition-transform group-hover:scale-110">◈</span>
             <span className="font-brand font-semibold tracking-wider text-xs sm:text-sm text-muted-foreground group-hover:text-foreground transition-colors">
               OMNI ARCHIVIST
             </span>
-            <span className="hidden lg:inline-block text-[10px] font-mono font-semibold px-1.5 py-0.5 rounded-full bg-[#0a9396]/15 text-[#94d2bd] border border-[#94d2bd]/30">
+            <span className="hidden lg:inline-block text-[10px] font-mono font-semibold px-1.5 py-0.5 rounded-full bg-[#005f73]/10 dark:bg-[#0a9396]/15 text-[#005f73] dark:text-[#94d2bd] border border-[#005f73]/20 dark:border-[#94d2bd]/30">
               12026 HE
             </span>
           </Link>
@@ -95,7 +95,7 @@ export function SiteHeader({ storyTitle, activeTab, onTabChange }: SiteHeaderPro
                 onClick={() => onTabChange('story')}
                 className={`flex items-center gap-1.5 px-3 py-1 rounded-md transition-all cursor-pointer ${
                   activeTab === 'story'
-                    ? 'bg-[#ee9b00] text-[#001219] font-semibold shadow-[0_0_10px_rgba(238,155,0,0.4)]'
+                    ? 'bg-[#bb3e03] text-white dark:bg-[#ee9b00] dark:text-[#001219] font-semibold shadow-[0_0_10px_rgba(238,155,0,0.4)]'
                     : 'text-muted-foreground hover:text-foreground'
                 }`}
               >
@@ -107,7 +107,7 @@ export function SiteHeader({ storyTitle, activeTab, onTabChange }: SiteHeaderPro
                 onClick={() => onTabChange('metadata')}
                 className={`flex items-center gap-1.5 px-3 py-1 rounded-md transition-all cursor-pointer ${
                   activeTab === 'metadata'
-                    ? 'bg-[#0a9396] text-[#f5eedf] font-semibold shadow-[0_0_10px_rgba(10,147,150,0.4)]'
+                    ? 'bg-[#005f73] text-white dark:bg-[#0a9396] dark:text-[#f5eedf] font-semibold shadow-[0_0_10px_rgba(10,147,150,0.4)]'
                     : 'text-muted-foreground hover:text-foreground'
                 }`}
               >

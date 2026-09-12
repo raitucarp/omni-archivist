@@ -20,6 +20,7 @@ export interface StoryMetadata {
       micro?: string;
       topography?: string;
       atmosphere?: string;
+      function?: string;
       chronotope?: string;
     };
     structure?: {
@@ -34,39 +35,66 @@ export interface StoryMetadata {
       actant_role?: string;
       complexity?: string;
       development?: string;
+      characterisation?: string;
       description?: string;
       motivation?: string;
       conflict?: string;
     }>;
     scene_sequels?: Array<{
+      context?: string;
       scene?: {
         goal?: { description?: string; stakes?: { external?: string; internal?: string } };
         conflict?: { opposition?: { type?: string; description?: string }; escalation?: { beats?: string[] } };
         disaster?: { outcome?: string; consequence?: { plot?: string; character?: string } };
       };
       sequel?: {
-        reaction?: { emotional?: { immediate?: string }; physical?: string };
-        dilemma?: { options?: string[] };
-        decision?: { rationale?: string };
+        reaction?: { emotional?: { immediate?: string }; physical?: string; processing?: string };
+        processing?: string;
+        dilemma?: { options?: Array<{ choice?: string; cost?: string; risk?: string }> };
+        decision?: { chosen_option?: string; rationale?: string; new_goal?: string };
       };
     }>;
     discourse?: {
       narration?: {
         voice?: string;
+        level?: string;
         focalisation?: string;
+        reliability?: string;
         speed?: string;
         order?: string;
         frequency?: string;
+      };
+      language?: {
+        tone?: string;
+        diction?: string;
+        figures_of_speech?: string[];
+        mode_balance?: string;
       };
       language_style?: {
         syntax?: string;
         diction?: string;
       };
     };
+    pov?: string;
+    image_prompt?: string;
+    aesthetic?: {
+      art_style?: string;
+      color_palette?: string;
+      composition?: string;
+      lighting?: string;
+      mood?: string;
+      subject_matter?: string;
+      prompt?: string;
+    };
   };
   meta?: {
-    science_field?: { name?: string; domains?: string[] };
-    genre?: { name?: string; tropes?: string[] };
+    science_field?: { name?: string; description?: string; domains?: string[] };
+    genre?: { name?: string; description?: string; tropes?: string[] };
+    vocabs?: Array<{
+      lex_category?: string;
+      word?: string;
+      definition?: string;
+    }>;
   };
 }
 

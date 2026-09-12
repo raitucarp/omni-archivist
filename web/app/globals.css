@@ -6,16 +6,16 @@
     --foreground: #001219;
     --card: #ffffff;
     --card-foreground: #001219;
-    --border: rgba(0, 95, 115, 0.16);
-    --muted: #f4eee2;
+    --border: rgba(0, 18, 25, 0.14);
+    --muted: #f2ede2;
     --muted-foreground: #005f73;
-    --primary: #ca6702;
+    --primary: #bb3e03;
     --primary-foreground: #ffffff;
-    --accent-gold: #ee9b00;
-    --accent-aqua: #94d2bd;
-    --accent-cyan: #0a9396;
-    --accent-caramel: #ca6702;
-    --accent-wheat: #e9d8a6;
+    --accent-gold: #b45309;
+    --accent-aqua: #005f73;
+    --accent-cyan: #0a6c74;
+    --accent-caramel: #9b2226;
+    --accent-wheat: #78350f;
   }
 
   [data-theme="dark"],
@@ -65,17 +65,24 @@
   font-family: 'Inter', -apple-system, sans-serif;
 }
 
-/* Paragraph Focus Mode */
+/* Paragraph Formatting: spacing & text-indent */
 .story-prose-body p {
+  margin-bottom: 2.25rem !important;
+  line-height: 2.1 !important;
+  text-indent: 2.5rem;
   transition: opacity 0.35s ease, filter 0.35s ease, transform 0.35s ease, border-left 0.25s ease, padding-left 0.25s ease, background 0.3s ease;
   border-left: 3px solid transparent;
   padding-left: 0;
   border-radius: 0 8px 8px 0;
 }
 
+.story-prose-body p:first-of-type {
+  text-indent: 0;
+}
+
 /* When focus mode is OFF: subtle indication for active reading paragraph */
 .story-prose-body:not(.focus-mode-active) p.active-reading-p {
-  border-left: 3px solid rgba(238, 155, 0, 0.38);
+  border-left: 3px solid rgba(238, 155, 0, 0.45);
   padding-left: 1.25rem;
 }
 

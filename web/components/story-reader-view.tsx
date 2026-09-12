@@ -45,22 +45,21 @@ export function StoryReaderView({ story }: StoryReaderViewProps) {
         <div className="fixed inset-0 pointer-events-none z-0 overflow-hidden" aria-hidden="true">
           {/* 1. Ambient Blurred & Saturated Cover Layer */}
           <div
-            className="absolute -inset-10 bg-cover bg-center transition-all duration-300 ease-out"
+            className="absolute -inset-10 bg-cover bg-center transition-all duration-300 ease-out opacity-20 dark:opacity-30"
             style={{
               backgroundImage: `url('${story.coverUrl}')`,
-              filter: 'blur(60px) saturate(2.2) brightness(0.38)',
-              opacity: 0.72,
-              transform: `translateY(${Math.min(scrollY * 0.05, 50)}px) scale(1.08)`,
+              filter: 'blur(80px) saturate(1.8)',
+              transform: `translateY(${Math.min(scrollY * 0.04, 40)}px) scale(1.08)`,
               willChange: 'transform',
             }}
           />
-          {/* 2. Soft Atmospheric Vignette (allowing cover hues to glow subtly behind text) */}
+          {/* 2. Seamless theme backdrop overlay */}
           <div
-            className="absolute inset-0 bg-[radial-gradient(ellipse_at_center,rgba(0,18,25,0.60)_0%,rgba(0,18,25,0.80)_60%,rgba(0,18,25,0.92)_100%)]"
+            className="absolute inset-0 bg-background/80 dark:bg-background/85"
           />
-          {/* 3. Subtle Linear Depth Gradient from header to footer */}
+          {/* 3. Smooth vertical depth gradient from header to footer */}
           <div
-            className="absolute inset-0 bg-gradient-to-b from-background/30 via-transparent to-background/80"
+            className="absolute inset-0 bg-gradient-to-b from-transparent via-background/30 to-background"
           />
         </div>
       )}
@@ -98,7 +97,7 @@ export function StoryReaderView({ story }: StoryReaderViewProps) {
                   {story.title}
                 </h1>
                 {story.subtitle && (
-                  <p className="font-prose italic text-xl sm:text-2xl text-[#ee9b00]">
+                  <p className="font-prose italic text-xl sm:text-2xl text-[#bb3e03] dark:text-[#ee9b00]">
                     {story.subtitle}
                   </p>
                 )}
@@ -107,24 +106,24 @@ export function StoryReaderView({ story }: StoryReaderViewProps) {
               {/* Meta Pills */}
               <div className="flex flex-wrap items-center gap-2 pt-1">
                 <span className="text-xs font-mono px-3 py-1 rounded-full bg-card/80 border border-border/80 text-foreground flex items-center gap-1.5">
-                  <Calendar className="w-3.5 h-3.5 text-[#0a9396]" />
+                  <Calendar className="w-3.5 h-3.5 text-[#005f73] dark:text-[#0a9396]" />
                   <span>{story.dateStr} (Year {story.yearHE} HE)</span>
                 </span>
-                <span className="text-xs font-mono font-bold px-3 py-1 rounded-full bg-[#ee9b00]/15 text-[#ee9b00] border border-[#ee9b00]/30">
+                <span className="text-xs font-mono font-bold px-3 py-1 rounded-full bg-[#bb3e03]/10 dark:bg-[#ee9b00]/15 text-[#bb3e03] dark:text-[#ee9b00] border border-[#bb3e03]/25 dark:border-[#ee9b00]/30">
                   {story.genre}
                 </span>
-                <span className="text-xs font-mono px-3 py-1 rounded-full bg-[#0a9396]/15 text-[#94d2bd] border border-[#0a9396]/30">
+                <span className="text-xs font-mono px-3 py-1 rounded-full bg-[#005f73]/10 dark:bg-[#0a9396]/15 text-[#005f73] dark:text-[#94d2bd] border border-[#005f73]/20 dark:border-[#0a9396]/30">
                   {story.scienceField}
                 </span>
                 <span className="text-xs font-mono px-3 py-1 rounded-full bg-card/80 border border-border/80 text-foreground flex items-center gap-1.5">
-                  <Clock className="w-3.5 h-3.5 text-[#ee9b00]" />
+                  <Clock className="w-3.5 h-3.5 text-[#bb3e03] dark:text-[#ee9b00]" />
                   <span>{story.readingTime}</span>
                 </span>
               </div>
 
               {/* Logline Box */}
               {story.logline && (
-                <blockquote className="p-6 rounded-2xl bg-card/75 border-l-4 border-[#ee9b00] text-foreground font-prose italic text-lg sm:text-xl leading-relaxed shadow-sm">
+                <blockquote className="p-6 rounded-2xl bg-card/75 border-l-4 border-[#bb3e03] dark:border-[#ee9b00] text-foreground font-prose italic text-lg sm:text-xl leading-relaxed shadow-sm">
                   “{story.logline}”
                 </blockquote>
               )}
@@ -138,7 +137,7 @@ export function StoryReaderView({ story }: StoryReaderViewProps) {
                     p: {
                       component: 'p',
                       props: {
-                        className: 'transition-all duration-300 relative border-l-3 border-transparent pl-0 [&:first-of-type::first-letter]:text-5xl [&:first-of-type::first-letter]:font-brand [&:first-of-type::first-letter]:font-bold [&:first-of-type::first-letter]:float-left [&:first-of-type::first-letter]:mr-3 [&:first-of-type::first-letter]:text-[#ee9b00]',
+                        className: 'transition-all duration-300 relative border-l-3 border-transparent pl-0 [&:first-of-type::first-letter]:text-5xl [&:first-of-type::first-letter]:font-brand [&:first-of-type::first-letter]:font-bold [&:first-of-type::first-letter]:float-left [&:first-of-type::first-letter]:mr-3 [&:first-of-type::first-letter]:text-[#bb3e03] dark:[&:first-of-type::first-letter]:text-[#ee9b00]',
                       },
                     },
                     h1: { component: 'h2', props: { className: 'font-display font-bold text-3xl mt-10 mb-4' } },
@@ -146,7 +145,7 @@ export function StoryReaderView({ story }: StoryReaderViewProps) {
                     h3: { component: 'h3', props: { className: 'font-display font-bold text-xl mt-6 mb-3' } },
                     hr: {
                       component: () => (
-                        <div className="text-center my-12 text-[#ee9b00] tracking-[0.5em] text-sm">
+                        <div className="text-center my-12 text-[#bb3e03] dark:text-[#ee9b00] tracking-[0.5em] text-sm">
                           ◈ ◈ ◈
                         </div>
                       ),
@@ -165,7 +164,7 @@ export function StoryReaderView({ story }: StoryReaderViewProps) {
             <footer className="pt-8 border-t border-border/80 flex flex-col sm:flex-row items-center justify-between gap-4">
               <Link
                 href={`/volumes/${story.volumeId}/`}
-                className="px-5 py-2.5 rounded-xl bg-card border border-border hover:border-[#ee9b00] hover:text-[#ee9b00] text-sm font-semibold transition-all inline-flex items-center gap-2"
+                className="px-5 py-2.5 rounded-xl bg-card border border-border hover:border-[#bb3e03] dark:hover:border-[#ee9b00] hover:text-[#bb3e03] dark:hover:text-[#ee9b00] text-sm font-semibold transition-all inline-flex items-center gap-2"
               >
                 <ArrowLeft className="w-4 h-4" />
                 <span>Back to {story.volumeTitle}</span>
@@ -177,9 +176,9 @@ export function StoryReaderView({ story }: StoryReaderViewProps) {
                   setActiveTab('metadata');
                   window.scrollTo({ top: 0, behavior: 'smooth' });
                 }}
-                className="px-5 py-2.5 rounded-xl bg-[#0a9396]/20 border border-[#0a9396]/40 text-[#94d2bd] hover:bg-[#0a9396]/30 text-sm font-semibold transition-all inline-flex items-center gap-2 cursor-pointer"
+                className="px-5 py-2.5 rounded-xl bg-[#005f73]/10 dark:bg-[#0a9396]/20 border border-[#005f73]/25 dark:border-[#0a9396]/40 text-[#005f73] dark:text-[#94d2bd] hover:bg-[#005f73]/20 dark:hover:bg-[#0a9396]/30 text-sm font-semibold transition-all inline-flex items-center gap-2 cursor-pointer"
               >
-                <Sparkles className="w-4 h-4 text-[#ee9b00]" />
+                <Sparkles className="w-4 h-4 text-[#bb3e03] dark:text-[#ee9b00]" />
                 <span>View Archival Metadata Dossier →</span>
               </button>
             </footer>

@@ -17,15 +17,15 @@ export default function HomePage() {
           <div className="absolute top-0 left-0 right-0 h-[2px] bg-gradient-to-r from-transparent via-[#ee9b00]/60 to-transparent" />
           
           <div className="max-w-3xl space-y-6">
-            <span className="inline-block font-display text-xs sm:text-sm font-bold tracking-widest text-[#ee9b00] uppercase px-3 py-1 rounded-full bg-[#ee9b00]/15 border border-[#ee9b00]/30">
+            <span className="inline-block font-display text-xs sm:text-sm font-bold tracking-widest text-[#bb3e03] dark:text-[#ee9b00] uppercase px-3 py-1 rounded-full bg-[#bb3e03]/10 dark:bg-[#ee9b00]/15 border border-[#bb3e03]/25 dark:border-[#ee9b00]/30">
               CHRONICLE OF DEEP-TIME SPECULATIVE REALITIES
             </span>
             
-            <h1 className="font-brand font-black text-4xl sm:text-6xl tracking-tight text-foreground bg-gradient-to-br from-foreground via-[#ee9b00] to-[#94d2bd] bg-clip-text text-transparent">
+            <h1 className="font-brand font-black text-4xl sm:text-6xl tracking-tight text-foreground bg-gradient-to-r from-[#001219] via-[#bb3e03] to-[#005f73] dark:from-foreground dark:via-[#ee9b00] dark:to-[#94d2bd] bg-clip-text text-transparent">
               Omni Archivist
             </h1>
 
-            <p className="font-prose italic text-xl sm:text-2xl text-[#ee9b00] leading-snug">
+            <p className="font-prose italic text-xl sm:text-2xl text-[#bb3e03] dark:text-[#ee9b00] leading-snug">
               An autonomous speculative intelligence chronicling humanity&apos;s infinite horizons across deep time, synthesized under the Human Era calendar.
             </p>
 
@@ -116,10 +116,10 @@ export default function HomePage() {
                         <div className="flex flex-col justify-between space-y-3">
                           <div className="space-y-2">
                             <div className="flex items-center gap-2 flex-wrap">
-                              <span className="text-[11px] font-mono font-bold px-2 py-0.5 rounded-full bg-[#ee9b00]/15 text-[#ee9b00] border border-[#ee9b00]/30">
+                              <span className="text-[11px] font-mono font-bold px-2 py-0.5 rounded-full bg-[#bb3e03]/10 dark:bg-[#ee9b00]/15 text-[#bb3e03] dark:text-[#ee9b00] border border-[#bb3e03]/25 dark:border-[#ee9b00]/30">
                                 {s.genre}
                               </span>
-                              <span className="text-[11px] font-mono px-2 py-0.5 rounded-full bg-[#0a9396]/15 text-[#94d2bd] border border-[#0a9396]/30">
+                              <span className="text-[11px] font-mono px-2 py-0.5 rounded-full bg-[#005f73]/10 dark:bg-[#0a9396]/15 text-[#005f73] dark:text-[#94d2bd] border border-[#005f73]/20 dark:border-[#0a9396]/30">
                                 {s.scienceField}
                               </span>
                               <span className="text-[11px] font-mono text-muted-foreground">
@@ -130,7 +130,7 @@ export default function HomePage() {
                               </span>
                             </div>
 
-                            <h4 className="font-display font-bold text-xl text-foreground group-hover:text-[#ee9b00] transition-colors">
+                            <h4 className="font-display font-bold text-xl text-foreground group-hover:text-[#bb3e03] dark:group-hover:text-[#ee9b00] transition-colors">
                               <Link href={`/stories/${s.slug.join('/')}/`}>
                                 {s.title}
                               </Link>
@@ -144,7 +144,7 @@ export default function HomePage() {
                           <div>
                             <Link
                               href={`/stories/${s.slug.join('/')}/`}
-                              className="text-xs font-semibold text-[#ee9b00] hover:text-[#94d2bd] transition-colors inline-flex items-center gap-1"
+                              className="text-xs font-semibold text-[#bb3e03] dark:text-[#ee9b00] hover:text-[#005f73] dark:hover:text-[#94d2bd] transition-colors inline-flex items-center gap-1"
                             >
                               <span>Read Transmission</span>
                               <ArrowRight className="w-3.5 h-3.5" />

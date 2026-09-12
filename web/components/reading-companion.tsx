@@ -126,13 +126,13 @@ export function ReadingCompanion() {
       {/* 1. Bottom-Left: Font Size Controls */}
       <div className="fixed bottom-6 left-6 z-40 flex items-center gap-1.5 p-1.5 rounded-full bg-card/85 backdrop-blur-md border border-border/80 shadow-lg text-xs font-semibold">
         <span className="px-2 text-muted-foreground flex items-center gap-1">
-          <Type className="w-3.5 h-3.5 text-[#ee9b00]" />
+          <Type className="w-3.5 h-3.5 text-[#bb3e03] dark:text-[#ee9b00]" />
         </span>
         <button
           type="button"
           onClick={() => setFontLevel((prev) => Math.max(0, prev - 1))}
           disabled={fontLevel === 0}
-          className="w-7 h-7 rounded-full bg-muted/60 hover:bg-[#ee9b00] hover:text-[#001219] disabled:opacity-30 disabled:pointer-events-none transition-colors flex items-center justify-center cursor-pointer"
+          className="w-7 h-7 rounded-full bg-muted/60 hover:bg-[#bb3e03] dark:hover:bg-[#ee9b00] hover:text-white dark:hover:text-[#001219] disabled:opacity-30 disabled:pointer-events-none transition-colors flex items-center justify-center cursor-pointer"
           title="Smaller font size"
           aria-label="Decrease font size"
         >
@@ -142,7 +142,7 @@ export function ReadingCompanion() {
           type="button"
           onClick={() => setFontLevel((prev) => Math.min(fontSizes.length - 1, prev + 1))}
           disabled={fontLevel === fontSizes.length - 1}
-          className="w-7 h-7 rounded-full bg-muted/60 hover:bg-[#ee9b00] hover:text-[#001219] disabled:opacity-30 disabled:pointer-events-none transition-colors flex items-center justify-center cursor-pointer"
+          className="w-7 h-7 rounded-full bg-muted/60 hover:bg-[#bb3e03] dark:hover:bg-[#ee9b00] hover:text-white dark:hover:text-[#001219] disabled:opacity-30 disabled:pointer-events-none transition-colors flex items-center justify-center cursor-pointer"
           title="Larger font size"
           aria-label="Increase font size"
         >
@@ -162,7 +162,7 @@ export function ReadingCompanion() {
           <button
             type="button"
             onClick={() => scrollToParagraph(-1)}
-            className="w-10 h-10 rounded-full bg-card/90 backdrop-blur-md border border-border/80 text-foreground hover:border-[#ee9b00] hover:text-[#ee9b00] hover:scale-105 shadow-md flex items-center justify-center transition-all cursor-pointer"
+            className="w-10 h-10 rounded-full bg-card/90 backdrop-blur-md border border-border/80 text-foreground hover:border-[#bb3e03] dark:hover:border-[#ee9b00] hover:text-[#bb3e03] dark:hover:text-[#ee9b00] hover:scale-105 shadow-md flex items-center justify-center transition-all cursor-pointer"
             title="Previous Paragraph (Shortcut: K)"
             aria-label="Previous Paragraph"
           >
@@ -173,7 +173,7 @@ export function ReadingCompanion() {
           <button
             type="button"
             onClick={() => scrollToParagraph(1)}
-            className="w-10 h-10 rounded-full bg-card/90 backdrop-blur-md border border-border/80 text-foreground hover:border-[#ee9b00] hover:text-[#ee9b00] hover:scale-105 shadow-md flex items-center justify-center transition-all cursor-pointer"
+            className="w-10 h-10 rounded-full bg-card/90 backdrop-blur-md border border-border/80 text-foreground hover:border-[#bb3e03] dark:hover:border-[#ee9b00] hover:text-[#bb3e03] dark:hover:text-[#ee9b00] hover:scale-105 shadow-md flex items-center justify-center transition-all cursor-pointer"
             title="Next Paragraph (Shortcut: J)"
             aria-label="Next Paragraph"
           >
@@ -186,8 +186,8 @@ export function ReadingCompanion() {
             onClick={() => setFocusMode((prev) => !prev)}
             className={`px-3.5 py-1.5 rounded-full border text-xs font-semibold flex items-center gap-1.5 shadow-md transition-all cursor-pointer ${
               focusMode
-                ? 'bg-[#ee9b00] text-[#001219] border-[#ee9b00] shadow-[0_0_14px_rgba(238,155,0,0.6)]'
-                : 'bg-card/90 backdrop-blur-md border-border/80 text-foreground hover:border-[#ee9b00] hover:text-[#ee9b00]'
+                ? 'bg-[#bb3e03] text-white border-[#bb3e03] dark:bg-[#ee9b00] dark:text-[#001219] dark:border-[#ee9b00] shadow-[0_0_14px_rgba(238,155,0,0.6)]'
+                : 'bg-card/90 backdrop-blur-md border-border/80 text-foreground hover:border-[#bb3e03] dark:hover:border-[#ee9b00] hover:text-[#bb3e03] dark:hover:text-[#ee9b00]'
             }`}
             title="Toggle Focus Mode: Blurs non-active paragraphs (Shortcut: F)"
             aria-label="Toggle Focus Mode"
@@ -200,7 +200,7 @@ export function ReadingCompanion() {
           <button
             type="button"
             onClick={scrollToTop}
-            className="w-10 h-10 rounded-full bg-card/90 backdrop-blur-md border border-border/80 text-foreground hover:border-[#ee9b00] hover:text-[#ee9b00] hover:scale-105 shadow-md flex items-center justify-center transition-all cursor-pointer"
+            className="w-10 h-10 rounded-full bg-card/90 backdrop-blur-md border border-border/80 text-foreground hover:border-[#bb3e03] dark:hover:border-[#ee9b00] hover:text-[#bb3e03] dark:hover:text-[#ee9b00] hover:scale-105 shadow-md flex items-center justify-center transition-all cursor-pointer"
             title="Scroll to Top"
             aria-label="Scroll to Top"
           >
@@ -212,7 +212,7 @@ export function ReadingCompanion() {
         <button
           type="button"
           onClick={() => setMobileExpanded((prev) => !prev)}
-          className="md:hidden w-12 h-12 rounded-full bg-gradient-to-br from-[#ee9b00] to-[#ca6702] text-[#001219] font-black text-xl shadow-[0_8px_20px_rgba(238,155,0,0.5)] border-2 border-white/25 flex items-center justify-center transition-transform active:scale-95 cursor-pointer"
+          className="md:hidden w-12 h-12 rounded-full bg-gradient-to-br from-[#bb3e03] to-[#ca6702] dark:from-[#ee9b00] dark:to-[#ca6702] text-white dark:text-[#001219] font-black text-xl shadow-[0_8px_20px_rgba(238,155,0,0.5)] border-2 border-white/25 flex items-center justify-center transition-transform active:scale-95 cursor-pointer"
           style={{ transform: mobileExpanded ? 'rotate(45deg)' : 'none' }}
           aria-label="Toggle Reading Companion"
           title="Reading Companion"

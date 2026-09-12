@@ -28,9 +28,6 @@ export default function RootLayout({
           defaultTheme="dark"
           enableSystem={false}
         >
-          {/* Ambient Glow */}
-          <div className="fixed top-0 left-0 right-0 h-[600px] bg-[radial-gradient(circle_at_50%_0%,rgba(10,147,150,0.2),rgba(238,155,0,0.12)_35%,rgba(155,34,38,0.08)_65%,transparent_80%)] pointer-events-none z-0" />
-          
           <div className="relative z-10 flex min-h-screen flex-col">
             {children}
             
