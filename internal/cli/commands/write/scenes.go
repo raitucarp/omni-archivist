@@ -35,10 +35,21 @@ func writeSceneStructureAction(ctx context.Context, command *cli.Command) (err e
 	genkit.DefineSchemaFor[SceneSequels](gk)
 	sceneSequelStructurePrompt := genkit.LookupDataPrompt[metadata.Story, *SceneSequels](gk, "scene_structure")
 
-	sceneSequelStructures, _, err := sceneSequelStructurePrompt.Execute(ctx, currentMetadata.Story)
+	retrier := retry.NewWithData[*SceneSequels](
+		retry.Attempts(10),
+		retry.Delay(1*time.Second),
+	)
+
+	sceneSequelStructures, err := retrier.Do(func() (*SceneSequels, error) {
+		res, _, pErr := sceneSequelStructurePrompt.Execute(ctx, currentMetadata.Story)
+		if pErr != nil {
+			return nil, pErr
+		}
+		return res, nil
+	})
 
 	if err != nil {
-		return
+		return err
 	}
 
 	currentMetadata.Story.SceneSequels = []metadata.SceneSequel{}

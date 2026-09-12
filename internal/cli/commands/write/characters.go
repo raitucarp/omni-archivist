@@ -2,7 +2,9 @@ package write
 
 import (
 	"context"
+	"time"
 
+	"github.com/avast/retry-go/v5"
 	"github.com/firebase/genkit/go/genkit"
 	"github.com/raitucarp/omni-archivist/internal/metadata"
 	"github.com/raitucarp/omni-archivist/internal/utils"
@@ -26,10 +28,21 @@ func writeCharactersAction(ctx context.Context, command *cli.Command) (err error
 	genkit.DefineSchemaFor[Characters](gk)
 	charactersPrompt := genkit.LookupDataPrompt[metadata.Story, *Characters](gk, "characters")
 
-	characters, _, err := charactersPrompt.Execute(ctx, currentMetadata.Story)
+	retrier := retry.NewWithData[*Characters](
+		retry.Attempts(10),
+		retry.Delay(1*time.Second),
+	)
+
+	characters, err := retrier.Do(func() (*Characters, error) {
+		chars, _, pErr := charactersPrompt.Execute(ctx, currentMetadata.Story)
+		if pErr != nil {
+			return nil, pErr
+		}
+		return chars, nil
+	})
 
 	if err != nil {
-		return
+		return err
 	}
 
 	currentMetadata.Story.Characters = []metadata.Character{}
