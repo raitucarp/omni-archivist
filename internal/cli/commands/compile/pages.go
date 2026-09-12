@@ -698,6 +698,17 @@ func renderStoryPage(outputPath string, view SiteStoryView) error {
     `, dossierItems)
 	}
 
+	// Progress bar at the top of the viewport
+	bodyBuf.WriteString("<div class=\"reading-progress-bar\" id=\"readingProgressBar\"></div>\n")
+
+	// Dynamic Blurred Cover Ambient Backdrop
+	if view.CoverURL != "" {
+		bodyBuf.WriteString(fmt.Sprintf(`
+      <div class="story-ambient-backdrop" style="background-image: url('%s');" id="storyBackdrop"></div>
+      <div class="story-backdrop-overlay"></div>
+    `, view.CoverURL))
+	}
+
 	bodyBuf.WriteString(fmt.Sprintf(`
     <article class="reader-container single-story-view">
       <nav class="breadcrumb">
@@ -728,6 +739,35 @@ func renderStoryPage(outputPath string, view SiteStoryView) error {
         <a href="../../../../index.html" class="btn-return">All Volumes</a>
       </footer>
     </article>
+
+    <!-- Floating Reading Companion Toolbar -->
+    <aside class="reading-controls-container" id="readingControls" aria-label="Reading Controls">
+      <div class="controls-panel" id="controlsPanel">
+        <span class="progress-pill" id="readingPercentBadge" title="Reading Progress">0%%</span>
+        <button class="ctrl-btn" id="btnFocusMode" title="Focus Mode: Spotlight current paragraph and blur others" aria-label="Toggle Focus Mode">
+          <span class="ctrl-icon">🎯</span>
+          <span class="ctrl-label">Focus</span>
+        </button>
+        <button class="ctrl-btn" id="btnPrevParagraph" title="Scroll to Previous Paragraph" aria-label="Previous Paragraph">
+          <span class="ctrl-icon">▲</span>
+          <span class="ctrl-label">Prev</span>
+        </button>
+        <button class="ctrl-btn" id="btnNextParagraph" title="Scroll to Next Paragraph" aria-label="Next Paragraph">
+          <span class="ctrl-icon">▼</span>
+          <span class="ctrl-label">Next</span>
+        </button>
+        <div class="ctrl-group-font" title="Adjust Prose Font Size">
+          <button class="ctrl-btn btn-small" id="btnFontDec" title="Decrease Font Size" aria-label="Smaller text">A-</button>
+          <button class="ctrl-btn btn-small" id="btnFontInc" title="Increase Font Size" aria-label="Larger text">A+</button>
+        </div>
+        <button class="ctrl-btn btn-top" id="btnScrollTop" title="Scroll to Top" aria-label="Scroll to Top">
+          <span class="ctrl-icon">↑</span>
+        </button>
+      </div>
+      <button class="fab-trigger" id="fabTrigger" aria-label="Toggle Reading Companion" title="Reading Controls">
+        <span class="fab-icon">◈</span>
+      </button>
+    </aside>
   `, view.VolumeURL, view.VolumeTitle, coverHTML, view.Title, subtitleHTML, metaPills, loglineBox, "", view.ContentHTML, dossierHTML, view.VolumeURL, view.VolumeTitle))
 
 	headData := struct {
@@ -795,16 +835,217 @@ const siteJS = `
 })();
 
 document.addEventListener('DOMContentLoaded', () => {
+  // 1. Theme Toggle
   const toggle = document.getElementById('themeToggle');
-  if (!toggle) return;
+  if (toggle) {
+    toggle.addEventListener('click', () => {
+      const current = document.documentElement.getAttribute('data-theme') || 'dark';
+      const next = current === 'dark' ? 'light' : 'dark';
+      document.documentElement.setAttribute('data-theme', next);
+      localStorage.setItem('omni-theme', next);
+    });
+  }
 
-  toggle.addEventListener('click', () => {
-    const current = document.documentElement.getAttribute('data-theme') || 'dark';
-    const next = current === 'dark' ? 'light' : 'dark';
-    document.documentElement.setAttribute('data-theme', next);
-    localStorage.setItem('omni-theme', next);
-  });
+  // 2. Reading Experience (Progress bar, paragraph tracker, focus mode, backdrop parallax)
+  initReadingExperience();
 });
+
+function initReadingExperience() {
+  const prose = document.querySelector('.story-prose-body');
+  if (!prose) return;
+
+  const progressBar = document.getElementById('readingProgressBar');
+  const percentBadge = document.getElementById('readingPercentBadge');
+  const backdrop = document.getElementById('storyBackdrop');
+  const paragraphs = Array.from(prose.querySelectorAll('p'));
+
+  if (paragraphs.length === 0) return;
+
+  let activeIndex = 0;
+  let focusMode = false;
+  let fontLevel = 1;
+  const fontSizes = ['1.22rem', '1.42rem', '1.62rem', '1.85rem'];
+
+  function updateActiveParagraph() {
+    // Focal zone in upper-middle viewport
+    const focalZone = window.innerHeight * 0.38;
+    let closestIndex = 0;
+    let minDistance = Infinity;
+
+    paragraphs.forEach((p, idx) => {
+      const rect = p.getBoundingClientRect();
+      const pMid = rect.top + rect.height / 2;
+      const dist = Math.abs(pMid - focalZone);
+      if (dist < minDistance) {
+        minDistance = dist;
+        closestIndex = idx;
+      }
+    });
+
+    if (closestIndex !== activeIndex) {
+      if (paragraphs[activeIndex]) {
+        paragraphs[activeIndex].classList.remove('active-reading-p');
+      }
+      activeIndex = closestIndex;
+      if (paragraphs[activeIndex]) {
+        paragraphs[activeIndex].classList.add('active-reading-p');
+      }
+    }
+  }
+
+  function updateProgress() {
+    const proseRect = prose.getBoundingClientRect();
+    const totalHeight = prose.scrollHeight;
+    const windowH = window.innerHeight;
+    const scrollOffset = -proseRect.top;
+
+    let progress = 0;
+    if (totalHeight > 0) {
+      progress = (scrollOffset / (totalHeight - windowH * 0.5)) * 100;
+      progress = Math.max(0, Math.min(100, progress));
+    }
+
+    if (progressBar) {
+      progressBar.style.width = progress + '%';
+    }
+    if (percentBadge) {
+      percentBadge.textContent = Math.round(progress) + '%';
+    }
+
+    // Dynamic Backdrop subtle parallax and depth on scroll
+    if (backdrop) {
+      const scrollY = window.scrollY || window.pageYOffset;
+      const shift = scrollY * 0.12;
+      backdrop.style.transform = 'translate3d(0, ' + shift + 'px, 0)';
+    }
+
+    updateActiveParagraph();
+  }
+
+  function scrollToParagraph(idx) {
+    if (idx < 0) idx = 0;
+    if (idx >= paragraphs.length) idx = paragraphs.length - 1;
+
+    const targetP = paragraphs[idx];
+    const targetY = targetP.getBoundingClientRect().top + window.pageYOffset - (window.innerHeight * 0.35);
+
+    window.scrollTo({
+      top: targetY,
+      behavior: 'smooth'
+    });
+
+    paragraphs.forEach(p => p.classList.remove('active-reading-p'));
+    targetP.classList.add('active-reading-p');
+    activeIndex = idx;
+  }
+
+  // Next / Prev Paragraph Handlers
+  const btnNext = document.getElementById('btnNextParagraph');
+  const btnPrev = document.getElementById('btnPrevParagraph');
+
+  if (btnNext) {
+    btnNext.addEventListener('click', (e) => {
+      e.preventDefault();
+      scrollToParagraph(activeIndex + 1);
+    });
+  }
+
+  if (btnPrev) {
+    btnPrev.addEventListener('click', (e) => {
+      e.preventDefault();
+      scrollToParagraph(activeIndex - 1);
+    });
+  }
+
+  // Focus Mode Toggle (Highlights active paragraph, blurs/dims inactive ones)
+  const btnFocus = document.getElementById('btnFocusMode');
+  if (btnFocus) {
+    btnFocus.addEventListener('click', (e) => {
+      e.preventDefault();
+      focusMode = !focusMode;
+      prose.classList.toggle('focus-mode-active', focusMode);
+      btnFocus.classList.toggle('active', focusMode);
+      updateActiveParagraph();
+    });
+  }
+
+  // Font Size Scaling
+  const btnFontInc = document.getElementById('btnFontInc');
+  const btnFontDec = document.getElementById('btnFontDec');
+
+  if (btnFontInc) {
+    btnFontInc.addEventListener('click', (e) => {
+      e.preventDefault();
+      if (fontLevel < fontSizes.length - 1) {
+        fontLevel++;
+        prose.style.fontSize = fontSizes[fontLevel];
+      }
+    });
+  }
+
+  if (btnFontDec) {
+    btnFontDec.addEventListener('click', (e) => {
+      e.preventDefault();
+      if (fontLevel > 0) {
+        fontLevel--;
+        prose.style.fontSize = fontSizes[fontLevel];
+      }
+    });
+  }
+
+  // Scroll to Top
+  const btnTop = document.getElementById('btnScrollTop');
+  if (btnTop) {
+    btnTop.addEventListener('click', (e) => {
+      e.preventDefault();
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+    });
+  }
+
+  // Mobile Collapsible FAB Menu
+  const fabTrigger = document.getElementById('fabTrigger');
+  const controlsContainer = document.getElementById('readingControls');
+
+  if (fabTrigger && controlsContainer) {
+    fabTrigger.addEventListener('click', (e) => {
+      e.stopPropagation();
+      controlsContainer.classList.toggle('fab-expanded');
+    });
+
+    document.addEventListener('click', (e) => {
+      if (!controlsContainer.contains(e.target)) {
+        controlsContainer.classList.remove('fab-expanded');
+      }
+    });
+  }
+
+  // Keyboard navigation shortcuts: J/K for next/prev, F for focus mode
+  document.addEventListener('keydown', (e) => {
+    if (['input', 'textarea'].includes(document.activeElement.tagName.toLowerCase())) return;
+    if (e.key === 'j' || (e.key === 'ArrowDown' && e.altKey)) {
+      scrollToParagraph(activeIndex + 1);
+    } else if (e.key === 'k' || (e.key === 'ArrowUp' && e.altKey)) {
+      scrollToParagraph(activeIndex - 1);
+    } else if (e.key.toLowerCase() === 'f' && !e.ctrlKey && !e.metaKey) {
+      if (btnFocus) btnFocus.click();
+    }
+  });
+
+  // Optimized scroll listener using requestAnimationFrame
+  let ticking = false;
+  window.addEventListener('scroll', () => {
+    if (!ticking) {
+      window.requestAnimationFrame(() => {
+        updateProgress();
+        ticking = false;
+      });
+      ticking = true;
+    }
+  }, { passive: true });
+
+  // Initial call
+  updateProgress();
+}
 `
 
 const siteCSS = `
@@ -1352,9 +1593,62 @@ body {
 }
 
 /* Single Story Reader Page */
+.reading-progress-bar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 4px;
+  width: 0%;
+  background: linear-gradient(90deg, var(--accent-gold) 0%, var(--accent-caramel) 35%, var(--accent-aqua) 70%, var(--accent-cyan) 100%);
+  box-shadow: 0 0 14px rgba(238, 155, 0, 0.85), 0 0 6px rgba(10, 147, 150, 0.7);
+  z-index: 1000;
+  pointer-events: none;
+  transition: width 0.1s linear;
+}
+
+.story-ambient-backdrop {
+  position: fixed;
+  top: -15%;
+  left: -15%;
+  width: 130%;
+  height: 130%;
+  background-size: cover;
+  background-position: center top;
+  background-repeat: no-repeat;
+  filter: blur(80px) saturate(1.8) brightness(0.48);
+  opacity: 0.52;
+  pointer-events: none;
+  z-index: 0;
+  transform: translateZ(0);
+  will-change: transform;
+  transition: opacity 0.5s ease;
+}
+
+[data-theme="light"] .story-ambient-backdrop {
+  filter: blur(85px) saturate(1.6) brightness(0.96);
+  opacity: 0.26;
+}
+
+.story-backdrop-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: radial-gradient(circle at 50% 15%, rgba(0, 18, 25, 0.45) 0%, rgba(0, 18, 25, 0.85) 60%, var(--bg-page) 100%);
+  pointer-events: none;
+  z-index: 1;
+}
+
+[data-theme="light"] .story-backdrop-overlay {
+  background: radial-gradient(circle at 50% 15%, rgba(251, 249, 244, 0.45) 0%, rgba(251, 249, 244, 0.88) 60%, var(--bg-page) 100%);
+}
+
 .reader-container {
   max-width: 820px;
   margin: 0 auto;
+  position: relative;
+  z-index: 5;
 }
 
 .breadcrumb {
@@ -1464,10 +1758,39 @@ body {
   color: var(--text-main);
   margin-bottom: 4rem;
   letter-spacing: 0.005em;
+  transition: font-size 0.25s ease;
 }
 
 .story-prose-body p {
   margin-bottom: 2rem;
+  transition: opacity 0.35s ease, filter 0.35s ease, transform 0.35s ease, border-left 0.25s ease, padding-left 0.25s ease, background 0.3s ease;
+  border-left: 3px solid transparent;
+  padding-left: 0;
+  border-radius: 0 var(--radius-sm) var(--radius-sm) 0;
+}
+
+/* Subtle active paragraph indication when focus mode is off */
+.story-prose-body:not(.focus-mode-active) p.active-reading-p {
+  border-left: 3px solid rgba(238, 155, 0, 0.38);
+  padding-left: 1.25rem;
+}
+
+/* Focus Mode: Dim and blur inactive paragraphs */
+.story-prose-body.focus-mode-active p {
+  opacity: 0.22;
+  filter: blur(1.5px);
+  transform: scale(0.995);
+}
+
+/* Focus Mode: Illuminate active paragraph with golden aura */
+.story-prose-body.focus-mode-active p.active-reading-p {
+  opacity: 1;
+  filter: none;
+  transform: scale(1.015);
+  border-left: 3px solid var(--accent-gold);
+  padding-left: 1.25rem;
+  background: linear-gradient(90deg, rgba(238, 155, 0, 0.08) 0%, transparent 100%);
+  box-shadow: -6px 0 20px -3px rgba(238, 155, 0, 0.35);
 }
 
 .story-prose-body p:first-of-type::first-letter {
@@ -1547,6 +1870,99 @@ body {
   border-color: var(--accent-gold);
   color: var(--accent-gold);
   transform: translateY(-2px);
+}
+
+/* Floating Reading Controls Toolbar */
+.reading-controls-container {
+  position: fixed;
+  bottom: 2rem;
+  right: 2rem;
+  z-index: 99;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  gap: 0.6rem;
+}
+
+.controls-panel {
+  display: flex;
+  align-items: center;
+  gap: 0.4rem;
+  background: var(--bg-card);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  border: 1px solid var(--border-strong);
+  box-shadow: 0 12px 36px rgba(0, 18, 25, 0.75);
+  padding: 0.38rem 0.65rem;
+  border-radius: var(--radius-full);
+  transition: var(--transition);
+}
+
+.progress-pill {
+  font-family: var(--font-display);
+  font-size: 0.78rem;
+  font-weight: 700;
+  color: var(--accent-gold);
+  padding: 0.25rem 0.55rem;
+  background: rgba(238, 155, 0, 0.15);
+  border-radius: var(--radius-full);
+  border: 1px solid rgba(238, 155, 0, 0.3);
+  min-width: 42px;
+  text-align: center;
+  user-select: none;
+}
+
+.ctrl-btn {
+  background: var(--bg-surface-elevated);
+  border: 1px solid var(--border-subtle);
+  color: var(--text-main);
+  padding: 0.42rem 0.68rem;
+  border-radius: var(--radius-full);
+  cursor: pointer;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.35rem;
+  font-size: 0.82rem;
+  font-weight: 600;
+  font-family: var(--font-ui);
+  transition: var(--transition);
+  user-select: none;
+}
+
+.ctrl-btn:hover {
+  border-color: var(--accent-gold);
+  color: var(--accent-gold);
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(238, 155, 0, 0.25);
+}
+
+.ctrl-btn.active {
+  background: var(--accent-gold);
+  color: #001219;
+  border-color: var(--accent-gold);
+  box-shadow: 0 0 14px rgba(238, 155, 0, 0.6);
+}
+
+.ctrl-btn.btn-small {
+  padding: 0.3rem 0.52rem;
+  font-size: 0.78rem;
+}
+
+.ctrl-btn.btn-top {
+  padding: 0.35rem 0.55rem;
+}
+
+.ctrl-group-font {
+  display: flex;
+  gap: 0.2rem;
+  background: rgba(0, 95, 115, 0.2);
+  padding: 0.12rem;
+  border-radius: var(--radius-full);
+  border: 1px solid var(--border-subtle);
+}
+
+.fab-trigger {
+  display: none;
 }
 
 /* Volume Page Specifics */
@@ -1642,7 +2058,81 @@ body {
     max-height: 280px;
   }
   .story-prose-body {
-    font-size: 1.15rem;
+    font-size: 1.18rem;
+  }
+
+  /* Mobile FAB Controls */
+  .reading-controls-container {
+    bottom: 1.25rem;
+    right: 1.25rem;
+  }
+
+  .fab-trigger {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 52px;
+    height: 52px;
+    border-radius: 50%;
+    background: linear-gradient(135deg, var(--accent-gold), var(--accent-caramel));
+    color: #001219;
+    font-size: 1.4rem;
+    font-weight: 900;
+    border: 2px solid rgba(255, 255, 255, 0.35);
+    box-shadow: 0 8px 24px rgba(238, 155, 0, 0.55);
+    cursor: pointer;
+    transition: transform 0.3s cubic-bezier(0.16, 1, 0.3, 1), background-color 0.3s ease;
+    z-index: 101;
+  }
+
+  .controls-panel {
+    display: none;
+    flex-direction: column;
+    align-items: stretch;
+    border-radius: var(--radius-lg);
+    padding: 0.85rem;
+    gap: 0.6rem;
+    min-width: 175px;
+    margin-bottom: 0.5rem;
+    background: var(--bg-surface);
+    border: 1px solid var(--border-strong);
+    box-shadow: 0 16px 40px rgba(0, 18, 25, 0.9);
+    animation: fabPop 0.25s cubic-bezier(0.16, 1, 0.3, 1);
+  }
+
+  .reading-controls-container.fab-expanded .controls-panel {
+    display: flex;
+  }
+
+  .reading-controls-container.fab-expanded .fab-trigger {
+    transform: rotate(45deg);
+    background: var(--accent-cyan);
+    color: #ffffff;
+  }
+
+  @keyframes fabPop {
+    from {
+      opacity: 0;
+      transform: translateY(16px) scale(0.92);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0) scale(1);
+    }
+  }
+
+  .ctrl-btn {
+    justify-content: center;
+    padding: 0.55rem 0.85rem;
+    width: 100%;
+  }
+
+  .ctrl-group-font {
+    justify-content: center;
+  }
+
+  .ctrl-group-font .ctrl-btn {
+    width: auto;
   }
 }
 `

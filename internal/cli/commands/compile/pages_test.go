@@ -51,4 +51,28 @@ func TestPagesCompilation(t *testing.T) {
 	if !strings.HasPrefix(grad, "linear-gradient") {
 		t.Errorf("expected linear-gradient, got %s", grad)
 	}
+
+	// Verify reader companion assets
+	if !strings.Contains(string(cssBytes), "reading-progress-bar") {
+		t.Errorf("style.css missing .reading-progress-bar")
+	}
+	if !strings.Contains(string(cssBytes), "story-ambient-backdrop") {
+		t.Errorf("style.css missing .story-ambient-backdrop")
+	}
+	if !strings.Contains(string(cssBytes), "focus-mode-active") {
+		t.Errorf("style.css missing .focus-mode-active")
+	}
+	if !strings.Contains(string(cssBytes), "fab-trigger") {
+		t.Errorf("style.css missing .fab-trigger")
+	}
+
+	if !strings.Contains(string(jsBytes), "initReadingExperience") {
+		t.Errorf("theme.js missing initReadingExperience")
+	}
+	if !strings.Contains(string(jsBytes), "btnFocusMode") {
+		t.Errorf("theme.js missing btnFocusMode logic")
+	}
+	if !strings.Contains(string(jsBytes), "btnNextParagraph") {
+		t.Errorf("theme.js missing btnNextParagraph logic")
+	}
 }
