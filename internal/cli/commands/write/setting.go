@@ -2,9 +2,8 @@ package write
 
 import (
 	"context"
-	"time"
+	"log"
 
-	"github.com/avast/retry-go/v5"
 	"github.com/firebase/genkit/go/genkit"
 	"github.com/raitucarp/omni-archivist/internal/metadata"
 	"github.com/raitucarp/omni-archivist/internal/utils"
@@ -26,23 +25,22 @@ func writeSettingAction(ctx context.Context, command *cli.Command) (err error) {
 	genkit.DefineSchemaFor[metadata.Setting](gk)
 	settingPrompt := genkit.LookupDataPrompt[metadata.Story, *metadata.Setting](gk, "setting")
 
-	retrier := retry.NewWithData[*metadata.Setting](
-		retry.Attempts(10),
-		retry.Delay(500*time.Millisecond),
-	)
+	log.Println("==> Constructing multi-scalar sci-fi setting (macro, meso, micro, topography, atmosphere)...")
+	retrier := utils.NewPromptRetrier[*metadata.Setting]("Write Setting")
 
-	settingResult, err := retrier.Do(func() (settingResult *metadata.Setting, err error) {
-		settingResult, _, err = settingPrompt.Execute(ctx, currentMetadata.Story)
-		if err != nil {
-			return nil, err
+	settingResult, err := retrier.Do(func() (*metadata.Setting, error) {
+		res, _, pErr := settingPrompt.Execute(ctx, currentMetadata.Story)
+		if pErr != nil {
+			return nil, pErr
 		}
-		return settingResult, nil
+		return res, nil
 	})
 
 	if err != nil {
 		return err
 	}
 
+	log.Printf("Setting Constructed: Function=%s, Chronotope=%s\n", settingResult.Function, settingResult.Chronotope)
 	currentMetadata.Story.Setting = settingResult
 	err = metadata.Write(currentMetadata)
 	return err

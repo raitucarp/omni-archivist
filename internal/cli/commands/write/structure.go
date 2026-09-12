@@ -2,9 +2,8 @@ package write
 
 import (
 	"context"
-	"time"
+	"log"
 
-	"github.com/avast/retry-go/v5"
 	"github.com/firebase/genkit/go/genkit"
 	"github.com/raitucarp/omni-archivist/internal/metadata"
 	"github.com/raitucarp/omni-archivist/internal/utils"
@@ -26,10 +25,8 @@ func writeStructuresAction(ctx context.Context, command *cli.Command) (err error
 	genkit.DefineSchemaFor[metadata.Structure](gk)
 	structurePrompt := genkit.LookupDataPrompt[metadata.Story, *metadata.Structure](gk, "structure")
 
-	retrier := retry.NewWithData[*metadata.Structure](
-		retry.Attempts(10),
-		retry.Delay(1*time.Second),
-	)
+	log.Println("==> Planning story narrative structure using MICE framework...")
+	retrier := utils.NewPromptRetrier[*metadata.Structure]("Write Structure")
 
 	structure, err := retrier.Do(func() (*metadata.Structure, error) {
 		res, _, pErr := structurePrompt.Execute(ctx, currentMetadata.Story)
@@ -42,6 +39,8 @@ func writeStructuresAction(ctx context.Context, command *cli.Command) (err error
 	if err != nil {
 		return err
 	}
+
+	log.Printf("MICE Structure Planned: %v - %s\n", structure.Kind, structure.Use)
 
 	currentMetadata.Story.Structure = structure
 

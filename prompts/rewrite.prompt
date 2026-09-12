@@ -1,5 +1,4 @@
 ---
-model: googleai/gemini-3-flash-preview
 config:
   maxOutputTokens: 150000
 input:

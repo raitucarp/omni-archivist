@@ -2,9 +2,8 @@ package write
 
 import (
 	"context"
-	"time"
+	"log"
 
-	"github.com/avast/retry-go/v5"
 	"github.com/firebase/genkit/go/genkit"
 	"github.com/raitucarp/omni-archivist/internal/metadata"
 	"github.com/raitucarp/omni-archivist/internal/utils"
@@ -42,23 +41,23 @@ func writeSynopsisAction(ctx context.Context, command *cli.Command) (err error) 
 	genkit.DefineSchemaFor[SynopsisResult](gk)
 	synopsisPrompt := genkit.LookupDataPrompt[metadata.Meta, *SynopsisResult](gk, "synopsis")
 
-	retrier := retry.NewWithData[*SynopsisResult](
-		retry.Attempts(25),
-		retry.Delay(500*time.Millisecond),
-	)
+	log.Println("==> Writing story synopsis, title, and discourse...")
+	retrier := utils.NewPromptRetrier[*SynopsisResult]("Write Synopsis")
 
-	synopsisResult, err := retrier.Do(func() (synopsisResult *SynopsisResult, err error) {
-		synopsisResult, _, err = synopsisPrompt.Execute(ctx, currentMetadata.Meta)
-
-		if err != nil {
-			return
+	synopsisResult, err := retrier.Do(func() (*SynopsisResult, error) {
+		res, _, pErr := synopsisPrompt.Execute(ctx, currentMetadata.Meta)
+		if pErr != nil {
+			return nil, pErr
 		}
-		return
+		return res, nil
 	})
 
 	if err != nil {
-		return
+		return err
 	}
+
+	log.Printf("Generated Story Title: %s - %s\n", synopsisResult.Title, synopsisResult.Subtitle)
+	log.Printf("Logline: %s\n", synopsisResult.Logline)
 
 	currentMetadata.Story.Synopsis = synopsisResult.Synopsis
 	currentMetadata.Story.Blurb = synopsisResult.Blurb

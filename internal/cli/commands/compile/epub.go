@@ -9,7 +9,6 @@ import (
 	"strings"
 	"time"
 
-	"github.com/avast/retry-go/v5"
 	"github.com/firebase/genkit/go/genkit"
 	"github.com/goccy/go-yaml"
 	"github.com/raitucarp/epub"
@@ -228,11 +227,7 @@ func generatePrefaceAndSubtitle(ctx context.Context, title string, yearHE, weekN
 				Stories:    storyInputs,
 			}
 
-			retrier := retry.NewWithData[*AnthologyPrefaceOutput](
-				retry.Attempts(3),
-				retry.Delay(500*time.Millisecond),
-			)
-
+			retrier := utils.NewPromptRetrier[*AnthologyPrefaceOutput]("Compile Preface")
 			result, pErr := retrier.Do(func() (*AnthologyPrefaceOutput, error) {
 				res, _, doErr := prefacePrompt.Execute(ctx, input)
 				return res, doErr

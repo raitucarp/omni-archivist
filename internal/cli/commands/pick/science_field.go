@@ -2,6 +2,7 @@ package pick
 
 import (
 	"context"
+	"log"
 
 	"github.com/raitucarp/omni-archivist/internal/metadata"
 	"github.com/samber/lo"
@@ -18,6 +19,8 @@ func scienceFieldAction(ctx context.Context, cmd *cli.Command) (err error) {
 
 	m.Meta.ScienceField.Name = s.Name
 	m.Meta.ScienceField.Description = s.Description
+
+	log.Printf("==> Selected Science Field: %s (%s)\n", s.Name, s.Description)
 
 	err = metadata.Write(m)
 	if err != nil {

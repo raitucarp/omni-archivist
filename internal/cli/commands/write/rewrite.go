@@ -7,9 +7,7 @@ import (
 	"os"
 	"path/filepath"
 	"strings"
-	"time"
 
-	"github.com/avast/retry-go/v5"
 	"github.com/firebase/genkit/go/genkit"
 	"github.com/goccy/go-yaml"
 	"github.com/raitucarp/omni-archivist/internal/metadata"
@@ -65,10 +63,7 @@ func rewriteStoryAction(ctx context.Context, command *cli.Command) (err error) {
 	log.Println("Rewrite story with length", len(input.Story))
 	log.Println("Rewrite story with yaml structure", len(input.Structure))
 
-	retrier := retry.NewWithData[*FinalStory](
-		retry.Attempts(10),
-		retry.Delay(1*time.Second),
-	)
+	retrier := utils.NewPromptRetrier[*FinalStory]("Rewrite Story")
 
 	finalStory, err := retrier.Do(func() (*FinalStory, error) {
 		res, _, pErr := rewriteStoryPrompt.Execute(ctx, input)

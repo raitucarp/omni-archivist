@@ -2,6 +2,7 @@ package pick
 
 import (
 	"context"
+	"log"
 
 	"github.com/firebase/genkit/go/genkit"
 	"github.com/raitucarp/omni-archivist/internal/metadata"
@@ -29,12 +30,22 @@ func scifiGenreAction(ctx context.Context, cmd *cli.Command) (err error) {
 	}
 
 	scifiGenrePrompt := genkit.LookupDataPrompt[metadata.ScienceField, *metadata.SciFiGenre](gk, "scifi_genre")
-	genre, _, err := scifiGenrePrompt.Execute(ctx, scienceField)
+
+	log.Printf("==> Picking sci-fi genre for science field: %s\n", scienceField.Name)
+	retrier := utils.NewPromptRetrier[*metadata.SciFiGenre]("Pick Sci-Fi Genre")
+	genre, err := retrier.Do(func() (*metadata.SciFiGenre, error) {
+		res, _, pErr := scifiGenrePrompt.Execute(ctx, scienceField)
+		if pErr != nil {
+			return nil, pErr
+		}
+		return res, nil
+	})
 
 	if err != nil {
 		return err
 	}
 
+	log.Printf("Selected Sci-Fi Genre: %s - %s\n", genre.Name, genre.Description)
 	currentMetadata.Meta.Genre.Name = genre.Name
 	currentMetadata.Meta.Genre.Description = genre.Description
 

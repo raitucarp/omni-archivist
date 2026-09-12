@@ -2,6 +2,7 @@ package pick
 
 import (
 	"context"
+	"log"
 	"strings"
 
 	"github.com/firebase/genkit/go/genkit"
@@ -34,10 +35,19 @@ func vocabsCompositionAction(ctx context.Context, cmd *cli.Command) (err error) 
 
 	vocabsPrompt := genkit.LookupDataPrompt[metadata.Meta, *VocabCounts](gk, "vocabs")
 
-	vocabs, _, err := vocabsPrompt.Execute(ctx, metadata.Meta{
-		ScienceField: currentMetadata.Meta.ScienceField,
-		Genre:        currentMetadata.Meta.Genre,
-		Vocabs:       []metadata.Vocab{},
+	log.Printf("==> Generating vocabulary composition for science field '%s' and genre '%s'...\n",
+		currentMetadata.Meta.ScienceField.Name, currentMetadata.Meta.Genre.Name)
+	retrier := utils.NewPromptRetrier[*VocabCounts]("Vocabs Composition")
+	vocabs, err := retrier.Do(func() (*VocabCounts, error) {
+		res, _, pErr := vocabsPrompt.Execute(ctx, metadata.Meta{
+			ScienceField: currentMetadata.Meta.ScienceField,
+			Genre:        currentMetadata.Meta.Genre,
+			Vocabs:       []metadata.Vocab{},
+		})
+		if pErr != nil {
+			return nil, pErr
+		}
+		return res, nil
 	})
 
 	if err != nil {

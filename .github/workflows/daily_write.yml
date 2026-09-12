@@ -45,20 +45,41 @@ jobs:
           go version
           go build -o omni-archivist .
 
-      - name: Run generation commands
-        run: |
-          ./omni-archivist check artifacts
-          ./omni-archivist pick science_field
-          ./omni-archivist pick scifi_genre
-          ./omni-archivist pick vocabs_composition
-          ./omni-archivist write synopsis
-          ./omni-archivist write setting
-          ./omni-archivist write characters
-          ./omni-archivist write structure
-          ./omni-archivist write scene_structures
-          ./omni-archivist write story
-          ./omni-archivist write rewrite
-          ./omni-archivist write cover
+      - name: Check artifacts
+        run: ./omni-archivist check artifacts
+
+      - name: Pick science field
+        run: ./omni-archivist pick science_field
+
+      - name: Pick scifi genre
+        run: ./omni-archivist pick scifi_genre
+
+      - name: Pick vocabs composition
+        run: ./omni-archivist pick vocabs_composition
+
+      - name: Write synopsis
+        run: ./omni-archivist write synopsis
+
+      - name: Write setting
+        run: ./omni-archivist write setting
+
+      - name: Write characters
+        run: ./omni-archivist write characters
+
+      - name: Write structure
+        run: ./omni-archivist write structure
+
+      - name: Write scene structures
+        run: ./omni-archivist write scene_structures
+
+      - name: Write story
+        run: ./omni-archivist write story
+
+      - name: Write rewrite
+        run: ./omni-archivist write rewrite
+
+      - name: Write cover
+        run: ./omni-archivist write cover
 
       - name: Commit generated artifacts
         run: |

@@ -8,9 +8,7 @@ import (
 	"os"
 	"path/filepath"
 	"strings"
-	"time"
 
-	"github.com/avast/retry-go/v5"
 	"github.com/firebase/genkit/go/genkit"
 	"github.com/goccy/go-yaml"
 	"github.com/raitucarp/omni-archivist/internal/metadata"
@@ -35,10 +33,8 @@ func writeSceneStructureAction(ctx context.Context, command *cli.Command) (err e
 	genkit.DefineSchemaFor[SceneSequels](gk)
 	sceneSequelStructurePrompt := genkit.LookupDataPrompt[metadata.Story, *SceneSequels](gk, "scene_structure")
 
-	retrier := retry.NewWithData[*SceneSequels](
-		retry.Attempts(10),
-		retry.Delay(1*time.Second),
-	)
+	log.Println("==> Designing scene and sequel structures (goal, conflict, disaster)...")
+	retrier := utils.NewPromptRetrier[*SceneSequels]("Write Scene Structures")
 
 	sceneSequelStructures, err := retrier.Do(func() (*SceneSequels, error) {
 		res, _, pErr := sceneSequelStructurePrompt.Execute(ctx, currentMetadata.Story)
@@ -51,6 +47,8 @@ func writeSceneStructureAction(ctx context.Context, command *cli.Command) (err e
 	if err != nil {
 		return err
 	}
+
+	log.Printf("Generated %d Scene & Sequel beats\n", len(*sceneSequelStructures))
 
 	currentMetadata.Story.SceneSequels = []metadata.SceneSequel{}
 	currentMetadata.Story.SceneSequels = *sceneSequelStructures
@@ -101,10 +99,7 @@ func writeStoryAction(ctx context.Context, command *cli.Command) (err error) {
 		return
 	}
 
-	retrier := retry.New(
-		retry.Attempts(25),
-		retry.Delay(500*time.Millisecond),
-	)
+	retrier := utils.NewVoidRetrier("Write Scene")
 
 	for sceneIndex, sceneSequel := range currentMetadata.Story.SceneSequels {
 		log.Println("---")

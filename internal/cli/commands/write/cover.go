@@ -4,17 +4,17 @@ import (
 	"context"
 	"encoding/base64"
 	"fmt"
+	"log"
 	"os"
 	"path/filepath"
 	"strings"
-	"time"
 
-	"github.com/avast/retry-go/v5"
 	"github.com/firebase/genkit/go/ai"
 	"github.com/firebase/genkit/go/genkit"
 	"github.com/raitucarp/omni-archivist/internal/metadata"
 	"github.com/raitucarp/omni-archivist/internal/utils"
 	"github.com/urfave/cli/v3"
+	"google.golang.org/genai"
 )
 
 type CoverPromptInput struct {
@@ -64,10 +64,8 @@ func writeCoverAction(ctx context.Context, command *cli.Command) (err error) {
 		Aesthetic: aesthetic,
 	}
 
-	retrier := retry.NewWithData[*CoverPromptOutput](
-		retry.Attempts(5),
-		retry.Delay(500*time.Millisecond),
-	)
+	log.Println("==> Synthesizing visual cover prompt from setting and aesthetic seeds...")
+	retrier := utils.NewPromptRetrier[*CoverPromptOutput]("Cover Prompt")
 
 	promptResult, err := retrier.Do(func() (*CoverPromptOutput, error) {
 		res, _, pErr := coverPromptTemplate.Execute(ctx, input)
@@ -82,21 +80,60 @@ func writeCoverAction(ctx context.Context, command *cli.Command) (err error) {
 
 	aesthetic.SubjectMatter = promptResult.SubjectMatter
 	aesthetic.Prompt = promptResult.Prompt
-	fmt.Printf("Generated Cover Prompt: %s\n", aesthetic.Prompt)
+	log.Printf("Generated Cover Prompt: %s\n", aesthetic.Prompt)
 
-	// 3. Generate cover image using Imagen 3 model via Genkit
+	// 3. Generate cover image using Gemini Flash Image / Imagen 3 / Imagen Fast via Genkit
 	imageModel := os.Getenv("IMAGEN_MODEL")
 	if imageModel == "" {
-		imageModel = "googleai/imagen-3.0-generate-002"
+		imageModel = "googleai/gemini-3.1-flash-image"
 	}
 
-	fmt.Printf("Generating cover image using model: %s...\n", imageModel)
-	resp, err := genkit.Generate(ctx, gk,
-		ai.WithModelName(imageModel),
-		ai.WithPrompt(aesthetic.Prompt),
-	)
-	if err != nil {
-		return fmt.Errorf("failed to generate cover image with %s: %w", imageModel, err)
+	modelCandidates := []string{
+		imageModel,
+		"googleai/gemini-2.5-flash-image",
+		"googleai/imagen-3.0-generate-002",
+		"googleai/imagen-3.0-fast-generate-001",
+	}
+
+	var uniqueCandidates []string
+	seen := make(map[string]bool)
+	for _, m := range modelCandidates {
+		if !seen[m] {
+			seen[m] = true
+			uniqueCandidates = append(uniqueCandidates, m)
+		}
+	}
+
+	var resp *ai.ModelResponse
+	var genErr error
+
+	for _, m := range uniqueCandidates {
+		log.Printf("==> Generating cover illustration using model: %s...\n", m)
+		imagenRetrier := utils.NewPromptRetrier[*ai.ModelResponse]("Image Generation (" + m + ")")
+		resp, genErr = imagenRetrier.Do(func() (*ai.ModelResponse, error) {
+			opts := []ai.GenerateOption{
+				ai.WithModelName(m),
+				ai.WithPrompt(aesthetic.Prompt),
+			}
+			if strings.Contains(m, "image") && !strings.Contains(m, "imagen") {
+				opts = append(opts, ai.WithConfig(genai.GenerateContentConfig{
+					ResponseModalities: []string{"IMAGE", "TEXT"},
+				}))
+			}
+			r, gErr := genkit.Generate(ctx, gk, opts...)
+			if gErr != nil {
+				return nil, gErr
+			}
+			return r, nil
+		})
+		if genErr == nil && resp != nil {
+			break
+		}
+		log.Printf("⚠️ Image model %s failed (%v). Attempting fallback if available...\n", m, genErr)
+	}
+
+	if genErr != nil || resp == nil {
+		return fmt.Errorf("failed to generate cover image across candidate models: %w", genErr)
 	}
 
 	// 4. Extract image bytes from response
