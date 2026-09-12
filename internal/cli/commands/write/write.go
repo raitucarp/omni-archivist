@@ -10,11 +10,13 @@ type WriteCommandKind string
 
 const (
 	WriteSynopsisCommand        WriteCommandKind = "synopsis"
+	WriteSettingCommand         WriteCommandKind = "setting"
 	WriteCharactersCommand      WriteCommandKind = "characters"
 	WriteSceneStructuresCommand WriteCommandKind = "scene_structures"
 	WriteStructureCommand       WriteCommandKind = "structure"
 	WriteStoryCommand           WriteCommandKind = "story"
 	WriteRewriteStoryCommand    WriteCommandKind = "rewrite"
+	WriteCoverCommand           WriteCommandKind = "cover"
 )
 
 func (wk WriteCommandKind) String() string {
@@ -36,6 +38,12 @@ func NewWriteCommand(ctx context.Context) *WriteCommand {
 		Name:    WriteSynopsisCommand.String(),
 		Aliases: []string{"syn"},
 		Action:  writeSynopsisAction,
+	}
+
+	writeSettingCommand := &cli.Command{
+		Name:    WriteSettingCommand.String(),
+		Aliases: []string{"set"},
+		Action:  writeSettingAction,
 	}
 
 	writeCharactersCommand := &cli.Command{
@@ -68,6 +76,12 @@ func NewWriteCommand(ctx context.Context) *WriteCommand {
 		Action:  rewriteStoryAction,
 	}
 
+	writeCoverCommand := &cli.Command{
+		Name:    WriteCoverCommand.String(),
+		Aliases: []string{"cov"},
+		Action:  writeCoverAction,
+	}
+
 	writeCommand := &WriteCommand{
 		context: &ctx,
 		Command: &cli.Command{
@@ -75,11 +89,13 @@ func NewWriteCommand(ctx context.Context) *WriteCommand {
 			Aliases: []string{"w"},
 			Commands: []*cli.Command{
 				writeSynopsisCommand,
+				writeSettingCommand,
 				writeCharactersCommand,
 				writeStructureCommand,
 				writeSceneStructureCommand,
 				writeStoryCommand,
 				rewriteStoryCommand,
+				writeCoverCommand,
 			},
 		},
 	}

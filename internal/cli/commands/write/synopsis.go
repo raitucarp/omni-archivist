@@ -12,13 +12,15 @@ import (
 )
 
 type SynopsisResult struct {
-	Synopsis    string `yaml:"synopsis" json:"synopsis" jsonschema:"description=A brief overview of the story's plot, characters, and setting, 4 to 6 paragraphs"`
-	Logline     string `yaml:"logline" json:"logline" jsonschema:"description=A one-sentence summary of the story's main plot"`
-	Blurb       string `yaml:"blurb" json:"blurb" jsonschema:"description=A short summary or teaser of the story"`
-	Title       string `yaml:"title" json:"title" jsonschema:"description=Title of story"`
-	Subtitle    string `yaml:"subtitle" json:"subtitle" jsonschema:"description=Subtitle of title of story"`
-	POV         string `yaml:"pov" json:"pov" jsonschema:"enum=first_person,enum=third_person_limited,enum=third_person_omniscient,description=Story point of view determines the narrator's perspective, influencing reader intimacy and information access."`
-	ImagePrompt string `yaml:"image_prompt" json:"image_prompt" jsonschema:"description=Prompt for generating a visual, an image that represents the story."`
+	Synopsis    string             `yaml:"synopsis" json:"synopsis" jsonschema:"description=A brief overview of the story's plot, characters, and setting, 4 to 6 paragraphs"`
+	Logline     string             `yaml:"logline" json:"logline" jsonschema:"description=A one-sentence summary of the story's main plot"`
+	Blurb       string             `yaml:"blurb" json:"blurb" jsonschema:"description=A short summary or teaser of the story"`
+	Title       string             `yaml:"title" json:"title" jsonschema:"description=Title of story"`
+	Subtitle    string             `yaml:"subtitle" json:"subtitle" jsonschema:"description=Subtitle of title of story"`
+	Theme       metadata.Theme     `yaml:"theme,omitempty" json:"theme,omitempty" jsonschema:"description=Core theme, premise, and motifs"`
+	Discourse   metadata.Discourse `yaml:"discourse,omitempty" json:"discourse,omitempty" jsonschema:"description=Discourse narration, focalisation, and style"`
+	POV         string             `yaml:"pov" json:"pov" jsonschema:"enum=first_person,enum=third_person_limited,enum=third_person_omniscient,description=Story point of view determines the narrator's perspective, influencing reader intimacy and information access."`
+	ImagePrompt string             `yaml:"image_prompt" json:"image_prompt" jsonschema:"description=Prompt for generating a visual, an image that represents the story."`
 }
 
 func writeSynopsisAction(ctx context.Context, command *cli.Command) (err error) {
@@ -33,6 +35,10 @@ func writeSynopsisAction(ctx context.Context, command *cli.Command) (err error) 
 	}
 
 	genkit.DefineSchemaFor[metadata.Meta](gk)
+	genkit.DefineSchemaFor[metadata.Theme](gk)
+	genkit.DefineSchemaFor[metadata.Narration](gk)
+	genkit.DefineSchemaFor[metadata.LanguageStyle](gk)
+	genkit.DefineSchemaFor[metadata.Discourse](gk)
 	genkit.DefineSchemaFor[SynopsisResult](gk)
 	synopsisPrompt := genkit.LookupDataPrompt[metadata.Meta, *SynopsisResult](gk, "synopsis")
 
@@ -59,6 +65,8 @@ func writeSynopsisAction(ctx context.Context, command *cli.Command) (err error) 
 	currentMetadata.Story.Logline = synopsisResult.Logline
 	currentMetadata.Story.Title = synopsisResult.Title
 	currentMetadata.Story.Subtitle = synopsisResult.Subtitle
+	currentMetadata.Story.Theme = synopsisResult.Theme
+	currentMetadata.Story.Discourse = synopsisResult.Discourse
 	currentMetadata.Story.POV = synopsisResult.POV
 	currentMetadata.Story.ImagePrompt = synopsisResult.ImagePrompt
 
