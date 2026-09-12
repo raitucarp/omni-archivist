@@ -1,0 +1,87 @@
+name: Weekly Stories Compilation
+
+on:
+  schedule:
+    - cron: '0 0 * * 0' # Weekly on Sunday at 00:00 UTC
+  workflow_dispatch:
+    inputs:
+      force:
+        description: 'Run weekly compilation manually'
+        required: false
+        type: boolean
+        default: true
+
+jobs:
+  compile-and-release:
+    if: github.event_name == 'workflow_dispatch' || vars.ENABLE_WEEKLY_CRON == 'true'
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+    env:
+      GEMINI_API_KEY: ${{ secrets.GEMINI_API_KEY }}
+      GEMINI_MODEL: ${{ vars.GEMINI_MODEL }}
+      ARTIFACTS_DIR: ${{ vars.ARTIFACTS_DIR }}
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - name: Set up Go
+        uses: actions/setup-go@v5
+        with:
+          go-version: '1.26'
+
+      - name: Compute Human Era release metadata
+        run: |
+          set -euo pipefail
+          year=$(date -u +%Y)
+          he_year=$((year + 10000))
+          # ISO week number without leading zeros for display, padded for filename
+          week=$(date -u +%-V)
+          padded_week=$(date -u +%02V)
+
+          title="Omni Archivist #$week $he_year"
+          tag="v$he_year.w$week"
+          epub_file="omni-archivist-$he_year-w$padded_week.epub"
+
+          echo "RELEASE_TITLE=$title" >> $GITHUB_ENV
+          echo "RELEASE_TAG=$tag" >> $GITHUB_ENV
+          echo "EPUB_FILE=$epub_file" >> $GITHUB_ENV
+
+          echo "Title: $title"
+          echo "Tag: $tag"
+          echo "EPUB file: $epub_file"
+
+      - name: Build omni-archivist
+        run: |
+          go version
+          go build -o omni-archivist .
+
+      - name: Compile weekly EPUB
+        run: |
+          ./omni-archivist compile epub --dir artifacts --output "${{ env.EPUB_FILE }}"
+
+      - name: Create GitHub Release
+        id: create_release
+        uses: actions/create-release@v1
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        with:
+          tag_name: ${{ env.RELEASE_TAG }}
+          release_name: ${{ env.RELEASE_TITLE }}
+          body: "Weekly omnibus of science fiction short stories curated by Omni Archivist in the year of the Human Era."
+          draft: false
+          prerelease: false
+
+      - name: Upload EPUB asset
+        env:
+          UPLOAD_URL: ${{ steps.create_release.outputs.upload_url }}
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: |
+          set -euo pipefail
+          base_url="${UPLOAD_URL%\{*}"
+          url="$base_url?name=${{ env.EPUB_FILE }}"
+          echo "Uploading ${{ env.EPUB_FILE }} to $url"
+          curl -s -X POST -H "Authorization: token $GITHUB_TOKEN" -H "Content-Type: application/epub+zip" --data-binary @"${{ env.EPUB_FILE }}" "$url"

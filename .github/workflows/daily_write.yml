@@ -1,12 +1,19 @@
 name: Daily Generate and Release
 
 on:
-  # schedule:
-  #   - cron: '0 0 * * *' # daily at 00:00 UTC
-  workflow_dispatch: {}
+  schedule:
+    - cron: '0 0 * * *' # daily at 00:00 UTC
+  workflow_dispatch:
+    inputs:
+      force:
+        description: 'Run workflow manually'
+        required: false
+        type: boolean
+        default: true
 
 jobs:
   generate-and-release:
+    if: github.event_name == 'workflow_dispatch' || vars.ENABLE_DAILY_CRON == 'true'
     runs-on: ubuntu-latest
     permissions:
       contents: write
@@ -45,11 +52,13 @@ jobs:
           ./omni-archivist pick scifi_genre
           ./omni-archivist pick vocabs_composition
           ./omni-archivist write synopsis
+          ./omni-archivist write setting
           ./omni-archivist write characters
           ./omni-archivist write structure
           ./omni-archivist write scene_structures
           ./omni-archivist write story
           ./omni-archivist write rewrite
+          ./omni-archivist write cover
 
       - name: Commit generated artifacts
         run: |
@@ -129,7 +138,7 @@ jobs:
           set -euo pipefail
           if [ -z "$UPLOAD_URL" ]; then echo "No upload URL"; exit 1; fi
           base_url="${UPLOAD_URL%\{*}"
-          for f in metadata.yml story.md draft.md; do
+          for f in metadata.yml story.md draft.md cover.png; do
             path="$RELEASE_DIR/$f"
             if [ -f "$path" ]; then
               name=$(basename "$f")
