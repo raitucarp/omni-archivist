@@ -4,6 +4,7 @@ import (
 	"context"
 	"errors"
 	"testing"
+	"time"
 
 	"github.com/firebase/genkit/go/genkit"
 	"github.com/firebase/genkit/go/plugins/googlegenai"
@@ -48,3 +49,27 @@ func TestPromptRetrier(t *testing.T) {
 		t.Fatalf("expected 2 attempts, got %d", attempts)
 	}
 }
+
+func TestSmartRetryDelay(t *testing.T) {
+	// 1. Check regex parsing with retryDelay:27s
+	err429 := errors.New("Error 429, Details: [map[retryDelay:27s]]")
+	delay := utils.SmartRetryDelay(0, err429, nil)
+	if delay < 30 {
+		t.Fatalf("expected delay >= 30s for 27s retryDelay, got %v", delay)
+	}
+
+	// 2. Check "Please retry in 27.5s"
+	errRetryIn := errors.New("Please retry in 27.5s., Status: RESOURCE_EXHAUSTED")
+	delay2 := utils.SmartRetryDelay(0, errRetryIn, nil)
+	if delay2 < 30 {
+		t.Fatalf("expected delay >= 30s, got %v", delay2)
+	}
+
+	// 3. Check generic 503
+	err503 := errors.New("Error 503, Message: This model is currently experiencing high demand.")
+	delay3 := utils.SmartRetryDelay(1, err503, nil)
+	if delay3 != 20*time.Second {
+		t.Fatalf("expected 20s for attempt 2 on 503, got %v", delay3)
+	}
+}
+

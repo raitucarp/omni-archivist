@@ -52,34 +52,54 @@ jobs:
         run: ./omni-archivist pick science_field
 
       - name: Pick scifi genre
-        run: ./omni-archivist pick scifi_genre
+        run: |
+          sleep 12
+          ./omni-archivist pick scifi_genre
 
       - name: Pick vocabs composition
-        run: ./omni-archivist pick vocabs_composition
+        run: |
+          sleep 12
+          ./omni-archivist pick vocabs_composition
 
       - name: Write synopsis
-        run: ./omni-archivist write synopsis
+        run: |
+          sleep 12
+          ./omni-archivist write synopsis
 
       - name: Write setting
-        run: ./omni-archivist write setting
+        run: |
+          sleep 12
+          ./omni-archivist write setting
 
       - name: Write characters
-        run: ./omni-archivist write characters
+        run: |
+          sleep 12
+          ./omni-archivist write characters
 
       - name: Write structure
-        run: ./omni-archivist write structure
+        run: |
+          sleep 12
+          ./omni-archivist write structure
 
       - name: Write scene structures
-        run: ./omni-archivist write scene_structures
+        run: |
+          sleep 12
+          ./omni-archivist write scene_structures
 
       - name: Write story
-        run: ./omni-archivist write story
+        run: |
+          sleep 12
+          ./omni-archivist write story
 
       - name: Write rewrite
-        run: ./omni-archivist write rewrite
+        run: |
+          sleep 12
+          ./omni-archivist write rewrite
 
       - name: Write cover
-        run: ./omni-archivist write cover
+        run: |
+          sleep 12
+          ./omni-archivist write cover
 
       - name: Commit generated artifacts
         run: |
