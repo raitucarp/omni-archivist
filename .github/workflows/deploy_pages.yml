@@ -5,7 +5,7 @@ on:
     branches:
       - main
   workflow_run:
-    workflows: ["Daily Generate and Release", "Weekly Stories Compilation"]
+    workflows: ["Generate Story", "Weekly Stories Compilation"]
     types:
       - completed
   workflow_dispatch:

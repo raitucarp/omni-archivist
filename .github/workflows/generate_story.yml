@@ -1,8 +1,10 @@
-name: Daily Generate and Release
+name: Generate Story
 
 on:
   schedule:
-    - cron: '0 0 * * *' # daily at 00:00 UTC
+    # Run every 60 hours (alternating 00:00 and 12:00 UTC every 2.5 days)
+    - cron: '0 0 1,6,11,16,21,26,31 * *'
+    - cron: '0 12 3,8,13,18,23,28 * *'
   workflow_dispatch:
     inputs:
       force:
@@ -13,7 +15,7 @@ on:
 
 jobs:
   generate-and-release:
-    if: github.event_name == 'workflow_dispatch' || vars.ENABLE_DAILY_CRON == 'true'
+    if: (github.event_name == 'workflow_dispatch' || github.event_name == 'schedule') && vars.DISABLE_STORY_CRON != 'true'
     runs-on: ubuntu-latest
     permissions:
       contents: write
@@ -111,7 +113,7 @@ jobs:
           if git diff --staged --quiet; then
             echo "No changes to commit"
           else
-            git commit -m "chore: update artifacts from daily workflow $GITHUB_RUN_ID on $(date -u +%F)"
+            git commit -m "chore: update artifacts from workflow $GITHUB_RUN_ID on $(date -u +%F)"
             # Push to the same ref the workflow was triggered on
             ref="${GITHUB_REF#refs/heads/}"
             git push origin HEAD:${ref}
@@ -124,7 +126,7 @@ jobs:
           echo "Creating tag: $tag"
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-          git tag -a "$tag" -m "Daily release $tag" || echo "Tag already exists, skipping"
+          git tag -a "$tag" -m "Story release $tag" || echo "Tag already exists, skipping"
           git push origin "$tag" || echo "Failed to push tag"
 
       - name: Prepare release metadata (using yq)
@@ -144,7 +146,7 @@ jobs:
 
           title=$(yq e '.story.title // .story.subtitle // ""' "$latest")
           if [ -z "$title" ]; then
-            title="Daily Release $(date -u +%F)"
+            title="Story Release $(date -u +%F)"
           fi
           synopsis=$(yq e '.story.synopsis // .story.logline // .story.blurb // ""' "$latest")
           dir=$(dirname "$latest")
