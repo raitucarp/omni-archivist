@@ -309,15 +309,18 @@ func estimateReadingTime(text string) string {
 }
 
 func computeVolumeGradient(stories []StoryItem) string {
+	// Ocean Sunset Palette & Variants
+	// Ink Black: #001219, Dark Teal: #005f73, Dark Cyan: #0a9396, Pearl Aqua: #94d2bd
+	// Wheat: #e9d8a6, Golden Orange: #ee9b00, Burnt Caramel: #ca6702, Rusty Spice: #bb3e03
 	type colorStop struct {
 		c1, c2, c3, c4 string
 	}
 	palettes := []colorStop{
-		{"#0b0f19", "#1e1b4b", "#4338ca", "#06b6d4"}, // Deep Void to Bioluminescent Cyan
-		{"#030712", "#311042", "#701a75", "#f43f5e"}, // Event Horizon Magenta & Rose
-		{"#022c22", "#064e3b", "#0d9488", "#38bdf8"}, // Abyssal Oceanic Emerald
-		{"#18181b", "#27272a", "#3f3f46", "#e11d48"}, // Monochrome Cyberpunk with Crimson
-		{"#1c1917", "#431407", "#9a3412", "#f59e0b"}, // Stellar Amber & Solar Flare
+		{"#001219", "#005f73", "#0a9396", "#ee9b00"}, // Ocean Depths to Golden Sunset
+		{"#001219", "#9b2226", "#bb3e03", "#ee9b00"}, // Midnight Red to Fiery Sunset
+		{"#00222e", "#0a9396", "#94d2bd", "#e9d8a6"}, // Oceanic Shimmer to Sunlit Wheat
+		{"#001219", "#ae2012", "#ca6702", "#94d2bd"}, // Ancient Iron & Caramel Seafoam
+		{"#001219", "#005f73", "#ee9b00", "#e9d8a6"}, // Deep Ink to Sunlit Gold
 	}
 
 	hash := 0
@@ -348,7 +351,7 @@ const baseHeadTemplate = `
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@500;700;900&family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400;1,600&family=Inter:wght@300;400;500;600;700&family=Literata:ital,opsz,wght@0,7..72,400;0,7..72,500;0,7..72,600;0,7..72,700;1,7..72,400;1,7..72,500;1,7..72,600&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
   
-  <link rel="stylesheet" href="{{ .AssetPrefix }}assets/css/style.css?v=12026.2">
+  <link rel="stylesheet" href="{{ .AssetPrefix }}assets/css/style.css?v=12026.3">
   <script src="{{ .AssetPrefix }}assets/js/theme.js"></script>
 </head>
 <body>
@@ -820,49 +823,57 @@ const siteCSS = `
 }
 
 [data-theme="dark"] {
-  --bg-page: #060913;
-  --bg-surface: #0c1224;
-  --bg-surface-elevated: #151d38;
-  --bg-card: rgba(15, 23, 42, 0.75);
+  --bg-page: #001219; /* Ink Black */
+  --bg-surface: #001e28; /* Midnight Ocean Navy */
+  --bg-surface-elevated: #002d3c; /* Undercurrent Teal */
+  --bg-card: rgba(0, 24, 34, 0.84); /* Frosted Ink & Teal */
   
-  --border-subtle: rgba(255, 255, 255, 0.08);
-  --border-strong: rgba(255, 255, 255, 0.16);
+  --border-subtle: rgba(148, 210, 189, 0.16); /* Pearl Aqua subtle boundary */
+  --border-strong: rgba(238, 155, 0, 0.32); /* Golden Orange accent glow */
   
-  --text-main: #f1f5f9;
-  --text-muted: #94a3b8;
-  --text-faint: #64748b;
+  --text-main: #f5eedf; /* Sunlit wheat off-white */
+  --text-muted: #94d2bd; /* Pearl Aqua */
+  --text-faint: #528085; /* Oceanic Muted Teal */
   
-  --accent-cyan: #38bdf8;
-  --accent-purple: #c084fc;
-  --accent-amber: #fbbf24;
-  --accent-rose: #f43f5e;
+  --accent-gold: #ee9b00; /* Golden Orange */
+  --accent-cyan: #0a9396; /* Dark Cyan */
+  --accent-aqua: #94d2bd; /* Pearl Aqua */
+  --accent-wheat: #e9d8a6; /* Wheat */
+  --accent-caramel: #ca6702; /* Burnt Caramel */
+  --accent-spice: #bb3e03; /* Rusty Spice */
+  --accent-iron: #ae2012; /* Oxidized Iron */
+  --accent-brownred: #9b2226; /* Brown Red */
   
-  --ambient-blur: radial-gradient(circle at 50% 0%, rgba(56, 189, 248, 0.12), rgba(192, 132, 252, 0.08) 40%, transparent 70%);
-  --card-shadow: 0 16px 36px -8px rgba(0, 0, 0, 0.6);
-  --hero-border: rgba(56, 189, 248, 0.2);
+  --ambient-blur: radial-gradient(circle at 50% 0%, rgba(10, 147, 150, 0.25), rgba(238, 155, 0, 0.15) 35%, rgba(155, 34, 38, 0.1) 65%, transparent 80%);
+  --card-shadow: 0 16px 36px -8px rgba(0, 18, 25, 0.85);
+  --hero-border: rgba(238, 155, 0, 0.38);
 }
 
 [data-theme="light"] {
-  --bg-page: #f8fafc;
+  --bg-page: #fbf9f4; /* Warm sunlit sands */
   --bg-surface: #ffffff;
-  --bg-surface-elevated: #f1f5f9;
-  --bg-card: rgba(255, 255, 255, 0.85);
+  --bg-surface-elevated: #f4eee2; /* Wheat tint */
+  --bg-card: rgba(255, 255, 255, 0.9);
   
-  --border-subtle: rgba(15, 23, 42, 0.08);
-  --border-strong: rgba(15, 23, 42, 0.15);
+  --border-subtle: rgba(0, 95, 115, 0.14); /* Dark Teal hairline */
+  --border-strong: rgba(202, 103, 2, 0.32); /* Burnt Caramel border */
   
-  --text-main: #0f172a;
-  --text-muted: #475569;
-  --text-faint: #64748b;
+  --text-main: #001219; /* Ink Black */
+  --text-muted: #005f73; /* Dark Teal */
+  --text-faint: #487e86; /* Oceanic Teal */
   
-  --accent-cyan: #0284c7;
-  --accent-purple: #9333ea;
-  --accent-amber: #d97706;
-  --accent-rose: #e11d48;
+  --accent-gold: #ca6702; /* Burnt Caramel */
+  --accent-cyan: #0a9396; /* Dark Cyan */
+  --accent-aqua: #005f73; /* Dark Teal */
+  --accent-wheat: #e9d8a6; /* Wheat */
+  --accent-caramel: #ca6702;
+  --accent-spice: #bb3e03; /* Rusty Spice */
+  --accent-iron: #ae2012;
+  --accent-brownred: #9b2226;
   
-  --ambient-blur: radial-gradient(circle at 50% 0%, rgba(2, 132, 199, 0.08), rgba(147, 51, 234, 0.05) 40%, transparent 70%);
-  --card-shadow: 0 16px 32px -8px rgba(15, 23, 42, 0.08);
-  --hero-border: rgba(2, 132, 199, 0.25);
+  --ambient-blur: radial-gradient(circle at 50% 0%, rgba(233, 216, 166, 0.4), rgba(238, 155, 0, 0.12) 35%, rgba(10, 147, 150, 0.08) 65%, transparent 80%);
+  --card-shadow: 0 16px 32px -8px rgba(0, 18, 25, 0.08);
+  --hero-border: rgba(202, 103, 2, 0.35);
 }
 
 *, *::before, *::after {
@@ -926,18 +937,19 @@ body {
 }
 
 .brand-symbol {
-  color: var(--accent-cyan);
-  font-size: 1.25rem;
+  color: var(--accent-gold);
+  font-size: 1.35rem;
+  filter: drop-shadow(0 0 8px rgba(238, 155, 0, 0.5));
 }
 
 .badge-he {
-  font-size: 0.72rem;
+  font-size: 0.75rem;
   font-family: var(--font-ui);
-  font-weight: 600;
-  background: rgba(56, 189, 248, 0.12);
-  color: var(--accent-cyan);
-  border: 1px solid rgba(56, 189, 248, 0.25);
-  padding: 0.15rem 0.5rem;
+  font-weight: 700;
+  background: rgba(10, 147, 150, 0.18);
+  color: var(--accent-aqua);
+  border: 1px solid rgba(148, 210, 189, 0.35);
+  padding: 0.2rem 0.6rem;
   border-radius: var(--radius-full);
 }
 
@@ -975,7 +987,7 @@ body {
 
 .theme-btn:hover {
   transform: translateY(-1px);
-  border-color: var(--accent-cyan);
+  border-color: var(--accent-gold);
 }
 
 [data-theme="dark"] .light-icon { display: inline-block; }
@@ -1009,33 +1021,37 @@ body {
 .hero-section::after {
   content: '';
   position: absolute;
-  top: 0;
-  right: 0;
-  width: 300px;
-  height: 300px;
-  background: radial-gradient(circle, rgba(192, 132, 252, 0.15), transparent 70%);
+  top: -60px;
+  right: -60px;
+  width: 380px;
+  height: 380px;
+  background: radial-gradient(circle, rgba(238, 155, 0, 0.18), rgba(10, 147, 150, 0.12) 50%, transparent 75%);
   pointer-events: none;
 }
 
 .hero-badge {
   display: inline-block;
   font-family: var(--font-display);
-  font-size: 0.8rem;
-  letter-spacing: 0.15em;
+  font-size: 0.82rem;
+  letter-spacing: 0.16em;
   font-weight: 700;
-  color: var(--accent-purple);
+  color: var(--accent-gold);
   margin-bottom: 1rem;
   text-transform: uppercase;
+  background: rgba(238, 155, 0, 0.12);
+  border: 1px solid rgba(238, 155, 0, 0.28);
+  padding: 0.25rem 0.75rem;
+  border-radius: var(--radius-full);
 }
 
 .hero-title {
   font-family: var(--font-brand);
-  font-size: clamp(2.4rem, 5vw, 3.8rem);
+  font-size: clamp(2.6rem, 5.5vw, 4.2rem);
   font-weight: 900;
   letter-spacing: 0.04em;
   line-height: 1.1;
   margin-bottom: 1.25rem;
-  background: linear-gradient(135deg, var(--text-main) 30%, var(--accent-cyan) 100%);
+  background: linear-gradient(135deg, var(--text-main) 15%, var(--accent-gold) 60%, var(--accent-aqua) 100%);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 }
@@ -1045,10 +1061,14 @@ body {
   font-size: 1.45rem;
   font-weight: 500;
   font-style: italic;
-  color: var(--accent-cyan);
+  color: var(--accent-wheat);
   max-width: 860px;
   margin-bottom: 2rem;
   line-height: 1.6;
+}
+
+[data-theme="light"] .hero-lead {
+  color: var(--accent-caramel);
 }
 
 .hero-essay {
@@ -1185,8 +1205,8 @@ body {
 
 .story-thumb-placeholder {
   font-size: 2.5rem;
-  color: var(--accent-cyan);
-  background: linear-gradient(135deg, rgba(56, 189, 248, 0.1), rgba(192, 132, 252, 0.1));
+  color: var(--accent-gold);
+  background: linear-gradient(135deg, rgba(0, 95, 115, 0.35), rgba(238, 155, 0, 0.2));
 }
 
 .story-card-body {
@@ -1210,15 +1230,15 @@ body {
 }
 
 .tag-genre {
-  background: rgba(192, 132, 252, 0.15);
-  color: var(--accent-purple);
-  border: 1px solid rgba(192, 132, 252, 0.3);
+  background: rgba(238, 155, 0, 0.16);
+  color: var(--accent-gold);
+  border: 1px solid rgba(238, 155, 0, 0.35);
 }
 
 .tag-science {
-  background: rgba(56, 189, 248, 0.15);
-  color: var(--accent-cyan);
-  border: 1px solid rgba(56, 189, 248, 0.3);
+  background: rgba(10, 147, 150, 0.18);
+  color: var(--accent-aqua);
+  border: 1px solid rgba(10, 147, 150, 0.38);
 }
 
 .tag-date {
@@ -1241,7 +1261,7 @@ body {
 }
 
 .story-title a:hover {
-  color: var(--accent-cyan);
+  color: var(--accent-gold);
 }
 
 .story-logline {
@@ -1257,7 +1277,7 @@ body {
 }
 
 .read-link {
-  color: var(--accent-cyan);
+  color: var(--accent-gold);
   text-decoration: none;
   font-weight: 600;
   font-size: 0.92rem;
@@ -1268,6 +1288,7 @@ body {
 }
 
 .read-link:hover {
+  color: var(--accent-aqua);
   gap: 0.6rem;
 }
 
@@ -1283,8 +1304,9 @@ body {
 }
 
 .empty-icon {
-  font-size: 3rem;
-  color: var(--accent-cyan);
+  font-size: 3.2rem;
+  color: var(--accent-gold);
+  filter: drop-shadow(0 0 14px rgba(238, 155, 0, 0.5));
   margin-bottom: 1rem;
 }
 
@@ -1305,20 +1327,21 @@ body {
 .empty-status {
   display: inline-flex;
   align-items: center;
-  gap: 0.5rem;
+  gap: 0.6rem;
   font-size: 0.88rem;
-  color: var(--accent-cyan);
-  background: rgba(56, 189, 248, 0.1);
+  color: var(--accent-aqua);
+  background: rgba(0, 95, 115, 0.25);
+  border: 1px solid rgba(148, 210, 189, 0.3);
   padding: 0.35rem 0.9rem;
   border-radius: var(--radius-full);
 }
 
 .pulse-dot {
-  width: 8px;
-  height: 8px;
+  width: 9px;
+  height: 9px;
   border-radius: 50%;
-  background: var(--accent-cyan);
-  box-shadow: 0 0 10px var(--accent-cyan);
+  background: var(--accent-gold);
+  box-shadow: 0 0 12px var(--accent-gold);
   animation: pulse 2s infinite;
 }
 
@@ -1387,7 +1410,7 @@ body {
   font-family: var(--font-prose);
   font-style: italic;
   font-size: 1.45rem;
-  color: var(--accent-cyan);
+  color: var(--accent-gold);
   margin-bottom: 1.5rem;
 }
 
@@ -1412,7 +1435,7 @@ body {
 
 .story-logline-box {
   background: var(--bg-surface-elevated);
-  border-left: 4px solid var(--accent-cyan);
+  border-left: 4px solid var(--accent-gold);
   padding: 1.75rem 2rem;
   border-radius: 0 var(--radius-md) var(--radius-md) 0;
   margin-bottom: 3rem;
@@ -1453,7 +1476,7 @@ body {
   float: left;
   line-height: 0.8;
   margin: 0.15rem 0.8rem 0 0;
-  color: var(--accent-cyan);
+  color: var(--accent-gold);
 }
 
 .story-prose-body h1,
@@ -1473,7 +1496,7 @@ body {
 
 .story-prose-body hr::after {
   content: "◈ ◈ ◈";
-  color: var(--accent-cyan);
+  color: var(--accent-gold);
   letter-spacing: 0.5em;
   font-size: 0.9rem;
 }
@@ -1489,7 +1512,7 @@ body {
 .dossier-title {
   font-family: var(--font-display);
   font-size: 1.05rem;
-  color: var(--accent-purple);
+  color: var(--accent-gold);
   margin-bottom: 1rem;
 }
 
@@ -1521,7 +1544,8 @@ body {
 }
 
 .btn-return:hover {
-  border-color: var(--accent-cyan);
+  border-color: var(--accent-gold);
+  color: var(--accent-gold);
   transform: translateY(-2px);
 }
 
