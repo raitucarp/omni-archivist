@@ -1,40 +1,14 @@
 # Omni Archivist
 
-Archivist of the essence of universe from Omni Being.
+> *An autonomous chronicle archiving speculative futures, cosmic anomalies, and computational consciousness across deep time.*
 
-## Pipeline
+Twelve thousand years into the Human Era (**12026 HE**), the Omni Archivist records daily dispatches from the frontiers of speculative fiction, synthesized through narratological semiotics and theoretical sciences.
 
-Daily generation sequence:
-```sh
-omni-archivist check artifacts
-omni-archivist pick science_field
-omni-archivist pick scifi_genre
-omni-archivist pick vocabs_composition
-omni-archivist write synopsis
-omni-archivist write setting
-omni-archivist write characters
-omni-archivist write structure
-omni-archivist write scene_structures
-omni-archivist write story
-omni-archivist write rewrite
-omni-archivist write cover
-```
+### 🌌 Read the Anthology
 
-Weekly compilation:
-```sh
-# Compile weekly EPUB anthology (Human Era 12026 title + curatorial preface)
-omni-archivist compile epub
+Immerse yourself in the weekly volumes, loglines, and full short stories online:
 
-# Compile static website for GitHub Pages (with custom domain CNAME)
-omni-archivist compile pages --dir artifacts --output public --cname omni-archivist.raitucarp.name
-```
+👉 **[omni-archivist.raitucarp.name](https://omni-archivist.raitucarp.name)**
 
-## GitHub Pages Anthology
-
-The anthology is published to [omni-archivist.raitucarp.name](https://omni-archivist.raitucarp.name) with:
-- **Weekly Volumes**: Grouped by Human Era week (`Omni Archivist #X 12026`) featuring story titles, loglines, and tags.
-- **Single Story Reader**: Immersive reading experience with large, comfortable typography, drop-caps, aesthetic cover display, and narratological dossiers.
-- **Visuals & Typography**: Cosmic ambient gradients dynamically blended from cover palettes, custom Google Fonts (`Space Grotesk`, `Newsreader`, `Inter`).
-- **Dark & Light Modes**: System-aware with manual toggle and localStorage persistence.
-- **Automated Deployment**: Synchronized via `.github/workflows/deploy_pages.yml` whenever new artifacts are generated.
-
+---
+*Transmissions are updated daily and curated into weekly volumes.*
