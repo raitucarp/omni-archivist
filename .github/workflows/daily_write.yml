@@ -30,7 +30,7 @@ jobs:
           persist-credentials: true
 
       - name: Set up Go
-        uses: actions/setup-go@v4
+        uses: actions/setup-go@v5
         with:
           go-version: '1.26'
 
@@ -160,33 +160,20 @@ jobs:
 
           echo "RELEASE_DIR=$dir" >> $GITHUB_ENV
 
-      - name: Create GitHub Release
-        id: create_release
-        uses: actions/create-release@v1
-        with:
-          tag_name: ${{ env.RELEASE_TAG }}
-          release_name: ${{ env.RELEASE_TITLE }}
-          body: ${{ env.RELEASE_BODY }}
-          draft: false
-          prerelease: false
-
-      - name: Upload release assets
+      - name: Create GitHub Release and upload assets
         env:
-          UPLOAD_URL: ${{ steps.create_release.outputs.upload_url }}
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-          RELEASE_DIR: ${{ env.RELEASE_DIR }}
         run: |
           set -euo pipefail
-          if [ -z "$UPLOAD_URL" ]; then echo "No upload URL"; exit 1; fi
-          base_url="${UPLOAD_URL%\{*}"
+          files=()
           for f in metadata.yml story.md draft.md cover.png; do
-            path="$RELEASE_DIR/$f"
-            if [ -f "$path" ]; then
-              name=$(basename "$f")
-              url="$base_url?name=$name"
-              echo "Uploading $path to $url"
-              curl -s -X POST -H "Authorization: token $GITHUB_TOKEN" -H "Content-Type: application/octet-stream" --data-binary @"$path" "$url"
-            else
-              echo "Not found: $path"
+            p="$RELEASE_DIR/$f"
+            if [ -f "$p" ]; then
+              files+=("$p")
             fi
           done
+          gh release create "${{ env.RELEASE_TAG }}" \
+            --title "${{ env.RELEASE_TITLE }}" \
+            --notes "${{ env.RELEASE_BODY }}" \
+            --clobber \
+            "${files[@]}"
