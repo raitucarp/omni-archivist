@@ -1,0 +1,620 @@
+story:
+  title: The Anatomy of Unyielding Stone
+  subtitle: The Seismology of Planetary Rupture
+  blurb: "In an era where planetary crusts are sculpted and seismicity is forcibly subdued, humanity faces the ultimate tremor: the failure of tectonic engineering. As subduction zones shear and fault boundaries buckle, global systems must reckon with the violent resonance of an unyielding Earth."
+  logline: When artificial lithospheric stabilization triggers runaway crustal ruptures, human civilization must re-engineer planetary fault networks before subduction cascades swallow continental landmasses.
+  synopsis: "The advent of macro-lithospheric geoengineering transformed planetary seismology from passive monitoring into aggressive crustal regulation. Across fault networks running east southeast from ancestral cratons, continental stabilizers sought to pacify tectonic shear stresses before rupture events could liquefy urban foundations. In subterranean command hubs, monitoring arrays take stock of seismic tremors where deep basalt slabs struggle against the mantle mantle boundary. When early warning telemetry detects a runaway rupture velocity along deep-seated sutures, planetary authorities initiate an impossible action: inducing controlled micro-slip sequences through pressurized mantle-well conduits. Hydro-fracturing lattices, bolstered by bio-engineered matrices rich in lignin and synthetic hydroxy amino acid polymers, bind fractured bedrock plates before shear waves can elicit catastrophe. Automated geotechnical networks observe each crustal protrusion and xenolith displacement, verifying how subterranean anchors adapt under fluctuating air pressure and shear strain. Deep boreholes descend into abyssal vaults, bypassing regional boundaries held in severalty, while synthetic crustal plates comprise sintered peridotite blocks engineered to absorb shockwaves like a recoilless dampener."
+  theme:
+    central_premise: Human technological intervention in planetary-scale geodynamic forces inevitably generates complex systemic fragilities far exceeding anthropogenic control.
+    speculative_inquiry: Can planetary crust engineering eliminate catastrophic seismicity without destabilizing core mantle equilibrium and continental integrity?
+    motifs:
+    - Lithospheric boreholes
+    - Seismic waveform telemetry
+    - Subterranean hydraulic dampeners
+  setting:
+    macro: A heavily engineered post-natural terrestrial planet whose entire lithosphere is mechanically pinned, channeled, and braced by planetary-scale tectonic damping networks, now teetering on the verge of a planetary-scale runaway subduction cascade.
+    meso: The Craton Boundary Subterranean Anchor Complex, a multi-tiered seismic regulation fortress sunk six kilometers beneath an unstable continental suture zone, encompassing hyper-pressurized mantle-well arrays and subterranean hydro-fracturing corridors.
+    micro: The Primary Injection Pulpit, a vibration-isolated command spherical module suspended over an exposed, glowing xenolith shear face, flanked by high-velocity slurry manifolds, polymer injection valves, and vibrating telemetry monoliths.
+    topography: Cyclopean vertical shafts bored through basalt and sintered peridotite; interlocking lattices of bio-engineered shock-absorbing struts; tiered subterranean galleries overlooking abyssal trenches where fault blocks are chained by hydraulic anchor pins and polymer-sealed fissures.
+    atmosphere: Over-pressurized, hot air laden with pulverized basalt particulate, ozone, and the bitter tang of synthetic amino polymers; pervasive sub-audible infrasound vibrating bones; harsh emergency amber lighting cutting through rising geothermal vapor.
+    function: functional_causal
+    chronotope: "The Deep-Time Compression Chronotope: where eons-slow continental drift and geomorphic time violently collide with millisecond-scale emergency interventions inside hyper-dense subterranean depths, linking human tactical agency directly to planetary structural survival."
+  structure:
+    kind:
+    - M
+    - E
+    - I
+    - C
+    logic:
+    - Milieu opens with the descent into subterranean geotechnical vaults and closes with the return to baseline stability within the engineered lithosphere.
+    - Event opens when runaway rupture velocities threaten crustal collapse and closes when the synthetic peridotite dampeners arrest the catastrophic shockwaves.
+    - Inquiry opens with the telemetry challenge of calibrating micro-slip hydro-fracturing lattices and closes when sensor arrays confirm mantle structural containment.
+    - Character opens with the seismologists confronting their terrifying shift from passive monitors to active geological wardens and closes with the acceptance of their new planetary role.
+    type_use: Disaster reveals truth about self
+  characters:
+  - name: Dr. Orla Vance
+    gender: Female
+    description: Mid-forties with sharp, weary features and calloused fingers stained with core sealant; she possesses a razor-sharp intellect coupled with an obsessive, hyper-focused demeanor that alienates bureaucratic superiors.
+    role: Chief Seismological Architect and Tectonic Modeling Specialist
+    actant_role: protagonist
+    complexity: round
+    development: dynamic
+    characterisation: mixed
+    motivation: To halt the accelerating subduction cascade by successfully stabilizing the suture zones using untested micro-slip protocols before continental shelves collapse.
+    conflict: Must grapple with the guilt of having co-designed the flawed stabilization network while resisting administrative orders to suppress dangerous real-time sensor anomalies.
+  - name: Kaelen Voss
+    gender: Male
+    description: Late thirties, broad-shouldered field engineer wearing reinforced thermal rigs; cynical, dry-witted, and possessing an instinctive intuition for structural stress acoustics deep underground.
+    role: Deep-Well Borehole Operations Director
+    actant_role: deuteragonist
+    complexity: round
+    development: dynamic
+    characterisation: indirect
+    motivation: To extract his borehole engineering crews alive from catastrophic mantle-well conduit collapses while delivering precision polymer injections.
+    conflict: Torn between prioritizing immediate personnel evacuation and detonating hydro-fracturing charges necessary to anchor tectonic plates for civilization at large.
+  - name: Director Hesper Thorne
+    gender: Non-binary
+    description: Early fifties, impeccably tailored in anti-static regulatory vestments, cold and immaculately composed with an unnerving, measured vocal delivery.
+    role: Supreme Commissioner of the Continental Litho-Governance Authority
+    actant_role: antagonist
+    complexity: round
+    development: static
+    characterisation: direct
+    motivation: To enforce regional containment protocols and prevent public panic or economic collapse across sovereign cratonic territories at any cost.
+    conflict: Demands localized crustal sacrifices to preserve elite urban centers, directly conflicting with Vance's plan for a radical, planet-wide tectonic release.
+  - name: Dr. Sura Kray
+    gender: Female
+    description: Elderly geochemist with severe posture and silver hair cropped close; blunt, unsparingly candid, and dismissive of high-level geopolitical posturing.
+    role: Senior Bio-Polymer Matrix Developer and Advisor
+    actant_role: mentor
+    complexity: round
+    development: static
+    characterisation: mixed
+    motivation: To force tectonic engineers to account for the catastrophic decay rates of synthetic hydroxy-amino acid polymers in ultra-high mantle temperatures.
+    conflict: Distrusts the entire paradigm of aggressive macro-lithospheric geoengineering, continually clashing with Vance over the ethics of continuing intervention versus allowing natural tectonic equilibrium to reset.
+  scene_sequels:
+  - scene:
+      goal:
+        description: Dr. Orla Vance aims to conduct an exhaustive diagnostic of the Sub-Craton Vault Seven borehole array to ensure subterranean pressure containment before seasonal mantle shifts begin.
+        stakes:
+          external: Failure risks undetectable microscopic crustal fissures spreading unnoticed beneath three high-density metropolitan zones.
+          internal: Failing to catch structural degradation triggers Vance's persistent dread of repeating past design oversights.
+      conflict:
+        opposition:
+          type: environment
+          description: Extreme ambient temperatures and crushing lithostatic pressure inside the abyssal mantle-well vaults degrade sensory equipment and communication cables.
+        escalation:
+          beats:
+          - Sensor probes fail repeatedly due to ambient heat surges inside the bore casing.
+          - Lithostatic tremors rattle the descent elevator, jamming manual release gears.
+          - Primary telemetry links with the surface control room drop as basalt shear boundaries slip.
+      disaster:
+        outcome: Partial success
+        consequence:
+          plot: Vance maps the upper conduit fissures, but discovers the abyss is far hotter and more unstable than archival seismic models predicted.
+          character: She feels overwhelmed by the claustrophobic realization that humanity has built cities atop an artificially strained furnace.
+    sequel:
+      reaction:
+        emotional:
+          immediate: Chilled horror despite the sweltering subterranean atmosphere.
+          physical: Nausea accompanied by violent trembling in her hands and rapid, shallow breathing.
+        processing: She recognizes that the lithospheric stabilization architecture is failing to vent ambient mantle kinetic energy.
+      dilemma:
+        options:
+        - choice: Report the vault thermal anomalies immediately and request a complete sector evacuation.
+          cost: Triggers immediate economic turmoil and political retaliation from Director Thorne.
+          risk: Thorne may override her authority and lock her out of real-time monitoring systems.
+        - choice: Keep the anomaly contained within engineering logs while attempting localized borehole recalibration.
+          cost: Carries the entire moral burden alone without institutional backing.
+          risk: A catastrophic blind rupture if localized recalibrations fail to hold.
+      decision:
+        chosen_option: Keep the anomaly contained within engineering logs while attempting localized borehole recalibration.
+        rationale: She must buy critical operating time to identify the exact shear boundary failure without causing premature mass panic.
+        new_goal: Establish direct contact with Borehole Director Kaelen Voss to inspect deep-well conduit lattices.
+    context: MO
+  - scene:
+      goal:
+        description: Director Kaelen Voss must force high-pressure polymer dampeners into conduit four before accelerating shear fractures rupture the primary cratonic plate.
+        stakes:
+          external: Runaway rupture velocity will trigger cascading subduction and obliterate the regional continental shelf.
+          internal: Voss risks sacrificing his subordinate drilling crew trapped near the lower injection valves.
+      conflict:
+        opposition:
+          type: system
+          description: The automated lithospheric containment system triggers failsafe bulkheads, trapping crew members in the lower conduit corridor.
+        escalation:
+          beats:
+          - Telemetry spikes past critical shear tolerances along the east-southeast fault network.
+          - Automated bulkheads seal shut, severing the retrieval line to the lower borehole platform.
+          - A micro-rupture shears hydraulic conduits, spraying superheated mineral slurry across the injection control deck.
+      disaster:
+        outcome: Failure
+        consequence:
+          plot: The rupture cascade breaks past local containment and begins accelerating along the deep continental suture zone.
+          character: Voss is crushed by guilt for being unable to free his forward crew while the fault line widens.
+    sequel:
+      reaction:
+        emotional:
+          immediate: Blinding fury mixed with cold dread.
+          physical: Adrenaline spike accompanied by ringing ears and bruised ribs from escaping hydraulic shrapnel.
+        processing: He realizes the stabilization system is no longer pacifying tectonic strain but actively aggravating tectonic shear.
+      dilemma:
+        options:
+        - choice: Order an immediate full-depth evacuation of all engineering teams, abandoning the borehole injectors.
+          cost: Abandons the fault lines to unrestrained subduction cascades.
+          risk: Total loss of continental shelf integrity within hours.
+        - choice: Hold the collapsing borehole deck and manually detonate secondary hydro-fracturing charges.
+          cost: Sacrifices remaining escape vessels and jeopardizes surviving staff.
+          risk: Detonation shockwaves could accelerate fault detachment if mistimed.
+      decision:
+        chosen_option: Hold the collapsing borehole deck and manually detonate secondary hydro-fracturing charges.
+        rationale: Abandoning the injectors guarantees universal destruction, whereas holding the deck preserves a narrow margin of intervention.
+        new_goal: Coordinate with Dr. Vance to calculate an emergency hydro-fracturing sequence.
+    context: EO
+  - scene:
+      goal:
+        description: Dr. Vance and Dr. Sura Kray attempt to analyze telemetry to determine why the bio-polymer matrix is prematurely decomposing at high mantle depths.
+        stakes:
+          external: Without stable polymer binders, hydro-fracturing lattices cannot arrest the advancing shear waves.
+          internal: Vance must confront the reality that her own chemical stabilization framework was fundamentally flawed.
+      conflict:
+        opposition:
+          type: person
+          description: Dr. Sura Kray vehemently defends her chemical model, blaming mechanical borehole friction rather than polymer decay.
+        escalation:
+          beats:
+          - Kray presents laboratory data showing perfect stability under simulated conditions.
+          - Real-time telemetry streams reveal that synthetic hydroxy-amino acid chains are unraveling under mantle heat.
+          - Director Thorne intervenes via holocomm, demanding immediate suppression of telemetry reports that contradict official forecasts.
+      disaster:
+        outcome: Failure
+        consequence:
+          plot: The telemetry anomaly remains unsolved while critical minutes expire and synthetic binders turn into volatile gas down-well.
+          character: Vance feels deeply alienated from her scientific peers as defensive denial compromises catastrophic realities.
+    sequel:
+      reaction:
+        emotional:
+          immediate: Frustrated despair and intense intellectual disorientation.
+          physical: "Throbbing headache behind the temples and parched throat. processing: Vance dissects the thermodynamic equations, recognizing that synthetic polymers mutate under extreme mantle pressures into destabilizing solvents."
+        processing: Vance dissects the thermodynamic equations, recognizing that synthetic polymers mutate under extreme mantle pressures into destabilizing solvents.
+      dilemma:
+        options:
+        - choice: Admit the matrix formula is useless and scrap the entire chemical stabilization paradigm.
+          cost: Leaves the fracturing craton without any shock-absorbing binder.
+          risk: Shear waves will propagate unobstructed through shattered bedrock.
+        - choice: Force Kray to help re-engineer the polymer matrix in real time using untreated mineral binders.
+          cost: Requires violating safety testing protocols and risking toxic lithospheric venting.
+          risk: Untested mineral binders may solidify prematurely and shatter the borehole drill heads.
+      decision:
+        chosen_option: Force Kray to help re-engineer the polymer matrix in real time using untreated mineral binders.
+        rationale: A crude, rapidly setting binder provides the sole physical chance to withstand extreme temperatures and seal the fissures.
+        new_goal: Synthesize an emergency peridotite-compatible matrix formula alongside Dr. Kray.
+    context: IO
+  - scene:
+      goal:
+        description: Dr. Vance confronts Director Hesper Thorne to demand operational clearance for a global tectonic release protocol rather than sacrificing outer cratonic sectors.
+        stakes:
+          external: Thorne's plan will deliberately collapse peripheral inhabited sectors to buffer elite urban sanctuaries.
+          internal: Vance must cast off her identity as an obedient academic analyst and become an active planetary warden.
+      conflict:
+        opposition:
+          type: person
+          description: Director Hesper Thorne prioritizes territorial preservation and corporate cratonic governance over human survival.
+        escalation:
+          beats:
+          - Thorne presents tactical sacrifice projections for peripheral zones.
+          - Vance counters with seismic evidence proving localized sacrifice will merely redirect the cascade toward the continental core.
+          - Thorne threatens Vance with immediate arrest for insubordination and orders security to seize master borehole telemetry keys.
+      disaster:
+        outcome: Failure
+        consequence:
+          plot: Thorne seizes centralized command over the stabilization network and initiates localized cratonic sacrifice sequences.
+          character: Vance realizes that passive compliance makes her an accomplice to catastrophic geographic murder.
+    sequel:
+      reaction:
+        emotional:
+          immediate: Visceral revulsion and righteous defiance.
+          physical: Muscles coiled with tension and pulse pounding against the collarbone.
+        processing: She understands that planetary stewardship cannot coexist with bureaucratic preservation of political power structures.
+      dilemma:
+        options:
+        - choice: Submit to Thorne's authority and salvage whatever sensor data is possible from secondary monitoring bunkers.
+          cost: Complicity in the intentional destruction of peripheral territories.
+          risk: Permanent collapse of civilizational infrastructure once subduction accelerates beyond control.
+        - choice: Commit lithic treason by hotwiring auxiliary borehole relays to override Thorne's command sequence.
+          cost: Branded an outlaw and targeted by security forces with immediate lethal authorization.
+          risk: A catastrophic misfire during unauthorized manual override could collapse the borehole prematurely.
+      decision:
+        chosen_option: Commit lithic treason by hotwiring auxiliary borehole relays to override Thorne's command sequence.
+        rationale: Direct operational defiance is the only moral path remaining to preserve global life over political convenience.
+        new_goal: Infiltrate the secondary routing substation to hijack injection controls for Voss's drilling rigs.
+    context: CO
+  - scene:
+      goal:
+        description: Dr. Vance must fully seize manual control of the tectonic injection relays from the auxiliary substation while evading Thorne's security detachments.
+        stakes:
+          external: Loss of control will permit the automated containment sacrifice to execute across outer provinces.
+          internal: Vance must fully accept the weight of playing god with continental plates and accepting whatever casualties ensue.
+      conflict:
+        opposition:
+          type: system
+          description: Automated security lockouts and armed containment enforcers close in on the auxiliary control bunker.
+        escalation:
+          beats:
+          - Enforcers breach the outer pressure airlock of the auxiliary node.
+          - Vance re-routes primary power conduits, triggering blackout conditions across non-essential decks.
+          - Vance overrides Thorne's command cyphers using her personal architect master key.
+      disaster:
+        outcome: Success with cost
+        consequence:
+          plot: Vance successfully secures planetary borehole authority, but severs her connection to surface life, permanently branding herself a renegade architect.
+          character: She embraces her definitive transformation from an analytical observer to a hardened lithospheric guardian.
+    sequel:
+      reaction:
+        emotional:
+          immediate: Solemn peace beneath razor-sharp focus.
+          physical: Steadying breath, muscles releasing tension, steady hands on the master console.
+        processing: She understands that true geological stewardship requires absolute accountability for every fracture on the globe.
+      dilemma:
+        options:
+        - choice: Lockdown the auxiliary node permanently and isolate herself inside the tectonic control nexus.
+          cost: No possibility of physical extraction or return to civilian life.
+          risk: Substation could become a tomb if structural integrity collapses around her.
+        - choice: Attempt an armed breakout back to the surface after initiating the override.
+          cost: Diverts operational focus away from monitoring the microscopic slippage vectors.
+          risk: Losing real-time contact with Voss during the critical ignition window.
+      decision:
+        chosen_option: Lockdown the auxiliary node permanently and isolate herself inside the tectonic control nexus.
+        rationale: She must personally hold the telemetry channels open for Voss until the final dampeners seat.
+        new_goal: Transmit revised thermodynamic coordinates to Kaelen Voss and Dr. Kray.
+    context: CC
+  - scene:
+      goal:
+        description: Dr. Vance and Dr. Kray must reconcile contradictory sensor readings to determine the precise ignition timing for the hydro-fracturing micro-slip sequence.
+        stakes:
+          external: Premature ignition will shatter the craton; delayed ignition will let the subduction cascade consume the boreholes.
+          internal: Kray and Vance must overcome their mutual scientific distrust to solve the calculation together.
+      conflict:
+        opposition:
+          type: environment
+          description: Chaotic seismic acoustic noise from fracturing bedrock distorts telemetry sensor streams across the suture line.
+        escalation:
+          beats:
+          - Seismic background interference corrupts acoustic telemetry packets.
+          - Kray discovers that adjusting for thermal decay in peridotite blocks isolates the true signal frequency.
+          - The telemetry clarifies, revealing that the fault rupture is decelerating just enough to admit a dampener charge.
+      disaster:
+        outcome: Success
+        consequence:
+          plot: The exact mathematical solution for micro-slip timing is established, solving the core inquiry of the lithospheric cascade.
+          character: Both scientists experience profound mutual respect, realizing rigorous truth supersedes professional vanity.
+    sequel:
+      reaction:
+        emotional:
+          immediate: Electrifying relief tempered by extreme urgency.
+          physical: Shivers down the spine and sharp clarity in the eyes.
+        processing: They realize the planetary lithosphere can be guided into self-arresting equilibrium if the charges seat immediately.
+      dilemma:
+        options:
+        - choice: Run one additional diagnostic cycle to verify micro-slip timing tolerances.
+          cost: Loses precious seconds while the rupture approaches the boundary shelf.
+          risk: Fault speeds could surpass the threshold of dampener absorption.
+        - choice: Transmit the raw, unverified timing data directly to Voss's detonation console now.
+          cost: Relies on an unvetted theoretical calculation with zero margin for error.
+          risk: An undiscovered decimal error could blow the wellbore entirely.
+      decision:
+        chosen_option: Transmit the raw, unverified timing data directly to Voss's detonation console now.
+        rationale: The physical window of intervention is closing within seconds; immediate action is the only viable path.
+        new_goal: Direct Voss to detonate the deep-well hydro-fracturing array at the designated millisecond.
+    context: IC
+  - scene:
+      goal:
+        description: Kaelen Voss must manually trigger the hydro-fracturing lattice detonation while locking sintered peridotite dampeners into the abyssal fault boundary.
+        stakes:
+          external: Catastrophic shockwaves will propagate across the globe if the dampeners fail to interlock.
+          internal: Voss must hold his ground inside the vibrating bore-head structure despite the instinct to flee collapsing debris.
+      conflict:
+        opposition:
+          type: environment
+          description: Violent harmonic vibrations and cascading rock bursts threaten to dismantle the detonation rig.
+        escalation:
+          beats:
+          - Detonation sequence initiates, but manual latch pins jam on dampener block three.
+          - Voss crawls through falling scree to manually dislodge the pneumatic latch pin.
+          - A secondary shockwave tosses him against the guide rail, but he slams the physical firing contact.
+      disaster:
+        outcome: Success with cost
+        consequence:
+          plot: The hydro-fracturing charges detonate with surgical precision, forcing the runaway rupture into the sintered peridotite blocks and arresting the cascade.
+          character: Voss is severely injured and deafened by the concussion, but filled with profound triumph as the ground stops tearing apart.
+    sequel:
+      reaction:
+        emotional:
+          immediate: Awe and bone-deep exhaustion.
+          physical: Blood ringing in ears, labored breathing, dust-filled lungs, and blurred vision.
+        processing: He realizes the planetary crust has absorbed the shockwave; the catastrophic cascade has been completely arrested.
+      dilemma:
+        options:
+        - choice: Use remaining emergency battery power to radio for retrieval before life support expires.
+          cost: Drains telemetry feeds tracking post-detonation stress settling.
+          risk: Borehole vents could accumulate poisonous radon pockets unmonitored.
+        - choice: Maintain sensor telemetry routing to Vance's station until the fault reaches absolute zero kinetic flux.
+          cost: Depletes life support and personal survival equipment.
+          risk: Medical rescue may not reach his position in time.
+      decision:
+        chosen_option: Maintain sensor telemetry routing to Vance's station until the fault reaches absolute zero kinetic flux.
+        rationale: Verifying complete tectonic lock is paramount to preventing subsequent secondary ruptures.
+        new_goal: Transmit confirmation of seismic arrest to Vance and await structural retrieval crews.
+    context: EC
+  - scene:
+      goal:
+        description: Dr. Vance must conduct a final environmental sweep across the subterranean geotechnical vault networks to verify tectonic baseline equilibrium.
+        stakes:
+          external: Residual stress pockets could cause delayed cave-ins across metropolitan support roots.
+          internal: Vance must adjust to the haunting silence of an engineered planetary crust that now depends permanently on her vigilance.
+      conflict:
+        opposition:
+          type: environment
+          description: Cooling synthetic slurry vents dense thermal steam and acoustic echoes through the hollowed mantle-well vaults.
+        escalation:
+          beats:
+          - Thermal sensors register sudden local venting spikes in peripheral conduits.
+          - Automated pressure relief valves hiss open, cycling air through the abyssal shafts.
+          - Telemetry monitors transition from jagged seismic redlines into uniform, quiet baseline readings.
+      disaster:
+        outcome: Success
+        consequence:
+          plot: The engineered lithosphere attains stable equilibrium, securing continental shelves and confirming the viability of macro-geoengineering.
+          character: Vance steps away from the terminal, accepting that she is no longer an academic observer but an eternal caretaker of the earth's deep stone.
+    sequel:
+      reaction:
+        emotional:
+          immediate: Profound, serene humility.
+          physical: Slow, rhythmic heartbeat and calm, steady posture amidst the hum of cooling machinery.
+        processing: She contemplates the subterranean vaults, knowing humanity can never leave the engineered subterranean world unsupervised again.
+      dilemma:
+        options:
+        - choice: Ascend immediately to the surface to lead the political reconstruction of the Litho-Governance Authority.
+          cost: Abandons direct oversight of the fragile newly stabilized suture zones.
+          risk: Political opportunists might resume reckless geoengineering exploits.
+        - choice: Remain stationed permanently in the abyssal subterranean vault network as its chief custodian.
+          cost: Permanently renounces daylight and ordinary human community on the surface craton.
+          risk: Social isolation and psychological detachment from the world above.
+      decision:
+        chosen_option: Remain stationed permanently in the abyssal subterranean vault network as its chief custodian.
+        rationale: The tectonic crust requires permanent, unwavering scientific guardianship to protect civilization from its own engineered hubris.
+        new_goal: Establish the subterranean deep-vault covenant to monitor the pacified continental fault networks indefinitely.
+    context: MC
+  discourse:
+    narration:
+      voice: third_person_heterodiegetic
+      level: extradiegetic
+      focalisation: zero_omniscient
+      reliability: reliable
+    language:
+      tone: Clinical, foreboding, and technically analytical
+      diction: technical_scientific
+      figures_of_speech:
+      - Metaphor comparing the lithosphere to a fractured biological shell
+      - Personification of crustal tectonic plates experiencing hydraulic stress
+      mode_balance: diegesis_dominant
+  pov: third_person_omniscient
+  image_prompt: Cinematic visual of a fractured planetary crust exposing glowing mantle layers, seismic stabilization towers anchoring continental tectonic plates, volumetric dust and atmospheric pressure waves, hard science fiction aesthetic.
+  aesthetic:
+    art_style: analog grainy risograph print with stylized limited-color duotone sci-fi aesthetic
+    color_palette: "monochromatic amber and dark umber: reminiscent of vintage phosphor computer monitors"
+    composition: vast solitary horizon with lone minute figure emphasizing terrifying cosmic scale
+    lighting: harsh chiaroscuro rim lighting from a dying binary star on the edge of the eclipse
+    mood: gritty dangerous survival against a merciless alien environment
+    subject_matter: A lone geotechnical scout standing beside massive planetary seismic stabilization machinery on the rim of a ruptured continental rift.
+    prompt: Gritty cinematic sci-fi concept art depicting a vast, shattered alien horizon where colossal industrial stabilization towers and hydraulic earth-anchors pin a violently tearing lithospheric fault. On the precipice of a massive fractured basalt shelf, a lone minute figure in an industrial hazard suit stands gazing into the abyss, accentuating the terrifying scale of the dying world. Blinding chiaroscuro rim lighting from a dying binary star on the cusp of total eclipse cuts across jagged rock faces, carving razor-sharp silhouettes and deep obsidian shadows. Billowing geothermal steam and amber-glowing mineral particulate rise from the fissure, creating an atmosphere of raw, unforgiving planetary collapse.
+  cover_path: cover.png
+meta:
+  science_field:
+    name: Seismology
+    description: Earthquakes
+  genre:
+    name: Tectonic Science Fiction
+    description: A specialized branch of hard science fiction focused on lithospheric dynamics, fault-line technologies, and planetary crust engineering, where cataclysmic or technologically induced earthquakes form the central plot, existential threats, and driving scientific mysteries.
+  vocabs:
+  - lex_category: verb.perception
+    word: look around
+    definition: look about oneself
+  - lex_category: verb.perception
+    word: muzzle
+    definition: prevent from speaking out
+  - lex_category: noun.quantity
+    word: slug
+    definition: a unit of mass equal to the mass that accelerates at 1 foot/sec/sec when acted upon by a force of 1 pound; approximately 14.5939 kilograms
+  - lex_category: noun.quantity
+    word: Brazilian monetary unit
+    definition: monetary unit in Brazil
+  - lex_category: verb.communication
+    word: saddle
+    definition: impose a task upon, assign a responsibility to
+  - lex_category: verb.competition
+    word: swallow
+    definition: engulf and destroy
+  - lex_category: verb.stative
+    word: star
+    definition: feature as the star
+  - lex_category: verb.stative
+    word: comprise
+    definition: be composed ofinclude or contain; have as a componentform or compose
+  - lex_category: verb.weather
+    word: liquefy
+    definition: become liquid
+  - lex_category: noun.act
+    word: distraint
+    definition: the seizure and holding of property as security for payment of a debt or satisfaction of a claim
+  - lex_category: noun.act
+    word: block grant
+    definition: a grant of federal money to state and local governments to support social welfare programs
+  - lex_category: noun.cognition
+    word: impossible action
+    definition: an alternative that is not available
+  - lex_category: noun.cognition
+    word: texture
+    definition: the essential quality of something
+  - lex_category: noun.feeling
+    word: misology
+    definition: hatred of reasoning
+  - lex_category: noun.person
+    word: ass
+    definition: a pompous fool
+  - lex_category: noun.person
+    word: Ely Culbertson
+    definition: United States authority on contract bridge whose books helped to popularize the game (1891-1955)
+  - lex_category: adj.ppl
+    word: unposed
+    definition: not arranged for pictorial purposes
+  - lex_category: adj.ppl
+    word: sintered
+    definition: formed into a mass by heat and pressure
+  - lex_category: verb.motion
+    word: sledge
+    definition: transport in a sleighride in or travel with a sledge
+  - lex_category: verb.motion
+    word: struggle
+    definition: climb awkwardly, as if by scrambling
+  - lex_category: verb.social
+    word: take stock
+    definition: make or include in an itemized record or report
+  - lex_category: noun.shape
+    word: protrusion
+    definition: something that bulges out or is protuberant or projects from its surroundings
+  - lex_category: verb.change
+    word: commercialize
+    definition: make commercial
+  - lex_category: verb.change
+    word: adapt
+    definition: make fit for, or change to suit a new purposeadapt or conform oneself to new or different conditions
+  - lex_category: noun.event
+    word: Z
+    definition: the ending of a series or sequence
+  - lex_category: noun.event
+    word: blessed event
+    definition: the live birth of a child
+  - lex_category: noun.phenomenon
+    word: rejection
+    definition: (medicine) an immunological response that refuses to accept substances or organisms that are recognized as foreign
+  - lex_category: noun.phenomenon
+    word: air pressure
+    definition: the pressure exerted by the atmosphere
+  - lex_category: noun.state
+    word: block anesthesia
+    definition: anesthesia of an area supplied by a nerve; produced by an anesthetic agent applied to the nerve
+  - lex_category: noun.state
+    word: befoulment
+    definition: the state of being polluted
+  - lex_category: noun.substance
+    word: lignin
+    definition: a complex polymer; the chief constituent of wood other than carbohydrates; binds to cellulose fibers to harden and strengthen cell walls of plants
+  - lex_category: noun.substance
+    word: hydroxy amino acid
+    definition: any amino acid with a hydroxy group.
+  - lex_category: verb.contact
+    word: toe
+    definition: drive obliquelyhit (a golf ball) with the toe of the clubdrive (a golf ball) with the toe of the clubtouch with the toe
+  - lex_category: verb.contact
+    word: bind
+    definition: stick to firmlymake fast; tie or secure, with or as if with a ropewrap around with something so as to cover or enclosesecure with or as if with ropesprovide with a bindingfasten or secure with a rope, string, or cord
+  - lex_category: verb.emotion
+    word: pacify
+    definition: cause to be more favorably inclined; gain the good will of
+  - lex_category: verb.possession
+    word: merchandise
+    definition: engage in the trade of
+  - lex_category: adverb.all
+    word: big
+    definition: ""
+  - lex_category: adverb.all
+    word: so yeah
+    definition: ""
+  - lex_category: noun.body
+    word: bulbar conjunctiva
+    definition: the part of the conjunctiva covering the anterior face of the sclera and the surface epithelium of the cornea
+  - lex_category: noun.communication
+    word: reflexion
+    definition: expression without wordsa remark expressing careful consideration
+  - lex_category: noun.group
+    word: expedition
+    definition: an organized group of people undertaking a journey for a particular purpose
+  - lex_category: noun.possession
+    word: severalty
+    definition: exclusive individual ownership
+  - lex_category: noun.relation
+    word: east southeast
+    definition: the compass point midway between east and southeast
+  - lex_category: noun.relation
+    word: political relation
+    definition: social relations involving intrigue to gain authority or power
+  - lex_category: verb.body
+    word: have on
+    definition: be dressed in
+  - lex_category: verb.cognition
+    word: lip-read
+    definition: interpret by lipreading; of deaf people
+  - lex_category: verb.cognition
+    word: elicit
+    definition: derive by reason
+  - lex_category: verb.consumption
+    word: scavenge
+    definition: feed on carrion or refuse
+  - lex_category: noun.artifact
+    word: bear claw
+    definition: an incised design resembling the claw of a bear; used in Native American pottery
+  - lex_category: noun.artifact
+    word: coal scuttle
+    definition: container for coal; shaped to permit pouring the coal onto the fire
+  - lex_category: noun.object
+    word: xenolith
+    definition: (geology) a piece of rock of different origin from the igneous rock in which it is embedded
+  - lex_category: noun.object
+    word: Loire
+    definition: the longest French river; rises in the Massif Central and flows north and west to the Atlantic Ocean
+  - lex_category: noun.time
+    word: 1760s
+    definition: the decade from 1760 to 1769
+  - lex_category: noun.time
+    word: dayspring
+    definition: the first light of day
+  - lex_category: adj.all
+    word: incommutable
+    definition: not subject to alteration or changenot interchangeable or able to substitute one for another
+  - lex_category: adj.all
+    word: pretty
+    definition: pleasing by delicacy or grace; not imposing(used ironically) unexpectedly bad
+  - lex_category: verb.creation
+    word: tag
+    definition: supply (blank verse or prose) with rhymes
+  - lex_category: verb.creation
+    word: call down
+    definition: summon into action or bring into existence, often as if by magic
+  - lex_category: noun.attribute
+    word: rusticity
+    definition: the quality of being rustic or gauche
+  - lex_category: noun.attribute
+    word: foible
+    definition: a behavioral attribute that is distinctive and peculiar to an individual
+  - lex_category: noun.location
+    word: Kimberley
+    definition: city in central South Africa; center for diamond mining and diamond marketing
+  - lex_category: noun.location
+    word: Bowery
+    definition: a street in Manhattan noted for cheap hotels frequented by homeless derelicts
+  - lex_category: noun.motive
+    word: death wish
+    definition: (psychoanalysis) an unconscious urge to die
+  - lex_category: noun.process
+    word: boolean operation
+    definition: an operation that follows the rules of Boolean algebra; each operand and the result take one of two values
+  - lex_category: noun.process
+    word: decoction process
+    definition: (brewing) a process in which part of the mash is removed and boiled and then returned
+  - lex_category: adj.pert
+    word: vocal
+    definition: relating to or designed for or using the singing voicehaving or using the power to produce speech or sound
+  - lex_category: adj.pert
+    word: recoilless
+    definition: of or being a weapon that is designed to minimize recoil
