@@ -35,6 +35,31 @@ func NewCompileCommand(ctx context.Context) *CompileCommand {
 		Action: compileEpubAction,
 	}
 
+	pagesCommand := &cli.Command{
+		Name:    "pages",
+		Aliases: []string{"p", "site"},
+		Usage:   "Compile stories into a static website for GitHub Pages",
+		Flags: []cli.Flag{
+			&cli.StringFlag{
+				Name:    "dir",
+				Aliases: []string{"d"},
+				Usage:   "Source directory of stories (defaults to ARTIFACTS_DIR or artifacts)",
+			},
+			&cli.StringFlag{
+				Name:    "output",
+				Aliases: []string{"o"},
+				Usage:   "Output directory for the static site (defaults to public)",
+			},
+			&cli.StringFlag{
+				Name:    "cname",
+				Aliases: []string{"c"},
+				Usage:   "Custom domain for GitHub Pages CNAME (defaults to omni-archivist.raitucarp.name)",
+				Value:   "omni-archivist.raitucarp.name",
+			},
+		},
+		Action: compilePagesAction,
+	}
+
 	cmd := &CompileCommand{
 		context: &ctx,
 		Command: &cli.Command{
@@ -43,6 +68,7 @@ func NewCompileCommand(ctx context.Context) *CompileCommand {
 			Usage:   "Compile generated stories into publications",
 			Commands: []*cli.Command{
 				epubCommand,
+				pagesCommand,
 			},
 		},
 	}
