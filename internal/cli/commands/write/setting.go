@@ -43,7 +43,7 @@ func writeSettingAction(ctx context.Context, command *cli.Command) (err error) {
 		return err
 	}
 
-	currentMetadata.Story.Setting = *settingResult
+	currentMetadata.Story.Setting = settingResult
 	err = metadata.Write(currentMetadata)
 	return err
 }

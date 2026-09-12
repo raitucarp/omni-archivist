@@ -2,8 +2,8 @@ package metadata
 
 // PlotConflict represents the core agon or conflict of the story (Chapter 2: Plot).
 type PlotConflict struct {
-	Type        string `yaml:"type" json:"type" jsonschema:"enum=character_vs_character,enum=character_vs_nature,enum=character_vs_society,enum=character_vs_technology,enum=character_vs_self,description=Primary conflict category"`
-	Description string `yaml:"description" json:"description" jsonschema:"description=Detailed explanation of the opposing forces and stakes"`
+	Type        string `yaml:"type,omitempty" json:"type,omitempty" jsonschema:"enum=character_vs_character,enum=character_vs_nature,enum=character_vs_society,enum=character_vs_technology,enum=character_vs_self,description=Primary conflict category"`
+	Description string `yaml:"description,omitempty" json:"description,omitempty" jsonschema:"description=Detailed explanation of the opposing forces and stakes"`
 }
 
 // PlotArc represents the classical dramatic structure (Freytag's pyramid).

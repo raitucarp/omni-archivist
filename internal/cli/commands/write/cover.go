@@ -21,7 +21,7 @@ type CoverPromptInput struct {
 	Title     string                   `json:"title"`
 	Subtitle  string                   `json:"subtitle"`
 	Synopsis  string                   `json:"synopsis"`
-	Setting   metadata.Setting         `json:"setting"`
+	Setting   *metadata.Setting        `json:"setting,omitempty"`
 	Aesthetic metadata.VisualAesthetic `json:"aesthetic"`
 }
 
@@ -136,7 +136,7 @@ func writeCoverAction(ctx context.Context, command *cli.Command) (err error) {
 	fmt.Printf("Cover successfully saved to: %s\n", coverFilePath)
 
 	// 6. Update story metadata
-	currentMetadata.Story.Aesthetic = aesthetic
+	currentMetadata.Story.Aesthetic = &aesthetic
 	currentMetadata.Story.CoverPath = coverFileName
 	if err := metadata.Write(currentMetadata); err != nil {
 		return fmt.Errorf("failed to update metadata with cover info: %w", err)

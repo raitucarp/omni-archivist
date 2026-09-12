@@ -65,8 +65,8 @@ func writeSynopsisAction(ctx context.Context, command *cli.Command) (err error) 
 	currentMetadata.Story.Logline = synopsisResult.Logline
 	currentMetadata.Story.Title = synopsisResult.Title
 	currentMetadata.Story.Subtitle = synopsisResult.Subtitle
-	currentMetadata.Story.Theme = synopsisResult.Theme
-	currentMetadata.Story.Discourse = synopsisResult.Discourse
+	currentMetadata.Story.Theme = &synopsisResult.Theme
+	currentMetadata.Story.Discourse = &synopsisResult.Discourse
 	currentMetadata.Story.POV = synopsisResult.POV
 	currentMetadata.Story.ImagePrompt = synopsisResult.ImagePrompt
 

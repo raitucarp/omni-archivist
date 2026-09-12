@@ -30,8 +30,7 @@ func writeStructuresAction(ctx context.Context, command *cli.Command) (err error
 		return
 	}
 
-	currentMetadata.Story.Structure = metadata.Structure{}
-	currentMetadata.Story.Structure = *structure
+	currentMetadata.Story.Structure = structure
 
 	err = metadata.Write(currentMetadata)
 
