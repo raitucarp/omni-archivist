@@ -1,13 +1,15 @@
 @import "tailwindcss";
 
+@custom-variant dark (&:where(.dark, .dark *));
+
 @layer base {
   :root {
-    --background: #fbf9f4;
+    --background: #faf8f5;
     --foreground: #001219;
     --card: #ffffff;
     --card-foreground: #001219;
-    --border: rgba(0, 18, 25, 0.14);
-    --muted: #f2ede2;
+    --border: rgba(0, 18, 25, 0.12);
+    --muted: #f1ecdf;
     --muted-foreground: #005f73;
     --primary: #bb3e03;
     --primary-foreground: #ffffff;
@@ -18,14 +20,13 @@
     --accent-wheat: #78350f;
   }
 
-  [data-theme="dark"],
   .dark {
     --background: #001219;
     --foreground: #f5eedf;
-    --card: #001e28;
+    --card: #001c27;
     --card-foreground: #f5eedf;
-    --border: rgba(148, 210, 189, 0.16);
-    --muted: #00222e;
+    --border: rgba(148, 210, 189, 0.2);
+    --muted: #002636;
     --muted-foreground: #94d2bd;
     --primary: #ee9b00;
     --primary-foreground: #001219;
@@ -65,11 +66,11 @@
   font-family: 'Inter', -apple-system, sans-serif;
 }
 
-/* Paragraph Formatting: spacing & text-indent */
+/* Paragraph Formatting: editorial spacing & text-indent */
 .story-prose-body p {
-  margin-bottom: 2.25rem !important;
-  line-height: 2.1 !important;
-  text-indent: 2.5rem;
+  margin-bottom: 1.85rem !important;
+  line-height: 1.95 !important;
+  text-indent: 1.5rem;
   transition: opacity 0.35s ease, filter 0.35s ease, transform 0.35s ease, border-left 0.25s ease, padding-left 0.25s ease, background 0.3s ease;
   border-left: 3px solid transparent;
   padding-left: 0;
@@ -77,18 +78,38 @@
 }
 
 .story-prose-body p:first-of-type {
-  text-indent: 0;
+  text-indent: 0 !important;
+}
+
+.story-prose-body p:first-of-type::first-letter {
+  font-family: 'Syne', sans-serif;
+  font-size: 3.5rem;
+  line-height: 0.82;
+  float: left;
+  margin-top: 0.12em;
+  margin-right: 0.45rem;
+  margin-bottom: -0.05em;
+  font-weight: 800;
+  color: #bb3e03;
+}
+
+.dark .story-prose-body p:first-of-type::first-letter {
+  color: #ee9b00;
 }
 
 /* When focus mode is OFF: subtle indication for active reading paragraph */
 .story-prose-body:not(.focus-mode-active) p.active-reading-p {
-  border-left: 3px solid rgba(238, 155, 0, 0.45);
+  border-left: 3px solid #bb3e03;
   padding-left: 1.25rem;
+}
+
+.dark .story-prose-body:not(.focus-mode-active) p.active-reading-p {
+  border-left: 3px solid #ee9b00;
 }
 
 /* When focus mode is ON: blur and dim all other paragraphs */
 .story-prose-body.focus-mode-active p {
-  opacity: 0.22;
+  opacity: 0.2;
   filter: blur(1.5px);
   transform: scale(0.995);
 }
@@ -97,9 +118,14 @@
 .story-prose-body.focus-mode-active p.active-reading-p {
   opacity: 1;
   filter: none;
-  transform: scale(1.015);
-  border-left: 3px solid #ee9b00;
+  transform: scale(1.01);
+  border-left: 3px solid #bb3e03;
   padding-left: 1.25rem;
+  background: linear-gradient(90deg, rgba(187, 62, 3, 0.08) 0%, transparent 100%);
+}
+
+.dark .story-prose-body.focus-mode-active p.active-reading-p {
+  border-left: 3px solid #ee9b00;
   background: linear-gradient(90deg, rgba(238, 155, 0, 0.08) 0%, transparent 100%);
   box-shadow: -6px 0 20px -3px rgba(238, 155, 0, 0.35);
 }

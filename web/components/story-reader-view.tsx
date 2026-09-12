@@ -40,26 +40,20 @@ export function StoryReaderView({ story }: StoryReaderViewProps) {
         onTabChange={(tab) => setActiveTab(tab)}
       />
 
-      {/* Dynamic Cover Ambient Backdrop (Persists & Blends Throughout Entire Story Scroll) */}
+      {/* Hero Cover Atmospheric Backdrop (Subtle top glow, fades completely before prose) */}
       {activeTab === 'story' && story.coverUrl && (
-        <div className="fixed inset-0 pointer-events-none z-0 overflow-hidden" aria-hidden="true">
-          {/* 1. Ambient Blurred & Saturated Cover Layer */}
+        <div className="absolute top-0 left-0 right-0 h-[620px] pointer-events-none z-0 overflow-hidden" aria-hidden="true">
+          {/* Ambient Blurred Cover Layer */}
           <div
-            className="absolute -inset-10 bg-cover bg-center transition-all duration-300 ease-out opacity-20 dark:opacity-30"
+            className="absolute -inset-10 bg-cover bg-center opacity-25 dark:opacity-40"
             style={{
               backgroundImage: `url('${story.coverUrl}')`,
-              filter: 'blur(80px) saturate(1.8)',
-              transform: `translateY(${Math.min(scrollY * 0.04, 40)}px) scale(1.08)`,
-              willChange: 'transform',
+              filter: 'blur(70px) saturate(1.8)',
             }}
           />
-          {/* 2. Seamless theme backdrop overlay */}
+          {/* Smooth vertical depth gradient: completely transitions to 100% background before story text */}
           <div
-            className="absolute inset-0 bg-background/80 dark:bg-background/85"
-          />
-          {/* 3. Smooth vertical depth gradient from header to footer */}
-          <div
-            className="absolute inset-0 bg-gradient-to-b from-transparent via-background/30 to-background"
+            className="absolute inset-0 bg-gradient-to-b from-background/30 via-background/70 to-background"
           />
         </div>
       )}
@@ -68,13 +62,13 @@ export function StoryReaderView({ story }: StoryReaderViewProps) {
         {activeTab === 'story' ? (
           <article className="space-y-10 animate-in fade-in duration-300">
             {/* Breadcrumb */}
-            <nav className="flex items-center gap-2 text-xs font-mono text-muted-foreground">
-              <Link href="/" className="hover:text-foreground transition-colors flex items-center gap-1">
-                <ArrowLeft className="w-3.5 h-3.5" />
+            <nav className="flex items-center gap-2 text-sm font-mono text-muted-foreground">
+              <Link href="/" className="hover:text-foreground transition-colors flex items-center gap-1.5 font-medium">
+                <ArrowLeft className="w-4 h-4" />
                 <span>Home</span>
               </Link>
               <span>/</span>
-              <Link href={`/volumes/${story.volumeId}/`} className="hover:text-foreground transition-colors">
+              <Link href={`/volumes/${story.volumeId}/`} className="hover:text-foreground transition-colors font-medium">
                 {story.volumeTitle}
               </Link>
             </nav>
@@ -82,7 +76,7 @@ export function StoryReaderView({ story }: StoryReaderViewProps) {
             {/* Story Hero Header */}
             <header className="space-y-6">
               {story.coverUrl && (
-                <div className="w-full max-h-[480px] rounded-3xl overflow-hidden border border-[#ee9b00]/30 shadow-2xl relative">
+                <div className="w-full max-h-[480px] rounded-3xl overflow-hidden border border-border shadow-2xl relative">
                   {/* eslint-disable-next-line @next/next/no-img-element */}
                   <img
                     src={story.coverUrl}
@@ -97,55 +91,55 @@ export function StoryReaderView({ story }: StoryReaderViewProps) {
                   {story.title}
                 </h1>
                 {story.subtitle && (
-                  <p className="font-prose italic text-xl sm:text-2xl text-[#bb3e03] dark:text-[#ee9b00]">
+                  <p className="font-prose italic text-xl sm:text-2xl text-[#bb3e03] dark:text-[#ee9b00] font-medium">
                     {story.subtitle}
                   </p>
                 )}
               </div>
 
               {/* Meta Pills */}
-              <div className="flex flex-wrap items-center gap-2 pt-1">
-                <span className="text-xs font-mono px-3 py-1 rounded-full bg-card/80 border border-border/80 text-foreground flex items-center gap-1.5">
-                  <Calendar className="w-3.5 h-3.5 text-[#005f73] dark:text-[#0a9396]" />
+              <div className="flex flex-wrap items-center gap-2.5 pt-1">
+                <span className="text-sm font-mono px-3.5 py-1.5 rounded-full bg-card border border-border text-foreground flex items-center gap-2 shadow-sm">
+                  <Calendar className="w-4 h-4 text-[#005f73] dark:text-[#0a9396]" />
                   <span>{story.dateStr} (Year {story.yearHE} HE)</span>
                 </span>
-                <span className="text-xs font-mono font-bold px-3 py-1 rounded-full bg-[#bb3e03]/10 dark:bg-[#ee9b00]/15 text-[#bb3e03] dark:text-[#ee9b00] border border-[#bb3e03]/25 dark:border-[#ee9b00]/30">
+                <span className="text-sm font-mono font-bold px-3.5 py-1.5 rounded-full bg-[#bb3e03]/10 dark:bg-[#ee9b00]/15 text-[#bb3e03] dark:text-[#ee9b00] border border-[#bb3e03]/25 dark:border-[#ee9b00]/30 shadow-sm">
                   {story.genre}
                 </span>
-                <span className="text-xs font-mono px-3 py-1 rounded-full bg-[#005f73]/10 dark:bg-[#0a9396]/15 text-[#005f73] dark:text-[#94d2bd] border border-[#005f73]/20 dark:border-[#0a9396]/30">
+                <span className="text-sm font-mono font-semibold px-3.5 py-1.5 rounded-full bg-[#005f73]/10 dark:bg-[#0a9396]/15 text-[#005f73] dark:text-[#94d2bd] border border-[#005f73]/20 dark:border-[#0a9396]/30 shadow-sm">
                   {story.scienceField}
                 </span>
-                <span className="text-xs font-mono px-3 py-1 rounded-full bg-card/80 border border-border/80 text-foreground flex items-center gap-1.5">
-                  <Clock className="w-3.5 h-3.5 text-[#bb3e03] dark:text-[#ee9b00]" />
+                <span className="text-sm font-mono px-3.5 py-1.5 rounded-full bg-card border border-border text-foreground flex items-center gap-2 shadow-sm">
+                  <Clock className="w-4 h-4 text-[#bb3e03] dark:text-[#ee9b00]" />
                   <span>{story.readingTime}</span>
                 </span>
               </div>
 
               {/* Logline Box */}
               {story.logline && (
-                <blockquote className="p-6 rounded-2xl bg-card/75 border-l-4 border-[#bb3e03] dark:border-[#ee9b00] text-foreground font-prose italic text-lg sm:text-xl leading-relaxed shadow-sm">
+                <blockquote className="p-6 sm:p-8 rounded-2xl bg-card border-l-4 border-[#bb3e03] dark:border-[#ee9b00] border-y border-r border-border text-foreground font-prose italic text-lg sm:text-xl leading-relaxed shadow-md">
                   “{story.logline}”
                 </blockquote>
               )}
             </header>
 
             {/* Story Prose Body */}
-            <section className="story-prose-body font-prose text-[1.42rem] text-foreground leading-[1.95] tracking-[0.005em] space-y-8 pt-4 pb-12">
+            <section className="story-prose-body font-prose text-[1.26rem] sm:text-[1.36rem] text-foreground max-w-3xl mx-auto pt-6 pb-16">
               <Markdown
                 options={{
                   overrides: {
                     p: {
                       component: 'p',
                       props: {
-                        className: 'transition-all duration-300 relative border-l-3 border-transparent pl-0 [&:first-of-type::first-letter]:text-5xl [&:first-of-type::first-letter]:font-brand [&:first-of-type::first-letter]:font-bold [&:first-of-type::first-letter]:float-left [&:first-of-type::first-letter]:mr-3 [&:first-of-type::first-letter]:text-[#bb3e03] dark:[&:first-of-type::first-letter]:text-[#ee9b00]',
+                        className: 'transition-all duration-300 relative border-l-3 border-transparent pl-0',
                       },
                     },
-                    h1: { component: 'h2', props: { className: 'font-display font-bold text-3xl mt-10 mb-4' } },
-                    h2: { component: 'h2', props: { className: 'font-display font-bold text-2xl mt-8 mb-4' } },
-                    h3: { component: 'h3', props: { className: 'font-display font-bold text-xl mt-6 mb-3' } },
+                    h1: { component: 'h2', props: { className: 'font-display font-bold text-3xl mt-12 mb-6 text-foreground' } },
+                    h2: { component: 'h2', props: { className: 'font-display font-bold text-2xl mt-10 mb-5 text-foreground' } },
+                    h3: { component: 'h3', props: { className: 'font-display font-bold text-xl mt-8 mb-4 text-foreground' } },
                     hr: {
                       component: () => (
-                        <div className="text-center my-12 text-[#bb3e03] dark:text-[#ee9b00] tracking-[0.5em] text-sm">
+                        <div className="text-center my-14 text-[#bb3e03] dark:text-[#ee9b00] tracking-[0.6em] text-base opacity-80">
                           ◈ ◈ ◈
                         </div>
                       ),

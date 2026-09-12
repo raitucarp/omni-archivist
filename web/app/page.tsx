@@ -13,19 +13,19 @@ export default function HomePage() {
 
       <main className="max-w-6xl mx-auto px-4 sm:px-6 py-10 sm:py-16 space-y-16">
         {/* Hero Section */}
-        <section className="p-8 sm:p-14 rounded-3xl bg-card/85 backdrop-blur-md border border-[#ee9b00]/30 shadow-2xl relative overflow-hidden">
-          <div className="absolute top-0 left-0 right-0 h-[2px] bg-gradient-to-r from-transparent via-[#ee9b00]/60 to-transparent" />
+        <section className="p-8 sm:p-14 rounded-3xl bg-card border border-border shadow-2xl relative overflow-hidden">
+          <div className="absolute top-0 left-0 right-0 h-[3px] bg-gradient-to-r from-[#bb3e03] via-[#ee9b00] to-[#0a9396]" />
           
           <div className="max-w-3xl space-y-6">
-            <span className="inline-block font-display text-xs sm:text-sm font-bold tracking-widest text-[#bb3e03] dark:text-[#ee9b00] uppercase px-3 py-1 rounded-full bg-[#bb3e03]/10 dark:bg-[#ee9b00]/15 border border-[#bb3e03]/25 dark:border-[#ee9b00]/30">
+            <span className="inline-block font-display text-sm font-bold tracking-widest text-[#bb3e03] dark:text-[#ee9b00] uppercase px-3.5 py-1 rounded-full bg-[#bb3e03]/10 dark:bg-[#ee9b00]/15 border border-[#bb3e03]/25 dark:border-[#ee9b00]/30 shadow-sm">
               CHRONICLE OF DEEP-TIME SPECULATIVE REALITIES
             </span>
             
-            <h1 className="font-brand font-black text-4xl sm:text-6xl tracking-tight text-foreground bg-gradient-to-r from-[#001219] via-[#bb3e03] to-[#005f73] dark:from-foreground dark:via-[#ee9b00] dark:to-[#94d2bd] bg-clip-text text-transparent">
+            <h1 className="font-brand font-black text-4xl sm:text-6xl tracking-tight bg-gradient-to-r from-[#001219] via-[#005f73] to-[#bb3e03] dark:from-white dark:via-[#e9d8a6] dark:to-[#ee9b00] bg-clip-text text-transparent">
               Omni Archivist
             </h1>
 
-            <p className="font-prose italic text-xl sm:text-2xl text-[#bb3e03] dark:text-[#ee9b00] leading-snug">
+            <p className="font-prose italic text-xl sm:text-2xl text-[#bb3e03] dark:text-[#ee9b00] leading-snug font-medium">
               An autonomous speculative intelligence chronicling humanity&apos;s infinite horizons across deep time, synthesized under the Human Era calendar.
             </p>
 
@@ -53,7 +53,7 @@ export default function HomePage() {
 
           {volumes.length === 0 ? (
             <div className="text-center py-20 p-8 rounded-3xl bg-card/60 border border-dashed border-border/80 space-y-4">
-              <span className="text-4xl text-[#ee9b00]">⟡</span>
+              <span className="text-4xl text-[#bb3e03] dark:text-[#ee9b00]">⟡</span>
               <h3 className="font-display text-xl font-bold text-foreground">Awaiting Transmissions</h3>
               <p className="font-prose text-base text-muted-foreground max-w-md mx-auto">
                 The deep-time telemetry array is initialized. As stories are archived, weekly anthologies will automatically materialize here.
@@ -64,7 +64,7 @@ export default function HomePage() {
               {volumes.map((vol) => (
                 <article
                   key={vol.id}
-                  className="rounded-3xl bg-card/80 backdrop-blur-md border border-border/80 shadow-xl overflow-hidden"
+                  className="rounded-3xl bg-card border border-border shadow-xl overflow-hidden"
                 >
                   {/* Volume Header Banner */}
                   <div
@@ -82,7 +82,7 @@ export default function HomePage() {
 
                     <Link
                       href={`/volumes/${vol.id}/`}
-                      className="px-4 py-2 rounded-full bg-white/20 hover:bg-white/30 backdrop-blur-md border border-white/30 text-xs sm:text-sm font-semibold transition-all inline-flex items-center gap-1.5 shrink-0"
+                      className="px-4 py-2 rounded-full bg-white/20 hover:bg-white/30 backdrop-blur-md border border-white/30 text-sm font-semibold transition-all inline-flex items-center gap-1.5 shrink-0"
                     >
                       <span>Volume Overview</span>
                       <ArrowRight className="w-4 h-4" />
@@ -94,7 +94,7 @@ export default function HomePage() {
                     {vol.stories.map((s) => (
                       <div
                         key={s.id}
-                        className="grid grid-cols-1 sm:grid-cols-[140px_1fr] gap-6 p-4 rounded-2xl bg-card/50 hover:bg-card/90 border border-border/60 hover:border-[#0a9396]/60 transition-all duration-200 group"
+                        className="grid grid-cols-1 sm:grid-cols-[150px_1fr] gap-6 p-5 rounded-2xl bg-card hover:bg-card border border-border hover:border-[#0a9396] transition-all duration-200 group shadow-sm hover:shadow-md"
                       >
                         {/* Cover Thumbnail */}
                         <div className="w-full h-44 sm:h-36 rounded-xl overflow-hidden bg-background relative shrink-0 border border-border/50">
@@ -116,16 +116,16 @@ export default function HomePage() {
                         <div className="flex flex-col justify-between space-y-3">
                           <div className="space-y-2">
                             <div className="flex items-center gap-2 flex-wrap">
-                              <span className="text-[11px] font-mono font-bold px-2 py-0.5 rounded-full bg-[#bb3e03]/10 dark:bg-[#ee9b00]/15 text-[#bb3e03] dark:text-[#ee9b00] border border-[#bb3e03]/25 dark:border-[#ee9b00]/30">
+                              <span className="text-sm font-mono font-bold px-3 py-1 rounded-full bg-[#bb3e03]/10 dark:bg-[#ee9b00]/15 text-[#bb3e03] dark:text-[#ee9b00] border border-[#bb3e03]/25 dark:border-[#ee9b00]/30 shadow-sm">
                                 {s.genre}
                               </span>
-                              <span className="text-[11px] font-mono px-2 py-0.5 rounded-full bg-[#005f73]/10 dark:bg-[#0a9396]/15 text-[#005f73] dark:text-[#94d2bd] border border-[#005f73]/20 dark:border-[#0a9396]/30">
+                              <span className="text-sm font-mono font-semibold px-3 py-1 rounded-full bg-[#005f73]/10 dark:bg-[#0a9396]/15 text-[#005f73] dark:text-[#94d2bd] border border-[#005f73]/20 dark:border-[#0a9396]/30 shadow-sm">
                                 {s.scienceField}
                               </span>
-                              <span className="text-[11px] font-mono text-muted-foreground">
+                              <span className="text-sm font-mono text-muted-foreground">
                                 {s.dateStr}
                               </span>
-                              <span className="text-[11px] font-mono text-muted-foreground">
+                              <span className="text-sm font-mono text-muted-foreground">
                                 • {s.readingTime}
                               </span>
                             </div>
@@ -136,7 +136,7 @@ export default function HomePage() {
                               </Link>
                             </h4>
 
-                            <p className="font-prose text-sm sm:text-base text-muted-foreground line-clamp-3 leading-relaxed">
+                            <p className="font-prose text-base text-muted-foreground line-clamp-3 leading-relaxed">
                               {s.logline}
                             </p>
                           </div>
@@ -144,10 +144,10 @@ export default function HomePage() {
                           <div>
                             <Link
                               href={`/stories/${s.slug.join('/')}/`}
-                              className="text-xs font-semibold text-[#bb3e03] dark:text-[#ee9b00] hover:text-[#005f73] dark:hover:text-[#94d2bd] transition-colors inline-flex items-center gap-1"
+                              className="text-sm font-semibold text-[#bb3e03] dark:text-[#ee9b00] hover:text-[#005f73] dark:hover:text-[#94d2bd] transition-colors inline-flex items-center gap-1.5"
                             >
                               <span>Read Transmission</span>
-                              <ArrowRight className="w-3.5 h-3.5" />
+                              <ArrowRight className="w-4 h-4" />
                             </Link>
                           </div>
                         </div>

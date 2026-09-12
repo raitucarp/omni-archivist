@@ -49,7 +49,7 @@ export function SiteHeader({ storyTitle, activeTab, onTabChange }: SiteHeaderPro
   }, [storyTitle]);
 
   return (
-    <header className="sticky top-0 z-50 w-full border-b border-border/80 bg-background/85 backdrop-blur-md transition-all duration-300">
+    <header className="sticky top-0 z-50 w-full border-b border-border bg-background/95 backdrop-blur-md shadow-sm transition-all duration-300">
       {/* 1. Topmost Reading Progress Bar (Crisp, unblurred, topmost in header) */}
       {storyTitle && (
         <div
@@ -68,10 +68,10 @@ export function SiteHeader({ storyTitle, activeTab, onTabChange }: SiteHeaderPro
         <div className="flex items-center gap-2 sm:gap-3 min-w-0">
           <Link href="/" className="flex items-center gap-1.5 group shrink-0" title="Omni Archivist Home">
             <span className="text-base sm:text-lg text-[#bb3e03] dark:text-[#ee9b00] drop-shadow-[0_0_8px_rgba(238,155,0,0.5)] transition-transform group-hover:scale-110">◈</span>
-            <span className="font-brand font-semibold tracking-wider text-xs sm:text-sm text-muted-foreground group-hover:text-foreground transition-colors">
+            <span className="font-brand font-semibold tracking-wider text-xs sm:text-sm text-foreground/80 group-hover:text-foreground transition-colors">
               OMNI ARCHIVIST
             </span>
-            <span className="hidden lg:inline-block text-[10px] font-mono font-semibold px-1.5 py-0.5 rounded-full bg-[#005f73]/10 dark:bg-[#0a9396]/15 text-[#005f73] dark:text-[#94d2bd] border border-[#005f73]/20 dark:border-[#94d2bd]/30">
+            <span className="hidden lg:inline-block text-xs font-mono font-semibold px-2 py-0.5 rounded-full bg-[#005f73]/10 dark:bg-[#0a9396]/15 text-[#005f73] dark:text-[#94d2bd] border border-[#005f73]/20 dark:border-[#94d2bd]/30">
               12026 HE
             </span>
           </Link>
@@ -89,29 +89,29 @@ export function SiteHeader({ storyTitle, activeTab, onTabChange }: SiteHeaderPro
         {/* Story / Metadata Navigation Tabs & Theme Toggle */}
         <div className="flex items-center gap-3 shrink-0">
           {storyTitle && onTabChange && (
-            <nav className="flex items-center bg-card/70 border border-border/70 p-1 rounded-lg text-xs sm:text-sm font-medium">
+            <nav className="flex items-center bg-card border border-border p-1 rounded-xl text-sm font-semibold shadow-sm">
               <button
                 type="button"
                 onClick={() => onTabChange('story')}
-                className={`flex items-center gap-1.5 px-3 py-1 rounded-md transition-all cursor-pointer ${
+                className={`flex items-center gap-1.5 px-3.5 py-1.5 rounded-lg transition-all cursor-pointer ${
                   activeTab === 'story'
-                    ? 'bg-[#bb3e03] text-white dark:bg-[#ee9b00] dark:text-[#001219] font-semibold shadow-[0_0_10px_rgba(238,155,0,0.4)]'
-                    : 'text-muted-foreground hover:text-foreground'
+                    ? 'bg-[#bb3e03] text-white dark:bg-[#ee9b00] dark:text-[#001219] font-bold shadow-sm'
+                    : 'text-foreground/75 hover:text-foreground hover:bg-muted/60'
                 }`}
               >
-                <BookOpen className="w-3.5 h-3.5" />
+                <BookOpen className="w-4 h-4" />
                 <span>Story</span>
               </button>
               <button
                 type="button"
                 onClick={() => onTabChange('metadata')}
-                className={`flex items-center gap-1.5 px-3 py-1 rounded-md transition-all cursor-pointer ${
+                className={`flex items-center gap-1.5 px-3.5 py-1.5 rounded-lg transition-all cursor-pointer ${
                   activeTab === 'metadata'
-                    ? 'bg-[#005f73] text-white dark:bg-[#0a9396] dark:text-[#f5eedf] font-semibold shadow-[0_0_10px_rgba(10,147,150,0.4)]'
-                    : 'text-muted-foreground hover:text-foreground'
+                    ? 'bg-[#005f73] text-white dark:bg-[#0a9396] dark:text-white font-bold shadow-sm'
+                    : 'text-foreground/75 hover:text-foreground hover:bg-muted/60'
                 }`}
               >
-                <FileText className="w-3.5 h-3.5" />
+                <FileText className="w-4 h-4" />
                 <span>Metadata</span>
               </button>
             </nav>
@@ -119,7 +119,7 @@ export function SiteHeader({ storyTitle, activeTab, onTabChange }: SiteHeaderPro
 
           <Link
             href="/"
-            className="hidden sm:inline-block text-xs font-medium text-muted-foreground hover:text-foreground transition-colors px-2 py-1"
+            className="hidden sm:inline-block text-sm font-semibold text-foreground/80 hover:text-foreground transition-colors px-2 py-1"
           >
             Anthology
           </Link>
