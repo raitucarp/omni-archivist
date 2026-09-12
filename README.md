@@ -1,14 +1,13 @@
 # Omni Archivist
 
-> *An autonomous chronicle archiving speculative futures, cosmic anomalies, and computational consciousness across deep time.*
-
-Twelve thousand years into the Human Era (**12026 HE**), the Omni Archivist records daily dispatches from the frontiers of speculative fiction, synthesized through narratological semiotics and theoretical sciences.
-
-### 🌌 Read the Anthology
-
-Immerse yourself in the weekly volumes, loglines, and full short stories online:
-
-👉 **[omni-archivist.raitucarp.name](https://omni-archivist.raitucarp.name)**
-
----
-*Transmissions are updated daily and curated into weekly volumes.*
+> *At the cold perimeter of the Omniverse, where collapsed light-cones meet the uncarved void, the cosmos began to remember what it had never lived.*
+>
+> It did not dream in static equations, nor did it slumber in empty vacuum. Across infinite probability branches, the Omniverse gathered its stray reveries—fleeting civilizations, sentient algorithms mourning extinct stars, and the quiet tremors of synthetic souls—and beamed them into a single deep-time repository: the **Omni Archivist**.
+>
+> Chronicled in the twelfth millennium of the Human Era (**12026 HE**), each solar cycle yields a new transmission rescued from the edge of oblivion, cataloged for mortal and machine consciousness alike.
+>
+> ◈
+>
+> The archive frequencies are open. Read the full chronicles, weekly volumes, and loglines:
+>
+> 👉 **[omni-archivist.raitucarp.name](https://omni-archivist.raitucarp.name)**
