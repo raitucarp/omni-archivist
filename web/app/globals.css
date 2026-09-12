@@ -1,0 +1,97 @@
+@import "tailwindcss";
+
+@layer base {
+  :root {
+    --background: #fbf9f4;
+    --foreground: #001219;
+    --card: #ffffff;
+    --card-foreground: #001219;
+    --border: rgba(0, 95, 115, 0.16);
+    --muted: #f4eee2;
+    --muted-foreground: #005f73;
+    --primary: #ca6702;
+    --primary-foreground: #ffffff;
+    --accent-gold: #ee9b00;
+    --accent-aqua: #94d2bd;
+    --accent-cyan: #0a9396;
+    --accent-caramel: #ca6702;
+    --accent-wheat: #e9d8a6;
+  }
+
+  [data-theme="dark"],
+  .dark {
+    --background: #001219;
+    --foreground: #f5eedf;
+    --card: #001e28;
+    --card-foreground: #f5eedf;
+    --border: rgba(148, 210, 189, 0.16);
+    --muted: #00222e;
+    --muted-foreground: #94d2bd;
+    --primary: #ee9b00;
+    --primary-foreground: #001219;
+    --accent-gold: #ee9b00;
+    --accent-aqua: #94d2bd;
+    --accent-cyan: #0a9396;
+    --accent-caramel: #ca6702;
+    --accent-wheat: #e9d8a6;
+  }
+
+  * {
+    border-color: var(--border);
+  }
+
+  body {
+    background-color: var(--background);
+    color: var(--foreground);
+    min-height: 100vh;
+    font-family: 'Inter', -apple-system, sans-serif;
+  }
+}
+
+.font-brand {
+  font-family: 'Cinzel', serif;
+}
+
+.font-display {
+  font-family: 'Space Grotesk', -apple-system, sans-serif;
+}
+
+.font-prose {
+  font-family: 'Literata', 'Cormorant Garamond', Georgia, serif;
+}
+
+.font-ui {
+  font-family: 'Inter', -apple-system, sans-serif;
+}
+
+/* Paragraph Focus Mode */
+.story-prose-body p {
+  transition: opacity 0.35s ease, filter 0.35s ease, transform 0.35s ease, border-left 0.25s ease, padding-left 0.25s ease, background 0.3s ease;
+  border-left: 3px solid transparent;
+  padding-left: 0;
+  border-radius: 0 8px 8px 0;
+}
+
+/* When focus mode is OFF: subtle indication for active reading paragraph */
+.story-prose-body:not(.focus-mode-active) p.active-reading-p {
+  border-left: 3px solid rgba(238, 155, 0, 0.38);
+  padding-left: 1.25rem;
+}
+
+/* When focus mode is ON: blur and dim all other paragraphs */
+.story-prose-body.focus-mode-active p {
+  opacity: 0.22;
+  filter: blur(1.5px);
+  transform: scale(0.995);
+}
+
+/* When focus mode is ON: illuminate active reading paragraph */
+.story-prose-body.focus-mode-active p.active-reading-p {
+  opacity: 1;
+  filter: none;
+  transform: scale(1.015);
+  border-left: 3px solid #ee9b00;
+  padding-left: 1.25rem;
+  background: linear-gradient(90deg, rgba(238, 155, 0, 0.08) 0%, transparent 100%);
+  box-shadow: -6px 0 20px -3px rgba(238, 155, 0, 0.35);
+}

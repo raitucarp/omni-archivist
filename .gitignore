@@ -79,4 +79,4 @@ $RECYCLE.BIN/
 theory/
 test_stories/
 *.epub
-public/
+/public/

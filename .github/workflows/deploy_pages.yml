@@ -27,28 +27,26 @@ jobs:
       name: github-pages
       url: ${{ steps.deployment.outputs.page_url }}
     runs-on: ubuntu-latest
-    env:
-      GEMINI_MODEL: ${{ vars.GEMINI_MODEL || 'googleai/gemini-flash-latest' }}
-      GEMINI_API_KEY: ${{ secrets.GEMINI_API_KEY }}
     steps:
       - name: Checkout repository
         uses: actions/checkout@v4
         with:
           fetch-depth: 0
 
-      - name: Set up Go
-        uses: actions/setup-go@v4
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
         with:
-          go-version: '1.26'
+          node-version: '22'
+          cache: 'npm'
+          cache-dependency-path: 'web/package-lock.json'
 
-      - name: Build omni-archivist
-        run: |
-          go version
-          go build -o omni-archivist .
+      - name: Install dependencies
+        working-directory: web
+        run: npm ci
 
-      - name: Compile static site for GitHub Pages
-        run: |
-          ./omni-archivist compile pages --dir artifacts --output public --cname omni-archivist.raitucarp.name
+      - name: Build Next.js Static Site
+        working-directory: web
+        run: npm run build
 
       - name: Setup Pages
         uses: actions/configure-pages@v5
@@ -56,8 +54,9 @@ jobs:
       - name: Upload Pages artifact
         uses: actions/upload-pages-artifact@v3
         with:
-          path: './public'
+          path: './web/out'
 
       - name: Deploy to GitHub Pages
         id: deployment
         uses: actions/deploy-pages@v4
+
