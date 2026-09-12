@@ -2,12 +2,10 @@ name: Deploy GitHub Pages
 
 on:
   push:
-    paths:
-      - 'artifacts/**'
     branches:
       - main
   workflow_run:
-    workflows: ["Daily Generate and Release", "Weekly EPUB Compilation"]
+    workflows: ["Daily Generate and Release", "Weekly Stories Compilation"]
     types:
       - completed
   workflow_dispatch:
