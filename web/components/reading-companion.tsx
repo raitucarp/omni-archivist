@@ -124,7 +124,7 @@ export function ReadingCompanion() {
   return (
     <>
       {/* 1. Bottom-Left: Font Size Controls */}
-      <div className="fixed bottom-12 left-2 sm:bottom-6 sm:left-6 z-40 flex items-center gap-1.5 p-1.5 rounded-full bg-card/90 backdrop-blur-md border border-border/80 shadow-lg text-xs font-semibold">
+      <div className="fixed bottom-14 left-3 sm:bottom-6 sm:left-6 z-40 flex items-center gap-1.5 p-1.5 rounded-full bg-card/90 backdrop-blur-md border border-border/80 shadow-lg text-xs font-semibold">
         <span className="px-1.5 text-muted-foreground flex items-center gap-1">
           <Type className="w-3.5 h-3.5 text-[#bb3e03] dark:text-[#ee9b00]" />
         </span>
@@ -151,7 +151,7 @@ export function ReadingCompanion() {
       </div>
 
       {/* 3. Bottom-Right: Vertical Controls Cluster */}
-      <div className="fixed bottom-12 right-2 sm:bottom-6 sm:right-6 z-40 flex flex-col items-end gap-2.5">
+      <div className="fixed bottom-14 right-3 sm:bottom-6 sm:right-6 z-40 flex flex-col items-end gap-2.5">
         {/* Desktop Vertical Stack / Mobile Expandable Menu */}
         <div
           className={`flex flex-col items-center gap-2.5 transition-all duration-300 ${

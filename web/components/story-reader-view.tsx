@@ -110,9 +110,9 @@ export function StoryReaderView({ story }: StoryReaderViewProps) {
         </aside>
       )}
 
-      <main className={`relative z-10 w-full max-w-full min-w-0 mx-auto px-3.5 sm:px-6 py-6 sm:py-12 transition-all duration-300 ${activeTab === 'metadata' ? 'max-w-7xl' : 'max-w-5xl'}`}>
+      <main className={`relative z-10 w-full mx-auto px-4 sm:px-6 py-6 sm:py-12 transition-all duration-300 ${activeTab === 'metadata' ? 'max-w-7xl' : 'max-w-4xl'}`}>
         {activeTab === 'story' ? (
-          <article className="space-y-10 animate-in fade-in duration-300 min-w-0 max-w-full">
+          <article className="space-y-10 animate-in fade-in duration-300">
             {/* Breadcrumb */}
             <nav className="flex items-center gap-2 text-sm font-mono text-muted-foreground">
               <Link href="/" className="hover:text-foreground transition-colors flex items-center gap-1.5 font-medium">
@@ -175,8 +175,8 @@ export function StoryReaderView({ story }: StoryReaderViewProps) {
               )}
             </header>
 
-            {/* Story Prose Body - Responsive Typography (Compact on mobile, expansive on desktop) */}
-            <section className="story-prose-body font-prose text-base sm:text-[1.36rem] text-foreground max-w-4xl mx-auto pt-4 pb-28 sm:pb-16 min-w-0 max-w-full">
+            {/* Story Prose Body - Responsive Typography (Compact on mobile, centered reading column on desktop) */}
+            <section className="story-prose-body font-prose text-base sm:text-[1.36rem] text-foreground max-w-3xl lg:max-w-4xl mx-auto pt-4 pb-28 sm:pb-16">
               <Markdown
                 options={{
                   overrides: {
@@ -199,31 +199,6 @@ export function StoryReaderView({ story }: StoryReaderViewProps) {
                 {story.contentMD}
               </Markdown>
             </section>
-
-            {/* Reading Companion Controls */}
-            <ReadingCompanion />
-
-            {/* Mobile Fixed Bottom Information Bar */}
-            <div
-              className="md:hidden fixed bottom-0 left-0 right-0 z-30 bg-background/95 backdrop-blur-md border-t border-border px-4 py-2.5 shadow-lg flex items-center justify-between text-xs font-mono"
-              aria-label="Story Metrics Mobile Bar"
-            >
-              <div className="flex items-center gap-2 text-muted-foreground">
-                <span className="text-[#bb3e03] dark:text-[#ee9b00] text-xs">◈</span>
-                <span>
-                  <strong className="text-foreground">{wordCount.toLocaleString()}</strong> words
-                </span>
-                <span className="opacity-40">•</span>
-                <span>
-                  <strong className="text-foreground">{paragraphCount}</strong> paras
-                </span>
-              </div>
-
-              <div className="flex items-center gap-1.5 font-semibold text-[#bb3e03] dark:text-[#ee9b00]">
-                <Clock className="w-3.5 h-3.5" />
-                <span>{story.readingTime}</span>
-              </div>
-            </div>
 
             {/* Story Navigation Footer */}
             <footer className="pt-8 pb-12 md:pb-0 border-t border-border/80 flex flex-col sm:flex-row items-center justify-between gap-4">
@@ -274,6 +249,35 @@ export function StoryReaderView({ story }: StoryReaderViewProps) {
           </div>
         )}
       </main>
+
+      {/* Floating Reading Companion & Mobile Bottom Status Bar (True Viewport Fixed) */}
+      {activeTab === 'story' && (
+        <>
+          <ReadingCompanion />
+
+          {/* Mobile Fixed Bottom Information Bar */}
+          <div
+            className="md:hidden fixed bottom-0 left-0 right-0 z-40 bg-background/95 backdrop-blur-md border-t border-border px-4 py-2 pb-[max(0.625rem,env(safe-area-inset-bottom))] shadow-lg flex items-center justify-between text-xs font-mono"
+            aria-label="Story Metrics Mobile Bar"
+          >
+            <div className="flex items-center gap-2 text-muted-foreground">
+              <span className="text-[#bb3e03] dark:text-[#ee9b00] text-xs">◈</span>
+              <span>
+                <strong className="text-foreground">{wordCount.toLocaleString()}</strong> words
+              </span>
+              <span className="opacity-40">•</span>
+              <span>
+                <strong className="text-foreground">{paragraphCount}</strong> paras
+              </span>
+            </div>
+
+            <div className="flex items-center gap-1.5 font-semibold text-[#bb3e03] dark:text-[#ee9b00]">
+              <Clock className="w-3.5 h-3.5" />
+              <span>{story.readingTime}</span>
+            </div>
+          </div>
+        </>
+      )}
     </>
   );
 }
