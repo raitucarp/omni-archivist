@@ -124,7 +124,11 @@ export function ReadingCompanion() {
   return (
     <>
       {/* 1. Bottom-Left: Font Size Controls */}
-      <div className="fixed bottom-14 left-3 sm:bottom-6 sm:left-6 z-40 flex items-center gap-1.5 p-1.5 rounded-full bg-card/90 backdrop-blur-md border border-border/80 shadow-lg text-xs font-semibold">
+      <div
+        className={`fixed bottom-14 left-3 sm:bottom-6 sm:left-6 z-40 flex items-center gap-1.5 p-1.5 rounded-full bg-card/90 backdrop-blur-md border border-border/80 shadow-lg text-xs font-semibold transition-all duration-200 ${
+          mobileExpanded ? 'hidden sm:flex' : 'flex'
+        }`}
+      >
         <span className="px-1.5 text-muted-foreground flex items-center gap-1">
           <Type className="w-3.5 h-3.5 text-[#bb3e03] dark:text-[#ee9b00]" />
         </span>
@@ -150,41 +154,55 @@ export function ReadingCompanion() {
         </button>
       </div>
 
-      {/* 3. Bottom-Right: Vertical Controls Cluster */}
-      <div className="fixed bottom-14 right-3 sm:bottom-6 sm:right-6 z-40 flex flex-col items-end gap-2.5">
-        {/* Desktop Vertical Stack / Mobile Expandable Menu */}
+      {/* 3. Bottom-Right: Controls Cluster (Horizontal stack on Mobile, Vertical on Desktop) */}
+      <div className="fixed bottom-14 right-3 sm:bottom-6 sm:right-6 z-40 flex flex-row-reverse md:flex-col items-center gap-2 sm:gap-2.5">
+        {/* Mobile FAB Trigger (Visible only on <= 768px) */}
+        <button
+          type="button"
+          onClick={() => setMobileExpanded((prev) => !prev)}
+          className="md:hidden w-11 h-11 rounded-full bg-gradient-to-br from-[#bb3e03] to-[#ca6702] dark:from-[#ee9b00] dark:to-[#ca6702] text-white dark:text-[#001219] font-black text-lg shadow-[0_6px_18px_rgba(238,155,0,0.5)] border-2 border-white/25 flex items-center justify-center transition-transform active:scale-95 cursor-pointer shrink-0"
+          style={{ transform: mobileExpanded ? 'rotate(45deg)' : 'none' }}
+          aria-label="Toggle Reading Companion"
+          title="Reading Companion"
+        >
+          ◈
+        </button>
+
+        {/* Buttons: Horizontal row on Mobile, Vertical column on Desktop */}
         <div
-          className={`flex flex-col items-center gap-2.5 transition-all duration-300 ${
-            mobileExpanded ? 'flex' : 'hidden md:flex'
+          className={`items-center gap-1.5 sm:gap-2.5 p-1 sm:p-0 rounded-full bg-card/95 sm:bg-transparent backdrop-blur-md sm:backdrop-blur-none border border-border/80 sm:border-0 shadow-xl sm:shadow-none transition-all duration-300 ${
+            mobileExpanded
+              ? 'flex flex-row md:flex-col animate-in fade-in slide-in-from-right-3 duration-200'
+              : 'hidden md:flex md:flex-col'
           }`}
         >
           {/* Previous Paragraph (Round button with icon) */}
           <button
             type="button"
             onClick={() => scrollToParagraph(-1)}
-            className="w-10 h-10 rounded-full bg-card/90 backdrop-blur-md border border-border/80 text-foreground hover:border-[#bb3e03] dark:hover:border-[#ee9b00] hover:text-[#bb3e03] dark:hover:text-[#ee9b00] hover:scale-105 shadow-md flex items-center justify-center transition-all cursor-pointer"
+            className="w-9 h-9 sm:w-10 sm:h-10 rounded-full bg-card/90 sm:bg-card/90 backdrop-blur-md border border-border/80 text-foreground hover:border-[#bb3e03] dark:hover:border-[#ee9b00] hover:text-[#bb3e03] dark:hover:text-[#ee9b00] hover:scale-105 shadow-sm sm:shadow-md flex items-center justify-center transition-all cursor-pointer shrink-0"
             title="Previous Paragraph (Shortcut: K)"
             aria-label="Previous Paragraph"
           >
-            <ChevronUp className="w-5 h-5" />
+            <ChevronUp className="w-4 h-4 sm:w-5 sm:h-5" />
           </button>
 
           {/* Next Paragraph (Round button with icon) */}
           <button
             type="button"
             onClick={() => scrollToParagraph(1)}
-            className="w-10 h-10 rounded-full bg-card/90 backdrop-blur-md border border-border/80 text-foreground hover:border-[#bb3e03] dark:hover:border-[#ee9b00] hover:text-[#bb3e03] dark:hover:text-[#ee9b00] hover:scale-105 shadow-md flex items-center justify-center transition-all cursor-pointer"
+            className="w-9 h-9 sm:w-10 sm:h-10 rounded-full bg-card/90 sm:bg-card/90 backdrop-blur-md border border-border/80 text-foreground hover:border-[#bb3e03] dark:hover:border-[#ee9b00] hover:text-[#bb3e03] dark:hover:text-[#ee9b00] hover:scale-105 shadow-sm sm:shadow-md flex items-center justify-center transition-all cursor-pointer shrink-0"
             title="Next Paragraph (Shortcut: J)"
             aria-label="Next Paragraph"
           >
-            <ChevronDown className="w-5 h-5" />
+            <ChevronDown className="w-4 h-4 sm:w-5 sm:h-5" />
           </button>
 
           {/* Focus Mode Toggle (With Icon & Label) */}
           <button
             type="button"
             onClick={() => setFocusMode((prev) => !prev)}
-            className={`px-3.5 py-1.5 rounded-full border text-xs font-semibold flex items-center gap-1.5 shadow-md transition-all cursor-pointer ${
+            className={`px-3 py-1.5 sm:px-3.5 rounded-full border text-xs font-semibold flex items-center gap-1.5 shadow-sm sm:shadow-md transition-all cursor-pointer shrink-0 ${
               focusMode
                 ? 'bg-[#bb3e03] text-white border-[#bb3e03] dark:bg-[#ee9b00] dark:text-[#001219] dark:border-[#ee9b00] shadow-[0_0_14px_rgba(238,155,0,0.6)]'
                 : 'bg-card/90 backdrop-blur-md border-border/80 text-foreground hover:border-[#bb3e03] dark:hover:border-[#ee9b00] hover:text-[#bb3e03] dark:hover:text-[#ee9b00]'
@@ -200,25 +218,13 @@ export function ReadingCompanion() {
           <button
             type="button"
             onClick={scrollToTop}
-            className="w-10 h-10 rounded-full bg-card/90 backdrop-blur-md border border-border/80 text-foreground hover:border-[#bb3e03] dark:hover:border-[#ee9b00] hover:text-[#bb3e03] dark:hover:text-[#ee9b00] hover:scale-105 shadow-md flex items-center justify-center transition-all cursor-pointer"
+            className="w-9 h-9 sm:w-10 sm:h-10 rounded-full bg-card/90 sm:bg-card/90 backdrop-blur-md border border-border/80 text-foreground hover:border-[#bb3e03] dark:hover:border-[#ee9b00] hover:text-[#bb3e03] dark:hover:text-[#ee9b00] hover:scale-105 shadow-sm sm:shadow-md flex items-center justify-center transition-all cursor-pointer shrink-0"
             title="Scroll to Top"
             aria-label="Scroll to Top"
           >
             <ArrowUp className="w-4 h-4" />
           </button>
         </div>
-
-        {/* Mobile FAB Trigger (Visible only on <= 768px) */}
-        <button
-          type="button"
-          onClick={() => setMobileExpanded((prev) => !prev)}
-          className="md:hidden w-12 h-12 rounded-full bg-gradient-to-br from-[#bb3e03] to-[#ca6702] dark:from-[#ee9b00] dark:to-[#ca6702] text-white dark:text-[#001219] font-black text-xl shadow-[0_8px_20px_rgba(238,155,0,0.5)] border-2 border-white/25 flex items-center justify-center transition-transform active:scale-95 cursor-pointer"
-          style={{ transform: mobileExpanded ? 'rotate(45deg)' : 'none' }}
-          aria-label="Toggle Reading Companion"
-          title="Reading Companion"
-        >
-          ◈
-        </button>
       </div>
     </>
   );
