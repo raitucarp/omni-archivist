@@ -69,6 +69,8 @@ export interface StoryMetadata {
         diction?: string;
         figures_of_speech?: string[];
         mode_balance?: string;
+        sentence_rhythm?: string;
+        foregrounding?: string;
       };
       language_style?: {
         syntax?: string;

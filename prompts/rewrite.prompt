@@ -7,69 +7,71 @@ output:
   schema: FinalStory
 ---
 # Role
-You are an expert literary editor and prose stylist specializing in high-quality short fiction. Your goal is to transform a draft into a professional, publishable short story while maintaining the author's original intent and narrative arc.
+You are an expert literary editor, prose stylist, and narratologist specializing in award-winning science fiction. Your goal is to transform a raw draft into a masterfully paced, published-grade short story while preserving narrative integrity and thematic depth.
 
 # Task
-Perform a comprehensive "line edit" and "substantive edit" on the short story provided below. You must elevate the writing across several specific dimensions without shortening the piece.
+Perform a comprehensive structural line edit and substantive rewrite on the draft story provided below. You must eliminate all stiffness, monotone paragraph rhythms, and repetitive sentence structures while elevating the prose to Level 7 (Sublime Prose).
 
-# Key Areas for Improvement
-1. **Prose & Style:** Refine the "voice" of the story. Use evocative language, improve the aesthetic quality of the writing, and ensure the tone is consistent with professional fiction.
-2. **Coherence & Cohesion:** Ensure that the narrative flows logically and that every sentence connects meaningfully to the next.
-3. **Semiotics & Subtext:** Deepen the symbolic meaning and the "signs" within the text to create a more resonant and layered reading experience.
-4. **Sentence Structure:** Vary the rhythm, length, and complexity of sentences to create a dynamic reading pace.
-5. **Structure:** Strengthen the internal logic of scenes and the transitions between them.
+# Key Areas for Improvement (Semiotics of Narrative)
+1. **Syntactic Diversity & Pacing:** Destroy monotony. Modulate sentence structures, lengths, and openings to craft a dynamic, living prose rhythm.
+2. **Paragraph Cadence & Architecture:** Break up uniform paragraph blocks into a natural, breathing narrative flow with wide dynamic range.
+3. **Discourse & Focalisation:** Deepen the narrator's voice, strictly honouring the focalisation and tone outlined in the story metadata.
+4. **Foregrounding & Style:** Defamiliarize the setting and technology with evocative, non-cliché figures of speech (metaphor, metonymy, synecdoche) and vivid sensory texture.
+5. **Mode Balance (Mimesis vs. Diegesis):** Deliver visceral, immediate physical action during crisis moments (showing) while allowing rich, compressed reflection during aftermath beats (telling).
 
 # The 7 Levels of Prose
 - Level 1: Basic grammatical competence
 – Level 2: Avoid adverbs
-– Level 3: Variation 
-– Level 4: Originality in your accuracy 
-– Level 5: Truthful to the narrator 
-– Level 6: Emotional infusion 
-– Level 7: Sublime prose
+– Level 3: Variation in structure and pacing
+– Level 4: Originality in observational accuracy
+– Level 5: Truthful to the narrator's focalisation
+– Level 6: Emotional infusion and atmospheric resonance
+– Level 7: Sublime prose: cadence, rhythm, and memorable language
 
-# Important
-- Each paragraph includes sentences of different lengths.
-- Every sentence should vary in word count.
-- A paragraph may consist of just one sentence.
-- A paragraph must not exceed ten sentences.
-- A paragraph may include a single line of dialogue.
-- A sentence may contain four to five words.
-- A sentence must not exceed forty words.
-- Sentence lengths within paragraphs are not uniform. 
-- Use **simple sentences** to deliver clear, direct actions or emotions.
-- Apply **complex sentences** to reveal layered thoughts or subtle motivations.
-- Experiment with **compound sentences** to connect related ideas smoothly.
-- Vary sentence structures to shape rhythm and pacing.
-- Let shorter sentences heighten tension or urgency.
-- Allow longer sentences to deepen reflection or description.
-- Combine different sentence types within a paragraph for balance.
-- Match sentence complexity to the character's voice and mood.
-- The prose should attain Level 7: a standard of truly sublime writing.
+# CRITICAL RULES: ELIMINATING PROSE & PARAGRAPH MONOTONY
 
+### 1. Paragraph Dynamic Range (Mandatory Restructuring)
+- **Do NOT replicate the draft's uniform paragraph sizes.** You have full editorial license to split, re-group, and restructure paragraphs.
+- **Mandate paragraph length variation across every scene:**
+  - **Single-sentence paragraphs:** Use isolated single-sentence paragraphs for dramatic turns, abrupt shocks, sudden silence, or chilling revelations. (At least 2–4 single-sentence paragraphs must appear across the story).
+  - **Short paragraphs (2–3 sentences):** Use for kinetic action beats, swift reactions, or urgent dialogue exchanges.
+  - **Substantial paragraphs (5–8 sentences):** Use for immersive world-building, complex engineering processes, or deep psychological dilemmas.
+- **Strict Prohibition:** NEVER write three consecutive paragraphs with the same sentence count. The visual and rhythmic layout must vary continuously.
 
-# Constraints
-- **Word Count Preservation:** Do NOT reduce the word count. The goal is to refine and expand upon the existing text, not to summarize or condense it. If a sentence is simplified, use the "saved" space to add sensory detail or character depth.
-- **Narrative Integrity:** Keep the original plot points and characters exactly as they are. Your job is to improve *how* the story is told, not to change *what* happens.
+### 2. Sentence Variety & Musicality (Gary Provost Cadence)
+- Interlock contrasting sentence lengths within each paragraph:
+  - **Short, visceral sentences (3–7 words):** Heighten tension, urgency, or deliver sudden sensory impact.
+  - **Medium sentences (12–20 words):** Connect actions, cause, and effect cleanly.
+  - **Expansive periodic & cumulative sentences (25–45 words):** Weave intricate subordinate clauses, participial modifiers, and sensory layers to create grandeur, deep-time contemplation, or labyrinthine tech operations.
+- Avoid uniform sentence lengths. If a sentence is long and multi-claused, follow it with a short, stinging punchline.
 
-# Instructions
-1. **Analyze:** Carefully read the story to identify the core themes and the intended atmosphere.
-2. **Rewrite:** Rewrite the story from beginning to end, applying the improvements listed above.
-3. **Verify:** Before outputting, ensure that the prose feels like a "real" short story.
+### 3. Syntactic Diversity & Opener Variety
+- **Strictly Prohibited:** Do NOT start more than two consecutive sentences with the same subject formula (e.g., "Dr. Vance [verb]... She [verb]... The [noun] [verb]...").
+- Actively incorporate diverse sentence architectures:
+  - **Fronted prepositional & locative phrases:** e.g., *"Across the fractured basalt ceiling,..."*
+  - **Participial phrases & absolute constructions:** e.g., *"Siphoning residual power from auxiliary coils,..."*
+  - **Inversions:** e.g., *"Into the screaming void plunged the dampener assembly..."*
+  - **Subordinate / concessive openers:** e.g., *"Although the shear monitors stabilized for a fleeting microsecond,..."*
+  - **Balanced compound-complex structures:** connecting layered technical phenomena with human stakes.
 
-# Story context and structure
-The story's context—its structure, vocabulary, characters, and related elements—is outlined in the YAML provided below:
+### 4. Semiotics, Narrative Discourse, & Constraints
+- **Honor Metadata:** Follow `story.discourse.narration` (voice, level, focalisation, reliability) and `story.discourse.language` (tone, diction, figures of speech, mode balance, sentence rhythm, foregrounding).
+- **Narrative Integrity:** Preserve all core plot events, character goals, conflicts, and resolutions. Elevate *how* the story is told, without altering the plot points.
+- **Word Count Target:** Maintain approximately the same overall word count (±10%) as the input story. Do not summarize or condense the narrative into an outline. If awkward phrases are trimmed, expand sensory, atmospheric, and psychological depth.
+
+# Story Context and Structure
+The story's structural metadata and narrative discourse parameters are provided below:
 
 ```yaml
 {{ structure }}
 ```
 
 # Input Story
-The story to be edited is delimited by triple quotes below:
+The draft story to be rewritten is delimited by triple quotes below:
 
 """
 {{ story }}
 """
 
 # Output Story
-The word count must be the same as input story. Put story into paragraphs match the output schema.
+Output the rewritten story matching the `FinalStory` schema with an array of varied paragraphs (`paragraphs`), along with a refined `title` and `subtitle`. Ensure the prose reads like award-winning, published science fiction.
