@@ -1,0 +1,620 @@
+story:
+  title: The Siphon Mandate
+  subtitle: Hydro-Politics of the Post-Aquifer Basin
+  blurb: When the planetary water cycle is replaced by thousands of miles of pressurized naval brass and authoritarian hydro-politics, civilization measures life by the ounce. As a terminal calcification event chokes the subterranean aqueducts beneath the dried riverbeds of the northern hemisphere, human survival teeters between immediate systemic rupture and absolute dehydration.
+  logline: In a post-collapse hydropunk world governed by ruthless water syndicates, a cataclysmic mineralization blockage in the continental pumping grid threatens to permanently rupture the subterranean aquifers that sustain humanity.
+  synopsis: "The planetary hydrological cycle collapsed when total subterranean siphonage drained ancient aquifers, leaving civil engineering as the sole mediator of survival across fractured continents. At the system apogee, the great continental aqueducts—vast ribbons of naval brass, riveted conduits, and high-pressure steam valves—channeled saline runoff from the dried Missouri basin to the permafrost fringes along the Argun river. Across these arid expanse networks, civic life ceased to exist outside the hydraulic grid; human settlements were forced to colonize the desiccated reach around dead river valleys, clustering below ground level where moisture traps could quench collective biological demand. Water rationing dictated human existence down to the exact ounce and the calculated twelfth part of a liter. In the sovereign canal-cities, bureaucratic regimes viewed industrial overwork as a sacred duty, executing periodic algorithmic redundancy check protocols on every pump station, reservoir bursa, and condensation well. Any illicit moisture tapping or public gathering was construed as an existential threat to collective defence; when municipal yields plunged, a subterranean hunger march of parched laborers would surge against municipal floodgates, only to be met by pressurized acoustic cannons that would immobilise crowds in deep drainage tunnels. The upper strata maintained an insulated life characterized by manufactured breeziness, lavish botanical domes preserving golden Craspedia blossoms, and synthetic French vermouth served to mesmerize foreign emissaries, while the subterranean lower tiers endured rampant transmission of waterborne blights, chronic swelling of dry joints, and an institutionalized sense of shame over the biological need to excrete fluids, reducing access even to basic toilet tissue. To enforce order, regional hydro-cartels employed the slop-seller guilds to repurpose greywater and scavenge biological waste, viewing the teeming human populations as little more than aqueous filtration engines that must masticate synthetic nutrient cakes and continuously degrease turbine housings. The atmospheric moisture layers, poisoned by centuries of atom-bomb fallout and chemical smog, denied the earth natural snowfall or cleansing rains, producing instead a perpetual static buzz across copper telemetry lines aligned north northwest toward the polar condensaries. In this desiccated world, aquatic life forms were thought to arise only by industrial alchemy resembling spontaneous generation within stagnant reclamation tanks, where bio-engineered Anopheles swarms were deployed to purify stagnant sumps. Across the arid lakeside settlements, archaic legal structures vanished: communal membership, hereditary belonging, and every legal birthright were renegotiated according to hydration metrics as societies established a strict biological age of consent for reproductive fluid pooling. A mechanical twosome of intake siphon and brine ejector formed the core liturgical axis of everyday civilization. Yet beneath the dry city foundations, where industrial turbines hiss with boiling vapor and high-velocity injectors purl through limestone caverns, a deeper tectonic crisis brewing along the Argun river basin began to precede an absolute infrastructural rupture. When excessive pumping caused a massive fibroid tumor of mineralized calcite to choke the main subterranean conduits, city engineers faced a catastrophic void of pressure that threatened to arouse total civic collapse. To desist from pumping meant immediate extinction; to continue meant tearing the continental bedplates apart. As warning sirens sound across every hand-held receiver, the technocratic overseers must conclude whether to open the emergency blast sluices, sending an apocalyptic draft of pressurized sludge through the civil corridors, or watch the final hale sanctuaries dry into dust under the unblinking sun of constellation Leo."
+  theme:
+    central_premise: The total technological enclosure of a vital ecological element inevitably reduces civilization and biology to mere thermodynamic throughput.
+    speculative_inquiry: How does human sociopolitical structure evolve when hydrology shifts from an open biosphere cycle to a high-pressure closed mechanical circuit?
+    motifs:
+    - Naval brass conduits and corroding high-pressure valves
+    - Measured ounces of graywater rations
+    - Calcified aquifer arterial blockages
+  setting:
+    macro: Post-hydrological collapse Earth, where the complete desiccation of planetary aquifers and persistent radio-chemical smog have extinguished the natural water cycle, reducing human civilization to a desperate, mechanized hydropunk imperium bound to transcontinental conduit grids.
+    meso: The Argun Sub-Basin Siphon Complex, a fortified subterranean canal-settlement carved into the dry bedrock of a dead river system, partitioned vertically between the aristocratic botanical dome tiers above and the toxic, pressurized drainage networks below.
+    micro: Deep Conduit Vault 09-Argun, a subterranean control pulpit hung with corroded naval brass telemetry lines, weeping limestone buttresses, high-pressure steam bleeder valves, and an inspection port overlooking a petrified arterial siphon choked with calcified mineral blooms.
+    topography: A verticalized subterranean karst landscape retrofitted with megalithic riveted-iron aqueduct trunks, cascading pressure-relief flumes, stepped worker warrens clinging to dead canyon walls, and seismic blast-sluice spillways routed along active tectonic fault lines.
+    atmosphere: Stifling geothermal heat laced with sulfurous steam, acrid alkaline dust, and caustic brine vapor, illuminated by sputtering amber telemetry dials and bioluminescent vat algae, filled with the ear-splitting cavitation hum of over-torqued hydraulic turbines.
+    function: functional_causal
+    chronotope: "The Chronotope of the Hydraulic Countdown: an existential compression of space and time where linear civilizational history is measured strictly through dwindling volumetric flow-rates, and spatial stability is directly chained to the immediate, non-negotiable cadence of mechanical pressure cycles."
+  structure:
+    kind:
+    - M
+    - I
+    - E
+    - C
+    logic:
+    - Milieu opens with the oppressive, desiccated post-aquifer basin governed by hydro-rationing, and closes upon the permanent reordering of the continental water grid.
+    - Inquiry opens with erratic telemetry questioning conduit sustainability under terminal demand, and closes when the fatal limits of subterranean siphonage are revealed.
+    - Event opens when a calcified mineral tumor chokes subterranean conduits to spark an acute pressure void, and closes with the firing of the emergency blast sluices.
+    - Character opens with the overseers' internal crisis between technocratic duty and human empathy, and closes as they abandon bureaucratic detachment to accept moral culpability.
+    type_use: External shock reshapes self
+  characters:
+  - name: Orlo Mallow
+    gender: Male
+    description: A gaunt, grease-stained conduit engineer with salt-crusted skin and eyes permanently narrowed against toxic steam venting. He possesses an instinctive acoustic ear for structural stress fractures in naval-brass pipelines.
+    role: Deep-Conduit Pressure Surveyor
+    actant_role: protagonist
+    complexity: round
+    development: dynamic
+    characterisation: mixed
+    motivation: To manually dissolve the calcite arterial blockage without triggering the apocalyptic blast sluice that would flush his subterranean neighborhood with toxic sludge.
+    conflict: Internally torn between lingering institutional obedience to the syndicate that rations his water and surging protective instincts toward parched lower-tier laborers.
+  - name: High Commissioner Vespera Thorne
+    gender: Female
+    description: An austere, porcelain-skinned technocrat draped in tailored synthetic linen, perfumed with lab-distilled moisture, who evaluates all human life as discrete thermodynamic expenditure values.
+    role: Chief Directorate Executive of the Siphon Syndicate
+    actant_role: antagonist
+    complexity: round
+    development: static
+    characterisation: direct
+    motivation: To preserve systemic grid pressurization and the upper-tier botanical domes at any human cost, maintaining civil order through algorithmic rationing.
+    conflict: Faces the imminent mechanical destruction of the continental bedplates while privately dreading computational projections proving total depletion is mathematically inevitable.
+  - name: Marais Chen
+    gender: Non-binary
+    description: A wiry, scar-creased greywater scavenger fitted with a customized rubberized rebreather harness, exuding the briny stench of condensation sumps and an unyielding, predatory calm.
+    role: Guildmaster of the Slop-Sellers
+    actant_role: deuteragonist
+    complexity: round
+    development: dynamic
+    characterisation: indirect
+    motivation: To seize physical control over subterranean drainage sluices and weaponize recycled water supplies against the predatory syndicates.
+    conflict: Must choose between collaborating with conduit technicians to prevent infrastructural collapse or deliberately breaching the pipes to wipe out the oppressive upper tier.
+  - name: Dr. Haddon Kray
+    gender: Male
+    description: A frail, wheezing hydro-geologist tethered to a clattering mechanical vapor-condenser, bitter and manic after decades of unheeded tectonic alerts.
+    role: Exiled Chief Lithic Hydrologist
+    actant_role: mentor
+    complexity: round
+    development: static
+    characterisation: mixed
+    motivation: To prove his calcification models correct and execute a controlled subterranean depressurization before the Argun river basin ruptures completely.
+    conflict: Plagued by guilt over having designed the syndicate extraction pumps decades prior, he is physically incapable of descending into the deep vents without dying of dehydration.
+  scene_sequels:
+  - scene:
+      goal:
+        description: Orlo Mallow must survey the primary sub-aquifer siphon in District 9 to verify why telemetry reporting shows severe volumetric deficits.
+        stakes:
+          external: Failing to locate the feed discrepancy risks an unannounced district-wide hydro-ration freeze across the lower-tier tenement wards.
+          internal: Succumbing to complacency threatens his fragile self-respect as an honest conduit surveyor caught in a corrupt syndical rationing system.
+      conflict:
+        opposition:
+          type: environment
+          description: The oppressive heat and caustic lime-dust particulate vents inside the deep naval-brass conduit tunnels.
+        escalation:
+          beats:
+          - Thermal sensors spike as superheated atmospheric bleed fills the inspection catwalks.
+          - A burst seal on an adjacent greywater return coats the ladder rungs in corrosive alkaline sludge.
+          - Pressure dials swing violently, revealing that the suction pumps are pulling dry air rather than deep-basin reserves.
+      disaster:
+        outcome: Partial success
+        consequence:
+          plot: Orlo identifies that the supply drop is not a minor metering glitch but a deep structural stoppage threatening the entire regional intake.
+          character: He realizes that his technical routines can no longer insulate him from the environmental death spiral outside.
+    sequel:
+      reaction:
+        emotional:
+          immediate: Numbing dread tinged with bitter vindication.
+          physical: Gasping breath through a clogged filter mask and stinging, sweat-burned eyes.
+        processing: He recognizes that the desertification of the deeper aquifers has reached a terminal velocity far ahead of official forecasts.
+      dilemma:
+        options:
+        - choice: Falsify the pressure logs to prevent panic and buy time to inspect the main manifold.
+          cost: Complicity in syndicate propaganda that starves the lower tiers.
+          risk: Catastrophic unannounced vacuum implosion across the civic line.
+        - choice: Trigger the emergency audit horn and sound the alarm immediately.
+          cost: Summary arrest by syndicate enforcers for inciting municipal panic.
+          risk: Violent water riots breaking out before any repairs can even be attempted.
+      decision:
+        chosen_option: Falsify the surface pressure logs temporarily while seeking out unmonitored hydrological data.
+        rationale: Direct confrontation with syndicate enforcers will end in his execution before the true physical bottleneck is mapped.
+        new_goal: Access Dr. Kray's unauthorized lithic telemetry records stored within the abandoned drainage substation.
+    context: MO
+  - scene:
+      goal:
+        description: Orlo seeks to decode Dr. Haddon Kray's clandestine telemetry cache to determine the exact origin of the subterranean flow anomaly.
+        stakes:
+          external: If the data remains encrypted or is seized, the engineers will remain blind to the true nature of the blockage.
+          internal: Digging into contraband hydrology exposes Orlo to the treasonous truth he has willfully ignored for years.
+      conflict:
+        opposition:
+          type: system
+          description: The Siphon Syndicate automated defensive firewalls and security sweeps purging decommissioned substation nodes.
+        escalation:
+          beats:
+          - The obsolete terminal rejects his surveyor bypass key, initiating an audio trace.
+          - Syndicate tracer routines begin corrupting sector storage banks line by line.
+          - A proximity drone scans the drainage corridor outside the terminal hatch.
+      disaster:
+        outcome: Success with cost
+        consequence:
+          plot: Orlo retrieves the raw lithic survey, uncovering impossible mineral growth profiles that imply an unnatural, catastrophic crystallization.
+          character: He is shattered by evidence that the syndicate knew of the calcification models decades ago and deliberately concealed them.
+    sequel:
+      reaction:
+        emotional:
+          immediate: Cold, paralyzing intellectual vertigo.
+          physical: Trembling fingers gripping the data prism and an erratic, pounding pulse.
+        processing: The telemetry proves the crisis is not mere water exhaustion, but an active arterial blockage choking the planet's remaining intake.
+      dilemma:
+        options:
+        - choice: Deliver the data directly to High Commissioner Vespera Thorne to demand high-level intervention.
+          cost: Revealing his treasonous breach of classified engineering protocols.
+          risk: Being silenced and disappeared into the reclamation tanks.
+        - choice: Take the telemetry directly to the exiled Dr. Kray to interpret the core obstruction.
+          cost: Abandoning his surveyor post and becoming an official fugitive.
+          risk: Finding out that the calcification is already beyond mathematical redemption.
+      decision:
+        chosen_option: Track down Dr. Kray in the lower brine sinks to interpret the crystallization dynamics.
+        rationale: Only the original architect of the continental pumps can decode the mineral growth geometry before the conduits shatter.
+        new_goal: Locate Dr. Kray in the undocumented salt-sink vaults beneath the Argun bedplates.
+    context: IO
+  - scene:
+      goal:
+        description: Orlo and Dr. Kray attempt to reach the deep intake junction at Arterial Pipe 4 to inspect the anomalous structural mass.
+        stakes:
+          external: If the junction collapses before they assess it, millions in the lower tiers will suffer immediate decompression suffocation.
+          internal: Kray must confront the physical monstrosity of his own historical engineering designs.
+      conflict:
+        opposition:
+          type: environment
+          description: A massive, calcified mineral tumor expanding through the high-velocity intake chamber, creating violent pneumatic shockwaves.
+        escalation:
+          beats:
+          - Acoustic vibrations from the choked flow fracture the reinforced inspection glass.
+          - The mineral mass groans under tectonic hydraulic drag, venting boiling brine jets.
+          - A sudden structural shudder buckles the steel catwalk beneath their feet.
+      disaster:
+        outcome: Failure
+        consequence:
+          plot: The calcified mass fissures the bedrock chamber, triggering automated seismic emergency sirens across the entire continental grid.
+          character: Both men realize the blockage is no longer slowly accumulating; it is actively fracturing the continental bedplate.
+    sequel:
+      reaction:
+        emotional:
+          immediate: Visceral horror and mounting hysteria.
+          physical: Ears ringing from sonic cavitation and burns along the forearms from escaping steam.
+        processing: The physical event of the conduit's structural rupture has begun; total hydraulic fracture is now imminent within hours.
+      dilemma:
+        options:
+        - choice: Evacuate back to the surface and join the elite dome shelters.
+          cost: Leaving the subterranean populace to drown in backflowing sludge.
+          risk: Surface shelters will dry out within days anyway when pressure permanently zeroes out.
+        - choice: Confront High Commissioner Thorne to force an emergency manual shutdown before the pipes burst.
+          cost: Facing immediate armed interception by syndical Praetorians.
+          risk: A sudden shutdown might cause cavitation waves that instantly pulverize the city's foundations.
+      decision:
+        chosen_option: Intervene directly in the Directorate executive chamber to arrest the pumping sequence.
+        rationale: Stopping the syndicate's relentless suction is the only way to arrest the catastrophic seismic rupture.
+        new_goal: Breach the High Commissioner's observation sanctum above the central blast sluices.
+    context: EO
+  - scene:
+      goal:
+        description: High Commissioner Vespera Thorne aims to execute algorithmic rationing directives to enforce maximum suction despite mechanical warning signals.
+        stakes:
+          external: Losing hydraulic pressure will cause the botanical domes and synthetic civilization to collapse into civil anarchy.
+          internal: She must suppress her private moral terror that her technocratic mandate is an architecture of systemic murder.
+      conflict:
+        opposition:
+          type: person
+          description: Guildmaster Marais Chen, who has infiltrated the command deck with an armed contingent of radical slop-sellers.
+        escalation:
+          beats:
+          - Marais shorts the central hydraulic telemetry boards, throwing the executive dome into emergency amber lighting.
+          - Marais holds the manual override key at knifepoint, demanding the full diversion of botanical reserves to the slums.
+          - Thorne's computational consoles flash crimson as bedrock stress reaches 98 percent of absolute tensile limit.
+      disaster:
+        outcome: Partial success
+        consequence:
+          plot: Thorne retains command of the console, but the system locks itself into an automated countdown for the emergency blast sluice.
+          character: Thorne's veneer of bureaucratic detachment cracks entirely as she faces the human faces of those she calculated as expendable.
+    sequel:
+      reaction:
+        emotional:
+          immediate: Debilitating shame and piercing existential isolation.
+          physical: Dry, shallow panting and hyperventilation in the humid, perfume-scented air of the dome.
+        processing: She realizes that her entire career of mathematical stewardship was merely an elaborate rationalization for cowardice.
+      dilemma:
+        options:
+        - choice: Fire the emergency blast sluices to flush the mineral tumor with lower-tier drainage, preserving the upper grid.
+          cost: Drowning tens of thousands of subterranean dwellers in boiling, toxic brine.
+          risk: Inciting an unstoppable, suicidal insurrection across all surviving sectors.
+        - choice: Relinquish executive control to Orlo and Marais to attempt an unproven manual dissolution.
+          cost: Surrendering syndicate sovereignty and accepting personal war-crime liability.
+          risk: Total grid depressurization if the manual dissolution fails to clear the calcified mass.
+      decision:
+        chosen_option: Abandon technocratic command and hand the physical valve controls to Orlo and Marais.
+        rationale: She can no longer justify the algorithmic sacrifice of human lives to preserve an unsustainable mechanical illusion.
+        new_goal: Assist Orlo in venting the blast sluice pressure safely away from the residential tenements.
+    context: CO
+  - scene:
+      goal:
+        description: Orlo and Thorne together must manually override the sluice gate safety interlocks from within the trembling control nexus.
+        stakes:
+          external: Failure means the automatic purge will dump lethal alkaline sludge directly into the crowded residential drainage tunnels.
+          internal: Orlo must overcome his ingrained terror of syndicate authority and step into a leadership role.
+      conflict:
+        opposition:
+          type: self
+          description: Orlo's paralyzing conditioning to obey syndicate hierarchy, clashing with the desperate need to seize moral agency.
+        escalation:
+          beats:
+          - The automated security system demands biometric authorization that rejects Thorne's demoted access token.
+          - Orlo must intentionally sever the master command cable, committing irreversible high treason under syndicate law.
+          - Sluice gates begin shuddering open as the automated blast sequence enters its final sixty-second ignition.
+      disaster:
+        outcome: Success with cost
+        consequence:
+          plot: Orlo successfully severs the syndicate linkage, redirecting the purge path away from the living wards and toward the industrial evaporators.
+          character: Orlo permanently casts off his identity as a submissive cog, accepting the full burden of his newfound moral autonomy.
+    sequel:
+      reaction:
+        emotional:
+          immediate: Cathartic relief mixed with acute, sober clarity.
+          physical: Muscles shaking with exhaustion, skin covered in grease and severed cable sparks.
+        processing: He understands that whether they live or die, they have broken the syndicate's psychological monopoly on their lives.
+      dilemma:
+        options:
+        - choice: Flee the nexus before the manual blast sluice discharges its violent pneumatic shockwave.
+          cost: Leaving the blast sequence unmonitored, risking an uneven explosive breach.
+          risk: The mineral tumor may crack unevenly and permanently shatter the bedplates.
+        - choice: Remain at the manual release wheel to balance the pressure discharge dynamically.
+          cost: Exposure to lethal concussive feedback and deafening acoustic pressure.
+          risk: Severe physical maiming or death at the moment of pipe rupture.
+      decision:
+        chosen_option: Remain at the release wheel alongside Marais and Thorne to modulate the physical detonation.
+        rationale: The survival of the entire subterranean habitat relies on maintaining precise pressure modulation during the blast.
+        new_goal: Manually regulate the high-velocity discharge as the blast sluices detonate.
+    context: CC
+  - scene:
+      goal:
+        description: The unified crew must trigger the focused directional blast sluice to shatter the calcified mineral tumor without rupturing the continental aquifer wall.
+        stakes:
+          external: An overpressure blast will crack the ancient bedrock, losing the continent's final water reserve forever; an underpressure blast will fail to clear the conduit.
+          internal: Dr. Kray must reconcile the destructive power of his own life's work by turning it toward salvation rather than extraction.
+      conflict:
+        opposition:
+          type: environment
+          description: The crushing pneumatic resistance and back-surging hydraulic shockwaves within Arterial Pipe 4.
+        escalation:
+          beats:
+          - The blast sluice charges, generating a deafening acoustic screech through the brass casing.
+          - The mineral tumor shifts, temporarily pinching off the escape vent and creating a critical pressure spike.
+          - Kray throws his body against the manual purge lever, forcing the explosive slurry directly into the calcite heart.
+      disaster:
+        outcome: Success with cost
+        consequence:
+          plot: The calcified tumor is completely pulverized and ejected into the uninhabited alkali flats, but the shockwave permanently destroys the mechanical pumping turbines.
+          character: The event of the mechanical choking crisis is finally terminated, leaving the basin silent for the first time in centuries.
+    sequel:
+      reaction:
+        emotional:
+          immediate: Stunned silence shifting into awe-struck stillness.
+          physical: Ears ringing in the sudden, eerie quiet; the ground settling into calm immobility.
+        processing: The threat of catastrophic mechanical rupture has ended, but with the extraction turbines destroyed, the artificial grid can never run again.
+      dilemma:
+        options:
+        - choice: Attempt to scavenge turbine parts to rebuild the old high-pressure syndicate pumping regime.
+          cost: Repeating the exact extractive cycle that spawned the mineral tumor.
+          risk: Triggering another fatal calcification cascade in the surviving deep bedrock.
+        - choice: Accept the death of high-pressure siphonage and begin unsealing the gravity-fed natural drainage aquifers.
+          cost: Total collapse of upper-tier botanical domes and artificial luxury climates.
+          risk: A difficult, unpredictable transition to low-yield communal water rationing.
+      decision:
+        chosen_option: Refuse to rebuild the high-pressure syndicate pumps and unseal the gravity-fed aquifers.
+        rationale: Mechanical forcing of the subterranean basin was a suicidal paradigm; humanity must adapt to the true natural capacity of the deep earth.
+        new_goal: Investigate the natural gravity-flow telemetry to determine how much water the basin can naturally support.
+    context: EC
+  - scene:
+      goal:
+        description: Dr. Kray and Orlo analyze the post-blast residual hydrological flow to answer whether the ancient aquifers can replenish naturally without industrial siphonage.
+        stakes:
+          external: If the natural flow rate is zero, the post-aquifer basin will become totally uninhabitable within months.
+          internal: Kray needs intellectual closure on whether his lifetime of scientific theory was based on a fatal hydrological myth.
+      conflict:
+        opposition:
+          type: system
+          description: Decades of obsolete, corrupted syndicate projection models that distort real-time lithic analysis.
+        escalation:
+          beats:
+          - The initial probe readings indicate an apparent flatline in the deep Argun basin water table.
+          - Orlo identifies that the sensors are tuned to artificial turbine pull rather than slow tectonic seepage.
+          - Recalibrating the acoustic litho-probes reveals a steady, rhythmic percolation through deep limestone strata.
+      disaster:
+        outcome: Success
+        consequence:
+          plot: "The inquiry into the limits of subterranean siphonage is definitively resolved: the aquifer lives, but only at a fraction of the syndicate's fabricated volumetric claims."
+          character: Kray achieves peaceful closure, vindicating his lifelong scientific warnings while dispelling the syndicate's myth of endless extraction.
+    sequel:
+      reaction:
+        emotional:
+          immediate: Humble reverence and tranquil solemnity.
+          physical: Tears tracing tracks through lime dust on weathered cheeks as cool, moist air rises from the depths.
+        processing: The mystery is closed; humanity was never running out of water, but rather running out of the hubristic capacity to artificially gorge upon it.
+      dilemma:
+        options:
+        - choice: Keep the natural flow metrics secret to establish a new governing technocracy.
+          cost: Becoming the very gatekeepers they just overthrew.
+          risk: A recurrence of authoritarian exploitation and public revolt.
+        - choice: Publish the unvarnished hydrological reality across all municipal communication bands.
+          cost: Destroying any illusion of returning to the lavish pre-collapse standard of living.
+          risk: Widespread civil panic over the harsh reality of severe, permanent conservation.
+      decision:
+        chosen_option: Broadcast the raw, truthful hydrological metrics to the entire basin.
+        rationale: Survival depends upon collective transparency and shared adaptation to the earth's finite pulse.
+        new_goal: Establish a communal covenant to rebuild human settlement around the natural gravity outlets.
+    context: IC
+  - scene:
+      goal:
+        description: Orlo, Marais, and Thorne lead the combined factions of lower-tier laborers and former overseers to unseal the surface conduits and establish a shared gravity-basin commons.
+        stakes:
+          external: Fracturing into factional warfare over the remaining pools will cause the scattered basin settlements to perish in the desert.
+          internal: All parties must surrender their historical grievances to survive together in the newly transformed milieu.
+      conflict:
+        opposition:
+          type: environment
+          description: The harsh, unyielding post-aquifer basin climate, bearing down on an unshielded, post-syndicate populace.
+        escalation:
+          beats:
+          - Hot, dry winds sweep across the opened intake valves, threatening rapid evaporation of the first poolings.
+          - Tensions flare between armed slop-sellers and displaced dome residents over valve distribution quotas.
+          - Orlo steps directly between the factions, using the surveyor's sounding rod to breach the final low-pressure cistern collectively.
+      disaster:
+        outcome: Success
+        consequence:
+          plot: A sustainable, low-pressure gravity fountain bubbles into the arid Argun river basin, permanently inaugurating a new post-syndicate communal order.
+          character: The citizens look upon their harsh environment not as an industrial machine to be dominated, but as a fragile home requiring perpetual reverence.
+    sequel:
+      reaction:
+        emotional:
+          immediate: Profound, grounded peace and shared collective dignity.
+          physical: Dipping calloused, dry hands into cool, living mineral water beneath the open sky.
+        processing: The oppressive world of hydraulic tyrants, brass conduits, and mechanical hydro-rationing has closed; a new, sober civilization begins.
+      dilemma:
+        options:
+        - choice: Remain clustered within the concrete ruins of the former syndicate pump station.
+          cost: Living in the physical shadow of old trauma and structural fragility.
+          risk: Gradual regression into old municipal habits and power imbalances.
+        - choice: Disperse outward along the new surface river trace to seed decentralized horticultural settlements.
+          cost: Enduring the grueling physical struggle of pioneering an untamed, arid frontier.
+          risk: Vulnerability to harsh desert storms and unshielded atmospheric radiation.
+      decision:
+        chosen_option: Disperse along the emerging river trace to cultivate decentralized, water-reverent communities.
+        rationale: Only by scattering across the basin and living within natural hydrologic limits can humanity prevent the rise of another Siphon Mandate.
+        new_goal: Begin the generational labor of rehabilitating the dry earth along the Argun's newborn watercourse.
+    context: MC
+  discourse:
+    narration:
+      voice: third_person_heterodiegetic
+      level: extradiegetic
+      focalisation: zero_omniscient
+      reliability: reliable
+    language:
+      tone: somber, clinical, and industrially oppressive
+      diction: technical_scientific
+      figures_of_speech:
+      - industrial reification
+      - hydraulic metaphor
+      - biomechanical antithesis
+      mode_balance: diegesis_dominant
+      sentence_rhythm: periodic_flowing
+      foregrounding: Systemic defamiliarization through fluid mechanics jargon applied to societal dynamics and biological existence
+  pov: third_person_omniscient
+  image_prompt: Industrial hydropunk cityscape, gigantic naval brass aqueducts and massive steam valves spanning across a cracked dry riverbed, intricate copper pipe networks, subterranean moisture condensaries, dim amber atmospheric lighting, particulate haze, macro scale architectural perspective
+  aesthetic:
+    art_style: Syd Mead industrial futurism architectural concept painting with precision mechanical forms
+    color_palette: "bioluminescent abyssal: deep ocean indigo, vibrant turquoise, and phosphorescent violet"
+    composition: dramatic symmetrical one-point perspective corridor receding infinitely into the unknown
+    lighting: blinding searchlight beams piercing through perpetual toxic rain and industrial steam
+    mood: haunting melancholy amidst the decaying ruins of an ancient interstellar civilization
+    subject_matter: A colossal subterranean conduit corridor of naval brass aqueducts encrusted with calcified mineral growths, receding into infinite darkness
+    prompt: A dramatic symmetrical one-point perspective looking down a colossal subterranean conduit corridor receding infinitely into shadowy depths. Towering walls of riveted naval brass, weeping limestone arches, and massive pressurized steam pipes frame the corridor, heavily encrusted with pale, calcified mineral blooms. Blinding industrial searchlight beams pierce through thick plumes of geothermal steam and caustic alkaline mist, casting sharp volumetric rays across rusted iron grates and stagnant brine pools. A solitary silhouetted engineer stands small upon a high suspended catwalk, dwarfed by monumental hydraulic infrastructure. The scene is rendered in rich textures of oxidized verdigris, deep soot, and glowing amber telemetry dials, evoking a haunting industrial melancholy.
+  cover_path: cover.png
+meta:
+  science_field:
+    name: Hydrology
+    description: Water systems
+  genre:
+    name: Hydropunk
+    description: A specialized science fiction subgenre centered on the technological, ecological, and societal mechanics of water systems, exploring themes of hydraulic engineering, acute resource scarcity, hydro-politics, and closed-loop aquatic infrastructures.
+  vocabs:
+  - lex_category: noun.communication
+    word: romance
+    definition: a story dealing with lovea novel dealing with idealized events remote from everyday life
+  - lex_category: noun.group
+    word: twosome
+    definition: a pair who associate with one another
+  - lex_category: noun.group
+    word: hunger march
+    definition: a march of protest or demonstration by the unemployed
+  - lex_category: noun.location
+    word: apogee
+    definition: apoapsis in Earth orbit; the point in its orbit where a satellite is at the greatest distance from the Earth
+  - lex_category: noun.location
+    word: Missouri
+    definition: a midwestern state in central United States; a border state during the American Civil War, Missouri was admitted to the Confederacy without actually seceding from the Union
+  - lex_category: verb.change
+    word: sound
+    definition: measure the depth of (a body of water) with a sounding line
+  - lex_category: verb.change
+    word: remit
+    definition: make slack as by lessening tension or firmnessdiminish or abate
+  - lex_category: verb.cognition
+    word: conclude
+    definition: decide by reasoning; draw or come to a conclusionbring to a close
+  - lex_category: noun.act
+    word: mydriasis
+    definition: reflex pupillary dilation as a muscle pulls the iris outward; occurs in response to a decrease in light or certain drugs
+  - lex_category: noun.body
+    word: bursa
+    definition: a small fluid-filled sac located between movable parts of the body especially at joints
+  - lex_category: noun.cognition
+    word: redundancy check
+    definition: a system of checking for errors in computer functioning
+  - lex_category: noun.food
+    word: French vermouth
+    definition: dry pale amber variety
+  - lex_category: noun.motive
+    word: sense of shame
+    definition: a motivating awareness of ethical responsibility
+  - lex_category: noun.substance
+    word: naval brass
+    definition: alpha-beta brass containing tin; resistant to sea water; Admiralty Metal is a trademark
+  - lex_category: noun.substance
+    word: toilet tissue
+    definition: a soft thin absorbent paper for use in toilets
+  - lex_category: adj.ppl
+    word: hand-held
+    definition: small and light enough to be operated while you hold it in your hands
+  - lex_category: verb.competition
+    word: atom-bomb
+    definition: bomb with atomic weapons
+  - lex_category: verb.competition
+    word: reach
+    definition: to exert much effort or energy
+  - lex_category: noun.object
+    word: lakeside
+    definition: the shore of a lake
+  - lex_category: noun.object
+    word: Argun
+    definition: a river in eastern Asia that arises in China and flows northeast along the border between China and Russia to become a tributary of the Amur River
+  - lex_category: noun.process
+    word: swelling
+    definition: the increase in volume of certain substances when they are heated (often accompanied by release of water)
+  - lex_category: noun.process
+    word: defence
+    definition: (psychiatry) an unconscious process that tries to reduce the anxiety associated with instinctive desires
+  - lex_category: verb.motion
+    word: hiss
+    definition: move with a whooshing sound
+  - lex_category: verb.motion
+    word: train
+    definition: travel by rail or train
+  - lex_category: verb.perception
+    word: get a load
+    definition: look at with attention
+  - lex_category: verb.social
+    word: overwork
+    definition: work excessively hard
+  - lex_category: verb.social
+    word: colonize
+    definition: settle as a colony; of countries in the developing world
+  - lex_category: adverb.all
+    word: well
+    definition: ""
+  - lex_category: noun.attribute
+    word: effeminacy
+    definition: the trait of being effeminate (derogatory of a man)
+  - lex_category: noun.attribute
+    word: breeziness
+    definition: a breezy liveliness
+  - lex_category: noun.quantity
+    word: ounce
+    definition: a unit of apothecary weight equal to 480 grains or one twelfth of a troy pounda unit of weight equal to one sixteenth of a pound or 16 drams or 28.349 grams
+  - lex_category: noun.quantity
+    word: twelfth part
+    definition: one part in twelve equal parts
+  - lex_category: noun.relation
+    word: north northwest
+    definition: the compass point that is midway between north and northwest
+  - lex_category: verb.contact
+    word: lather
+    definition: beat severely with a whip or rod
+  - lex_category: verb.stative
+    word: precede
+    definition: be earlier in time; go back furthercome before
+  - lex_category: verb.weather
+    word: ray
+    definition: emit as rays
+  - lex_category: verb.weather
+    word: quench
+    definition: put out, as of fires, flames, or lights
+  - lex_category: noun.artifact
+    word: ground level
+    definition: the floor of a building that is at or nearest to the level of the ground around the building
+  - lex_category: noun.artifact
+    word: sable coat
+    definition: a fur coat made of sable furs
+  - lex_category: noun.feeling
+    word: belonging
+    definition: happiness felt in a secure relationship
+  - lex_category: noun.possession
+    word: draft
+    definition: a document ordering the payment of money; drawn by one person or bank on another
+  - lex_category: noun.possession
+    word: birthright
+    definition: an inheritance coming by right of birth (especially by primogeniture)
+  - lex_category: noun.state
+    word: fibroid tumor
+    definition: benign tumor containing fibrous tissue (especially in the uterus)
+  - lex_category: noun.state
+    word: Hansen's disease
+    definition: chronic granulomatous communicable disease occurring in tropical and subtropical regions; characterized by inflamed nodules beneath the skin and wasting of body parts; caused by the bacillus Mycobacterium leprae
+  - lex_category: noun.time
+    word: age of consent
+    definition: the minimum age for marrying without parental consent or the minimum age for consensual sexual relations; intercourse at an earlier age can result in a charge of assault or statutory rape; the age differs in different states of the Union
+  - lex_category: verb.possession
+    word: degrease
+    definition: remove grease or oil from (a pan)
+  - lex_category: verb.possession
+    word: immobilise
+    definition: hold as reserve or withdraw from circulation; of capital
+  - lex_category: noun.animal
+    word: Anopheles
+    definition: malaria mosquitoes; distinguished by the adult's head-downward stance and absence of breathing tubes in the larvae
+  - lex_category: noun.event
+    word: ceilidh
+    definition: an informal social gathering at which there is Scottish or Irish folk music and singing and folk dancing and story telling
+  - lex_category: noun.event
+    word: transmission
+    definition: an incident in which an infectious disease is transmitted
+  - lex_category: noun.phenomenon
+    word: snowfall
+    definition: precipitation falling from clouds in the form of ice crystals
+  - lex_category: noun.phenomenon
+    word: spontaneous generation
+    definition: a hypothetical organic phenomenon by which living organisms are created from nonliving matter
+  - lex_category: noun.plant
+    word: Craspedia
+    definition: herbs of Australia and New Zealand
+  - lex_category: adj.pert
+    word: tibial
+    definition: relating to or located near a tibia
+  - lex_category: adj.pert
+    word: metamorphous
+    definition: of or relating to metamorphosis (especially of rocks)
+  - lex_category: verb.consumption
+    word: masticate
+    definition: chew (food); to bite and grind with the teeth
+  - lex_category: verb.consumption
+    word: desist
+    definition: choose not to consume
+  - lex_category: verb.creation
+    word: purl
+    definition: knit with a purl stitchedge or border with gold or silver embroideryembroider with gold or silver thread
+  - lex_category: noun.shape
+    word: void
+    definition: an empty area or space
+  - lex_category: verb.communication
+    word: buzz
+    definition: call with a buzzer
+  - lex_category: noun.person
+    word: Leo
+    definition: (astrology) a person who is born while the sun is in Leo
+  - lex_category: noun.person
+    word: slop-seller
+    definition: a dealer in cheap ready-made clothing
+  - lex_category: adj.all
+    word: electronegative
+    definition: having a negative charge
+  - lex_category: adj.all
+    word: hale
+    definition: exhibiting or restored to vigorous good health
+  - lex_category: verb.body
+    word: mesmerize
+    definition: induce hypnosis in
+  - lex_category: verb.emotion
+    word: arouse
+    definition: call forth (emotions, feelings, and responses)to evoke sexual feelings
