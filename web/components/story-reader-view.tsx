@@ -32,6 +32,20 @@ export function StoryReaderView({ story }: StoryReaderViewProps) {
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
 
+  // Compute story statistics
+  const wordCount = React.useMemo(() => {
+    return story.contentMD.trim().split(/\s+/).filter(Boolean).length;
+  }, [story.contentMD]);
+
+  const paragraphCount = React.useMemo(() => {
+    return story.contentMD
+      .split(/\n\s*\n/)
+      .filter((block) => {
+        const t = block.trim();
+        return t.length > 0 && !t.startsWith('#') && !t.startsWith('---') && !t.startsWith('***');
+      }).length;
+  }, [story.contentMD]);
+
   return (
     <>
       <SiteHeader
@@ -58,7 +72,45 @@ export function StoryReaderView({ story }: StoryReaderViewProps) {
         </div>
       )}
 
-      <main className="relative z-10 max-w-4xl mx-auto px-4 sm:px-6 py-8 sm:py-12">
+      {/* Desktop Floating Sticky Stats (Left Center) */}
+      {activeTab === 'story' && (
+        <aside
+          className="hidden xl:flex fixed left-4 2xl:left-8 top-1/2 -translate-y-1/2 z-30 flex-col gap-3 p-4 rounded-2xl bg-card/90 backdrop-blur-md border border-border shadow-xl min-w-[145px] animate-in fade-in duration-300"
+          aria-label="Story Metrics"
+        >
+          <div className="flex items-center gap-1.5 pb-2 border-b border-border/80">
+            <span className="text-[#bb3e03] dark:text-[#ee9b00] text-sm">◈</span>
+            <span className="font-mono text-xs uppercase font-bold text-[#005f73] dark:text-[#94d2bd] tracking-wider">
+              Metrics
+            </span>
+          </div>
+
+          <div className="space-y-0.5">
+            <div className="font-display font-black text-xl text-foreground">
+              {wordCount.toLocaleString()}
+            </div>
+            <div className="text-xs font-mono text-muted-foreground">
+              Total Words
+            </div>
+          </div>
+
+          <div className="space-y-0.5">
+            <div className="font-display font-black text-xl text-foreground">
+              {paragraphCount}
+            </div>
+            <div className="text-xs font-mono text-muted-foreground">
+              Paragraphs
+            </div>
+          </div>
+
+          <div className="pt-2 border-t border-border/80 flex items-center gap-1.5 text-xs font-mono font-semibold text-[#bb3e03] dark:text-[#ee9b00]">
+            <Clock className="w-3.5 h-3.5" />
+            <span>{story.readingTime}</span>
+          </div>
+        </aside>
+      )}
+
+      <main className={`relative z-10 mx-auto px-3.5 sm:px-6 py-6 sm:py-12 transition-all duration-300 ${activeTab === 'metadata' ? 'max-w-7xl' : 'max-w-5xl'}`}>
         {activeTab === 'story' ? (
           <article className="space-y-10 animate-in fade-in duration-300">
             {/* Breadcrumb */}
@@ -76,7 +128,7 @@ export function StoryReaderView({ story }: StoryReaderViewProps) {
             {/* Story Hero Header */}
             <header className="space-y-6">
               {story.coverUrl && (
-                <div className="w-full max-h-[480px] rounded-3xl overflow-hidden border border-border shadow-2xl relative">
+                <div className="w-full max-h-[520px] rounded-3xl overflow-hidden border border-border shadow-2xl relative">
                   {/* eslint-disable-next-line @next/next/no-img-element */}
                   <img
                     src={story.coverUrl}
@@ -123,16 +175,13 @@ export function StoryReaderView({ story }: StoryReaderViewProps) {
               )}
             </header>
 
-            {/* Story Prose Body */}
-            <section className="story-prose-body font-prose text-[1.26rem] sm:text-[1.36rem] text-foreground max-w-3xl mx-auto pt-6 pb-16">
+            {/* Story Prose Body - Widened for Desktop Comfort */}
+            <section className="story-prose-body font-prose text-[1.28rem] sm:text-[1.38rem] text-foreground max-w-4xl mx-auto pt-6 pb-16">
               <Markdown
                 options={{
                   overrides: {
                     p: {
                       component: 'p',
-                      props: {
-                        className: 'transition-all duration-300 relative border-l-3 border-transparent pl-0',
-                      },
                     },
                     h1: { component: 'h2', props: { className: 'font-display font-bold text-3xl mt-12 mb-6 text-foreground' } },
                     h2: { component: 'h2', props: { className: 'font-display font-bold text-2xl mt-10 mb-5 text-foreground' } },

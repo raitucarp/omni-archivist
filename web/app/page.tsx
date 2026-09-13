@@ -90,14 +90,14 @@ export default function HomePage() {
                   </div>
 
                   {/* Stories list */}
-                  <div className="p-6 sm:p-8 space-y-6">
+                  <div className="p-4 sm:p-8 space-y-6">
                     {vol.stories.map((s) => (
                       <div
                         key={s.id}
-                        className="grid grid-cols-1 sm:grid-cols-[150px_1fr] gap-6 p-5 rounded-2xl bg-card hover:bg-card border border-border hover:border-[#0a9396] transition-all duration-200 group shadow-sm hover:shadow-md"
+                        className="overflow-hidden rounded-2xl bg-card hover:bg-card border border-border hover:border-[#0a9396] transition-all duration-200 group shadow-sm hover:shadow-md flex flex-col sm:flex-row sm:p-5 sm:gap-6"
                       >
-                        {/* Cover Thumbnail */}
-                        <div className="w-full h-44 sm:h-36 rounded-xl overflow-hidden bg-background relative shrink-0 border border-border/50">
+                        {/* Cover Thumbnail: full bleed on mobile, rounded thumbnail on sm+ */}
+                        <div className="w-full h-52 sm:w-[160px] sm:h-40 sm:rounded-xl overflow-hidden bg-background relative shrink-0 border-b sm:border-b-0 sm:border border-border/50">
                           {s.coverUrl ? (
                             /* eslint-disable-next-line @next/next/no-img-element */
                             <img
@@ -113,7 +113,7 @@ export default function HomePage() {
                         </div>
 
                         {/* Body */}
-                        <div className="flex flex-col justify-between space-y-3">
+                        <div className="p-5 sm:p-0 flex flex-col justify-between space-y-3 flex-1">
                           <div className="space-y-2">
                             <div className="flex items-center gap-2 flex-wrap">
                               <span className="text-sm font-mono font-bold px-3 py-1 rounded-full bg-[#bb3e03]/10 dark:bg-[#ee9b00]/15 text-[#bb3e03] dark:text-[#ee9b00] border border-[#bb3e03]/25 dark:border-[#ee9b00]/30 shadow-sm">
@@ -141,13 +141,13 @@ export default function HomePage() {
                             </p>
                           </div>
 
-                          <div>
+                          <div className="pt-2">
                             <Link
                               href={`/stories/${s.slug.join('/')}/`}
-                              className="text-sm font-semibold text-[#bb3e03] dark:text-[#ee9b00] hover:text-[#005f73] dark:hover:text-[#94d2bd] transition-colors inline-flex items-center gap-1.5"
+                              className="inline-flex items-center gap-1.5 text-sm font-bold text-[#bb3e03] dark:text-[#ee9b00] hover:underline"
                             >
                               <span>Read Transmission</span>
-                              <ArrowRight className="w-4 h-4" />
+                              <ArrowRight className="w-4 h-4 transition-transform group-hover:translate-x-1" />
                             </Link>
                           </div>
                         </div>

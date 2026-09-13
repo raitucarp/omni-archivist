@@ -65,9 +65,10 @@ export default async function VolumePage({ params }: VolumePageProps) {
             {volume.stories.map((s) => (
               <div
                 key={s.id}
-                className="grid grid-cols-1 sm:grid-cols-[160px_1fr] gap-6 p-5 rounded-2xl bg-card/80 hover:bg-card border border-border/80 hover:border-[#ee9b00]/60 transition-all shadow-md group"
+                className="overflow-hidden rounded-2xl bg-card/80 hover:bg-card border border-border/80 hover:border-[#ee9b00]/60 transition-all shadow-md group flex flex-col sm:flex-row sm:p-5 sm:gap-6"
               >
-                <div className="w-full h-44 sm:h-auto rounded-xl overflow-hidden bg-background relative shrink-0 border border-border/50">
+                {/* Cover Thumbnail: full bleed on mobile, rounded thumbnail on sm+ */}
+                <div className="w-full h-52 sm:w-[160px] sm:h-40 sm:rounded-xl overflow-hidden bg-background relative shrink-0 border-b sm:border-b-0 sm:border border-border/50">
                   {s.coverUrl ? (
                     /* eslint-disable-next-line @next/next/no-img-element */
                     <img
@@ -82,19 +83,19 @@ export default async function VolumePage({ params }: VolumePageProps) {
                   )}
                 </div>
 
-                <div className="flex flex-col justify-between space-y-3">
+                <div className="p-5 sm:p-0 flex flex-col justify-between space-y-3 flex-1">
                   <div className="space-y-2">
                     <div className="flex items-center gap-2 flex-wrap">
-                      <span className="text-[11px] font-mono font-bold px-2 py-0.5 rounded-full bg-[#bb3e03]/10 dark:bg-[#ee9b00]/15 text-[#bb3e03] dark:text-[#ee9b00] border border-[#bb3e03]/25 dark:border-[#ee9b00]/30">
+                      <span className="text-sm font-mono font-bold px-3 py-1 rounded-full bg-[#bb3e03]/10 dark:bg-[#ee9b00]/15 text-[#bb3e03] dark:text-[#ee9b00] border border-[#bb3e03]/25 dark:border-[#ee9b00]/30 shadow-sm">
                         {s.genre}
                       </span>
-                      <span className="text-[11px] font-mono px-2 py-0.5 rounded-full bg-[#005f73]/10 dark:bg-[#0a9396]/15 text-[#005f73] dark:text-[#94d2bd] border border-[#005f73]/20 dark:border-[#0a9396]/30">
+                      <span className="text-sm font-mono font-semibold px-3 py-1 rounded-full bg-[#005f73]/10 dark:bg-[#0a9396]/15 text-[#005f73] dark:text-[#94d2bd] border border-[#005f73]/20 dark:border-[#0a9396]/30 shadow-sm">
                         {s.scienceField}
                       </span>
-                      <span className="text-[11px] font-mono text-muted-foreground">
+                      <span className="text-sm font-mono text-muted-foreground">
                         {s.dateStr}
                       </span>
-                      <span className="text-[11px] font-mono text-muted-foreground">
+                      <span className="text-sm font-mono text-muted-foreground">
                         • {s.readingTime}
                       </span>
                     </div>
@@ -105,12 +106,12 @@ export default async function VolumePage({ params }: VolumePageProps) {
                       </Link>
                     </h3>
 
-                    <p className="font-prose text-sm sm:text-base text-muted-foreground line-clamp-3 leading-relaxed">
+                    <p className="font-prose text-base text-muted-foreground line-clamp-3 leading-relaxed">
                       {s.logline}
                     </p>
                   </div>
 
-                  <div>
+                  <div className="pt-2">
                     <Link
                       href={`/stories/${s.slug.join('/')}/`}
                       className="text-xs font-semibold text-[#bb3e03] dark:text-[#ee9b00] hover:text-[#005f73] dark:hover:text-[#94d2bd] transition-colors inline-flex items-center gap-1.5"

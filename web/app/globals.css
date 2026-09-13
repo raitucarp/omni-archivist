@@ -97,35 +97,37 @@
   color: #ee9b00;
 }
 
-/* When focus mode is OFF: subtle indication for active reading paragraph */
+/* Elegant reading paragraph transitions without border jumping */
+.story-prose-body p {
+  transition: background-color 0.25s ease, opacity 0.3s ease, filter 0.3s ease;
+  border-radius: 0.75rem;
+  padding: 0.5rem 0.85rem;
+  margin-left: -0.85rem;
+  margin-right: -0.85rem;
+}
+
+/* When focus mode is OFF: subtle, non-intrusive ambient background wash for active paragraph */
 .story-prose-body:not(.focus-mode-active) p.active-reading-p {
-  border-left: 3px solid #bb3e03;
-  padding-left: 1.25rem;
+  background-color: rgba(187, 62, 3, 0.05);
 }
 
 .dark .story-prose-body:not(.focus-mode-active) p.active-reading-p {
-  border-left: 3px solid #ee9b00;
+  background-color: rgba(238, 155, 0, 0.07);
 }
 
 /* When focus mode is ON: blur and dim all other paragraphs */
 .story-prose-body.focus-mode-active p {
-  opacity: 0.2;
+  opacity: 0.22;
   filter: blur(1.5px);
-  transform: scale(0.995);
 }
 
 /* When focus mode is ON: illuminate active reading paragraph */
 .story-prose-body.focus-mode-active p.active-reading-p {
   opacity: 1;
   filter: none;
-  transform: scale(1.01);
-  border-left: 3px solid #bb3e03;
-  padding-left: 1.25rem;
-  background: linear-gradient(90deg, rgba(187, 62, 3, 0.08) 0%, transparent 100%);
+  background-color: rgba(187, 62, 3, 0.08);
 }
 
 .dark .story-prose-body.focus-mode-active p.active-reading-p {
-  border-left: 3px solid #ee9b00;
-  background: linear-gradient(90deg, rgba(238, 155, 0, 0.08) 0%, transparent 100%);
-  box-shadow: -6px 0 20px -3px rgba(238, 155, 0, 0.35);
+  background-color: rgba(238, 155, 0, 0.12);
 }
