@@ -110,9 +110,9 @@ export function StoryReaderView({ story }: StoryReaderViewProps) {
         </aside>
       )}
 
-      <main className={`relative z-10 mx-auto px-3.5 sm:px-6 py-6 sm:py-12 transition-all duration-300 ${activeTab === 'metadata' ? 'max-w-7xl' : 'max-w-5xl'}`}>
+      <main className={`relative z-10 w-full max-w-full min-w-0 mx-auto px-3.5 sm:px-6 py-6 sm:py-12 transition-all duration-300 ${activeTab === 'metadata' ? 'max-w-7xl' : 'max-w-5xl'}`}>
         {activeTab === 'story' ? (
-          <article className="space-y-10 animate-in fade-in duration-300">
+          <article className="space-y-10 animate-in fade-in duration-300 min-w-0 max-w-full">
             {/* Breadcrumb */}
             <nav className="flex items-center gap-2 text-sm font-mono text-muted-foreground">
               <Link href="/" className="hover:text-foreground transition-colors flex items-center gap-1.5 font-medium">
@@ -139,11 +139,11 @@ export function StoryReaderView({ story }: StoryReaderViewProps) {
               )}
 
               <div className="space-y-3">
-                <h1 className="font-display font-black text-3xl sm:text-5xl lg:text-6xl text-foreground leading-[1.15] tracking-tight">
+                <h1 className="font-display font-black text-3xl sm:text-5xl lg:text-6xl text-foreground leading-[1.15] tracking-tight break-words">
                   {story.title}
                 </h1>
                 {story.subtitle && (
-                  <p className="font-prose italic text-xl sm:text-2xl text-[#bb3e03] dark:text-[#ee9b00] font-medium">
+                  <p className="font-prose italic text-xl sm:text-2xl text-[#bb3e03] dark:text-[#ee9b00] font-medium break-words">
                     {story.subtitle}
                   </p>
                 )}
@@ -169,26 +169,26 @@ export function StoryReaderView({ story }: StoryReaderViewProps) {
 
               {/* Logline Box */}
               {story.logline && (
-                <blockquote className="p-6 sm:p-8 rounded-2xl bg-card border-l-4 border-[#bb3e03] dark:border-[#ee9b00] border-y border-r border-border text-foreground font-prose italic text-lg sm:text-xl leading-relaxed shadow-md">
+                <blockquote className="p-5 sm:p-8 rounded-2xl bg-card border-l-4 border-[#bb3e03] dark:border-[#ee9b00] border-y border-r border-border text-foreground font-prose italic text-base sm:text-xl leading-relaxed shadow-md break-words">
                   “{story.logline}”
                 </blockquote>
               )}
             </header>
 
-            {/* Story Prose Body - Widened for Desktop Comfort */}
-            <section className="story-prose-body font-prose text-[1.28rem] sm:text-[1.38rem] text-foreground max-w-4xl mx-auto pt-6 pb-16">
+            {/* Story Prose Body - Responsive Typography (Compact on mobile, expansive on desktop) */}
+            <section className="story-prose-body font-prose text-base sm:text-[1.36rem] text-foreground max-w-4xl mx-auto pt-4 pb-28 sm:pb-16 min-w-0 max-w-full">
               <Markdown
                 options={{
                   overrides: {
                     p: {
                       component: 'p',
                     },
-                    h1: { component: 'h2', props: { className: 'font-display font-bold text-3xl mt-12 mb-6 text-foreground' } },
-                    h2: { component: 'h2', props: { className: 'font-display font-bold text-2xl mt-10 mb-5 text-foreground' } },
-                    h3: { component: 'h3', props: { className: 'font-display font-bold text-xl mt-8 mb-4 text-foreground' } },
+                    h1: { component: 'h2', props: { className: 'font-display font-bold text-2xl sm:text-3xl mt-10 mb-5 text-foreground' } },
+                    h2: { component: 'h2', props: { className: 'font-display font-bold text-xl sm:text-2xl mt-8 mb-4 text-foreground' } },
+                    h3: { component: 'h3', props: { className: 'font-display font-bold text-lg sm:text-xl mt-6 mb-3 text-foreground' } },
                     hr: {
                       component: () => (
-                        <div className="text-center my-14 text-[#bb3e03] dark:text-[#ee9b00] tracking-[0.6em] text-base opacity-80">
+                        <div className="text-center my-10 sm:my-14 text-[#bb3e03] dark:text-[#ee9b00] tracking-[0.6em] text-sm sm:text-base opacity-80">
                           ◈ ◈ ◈
                         </div>
                       ),
@@ -203,8 +203,30 @@ export function StoryReaderView({ story }: StoryReaderViewProps) {
             {/* Reading Companion Controls */}
             <ReadingCompanion />
 
+            {/* Mobile Fixed Bottom Information Bar */}
+            <div
+              className="md:hidden fixed bottom-0 left-0 right-0 z-30 bg-background/95 backdrop-blur-md border-t border-border px-4 py-2.5 shadow-lg flex items-center justify-between text-xs font-mono"
+              aria-label="Story Metrics Mobile Bar"
+            >
+              <div className="flex items-center gap-2 text-muted-foreground">
+                <span className="text-[#bb3e03] dark:text-[#ee9b00] text-xs">◈</span>
+                <span>
+                  <strong className="text-foreground">{wordCount.toLocaleString()}</strong> words
+                </span>
+                <span className="opacity-40">•</span>
+                <span>
+                  <strong className="text-foreground">{paragraphCount}</strong> paras
+                </span>
+              </div>
+
+              <div className="flex items-center gap-1.5 font-semibold text-[#bb3e03] dark:text-[#ee9b00]">
+                <Clock className="w-3.5 h-3.5" />
+                <span>{story.readingTime}</span>
+              </div>
+            </div>
+
             {/* Story Navigation Footer */}
-            <footer className="pt-8 border-t border-border/80 flex flex-col sm:flex-row items-center justify-between gap-4">
+            <footer className="pt-8 pb-12 md:pb-0 border-t border-border/80 flex flex-col sm:flex-row items-center justify-between gap-4">
               <Link
                 href={`/volumes/${story.volumeId}/`}
                 className="px-5 py-2.5 rounded-xl bg-card border border-border hover:border-[#bb3e03] dark:hover:border-[#ee9b00] hover:text-[#bb3e03] dark:hover:text-[#ee9b00] text-sm font-semibold transition-all inline-flex items-center gap-2"

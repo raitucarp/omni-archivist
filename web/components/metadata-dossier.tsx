@@ -86,8 +86,8 @@ export function MetadataDossier({
         <div className="absolute top-0 left-0 right-0 h-[3.5px] bg-gradient-to-r from-[#bb3e03] via-[#ee9b00] to-[#0a9396]" />
         
         <div className="flex flex-wrap items-center gap-2 mb-4">
-          <span className="text-xs sm:text-sm font-mono font-bold tracking-wider uppercase px-3 py-1 sm:px-3.5 sm:py-1.5 rounded-full bg-[#bb3e03]/10 dark:bg-[#ee9b00]/15 text-[#bb3e03] dark:text-[#ee9b00] border border-[#bb3e03]/25 dark:border-[#ee9b00]/30 shadow-sm">
-            ◈ SEMIOTIC TRANSMISSION DOSSIER
+          <span className="text-xs sm:text-sm font-mono font-bold tracking-wider uppercase px-3 py-1 sm:px-3.5 sm:py-1.5 rounded-full bg-[#bb3e03]/10 dark:bg-[#ee9b00]/15 text-[#bb3e03] dark:text-[#ee9b00] border border-[#bb3e03]/25 dark:border-[#ee9b00]/30 shadow-sm shrink-0">
+            ◈ TRANSMISSION DOSSIER
           </span>
           <span className="text-xs sm:text-sm font-mono font-semibold px-3 py-1 sm:px-3.5 sm:py-1.5 rounded-full bg-[#005f73]/10 dark:bg-[#0a9396]/15 text-[#005f73] dark:text-[#94d2bd] border border-[#005f73]/25 dark:border-[#0a9396]/30 shadow-sm">
             {scienceField}
@@ -170,9 +170,9 @@ export function MetadataDossier({
       {/* 2. Theme & Speculative Inquiry */}
       {theme && (
         <section className="space-y-4">
-          <div className="flex items-center gap-2.5 text-[#bb3e03] dark:text-[#ee9b00]">
-            <Sparkles className="w-5 h-5 sm:w-6 sm:h-6" />
-            <h2 className="font-display font-bold text-xl sm:text-2xl uppercase tracking-wider text-foreground">
+          <div className="flex items-center gap-2.5 text-[#bb3e03] dark:text-[#ee9b00] min-w-0 flex-1">
+            <Sparkles className="w-5 h-5 sm:w-6 sm:h-6 shrink-0" />
+            <h2 className="font-display font-bold text-lg sm:text-2xl uppercase tracking-wider text-foreground break-words min-w-0">
               Philosophical & Thematic Premise
             </h2>
           </div>
@@ -224,9 +224,9 @@ export function MetadataDossier({
       {/* 3. Setting & Deep-Time Chronotope */}
       {setting && (
         <section className="space-y-4">
-          <div className="flex items-center gap-2.5 text-[#005f73] dark:text-[#94d2bd]">
-            <Globe className="w-5 h-5 sm:w-6 sm:h-6" />
-            <h2 className="font-display font-bold text-xl sm:text-2xl uppercase tracking-wider text-foreground">
+          <div className="flex items-center gap-2.5 text-[#005f73] dark:text-[#94d2bd] min-w-0 flex-1">
+            <Globe className="w-5 h-5 sm:w-6 sm:h-6 shrink-0" />
+            <h2 className="font-display font-bold text-lg sm:text-2xl uppercase tracking-wider text-foreground break-words min-w-0">
               Setting & Deep-Time Chronotope
             </h2>
           </div>
@@ -306,9 +306,9 @@ export function MetadataDossier({
       {/* 4. Dramatis Personae (Characters) */}
       {characters.length > 0 && (
         <section className="space-y-4">
-          <div className="flex items-center gap-2.5 text-[#bb3e03] dark:text-[#ee9b00]">
-            <Users className="w-5 h-5 sm:w-6 sm:h-6" />
-            <h2 className="font-display font-bold text-xl sm:text-2xl uppercase tracking-wider text-foreground">
+          <div className="flex items-center gap-2.5 text-[#bb3e03] dark:text-[#ee9b00] min-w-0 flex-1">
+            <Users className="w-5 h-5 sm:w-6 sm:h-6 shrink-0" />
+            <h2 className="font-display font-bold text-lg sm:text-2xl uppercase tracking-wider text-foreground break-words min-w-0">
               Dramatis Personae & Actant Architecture
             </h2>
           </div>
@@ -397,9 +397,9 @@ export function MetadataDossier({
       {/* 5. Narrative Structure & MICEC Quotient */}
       {structure && (
         <section className="space-y-4">
-          <div className="flex items-center gap-2.5 text-[#005f73] dark:text-[#94d2bd]">
-            <GitMerge className="w-5 h-5 sm:w-6 sm:h-6" />
-            <h2 className="font-display font-bold text-xl sm:text-2xl uppercase tracking-wider text-foreground">
+          <div className="flex items-center gap-2.5 text-[#005f73] dark:text-[#94d2bd] min-w-0 flex-1">
+            <GitMerge className="w-5 h-5 sm:w-6 sm:h-6 shrink-0" />
+            <h2 className="font-display font-bold text-lg sm:text-2xl uppercase tracking-wider text-foreground break-words min-w-0">
               Narrative Architecture & MICEC Quotient
             </h2>
           </div>
@@ -459,9 +459,9 @@ export function MetadataDossier({
       {sceneSequels.length > 0 && (
         <section className="space-y-5">
           <div className="flex items-center justify-between gap-4 flex-wrap">
-            <div className="flex items-center gap-2.5 text-[#bb3e03] dark:text-[#ee9b00]">
-              <Layers className="w-6 h-6" />
-              <h2 className="font-display font-bold text-2xl uppercase tracking-wider text-foreground">
+            <div className="flex items-center gap-2.5 text-[#bb3e03] dark:text-[#ee9b00] min-w-0 flex-1">
+              <Layers className="w-5 h-5 sm:w-6 sm:h-6 shrink-0" />
+              <h2 className="font-display font-bold text-lg sm:text-2xl uppercase tracking-wider text-foreground break-words min-w-0">
                 Scene-Sequel Dramatic Units ({sceneSequels.length} Cycles)
               </h2>
             </div>
@@ -754,9 +754,9 @@ export function MetadataDossier({
       {/* 7. Discourse Semiotics & Voice */}
       {discourse && (
         <section className="space-y-4">
-          <div className="flex items-center gap-2.5 text-[#005f73] dark:text-[#94d2bd]">
-            <Compass className="w-5 h-5 sm:w-6 sm:h-6" />
-            <h2 className="font-display font-bold text-xl sm:text-2xl uppercase tracking-wider text-foreground">
+          <div className="flex items-center gap-2.5 text-[#005f73] dark:text-[#94d2bd] min-w-0 flex-1">
+            <Compass className="w-5 h-5 sm:w-6 sm:h-6 shrink-0" />
+            <h2 className="font-display font-bold text-lg sm:text-2xl uppercase tracking-wider text-foreground break-words min-w-0">
               Discourse Semiotics & Voice
             </h2>
           </div>
@@ -857,9 +857,9 @@ export function MetadataDossier({
       {/* 8. Visual Concept & Aesthetic Architecture */}
       {aesthetic && (
         <section className="space-y-4">
-          <div className="flex items-center gap-2.5 text-[#bb3e03] dark:text-[#ee9b00]">
-            <Palette className="w-5 h-5 sm:w-6 sm:h-6" />
-            <h2 className="font-display font-bold text-xl sm:text-2xl uppercase tracking-wider text-foreground">
+          <div className="flex items-center gap-2.5 text-[#bb3e03] dark:text-[#ee9b00] min-w-0 flex-1">
+            <Palette className="w-5 h-5 sm:w-6 sm:h-6 shrink-0" />
+            <h2 className="font-display font-bold text-lg sm:text-2xl uppercase tracking-wider text-foreground break-words min-w-0">
               Visual Concept & Aesthetic Architecture
             </h2>
           </div>
@@ -923,9 +923,9 @@ export function MetadataDossier({
       {/* 9. Speculative Lexicon & Vocabularies */}
       {vocabs.length > 0 && (
         <section className="space-y-4">
-          <div className="flex items-center gap-2.5 text-[#005f73] dark:text-[#94d2bd]">
-            <BookMarked className="w-5 h-5 sm:w-6 sm:h-6" />
-            <h2 className="font-display font-bold text-xl sm:text-2xl uppercase tracking-wider text-foreground">
+          <div className="flex items-center gap-2.5 text-[#005f73] dark:text-[#94d2bd] min-w-0 flex-1">
+            <BookMarked className="w-5 h-5 sm:w-6 sm:h-6 shrink-0" />
+            <h2 className="font-display font-bold text-lg sm:text-2xl uppercase tracking-wider text-foreground break-words min-w-0">
               Speculative Lexicon ({vocabs.length} Terms)
             </h2>
           </div>

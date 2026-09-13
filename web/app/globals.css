@@ -41,6 +41,12 @@
     border-color: var(--border);
   }
 
+  html,
+  body {
+    max-width: 100%;
+    overflow-x: hidden;
+  }
+
   body {
     background-color: var(--background);
     color: var(--foreground);
@@ -59,51 +65,69 @@
 }
 
 .font-prose {
-  font-family: 'Literata', 'Cormorant Garamond', Georgia, serif;
+  font-family: 'Literata', Georgia, serif;
+}
+
+.font-cinzel {
+  font-family: 'Cormorant Garamond', Georgia, serif;
 }
 
 .font-ui {
   font-family: 'Inter', -apple-system, sans-serif;
 }
 
-/* Paragraph Formatting: editorial spacing & text-indent */
+/* Mobile-first prose body styling: compact, comfortable reading proportions on phones */
 .story-prose-body p {
-  margin-bottom: 1.85rem !important;
-  line-height: 1.95 !important;
-  text-indent: 1.5rem;
-  transition: opacity 0.35s ease, filter 0.35s ease, transform 0.35s ease, border-left 0.25s ease, padding-left 0.25s ease, background 0.3s ease;
-  border-left: 3px solid transparent;
-  padding-left: 0;
-  border-radius: 0 8px 8px 0;
+  margin-bottom: 1.35rem !important;
+  line-height: 1.75 !important;
+  text-indent: 1.25rem;
+  font-size: 1.08rem;
+  transition: background-color 0.25s ease, opacity 0.3s ease, filter 0.3s ease;
+  border-radius: 0.75rem;
+  padding: 0.35rem 0.65rem;
+  margin-left: -0.65rem;
+  margin-right: -0.65rem;
+}
+
+/* Desktop prose body styling: expansive editorial breathing room */
+@media (min-width: 640px) {
+  .story-prose-body p {
+    margin-bottom: 2.25rem !important;
+    line-height: 2.05 !important;
+    text-indent: 2rem;
+    font-size: 1.36rem;
+    padding: 0.5rem 0.85rem;
+    margin-left: -0.85rem;
+    margin-right: -0.85rem;
+  }
 }
 
 .story-prose-body p:first-of-type {
   text-indent: 0 !important;
 }
 
+/* Responsive Drop Cap */
 .story-prose-body p:first-of-type::first-letter {
-  font-family: 'Syne', sans-serif;
-  font-size: 3.5rem;
+  font-size: 2.85rem;
   line-height: 0.82;
   float: left;
-  margin-top: 0.12em;
-  margin-right: 0.45rem;
-  margin-bottom: -0.05em;
-  font-weight: 800;
+  margin-right: 0.35rem;
+  margin-top: 0.1rem;
+  font-family: var(--font-cinzel), serif;
+  font-weight: 700;
   color: #bb3e03;
+}
+
+@media (min-width: 640px) {
+  .story-prose-body p:first-of-type::first-letter {
+    font-size: 3.5rem;
+    margin-right: 0.45rem;
+    margin-top: 0.15rem;
+  }
 }
 
 .dark .story-prose-body p:first-of-type::first-letter {
   color: #ee9b00;
-}
-
-/* Elegant reading paragraph transitions without border jumping */
-.story-prose-body p {
-  transition: background-color 0.25s ease, opacity 0.3s ease, filter 0.3s ease;
-  border-radius: 0.75rem;
-  padding: 0.5rem 0.85rem;
-  margin-left: -0.85rem;
-  margin-right: -0.85rem;
 }
 
 /* When focus mode is OFF: subtle, non-intrusive ambient background wash for active paragraph */
