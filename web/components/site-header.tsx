@@ -156,6 +156,13 @@ export function SiteHeader({ storyTitle, activeTab, onTabChange }: SiteHeaderPro
             Anthology
           </Link>
 
+          <Link
+            href="/about/"
+            className="text-sm font-semibold text-foreground/80 hover:text-foreground transition-colors px-2 py-1"
+          >
+            About
+          </Link>
+
           <ThemeToggle />
         </div>
       </div>
