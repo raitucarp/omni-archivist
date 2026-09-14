@@ -11,11 +11,16 @@ import { ArrowLeft, BookOpen, Clock, Calendar, Sparkles } from 'lucide-react';
 
 interface StoryReaderViewProps {
   story: StoryItem;
+  initialTab?: 'story' | 'metadata';
 }
 
-export function StoryReaderView({ story }: StoryReaderViewProps) {
-  const [activeTab, setActiveTab] = useState<'story' | 'metadata'>('story');
+export function StoryReaderView({ story, initialTab = 'story' }: StoryReaderViewProps) {
+  const [activeTab, setActiveTab] = useState<'story' | 'metadata'>(initialTab);
   const [scrollY, setScrollY] = useState(0);
+
+  React.useEffect(() => {
+    setActiveTab(initialTab);
+  }, [initialTab]);
 
   React.useEffect(() => {
     let ticking = false;
@@ -50,6 +55,7 @@ export function StoryReaderView({ story }: StoryReaderViewProps) {
     <>
       <SiteHeader
         storyTitle={story.title}
+        storySlug={story.slug}
         activeTab={activeTab}
         onTabChange={(tab) => setActiveTab(tab)}
       />
@@ -210,31 +216,31 @@ export function StoryReaderView({ story }: StoryReaderViewProps) {
                 <span>Back to {story.volumeTitle}</span>
               </Link>
 
-              <button
-                type="button"
+              <Link
+                href={`/stories/${story.slug.join('/')}/metadata/`}
                 onClick={() => {
                   setActiveTab('metadata');
                   window.scrollTo({ top: 0, behavior: 'smooth' });
                 }}
-                className="px-5 py-2.5 rounded-xl bg-[#005f73]/10 dark:bg-[#0a9396]/20 border border-[#005f73]/25 dark:border-[#0a9396]/40 text-[#005f73] dark:text-[#94d2bd] hover:bg-[#005f73]/20 dark:hover:bg-[#0a9396]/30 text-sm font-semibold transition-all inline-flex items-center gap-2 cursor-pointer"
+                className="px-5 py-2.5 rounded-xl bg-[#005f73]/10 dark:bg-[#0a9396]/20 border border-[#005f73]/25 dark:border-[#0a9396]/40 text-[#005f73] dark:text-[#94d2bd] hover:bg-[#005f73]/20 dark:hover:bg-[#0a9396]/30 text-sm font-semibold transition-all inline-flex items-center gap-2"
               >
                 <Sparkles className="w-4 h-4 text-[#bb3e03] dark:text-[#ee9b00]" />
                 <span>View Archival Metadata Dossier →</span>
-              </button>
+              </Link>
             </footer>
           </article>
         ) : (
           /* Metadata Tab */
           <div className="space-y-8">
             <nav className="flex items-center gap-2 text-xs font-mono text-muted-foreground">
-              <button
-                type="button"
+              <Link
+                href={`/stories/${story.slug.join('/')}/`}
                 onClick={() => setActiveTab('story')}
-                className="hover:text-foreground transition-colors flex items-center gap-1 cursor-pointer"
+                className="hover:text-foreground transition-colors flex items-center gap-1"
               >
                 <ArrowLeft className="w-3.5 h-3.5" />
                 <span>Back to Reading Story</span>
-              </button>
+              </Link>
             </nav>
 
             <MetadataDossier

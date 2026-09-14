@@ -7,13 +7,17 @@ import { BookOpen, FileText } from 'lucide-react';
 
 interface SiteHeaderProps {
   storyTitle?: string;
+  storySlug?: string[];
   activeTab?: 'story' | 'metadata';
   onTabChange?: (tab: 'story' | 'metadata') => void;
 }
 
-export function SiteHeader({ storyTitle, activeTab, onTabChange }: SiteHeaderProps) {
+export function SiteHeader({ storyTitle, storySlug, activeTab, onTabChange }: SiteHeaderProps) {
   const [scrolled, setScrolled] = useState(false);
   const [progress, setProgress] = useState(0);
+
+  const storyBaseUrl = storySlug ? `/stories/${storySlug.join('/')}/` : undefined;
+  const metadataUrl = storySlug ? `/stories/${storySlug.join('/')}/metadata/` : undefined;
 
   useEffect(() => {
     let ticking = false;
@@ -47,6 +51,82 @@ export function SiteHeader({ storyTitle, activeTab, onTabChange }: SiteHeaderPro
     handleScroll();
     return () => window.removeEventListener('scroll', handleScroll);
   }, [storyTitle]);
+
+  const renderNavTabs = (
+    className?: string,
+    iconSize = 'w-4 h-4',
+    padding = 'px-3.5 py-1.5',
+    textClass = 'text-sm'
+  ) => {
+    if (!storyTitle || (!storySlug && !onTabChange)) return null;
+
+    const storyButton = storyBaseUrl ? (
+      <Link
+        href={storyBaseUrl}
+        onClick={() => onTabChange?.('story')}
+        className={`flex items-center gap-1.5 ${padding} rounded-lg transition-all cursor-pointer ${
+          activeTab === 'story'
+            ? 'bg-[#bb3e03] text-white dark:bg-[#ee9b00] dark:text-[#001219] font-bold shadow-sm'
+            : 'text-foreground/75 hover:text-foreground hover:bg-muted/60'
+        }`}
+      >
+        <BookOpen className={iconSize} />
+        <span>Story</span>
+      </Link>
+    ) : (
+      <button
+        type="button"
+        onClick={() => onTabChange?.('story')}
+        className={`flex items-center gap-1.5 ${padding} rounded-lg transition-all cursor-pointer ${
+          activeTab === 'story'
+            ? 'bg-[#bb3e03] text-white dark:bg-[#ee9b00] dark:text-[#001219] font-bold shadow-sm'
+            : 'text-foreground/75 hover:text-foreground hover:bg-muted/60'
+        }`}
+      >
+        <BookOpen className={iconSize} />
+        <span>Story</span>
+      </button>
+    );
+
+    const metadataButton = metadataUrl ? (
+      <Link
+        href={metadataUrl}
+        onClick={() => onTabChange?.('metadata')}
+        className={`flex items-center gap-1.5 ${padding} rounded-lg transition-all cursor-pointer ${
+          activeTab === 'metadata'
+            ? 'bg-[#005f73] text-white dark:bg-[#0a9396] dark:text-white font-bold shadow-sm'
+            : 'text-foreground/75 hover:text-foreground hover:bg-muted/60'
+        }`}
+      >
+        <FileText className={iconSize} />
+        <span>Metadata</span>
+      </Link>
+    ) : (
+      <button
+        type="button"
+        onClick={() => onTabChange?.('metadata')}
+        className={`flex items-center gap-1.5 ${padding} rounded-lg transition-all cursor-pointer ${
+          activeTab === 'metadata'
+            ? 'bg-[#005f73] text-white dark:bg-[#0a9396] dark:text-white font-bold shadow-sm'
+            : 'text-foreground/75 hover:text-foreground hover:bg-muted/60'
+        }`}
+      >
+        <FileText className={iconSize} />
+        <span>Metadata</span>
+      </button>
+    );
+
+    return (
+      <nav
+        className={`flex items-center bg-card border border-border p-0.5 sm:p-1 rounded-lg sm:rounded-xl font-semibold shadow-sm ${textClass} ${
+          className || ''
+        }`}
+      >
+        {storyButton}
+        {metadataButton}
+      </nav>
+    );
+  };
 
   return (
     <header className="sticky top-0 z-50 w-full border-b border-border bg-background/95 backdrop-blur-md shadow-sm transition-all duration-300">
@@ -90,64 +170,10 @@ export function SiteHeader({ storyTitle, activeTab, onTabChange }: SiteHeaderPro
         {/* Row 1 Right: Navigation Tabs & Controls */}
         <div className="flex items-center gap-2 sm:gap-3 shrink-0">
           {/* Desktop Tabs (Story / Metadata) */}
-          {storyTitle && onTabChange && (
-            <nav className="hidden md:flex items-center bg-card border border-border p-1 rounded-xl text-sm font-semibold shadow-sm">
-              <button
-                type="button"
-                onClick={() => onTabChange('story')}
-                className={`flex items-center gap-1.5 px-3.5 py-1.5 rounded-lg transition-all cursor-pointer ${
-                  activeTab === 'story'
-                    ? 'bg-[#bb3e03] text-white dark:bg-[#ee9b00] dark:text-[#001219] font-bold shadow-sm'
-                    : 'text-foreground/75 hover:text-foreground hover:bg-muted/60'
-                }`}
-              >
-                <BookOpen className="w-4 h-4" />
-                <span>Story</span>
-              </button>
-              <button
-                type="button"
-                onClick={() => onTabChange('metadata')}
-                className={`flex items-center gap-1.5 px-3.5 py-1.5 rounded-lg transition-all cursor-pointer ${
-                  activeTab === 'metadata'
-                    ? 'bg-[#005f73] text-white dark:bg-[#0a9396] dark:text-white font-bold shadow-sm'
-                    : 'text-foreground/75 hover:text-foreground hover:bg-muted/60'
-                }`}
-              >
-                <FileText className="w-4 h-4" />
-                <span>Metadata</span>
-              </button>
-            </nav>
-          )}
+          {renderNavTabs('hidden md:flex')}
 
           {/* Mobile Tabs in Row 1 when at top (not yet scrolled) */}
-          {storyTitle && onTabChange && !scrolled && (
-            <nav className="md:hidden flex items-center bg-card border border-border p-0.5 rounded-lg text-xs font-semibold shadow-sm">
-              <button
-                type="button"
-                onClick={() => onTabChange('story')}
-                className={`flex items-center gap-1 px-2.5 py-1 rounded-md transition-all cursor-pointer ${
-                  activeTab === 'story'
-                    ? 'bg-[#bb3e03] text-white dark:bg-[#ee9b00] dark:text-[#001219] font-bold shadow-sm'
-                    : 'text-foreground/75 hover:text-foreground'
-                }`}
-              >
-                <BookOpen className="w-3.5 h-3.5" />
-                <span>Story</span>
-              </button>
-              <button
-                type="button"
-                onClick={() => onTabChange('metadata')}
-                className={`flex items-center gap-1 px-2.5 py-1 rounded-md transition-all cursor-pointer ${
-                  activeTab === 'metadata'
-                    ? 'bg-[#005f73] text-white dark:bg-[#0a9396] dark:text-white font-bold shadow-sm'
-                    : 'text-foreground/75 hover:text-foreground'
-                }`}
-              >
-                <FileText className="w-3.5 h-3.5" />
-                <span>Metadata</span>
-              </button>
-            </nav>
-          )}
+          {!scrolled && renderNavTabs('md:hidden', 'w-3.5 h-3.5', 'px-2.5 py-1', 'text-xs')}
 
           <Link
             href="/"
@@ -174,34 +200,7 @@ export function SiteHeader({ storyTitle, activeTab, onTabChange }: SiteHeaderPro
             {storyTitle}
           </span>
 
-          {onTabChange && (
-            <nav className="flex items-center bg-card border border-border p-0.5 rounded-lg text-xs font-semibold shrink-0 shadow-sm">
-              <button
-                type="button"
-                onClick={() => onTabChange('story')}
-                className={`flex items-center gap-1 px-2.5 py-1 rounded-md transition-all cursor-pointer ${
-                  activeTab === 'story'
-                    ? 'bg-[#bb3e03] text-white dark:bg-[#ee9b00] dark:text-[#001219] font-bold shadow-sm'
-                    : 'text-foreground/75 hover:text-foreground'
-                }`}
-              >
-                <BookOpen className="w-3.5 h-3.5" />
-                <span>Story</span>
-              </button>
-              <button
-                type="button"
-                onClick={() => onTabChange('metadata')}
-                className={`flex items-center gap-1 px-2.5 py-1 rounded-md transition-all cursor-pointer ${
-                  activeTab === 'metadata'
-                    ? 'bg-[#005f73] text-white dark:bg-[#0a9396] dark:text-white font-bold shadow-sm'
-                    : 'text-foreground/75 hover:text-foreground'
-                }`}
-              >
-                <FileText className="w-3.5 h-3.5" />
-                <span>Metadata</span>
-              </button>
-            </nav>
-          )}
+          {renderNavTabs('shrink-0', 'w-3.5 h-3.5', 'px-2.5 py-1', 'text-xs')}
         </div>
       )}
     </header>
