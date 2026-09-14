@@ -177,5 +177,4 @@ jobs:
           gh release create "${{ env.RELEASE_TAG }}" \
             --title "${{ env.RELEASE_TITLE }}" \
             --notes "${{ env.RELEASE_BODY }}" \
-            --clobber \
             "${files[@]}"
