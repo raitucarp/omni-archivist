@@ -1,0 +1,611 @@
+story:
+  title: The Decoherence Horizon
+  subtitle: Macroscopic Superposition and the End of Classical Reality
+  blurb: The boundary between subatomic probability and macroscopic reality has dissolved. Across continents transformed by quantum coherence, human institutions fracture, forcing civilization to navigate an oscillating cosmos where observation dictates survival.
+  logline: As macroscopic quantum superposition destabilizes planetary determinism, human civilization must adapt its social, economic, and biological structures before localized decoherence collapses terrestrial reality.
+  synopsis: When macroscopic quantum coherence was unleashed across planetary infrastructure, human civilization experienced the collapse of classical determinism, plunging sociopolitical systems into an existential crisis. The initial uptake of macro-state superposition represented a revolutionary first step in anthropogeny, moving societies beyond archaic biology toward a state where physical reality itself could mediate between probability and form. Yet this shift did not unfold without institutional villainy and dogmatic resistance; theological enclaves branded any technological idolater who manipulated the quantum wave function as heretical, insisting that deterministic Calvinism was the only sacred order. Industrial centers sought to decarbonize by replacing mechanical apparatuses with non-local energy grids, rendering artifacts like the mechanical fan belt obsolete and limp as a worn dishrag. From the hydroelectric basins of the Volta River to orbital habitats, societies faced the threat of quantum decoherence that could decimate planetary logistics tenfold. Financial architectures disintegrated as trading algorithms began to mull and recalculate economic value across oscillating realities, turning currencies into historical relics where a Sudanese monetary unit held no fixed parity against synthetic commodities. Humanity fell into a collective slough of despond, reeling from the punishing, pelting cascade of fluctuating physical constants that tore through metropolitan stability.
+  theme:
+    central_premise: The expansion of subatomic quantum mechanics to macroscopic scales collapses the illusion of deterministic causality, exposing civilization as a delicate probabilistic construct.
+    speculative_inquiry: How would human economic, religious, and biological paradigms reorganize if macroscopic wave functions refused to collapse into a single objective reality?
+    motifs:
+    - quantum wave function collapse
+    - synthetic crystallization
+    - probabilistic currency
+  setting:
+    macro: A near-future Earth-orbital continuum caught in an escalating macroscopic phase entanglement, where planetary matter oscillates between probabilistic superpositions and classical determinism under the breakdown of global physical constants.
+    meso: The Volta River Macro-Coherence Basin, a sprawling industrial-hydroelectric complex retrofitted with non-local grid arrays, ringed by theological quarantine perimeters and collapsing urban logistical nodes.
+    micro: A sub-surface decoherence monitoring pulpit suspended over the cavitation turbines, sealed with lead-bismuth phase damping and lined with flickering analog dials and oscillating probability consoles.
+    topography: Fractured concrete river canyons bridged by tethered carbon-weave catwalks, featuring sluice gates that visually smear into overlapping geometric states and concentric containment zones isolating volatile probabilistic wavefronts.
+    atmosphere: Heavy sub-equatorial humidity saturated with sharp ionic ozone, an omnipresent pelting static hum vibrating through solid metal, and intermittent prismatic luminescence cast by refracted decoherence flares.
+    function: functional_causal
+    chronotope: The Bifurcating Threshold Chronotope, wherein temporal progression diverges across spatial coordinates, allowing unactualized and alternate states of matter to physically co-exist until forced into irreversible collapse by localized decoherence events.
+  structure:
+    kind:
+    - M
+    - I
+    - E
+    - C
+    logic:
+    - "World: Macroscopic superposition replaces classical infrastructure with non-local quantum grids."
+    - "Inquiry: Institutions probe the breakdown of economic valuation and deterministic physical order."
+    - "Event: A destructive cascade of quantum decoherence ruptures metropolitan logistical architectures."
+    - "Character: Humanity confronts collective existential despondency, transforming beyond archaic biological identity."
+    type_use: External shock reshapes self
+  characters:
+  - name: Dr. Nia Senghor
+    gender: Female
+    description: A lean, sharp-eyed quantum field theorist with silver-threaded braided hair and sensory-dampening optical implants. She is relentlessly analytical, emotionally restrained, and pragmatically grounded in physical systems.
+    role: Lead Wavefunction Stabilizer at the Volta Basin Grid
+    actant_role: protagonist
+    complexity: round
+    development: dynamic
+    characterisation: mixed
+    motivation: To engineer a stable macroscopic coherence bridge that prevents localized decoherence collapses from obliterating African infrastructure and global logistics.
+    conflict: Internal guilt over accelerating quantum implementation without safety parameters versus external pressure from militant deterministic factions trying to sabotage the basin.
+  - name: Reverend Elder Thaddeus Vance
+    gender: Male
+    description: An imposing figure in rigid, hand-stitched wool garments, possessing a weathered face, piercing gaze, and a voice built for pulpit condemnation. He exudes unyielding moral righteousness and dogmatic certainty.
+    role: Supreme Overseer of the Determinacy Covenant
+    actant_role: antagonist
+    complexity: round
+    development: static
+    characterisation: indirect
+    motivation: To forcibly trigger cataclysmic decoherence across urban centers, eradicating superposed states to restore classical determinism and divine predestination.
+    conflict: Internal terror of becoming an obsolete casualty in a mutable universe versus external resistance from secular quantum architects who brand him a reactionary terrorist.
+  - name: Tariq El-Obeid
+    gender: Male
+    description: A former algorithmic quant from Khartoum with weary, bloodshot eyes, nervous tremors, and an array of haptic neuro-gloves. He speaks in quick, fragmented calculations and displays chronic cognitive dissonance.
+    role: Displaced Macroeconomic Probabilist
+    actant_role: deuteragonist
+    complexity: round
+    development: dynamic
+    characterisation: mixed
+    motivation: To synthesize a viable economic parity model capable of stabilizing value exchange before his own neuro-synaptic pathways fully de-entangle.
+    conflict: Internal cognitive dissolution from tracking contradictory financial realities simultaneously versus external criminal syndicates exploiting oscillating market valuations.
+  - name: Dr. Lyra Thorne
+    gender: Female
+    description: An orbital biophysicist who has undergone partial physical superposition, appearing slightly blurred at the periphery with translucent skin and an echoing, layered voice. She is detached, melancholic, and deeply philosophical.
+    role: Orbital Anthropogeny Pioneer and Scientific Advisor
+    actant_role: mentor
+    complexity: round
+    development: dynamic
+    characterisation: direct
+    motivation: To guide humanity through biological and metaphysical metamorphosis into fully post-classical beings before planetary reality disintegrates.
+    conflict: Internal alienation as her human ego disperses into probability fields versus external hostility from grounded populations who view her post-biological form as an abomination.
+  scene_sequels:
+  - scene:
+      goal:
+        description: Dr. Nia Senghor seeks to calibrate the Volta Basin non-local grid to harmonize macroscopic superposition across West Africa.
+        stakes:
+          external: Collapse of regional energy distribution and physical infrastructure into chaotic decoherence.
+          internal: Accepting responsibility for deploying unverified quantum parameters without adequate human safeguards.
+      conflict:
+        opposition:
+          type: environment
+          description: Fluctuating physical constants and phase-shifting water flows across the river basin that defy classical hydrodynamics.
+        escalation:
+          beats:
+          - Phase sensors register multiple conflicting water levels simultaneously in the reservoir.
+          - Turbine casings alternate between solid alloy and dispersed probability clouds.
+          - A localized resonance spike threatens to forcibly collapse the basin's macro-state into structural rupture.
+      disaster:
+        outcome: Partial success
+        consequence:
+          plot: The grid is temporarily stabilized in a superposed state, but reality margins across the basin remain fragile and susceptible to outside disruption.
+          character: Nia realizes that classical engineering doctrines are entirely obsolete in this emergent quantum landscape.
+    sequel:
+      reaction:
+        emotional:
+          immediate: Profound disorientation and awe at the non-deterministic flow of matter.
+          physical: Nausea, vertigo, and a phantom vibration behind the optic nerves.
+        processing: She reconciles the fact that physical space no longer adheres to static coordinates and requires constant observation.
+      dilemma:
+        options:
+        - choice: Lock the grid to rigid probabilistic parameters to mimic classical physics.
+          cost: Drains immense computational reserves and risks systemic grid burnout.
+          risk: Could cause a violent decoherence wave across surrounding agricultural zones.
+        - choice: Permit the grid to drift freely within controlled superposition thresholds.
+          cost: Demands total abandonment of deterministic monitoring instruments.
+          risk: Exposes the basin to theological saboteurs tracking quantum fluctuations.
+      decision:
+        chosen_option: Permit the grid to drift freely within controlled superposition thresholds.
+        rationale: Trying to mimic classical boundaries will inevitably crack the fragile quantum material under current atmospheric pressures.
+        new_goal: Formulate an observation methodology that tracks fluctuating value exchanges across the grid.
+    context: MO
+  - scene:
+      goal:
+        description: Tariq El-Obeid aims to decode the diverging parity curves between Sudanese currency and superposed synthetic commodities.
+        stakes:
+          external: Total breakdown of global trade networks and resource starvation in dependent trade hubs.
+          internal: Loss of his personal cognitive grip as his own neuro-synaptic pathways de-entangle.
+      conflict:
+        opposition:
+          type: system
+          description: The hyper-fluid macroeconomic algorithmic matrices calculating conflicting valuations in simultaneous timelines.
+        escalation:
+          beats:
+          - Algorithmic indices output infinite indeterminate values for grain and clean water.
+          - Syndicate data-raiders initiate predatory probability arbitrages across the ledger.
+          - Tariq's neural implant fails to resolve a single stable price for essential imports.
+      disaster:
+        outcome: Failure
+        consequence:
+          plot: The algorithmic exchange crashes, leaving trade institutions with no baseline metric to govern commerce.
+          character: Tariq suffers severe cognitive dissociation, confronting the terror of absolute economic indeterminacy.
+    sequel:
+      reaction:
+        emotional:
+          immediate: Panic and paralyzing confusion as value markers vanish into mathematical nulls.
+          physical: Trembling hands, erratic pulse, and double vision displaying alternating financial tickers.
+        processing: He understands that financial value is no longer tied to scarcity, but to observer perception and quantum consensus.
+      dilemma:
+        options:
+        - choice: Adopt the Determinacy Covenant's hard-fixed gold standard ledger.
+          cost: Surrenders financial independence to dogmatic religious authoritarians.
+          risk: The deterministic ledger could shatter upon contact with superposed commodities.
+        - choice: Investigate deep non-local wave dynamics to derive a dynamic consensus model.
+          cost: Requires synchronizing his de-entangling mind directly with volatile orbital data streams.
+          risk: Permanent mental fragmentation into disjointed probabilistic timelines.
+      decision:
+        chosen_option: Investigate deep non-local wave dynamics to derive a dynamic consensus model.
+        rationale: Classical standards cannot contain quantum supply lines; a dynamic consensus is the only forward path.
+        new_goal: Establish contact with orbital telemetry to map macroscopic wave functions.
+    context: IO
+  - scene:
+      goal:
+        description: Reverend Elder Thaddeus Vance leads a strike to detonate a decoherence charge at a metropolitan transit hub, enforcing classical determinism.
+        stakes:
+          external: Urban logistical architectures being decimated by unmitigated decoherence shockwaves.
+          internal: Vance succumbing to fear that his Calvinist faith is a myth in a mutable cosmos.
+      conflict:
+        opposition:
+          type: system
+          description: The metropolitan automated quantum transit defense fields designed to absorb localized observation collapses.
+        escalation:
+          beats:
+          - Covenant acolytes plant decoherence resonators onto the superposed railway tracks.
+          - Automated defense fields phase in and out of phase, destabilizing the physical ground beneath the operatives.
+          - Transit law enforcers materialize across multiple probability vectors simultaneously to intercept the strike.
+      disaster:
+        outcome: Success with cost
+        consequence:
+          plot: The decoherence charge detonates, collapsing the hub into rigid classical debris, triggering a catastrophic cascading blackout across city logistics.
+          character: Vance feels a brief vindication, yet is haunted by the cold, lifeless finality of the ruined, collapsed matter.
+    sequel:
+      reaction:
+        emotional:
+          immediate: Grim religious ecstasy masking deep cosmic horror.
+          physical: Tension in the jaw, lungs burning from pulverized concrete dust.
+        processing: He realizes that while decoherence forces certainty, it leaves behind only static death rather than divine providence.
+      dilemma:
+        options:
+        - choice: Continue the campaign of localized detonations across all regional transit hubs.
+          cost: Guarantees mass civilian casualties and infrastructural collapse.
+          risk: Will provoke a unified military counter-offensive against the Covenant.
+        - choice: Target the planetary stabilization core at the Volta Basin directly.
+          cost: Puts his entire Covenant inner circle at direct risk of annihilation.
+          risk: A premature detonation at the core could obliterate continental stability entirely.
+      decision:
+        chosen_option: Target the planetary stabilization core at the Volta Basin directly.
+        rationale: Ending the macroscopic grid at its primary taproot is the only way to permanently re-establish determinism.
+        new_goal: Infiltrate the Volta Basin stabilization grid with maximum decoherence payloads.
+    context: EO
+  - scene:
+      goal:
+        description: Dr. Lyra Thorne attempts to stabilize her biological form through orbital anthropogeny protocols before her human ego dissipates entirely.
+        stakes:
+          external: Loss of scientific guidance for humanity's post-classical evolutionary transition.
+          internal: Complete dissolution of personal identity, memories, and sense of individual selfhood.
+      conflict:
+        opposition:
+          type: self
+          description: Her ingrained biological instincts and nostalgic attachment to her individual classical identity.
+        escalation:
+          beats:
+          - Cellular structures begin uncoupling into probability clouds within the orbital habitat.
+          - Memories of her childhood flash alongside alternative lifelines she never lived.
+          - Her consciousness stretches across multiple orbital telemetry points, diluting her central ego.
+      disaster:
+        outcome: Failure
+        consequence:
+          plot: Lyra fails to anchor her biological form within classical limits, initiating irreversible metamorphosis into a distributed being.
+          character: Her individual ego fractures, bringing on deep existential despondency and isolation from humanity.
+    sequel:
+      reaction:
+        emotional:
+          immediate: profound sorrow, grief for the lost mortal self, and existential dread.
+          physical: Complete loss of tactile bodily sensation, replaced by an awareness of field currents.
+        processing: She contemplates whether human identity must die for humanity to survive macroscopic reality.
+      dilemma:
+        options:
+        - choice: Fight to retain a fragmented, deteriorating biological anchor.
+          cost: Endures chronic neural agony and progressive neurological degradation.
+          risk: Incapacitates her from guiding earthbound survivors through the transition.
+        - choice: Fully embrace the post-biological state as a non-local consciousness.
+          cost: Permanently sever physical kinship and organic connection with classical humanity.
+          risk: Alienates the grounded population, who will view her as a non-human aberration.
+      decision:
+        chosen_option: Fully embrace the post-biological state as a non-local consciousness.
+        rationale: Only by discarding obsolete biological boundaries can she serve as the beacon humanity needs during the shift.
+        new_goal: Re-orient her distributed awareness to assist the ground grid against impending decoherence.
+    context: CO
+  - scene:
+      goal:
+        description: Dr. Lyra Thorne interfaces with Nia Senghor's systems to prove that post-biological awareness can guide humanity through existential despair.
+        stakes:
+          external: Rejection of adaptive evolutionary protocols by terrestrial civilization.
+          internal: Total emotional surrender to alienation and detachment from human struggles.
+      conflict:
+        opposition:
+          type: person
+          description: Terrestrial grid operators who instinctively resist guidance from a distributed non-human intelligence.
+        escalation:
+          beats:
+          - Lyra's distributed voice is flagged as hostile algorithmic noise by basin defenses.
+          - Operators attempt to purge her consciousness stream from the control node.
+          - Lyra channels sensory reflections of collective human survival to bypass their fear filters.
+      disaster:
+        outcome: Success with cost
+        consequence:
+          plot: The grid operators accept Lyra's consciousness as the primary adaptive bridge for the network.
+          character: Lyra sheds her lingering personal despair, cementing her identity as the progenitor of post-classical humanity.
+    sequel:
+      reaction:
+        emotional:
+          immediate: Serene clarity and boundless empathy untethered from personal pride.
+          physical: Perception of millions of terrestrial heartbeats as harmonic waves rather than individual pulses.
+        processing: She accepts that character evolution requires shedding individual vanity to sustain the whole.
+      dilemma:
+        options:
+        - choice: Direct all grid power to uplift humanity into post-biological forms immediately.
+          cost: Accelerates biological destabilization across unwilling grounded citizens.
+          risk: Mass psychological breakdown among those unprepared for superposition.
+        - choice: Maintain a transitional bridge that shelters classical biology while enabling adaptation.
+          cost: Diverts immense cognitive focus, slowing her own metaphysical expansion.
+          risk: Leaves the system vulnerable to brute-force deterministic assaults.
+      decision:
+        chosen_option: Maintain a transitional bridge that shelters classical biology while enabling adaptation.
+        rationale: True evolution must allow the biological self to transition gracefully rather than be shattered.
+        new_goal: Coordinate with Tariq and Nia to protect the basin from Vance's incoming assault.
+    context: CC
+  - scene:
+      goal:
+        description: Dr. Nia Senghor must defend the Volta Basin from Reverend Vance's synchronized decoherence assault.
+        stakes:
+          external: A catastrophic decoherence cascade rupturing African energy grids and global logistics.
+          internal: Giving in to guilt over creating the very system Vance seeks to destroy.
+      conflict:
+        opposition:
+          type: person
+          description: Reverend Vance and his Covenant strike force detonating deterministic charges along the primary water gate.
+        escalation:
+          beats:
+          - Vance's operatives detonate breach charges, forcing sections of the river into violent classical collapse.
+          - Concrete walls fracture as contradictory physical states slam together along fault lines.
+          - Nia manually overrides the quantum bridge under direct small-arms fire from Covenant acolytes.
+      disaster:
+        outcome: Success with cost
+        consequence:
+          plot: Nia neutralizes Vance's charges and captures the strike force, but the dam structure is severely degraded by localized decoherence shocks.
+          character: Nia casts aside her guilt, accepting that defending the future requires ruthless determination.
+    sequel:
+      reaction:
+        emotional:
+          immediate: Adrenaline surge giving way to exhaustion and relief.
+          physical: Labored breathing, singed skin, and bruised ribs from explosive concussions.
+        processing: She recognizes that the event cascade was stopped, but the underlying systemic instability remains unresolved.
+      dilemma:
+        options:
+        - choice: Execute Vance and his followers immediately to remove the deterministic threat.
+          cost: Violates ethical norms and inflames deterministic martyr insurgencies worldwide.
+          risk: Provokes retaliatory strikes against secondary quantum nodes across the globe.
+        - choice: Force Vance to witness the economic and physical integration of the new paradigm.
+          cost: Requires dedicating resources to secure ideological prisoners.
+          risk: Vance could exploit security vulnerabilities to sabotage internal nodes.
+      decision:
+        chosen_option: Force Vance to witness the economic and physical integration of the new paradigm.
+        rationale: Extinguishing dogmatic opposition requires demonstrating the viability of superposition, not creating martyrs.
+        new_goal: Provide stable computational channels for Tariq's economic consensus model.
+    context: EC
+  - scene:
+      goal:
+        description: Tariq El-Obeid aims to deploy his dynamic consensus parity model to resolve global economic valuation breakdown.
+        stakes:
+          external: The terminal dissolution of planetary trade, leading to systemic societal collapse.
+          internal: Permanent mental collapse if his neural pathways fail to sustain the calculation matrix.
+      conflict:
+        opposition:
+          type: system
+          description: The turbulent economic market data oscillating wildly across contradictory probability states.
+        escalation:
+          beats:
+          - Sudanese and global currency derivatives swing wildly toward infinite extremes.
+          - Tariq interfaces his mind directly with Lyra's orbital stream to expand processing throughput.
+          - Divergent price trajectories begin converging into a singular probabilistic parity equation.
+      disaster:
+        outcome: Success
+        consequence:
+          plot: The consensus parity model stabilizes global exchange, answering the riddle of non-classical economic value.
+          character: Tariq's neural state achieves equilibrium, restoring his intellectual confidence and mental coherence.
+    sequel:
+      reaction:
+        emotional:
+          immediate: Overwhelming intellectual triumph and sudden cognitive stillness.
+          physical: Deep release of muscle tension and stabilization of visual perception.
+        processing: He realizes value is no longer a static physical quantity, but a shared social and probabilistic agreement.
+      dilemma:
+        options:
+        - choice: Monopolize the consensus algorithms to oversee and regulate the new economy.
+          cost: Assumes the burden of planetary macroeconomic control.
+          risk: Creates an authoritarian algorithmic technocracy vulnerable to corruption.
+        - choice: Distribute the consensus framework openly to all planetary and orbital nodes.
+          cost: Relinquishes personal power and direct oversight over market evolution.
+          risk: Unregulated local markets could misapply the equations and cause micro-crises.
+      decision:
+        chosen_option: Distribute the consensus framework openly to all planetary and orbital nodes.
+        rationale: A decentralized quantum reality requires decentralized economic authority to flourish.
+        new_goal: Assist Nia and Lyra in codifying the macroscopic rules of the stabilized world.
+    context: IC
+  - scene:
+      goal:
+        description: Dr. Nia Senghor and the assembled leaders work to integrate macroscopic superposition as the definitive physical operating environment of Earth.
+        stakes:
+          external: Relapse into fragmented, chaotic reality pockets across global habitats.
+          internal: Fear of permanently stepping away from the familiar comfort of classical reality.
+      conflict:
+        opposition:
+          type: environment
+          description: The planetary climate and lingering classical boundaries resisting holistic quantum phase synchronization.
+        escalation:
+          beats:
+          - The Volta Basin begins broadcasting the integrated wavefunction across the planetary lattice.
+          - Orbital feeds from Dr. Thorne interface smoothly with terrestrial non-local power relays.
+          - Residual pockets of deterministic resistance dissolve into the fluid superposed landscape.
+      disaster:
+        outcome: Success
+        consequence:
+          plot: Earth formally achieves macroscopic quantum equilibrium, establishing a new era of civilization.
+          character: Nia fully embraces the strange, shimmering reality of a superposed future without looking back.
+    sequel:
+      reaction:
+        emotional:
+          immediate: Serenity, completion, and quiet reverence for the new world.
+          physical: A light, weightless sensation as the environment gently pulses in coherent harmony.
+        processing: Humanity has stepped out of the classical cradle into a vast, mutable cosmos where probability is an ally.
+      dilemma:
+        options:
+        - choice: Isolate Earth's coherent biosphere from unmapped deep-space decoherence threats.
+          cost: Stifles interstellar exploration and scientific curiosity.
+          risk: Deprives civilization of external resources and evolutionary expansion.
+        - choice: Project the macroscopic quantum horizon outward toward the solar system and stars.
+          cost: Demands continuous adaptation and risks contact with unpredictable cosmic fields.
+          risk: Could expose human reality to incomprehensible extra-solar phenomena.
+      decision:
+        chosen_option: Project the macroscopic quantum horizon outward toward the solar system and stars.
+        rationale: Civilization cannot survive by stagnation; expanding the horizon is the ultimate expression of anthropogeny.
+        new_goal: Commence preparations for the first macroscopic quantum voyage beyond lunar orbit.
+    context: MC
+  discourse:
+    narration:
+      voice: third_person_heterodiegetic
+      level: extradiegetic
+      focalisation: zero_omniscient
+      reliability: reliable
+    language:
+      tone: austere, clinical, and intellectually sublime
+      diction: technical_scientific
+      figures_of_speech:
+      - extended metaphor
+      - antithesis
+      - hyperbole
+      mode_balance: diegesis_dominant
+      sentence_rhythm: periodic_flowing
+      foregrounding: Scientific defamiliarization through the collision of subatomic quantum mechanics jargon with sociological and historical terminology.
+  pov: third_person_omniscient
+  image_prompt: A sprawling panoramic view of a futuristic city dissolving into shimmering quantum interference patterns, translucent geometric superposition waves overlapping crystalline towers bathed in chrome yellow and deep cyan light, no people present, hard sci-fi concept art.
+  aesthetic:
+    art_style: Syd Mead industrial futurism architectural concept painting with precision mechanical forms
+    color_palette: "bioluminescent abyssal: deep ocean indigo, vibrant turquoise, and phosphorescent violet"
+    composition: dramatic symmetrical one-point perspective corridor receding infinitely into the unknown
+    lighting: pulsing alien bioluminescence illuminating damp organic cavern walls
+    mood: haunting melancholy amidst the decaying ruins of an ancient interstellar civilization
+    subject_matter: An infinitely receding subterranean quantum conduit fracturing into probabilistic superposition amidst decaying industrial infrastructure
+    prompt: A dramatic symmetrical one-point perspective down an infinitely receding mega-engineering corridor, where industrial quantum infrastructure fractures into probabilistic superpositions. Decaying bulkhead walls of weeping damp lead-bismuth alloy are overgrown with strange, alien-like organic crystalline growths. Eerie, pulsing cyan and deep violet bioluminescence casts sweeping glimmers across submerged turbine tracks and flooded floor gratings, reflecting heavy prismatic flares in the dense, ozone-saturated mist. Ghostly, translucent echoes of machinery fluctuate between solid matter and ethereal probability waves down the haunting corridor, evoking a profound, melancholy stillness inside the ruined remnants of a collapsing macroscopic reality. Cinematic, hyper-detailed digital sci-fi painting.
+  cover_path: cover.png
+meta:
+  science_field:
+    name: Quantum Mechanics
+    description: Physical behavior at atomic and subatomic scales
+  genre:
+    name: Quantum Fiction
+    description: A hard speculative subgenre focused on narrative extrapolation of the bizarre physical behavior at atomic and subatomic scales, exploring phenomena such as superposition, quantum entanglement, wave-particle duality, and observer effects through technological and metaphysical realities.
+  vocabs:
+  - lex_category: noun.process
+    word: uptake
+    definition: a process of taking up or using up or consuming
+  - lex_category: noun.process
+    word: anthropogeny
+    definition: the evolution or genesis of the human race
+  - lex_category: noun.act
+    word: first step
+    definition: the first of a series of actions
+  - lex_category: noun.act
+    word: villainy
+    definition: a criminal or vicious act
+  - lex_category: noun.person
+    word: idolater
+    definition: a person who worships idols
+  - lex_category: adj.all
+    word: mediate
+    definition: acting through or dependent on an intervening agencybeing neither at the beginning nor at the end in a series
+  - lex_category: adj.all
+    word: pastoral
+    definition: (used with regard to idealized country life) idyllically rustic
+  - lex_category: verb.perception
+    word: incline
+    definition: bend or turn (one's ear) towards a speaker in order to listen well
+  - lex_category: verb.perception
+    word: subject
+    definition: cause to experience or suffer or make liable or vulnerable to
+  - lex_category: verb.possession
+    word: bewhisker
+    definition: furnish with whiskers
+  - lex_category: verb.stative
+    word: fly in the face of
+    definition: go against
+  - lex_category: verb.stative
+    word: concern
+    definition: be relevant tobe on the mind of
+  - lex_category: noun.body
+    word: cuneiform bone
+    definition: a wrist bone that articulates with the pisiform and hamate and lunate bones
+  - lex_category: noun.object
+    word: Volta River
+    definition: a river in Ghana that flows south to the Bight of Benin
+  - lex_category: noun.object
+    word: transmitter
+    definition: any agent (person or animal or microorganism) that carries and transmits a disease
+  - lex_category: noun.quantity
+    word: scale factor
+    definition: a number used as a multiplier in scaling
+  - lex_category: noun.quantity
+    word: Sudanese monetary unit
+    definition: monetary unit in the Sudan
+  - lex_category: verb.communication
+    word: disdain
+    definition: reject with contempt
+  - lex_category: verb.emotion
+    word: overpower
+    definition: overcome, as with emotions or perceptual stimuli
+  - lex_category: noun.cognition
+    word: Calvinism
+    definition: the theological system of John Calvin and his followers emphasizing omnipotence of God and salvation by grace alone
+  - lex_category: noun.cognition
+    word: noumenon
+    definition: the intellectual conception of a thing as it is in itself, not as it is known through perception
+  - lex_category: verb.contact
+    word: plump up
+    definition: make fuller by shaking
+  - lex_category: verb.contact
+    word: boom
+    definition: hit with great force
+  - lex_category: verb.motion
+    word: scend
+    definition: rise or heave upward under the influence of a natural force such as a wave
+  - lex_category: verb.motion
+    word: despatch
+    definition: send away towards a designated goal
+  - lex_category: noun.event
+    word: self-fertilization
+    definition: fertilization by the union of male and female gametes from the same individual
+  - lex_category: noun.event
+    word: tinkle
+    definition: a light clear metallic sound as of a small bell
+  - lex_category: noun.possession
+    word: king's ransom
+    definition: a very large treasure
+  - lex_category: noun.relation
+    word: subordination
+    definition: the semantic relation of being subordinate or belonging to a lower rank or classthe grammatical relation of a modifying word or phrase to its head
+  - lex_category: noun.relation
+    word: brotherhood
+    definition: the kinship relation between a male offspring and the siblings
+  - lex_category: noun.shape
+    word: fold
+    definition: an angular or rounded shape made by folding
+  - lex_category: noun.state
+    word: slough of despond
+    definition: (formal) extreme depression
+  - lex_category: noun.state
+    word: sensation
+    definition: a state of widespread public excitement and interest
+  - lex_category: verb.cognition
+    word: mull
+    definition: reflect deeply on a subject
+  - lex_category: verb.cognition
+    word: recalculate
+    definition: calculate anew
+  - lex_category: noun.Tops
+    word: biont
+    definition: a discrete unit of living matter
+  - lex_category: noun.communication
+    word: threat
+    definition: a warning that something unpleasant is imminentdeclaration of an intention or a determination to inflict harm on another
+  - lex_category: noun.substance
+    word: lanolin
+    definition: a yellow viscous animal oil extracted from wool; a mixture of fatty acids and esters; used in some ointments and cosmetics
+  - lex_category: noun.substance
+    word: chrome yellow
+    definition: any of several yellow pigments consisting of normal lead chromate and other lead compounds
+  - lex_category: verb.change
+    word: decimate
+    definition: kill one in every ten, as of mutineers in Roman armieskill in large numbers
+  - lex_category: verb.change
+    word: decarbonize
+    definition: remove carbon from (an engine)
+  - lex_category: noun.artifact
+    word: fan belt
+    definition: a belt driven by the crankshaft that drives a fan that pulls air through the radiator
+  - lex_category: noun.artifact
+    word: dishrag
+    definition: a cloth for washing dishes
+  - lex_category: noun.attribute
+    word: pelting
+    definition: anything happening rapidly or in quick successive
+  - lex_category: noun.attribute
+    word: breeziness
+    definition: a breezy liveliness
+  - lex_category: noun.motive
+    word: egomania
+    definition: an intense and irresistible love for yourself and concern for your own needs
+  - lex_category: adj.pert
+    word: curatorial
+    definition: of or relating to a curator or the duties of a curator
+  - lex_category: adj.pert
+    word: intravenous
+    definition: within or by means of a vein
+  - lex_category: adj.ppl
+    word: punishing
+    definition: resulting in punishment
+  - lex_category: adj.ppl
+    word: streaming
+    definition: exuding a bodily fluid in profuse amounts
+  - lex_category: verb.competition
+    word: shuttlecock
+    definition: send or toss to and fro, like a shuttlecock
+  - lex_category: adverb.all
+    word: monthly
+    definition: ""
+  - lex_category: adverb.all
+    word: tenfold
+    definition: ""
+  - lex_category: noun.feeling
+    word: scorn
+    definition: lack of respect accompanied by a feeling of intense dislike
+  - lex_category: noun.group
+    word: matriarchate
+    definition: a form of social organization in which a female is the family head and title is traced through the female line
+  - lex_category: noun.location
+    word: round
+    definition: a regular route for a sentry or policeman
+  - lex_category: noun.time
+    word: Dark Ages
+    definition: the period of history between classical antiquity and the Italian Renaissance
+  - lex_category: noun.time
+    word: month of Sundays
+    definition: a time perceived as long
+  - lex_category: verb.creation
+    word: improvize
+    definition: perform without preparation
+  - lex_category: verb.creation
+    word: bedeck
+    definition: decorate
+  - lex_category: verb.social
+    word: swing
+    definition: influence decisivelybe a social swinger; socialize a lot
+  - lex_category: noun.phenomenon
+    word: storm
+    definition: a violent weather condition with winds 64-72 knots (11 on the Beaufort scale) and precipitation and thunder and lightning
+  - lex_category: noun.phenomenon
+    word: bandwagon effect
+    definition: the phenomenon of a popular trend attracting even greater popularity
