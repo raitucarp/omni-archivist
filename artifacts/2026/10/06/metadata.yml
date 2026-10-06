@@ -1,0 +1,638 @@
+story:
+  title: The Carinated Caldera
+  subtitle: Chronicles of Mantle Dynamics and Lithic Decay
+  blurb: In an age where magma chambers power entire metropolises, humanity's hubris fractures the deep lithosphere. As tectonic forces awaken, society teeters between absolute thermodynamic mastery and total planetary extinction.
+  logline: When geological engineering destabilizes the planetary mantle, a volcanopunk civilization must harness resonant magma conduits before thermodynamic collapse consumes human settlements.
+  synopsis: Deep within the sub-crustal bastions of the Caldera Hegemony, tectonic thermodynamics governs the totality of civil engineering and civic existence. The civilization relies upon vast carinated conduits to channel superheated mantle plumes, tapping pyrostasis for metropolitan power. As the planetary crust begins to wester under anomalous convection currents, humanity discovers that the volcanic mantle does not merely drift; it throbs with prosodic acoustic vibrations harmonically tuned to subterranean resonance chambers. In official bulletins posted across regional citadels, this crustal uprise was framed with tongue-in-cheek optimism as a foolproof triumph of industrial classicalism, yet the harsh reality of thermal decomposition and acoustic garble revealed an egregious oversight. The planetary lithosphere had begun to animalize and contort, producing geological spasms that could scrape continental plates raw and precipitate catastrophic ash plumes. To reorientate their thermal grids, municipal syndicates attempt to desexualize their workforce cohorts, adopting an austere communal garb and deploying nonmotile kaolin dampers across subterranean corridors to suppress acoustic shockwaves. The technocratic councils intend to brail the billowing pyroclastic plumes like sails, yet every technological interaction with the abyss serves only to transgress deeper thermodynamic thresholds.
+  theme:
+    central_premise: The unyielding exploitation of planetary planetary thermodynamics inevitably transforms mechanical stability into uncontrollable seismic retribution.
+    speculative_inquiry: Can a civilization founded entirely upon artificial mantle manipulation survive when the thermodynamic equilibrium of the planet revolts?
+    motifs:
+    - magma conduits
+    - basalt infrastructure
+    - pyroclastic ash clouds
+  setting:
+    macro: A hyper-geothermal terrestrial world governed by the Caldera Hegemony, where planetary-scale mantle engineering has structurally bound continental tectonic plates to an industrialized thermodynamic energy grid.
+    meso: The regional Carinated Conduit Network of the sub-crustal lithosphere, comprised of fortified volcanic citadels anchored directly into dynamic mantle plumes and interconnected by keeled basalt viaducts.
+    micro: The brail-winch observation pulpit of Conduit Nine, a claustrophobic basalt chamber lined with nonmotile kaolin dampening tiles, vibrating acoustic telemetry arrays, and pneumatic valve levers overlooking an exposed river of white-hot magma.
+    topography: Vertically terraced subterranean architecture suspended within hollowed volcanic flues, framed by razor-keeled lava diversion channels, towering acoustic baffle arrays, and narrow obsidian catwalks spanning abyssal tectonic rifts.
+    atmosphere: Stifling hyperbaric heat saturated with sulfur vapor and microscopic vitrified ash; low-cast incandescent crimson illumination from exposed magma surfaces; an omnipresent, prosodic infrasonic rumble vibrating through solid rock.
+    function: functional_causal
+    chronotope: "The Thermodynamic Brink: an entropic space-time matrix wherein planetary geological epochs compress violently into industrial catastrophe, measuring civic continuity against the accelerating cadence of acoustic seismic pulses."
+  structure:
+    kind:
+    - M
+    - I
+    - E
+    - C
+    logic:
+    - Establish the sub-crustal bastions and thermodynamic conduits of the Caldera Hegemony
+    - Investigate the anomalous prosodic acoustic pulses and thermal decay within the mantle
+    - Survive the catastrophic lithic spasms and rupturing pyroclastic plumes
+    - Transform workforce cohorts into austere, desexualized collectives to endure subterranean resonance
+    type_use: External shock reshapes self
+  characters:
+  - name: Corren Vane
+    gender: Female
+    description: A gaunt acoustic lithologist with soot-streaked skin and an obsessive, calculating demeanor, Corren wears heat-resistant tunics fitted with copper listening horns.
+    role: Chief Acoustic Lithologist
+    actant_role: protagonist
+    complexity: round
+    development: dynamic
+    characterisation: mixed
+    motivation: To harmonize the Caldera's resonant magma conduits and prevent total thermodynamic collapse without freezing the subterranean populace.
+    conflict: Internally struggling with creeping sensory madness caused by subterranean frequencies, while externally fighting the syndicate's censorship of mantle instability.
+  - name: Malakor Heth
+    gender: Male
+    description: An imperious technocrat draped in basalt-fiber robes, projecting severe authority while masking dread beneath absolute devotion to industrial classicalism.
+    role: High Praetor of Mantle Extraction
+    actant_role: antagonist
+    complexity: round
+    development: static
+    characterisation: indirect
+    motivation: To enforce continuous thermodynamic energy flow and brail the pyroclastic surges, ensuring the syndicate's imperial supremacy remains intact.
+    conflict: Accepting the mantle's living resonance would invalidate his entire life work, forcing him to choose between lethal administrative pride and human survival.
+  - name: Vespera Kehl
+    gender: Non-binary
+    description: A quiet, muscular conduit worker coated in pale kaolin dust, sporting reinforced auditory plugs and a protective, skeptical attitude toward syndicate doctrine.
+    role: Sub-Crustal Damper Specialist
+    actant_role: deuteragonist
+    complexity: round
+    development: dynamic
+    characterisation: mixed
+    motivation: To preserve the lives and humanity of the subterranean labor cohorts against both tectonic crushing and syndicate desexualization policies.
+    conflict: Must deploy kaolin dampers to save coworkers in the short term, despite discovering the dampers agitate the lithosphere's spasms in the long term.
+  - name: Olar Vance
+    gender: Male
+    description: A half-blind, scarred veteran of early deep-mantle bores who speaks in rhythmic cadences and uses an archaic mechanical seismograph cane.
+    role: Exiled Seismo-Philosopher
+    actant_role: mentor
+    complexity: round
+    development: static
+    characterisation: direct
+    motivation: To impart forbidden knowledge of the mantle's true organic acoustics before tectonic friction scours the citadels away.
+    conflict: Paralyzed by guilt over previous mantle-boring catastrophes he engineered, he doubts whether his guidance will save Corren or hasten her demise.
+  scene_sequels:
+  - scene:
+      goal:
+        description: Map and stabilize the resonant acoustic frequencies within the primary carinated magma conduit of the Caldera Hegemony.
+        stakes:
+          external: A miscalculation will rupture the thermal grid and freeze Citadel One's lower sub-crustal residential ring.
+          internal: Corren risks succumbing to the disorienting acoustic hum she has concealed from syndicate inquisitors.
+      conflict:
+        opposition:
+          type: environment
+          description: Volatile, superheated magma surges vibrating with anomalous non-mechanical rhythms inside the conduit walls.
+        escalation:
+          beats:
+          - Thermal sensors register sudden convection reversal along the secondary carinated flutes.
+          - Sub-harmonic vibrations overwhelm the diagnostic lithophones, shattering quartz acoustic pick-ups.
+          - A pyroclastic vent cracks open beneath the catwalk, releasing superheated sulfurous vapor.
+      disaster:
+        outcome: Success with cost
+        consequence:
+          plot: The conduit pressure stabilizes temporarily, but Corren isolates an anomalous prosodic cadence embedded in the mantle's heat plumes.
+          character: Corren realizes the mantle's acoustic behavior is organized and sentient, terrifying her with the scope of syndicate ignorance.
+    sequel:
+      reaction:
+        emotional:
+          immediate: Chilled horror masked by professional detachment.
+          physical: Nausea, ringing in the cochlea, and trembling fingers scorched by hot brass casing.
+        processing: She recognizes that the Hegemony's mechanical models of pyrostasis are fundamentally incapable of parsing these organic lithic pulses.
+      dilemma:
+        options:
+        - choice: Falsify the acoustic logs to report conventional turbulence.
+          cost: Permits systemic blindness to persist across the Hegemony.
+          risk: Citadels remain blind to an impending tectonic catastrophe.
+        - choice: Submit the anomalous seismo-rhythmic data directly to Praetor Heth.
+          cost: Invites immediate arrest and punitive sensory scrubbing.
+          risk: Heth will violently increase extraction quotas to silence the anomalies.
+      decision:
+        chosen_option: Withhold the official data and secretly consult the exiled philosopher Olar Vance.
+        rationale: Only Vance understands non-linear mantle prosody without syndicate dogmatism.
+        new_goal: Infiltrate the peripheral slag-slums to locate Olar Vance and decipher the prosodic pulse.
+    context: MO
+  - scene:
+      goal:
+        description: Corren seeks to extract forbidden pre-collapse mantle charts from seismo-philosopher Olar Vance.
+        stakes:
+          external: Failure to decode the anomalous pulses prevents early warning for the awakening lithosphere.
+          internal: Corren must confront her guilt over abandoning Olar during the syndicate purges.
+      conflict:
+        opposition:
+          type: person
+          description: Olar Vance, embittered by exile and haunted by his past culpability in mantle-boring disasters.
+        escalation:
+          beats:
+          - Olar refuses to speak and attempts to destroy his remaining acoustic parchment logs.
+          - Syndicate acoustic drones ping the perimeter of Olar's cavern sanctuary.
+          - Olar confronts Corren with evidence that her current engineering projects are actively mutilating a living lithosphere.
+      disaster:
+        outcome: Partial success
+        consequence:
+          plot: Olar provides the cipher for the mantle's organic acoustics just as syndicate tracking units breach the hideout.
+          character: Corren's confidence in industrial lithology is shattered by the proof that the planet is reacting defensively.
+    sequel:
+      reaction:
+        emotional:
+          immediate: Stunned awe mingled with panic.
+          physical: Hyperventilation in the sulfurous gloom and a violent vertigo.
+        processing: Corren realizes humanity is not tapping a passive heat engine, but torturing an animalized planetary body.
+      dilemma:
+        options:
+        - choice: Surrender the cipher to Praetor Heth to bargain for Olar's safety.
+          cost: Hands weaponized geological knowledge to a ruthless regime.
+          risk: The syndicate accelerates lethal boring operations into the mantle's sensory core.
+        - choice: Flee into the sub-crustal dampening corridors with the cipher.
+          cost: Branded an outlaw alongside Olar and hunted by the Praetorian guard.
+          risk: Leaves the civil populace undefended against retaliatory magma surges.
+      decision:
+        chosen_option: Flee toward the lower damper conduits to find Vespera Kehl.
+        rationale: Vespera controls the nonmotile dampers that can physically test the acoustic cipher on real magma conduits.
+        new_goal: Reach the dampening line and convince Vespera to deploy resonant counter-harmonics.
+    context: IO
+  - scene:
+      goal:
+        description: Vespera Kehl attempts to deploy nonmotile kaolin dampers to prevent a catastrophic pyroclastic breach from incinerating Cohort Seven.
+        stakes:
+          external: The destruction of Cohort Seven and the collapse of the metropolitan bedrock support pillars.
+          internal: Vespera must violate syndicate orders prioritizing power transmission over human worker survival.
+      conflict:
+        opposition:
+          type: environment
+          description: A violent lithic spasm tearing through the tectonic plates, driving magma plumes through bulkhead seals.
+        escalation:
+          beats:
+          - Hydraulic line seals melt under unexpected kinetic friction from shifting granite plates.
+          - Syndicate overseers demand damper retraction to maintain energy flow to the high spires.
+          - Corren arrives amidst the chaos, warning that rigid damping will agitate the mantle's acoustic retaliation.
+      disaster:
+        outcome: Failure
+        consequence:
+          plot: The kaolin dampers fracture under explosive acoustic reverberations, triggering a cascade of rogue pyroclastic geysers.
+          character: Vespera witnesses the horrific maiming of their cohort, recognizing the futility of static mechanical suppression.
+    sequel:
+      reaction:
+        emotional:
+          immediate: Grief-stricken rage and crushing helplessness.
+          physical: Burning skin from ash fallout, scorched lungs, and raw palms from frozen emergency levers.
+        processing: Vespera understands that mechanical rigidity guarantees annihilation; survival demands harmonic flexibility.
+      dilemma:
+        options:
+        - choice: Retreat upward and conform to the syndicate's austere evacuation protocols.
+          cost: Abandons the trapped lower laborers to asphyxiation.
+          risk: Reinforces the syndicate's desexualized, disposable treatment of labor cohorts.
+        - choice: Align with Corren's untested acoustic harmonization plan to reroute magma conduits.
+          cost: Commits active sabotage against Hegemony property.
+          risk: Could accelerate tectonic collapse if Corren's theories are incorrect.
+      decision:
+        chosen_option: Join Corren and adopt the seismo-harmonic approach.
+        rationale: Action rooted in solidarity offers the only moral alternative to syndicate butchery.
+        new_goal: Break into Praetor Heth's central thermal regulator to recalibrate conduit resonance.
+    context: EO
+  - scene:
+      goal:
+        description: Corren confronts High Praetor Malakor Heth to halt mantle drilling and prevent institutional erasure of her research team.
+        stakes:
+          external: Heth will order total cranial acoustic scrubbing of Corren's department and initiate full-scale deep-mantle boring.
+          internal: Corren faces the total disintegration of her identity under forced syndicate desexualization and austere uniformity.
+      conflict:
+        opposition:
+          type: person
+          description: High Praetor Malakor Heth, fortified by imperial administrative dogma and mechanical supremacy.
+        escalation:
+          beats:
+          - Heth presents Corren with a syndical uniform, ordering her total personal and emotional stripping.
+          - Corren demonstrates that his boring drills are precipitating the continental crustal tear.
+          - Heth reveals that the syndicate already knows the mantle is alive, viewing its destruction as the ultimate triumph over nature.
+      disaster:
+        outcome: Failure
+        consequence:
+          plot: Heth places Corren and her allies under arrest and activates the massive carinated deep-mantle impalers.
+          character: Corren feels her sanity buckle as the hum of the dying mantle synchronizes with her own sensory breakdown.
+    sequel:
+      reaction:
+        emotional:
+          immediate: Absolute terror giving way to cold, crystalline clarity.
+          physical: Numb extremities, visual flashing in tune with seismo-frequencies, pounding temples.
+        processing: Corren realizes she cannot fight the syndicate as an obedient technocrat; she must become an organic conduit herself.
+      dilemma:
+        options:
+        - choice: Submit to the syndicate's austere lobotomy to survive as an unfeeling technician.
+          cost: Total loss of personal autonomy, identity, and the truth of the world.
+          risk: Citadels inevitably die when the mantle retaliates fully.
+        - choice: Embrace the sensory madness, channeling mantle acoustic feedback directly through her neural headset.
+          cost: Risk irreversible cognitive dissolution and permanent psychological metamorphosis.
+          risk: Losing her human consciousness entirely to lithic frequencies.
+      decision:
+        chosen_option: Embrace the mantle's acoustic consciousness to transcend syndical suppression.
+        rationale: Only by becoming resonant with the lithosphere can she master the conduits and challenge Heth.
+        new_goal: Overpower the central conduit controls using her synchronized bio-acoustic feedback.
+    context: CO
+  - scene:
+      goal:
+        description: Corren, mentally fused with the subterranean harmonics, fights to sever Heth's command link to the deep impalers.
+        stakes:
+          external: Unchecked boring will trigger a mantle rupture that disintegrates the planetary crust.
+          internal: Corren must retain her core humanity while channeling the titanic agony of the wounded mantle.
+      conflict:
+        opposition:
+          type: self
+          description: The overwhelming sensory agony of the animalized mantle threatening to obliterate her individual human self.
+        escalation:
+          beats:
+          - The lithic frequencies attempt to drown Corren's conscious thoughts in ancient tectonic static.
+          - Heth's guards flood the control dais with neuro-dampening gases to break her concentration.
+          - Corren transmutes the sensory chaos into a coherent harmonic melody, affirming her human empathy alongside the lithic voice.
+      disaster:
+        outcome: Success with cost
+        consequence:
+          plot: Corren severs Heth's control matrix, breaking his psychological stranglehold over the facility and halting the boring drills.
+          character: Corren stabilizes her mind, synthesizing her identity as both human engineer and voice of the carinated earth.
+    sequel:
+      reaction:
+        emotional:
+          immediate: Serene transcendence, sorrow for past blindness, and firm resolve.
+          physical: Bleeding ears, calm steady pulse, vision bathed in iridescent thermal gradients.
+        processing: She has conquered the sensory madness, discovering that the lithic hum was never hostile, only screaming in pain.
+      dilemma:
+        options:
+        - choice: Use the resonant controls to incinerate Heth and his guards with a thermal blowback.
+          cost: Sacrifices her newly claimed moral clarity to bloody vengeance.
+          risk: Triggers an immediate armed rebellion that destabilizes the city.
+        - choice: Spare Heth and force him to witness the evacuation and conduit brailing.
+          cost: Leaves an ideological enemy alive.
+          risk: Heth may attempt counter-sabotage during the critical evacuation window.
+      decision:
+        chosen_option: Spare Heth and command the syndicate workforce to prepare for thermal venting.
+        rationale: Survival requires collective cooperation, not despotic retributive slaughter.
+        new_goal: Brail the explosive pyroclastic plumes into safe atmospheric dissipation shafts.
+    context: CC
+  - scene:
+      goal:
+        description: Vespera Kehl and Corren work to brail the billowing pyroclastic plumes like sails, diverting an apocalyptic thermal surge away from human bastions.
+        stakes:
+          external: Catastrophic rupture of the caldera walls and the cremation of millions across subterranean citadels.
+          internal: Vespera must overcome trauma from previous cohort deaths to operate the critical manual release valves.
+      conflict:
+        opposition:
+          type: system
+          description: The crumbling, over-pressurized Hegemony thermal venting network, designed for rigid containment rather than fluid release.
+        escalation:
+          beats:
+          - Vespera ascends the buckling carinated exhaust tower amidst raining volcanic cinders.
+          - A rogue pressure surge blows out the tertiary brail cables, leaving the main funnel stuck open.
+          - Vespera manually hooks the thermal sail lines to the kaolin damper anchors despite blistering heat.
+      disaster:
+        outcome: Success with cost
+        consequence:
+          plot: The plumes are successfully brailed and funneled harmlessly into the upper stratosphere, saving the population, but the industrial grid is permanently ruined.
+          character: Vespera achieves catharsis, having saved the labor cohorts from mechanical immolation.
+    sequel:
+      reaction:
+        emotional:
+          immediate: Euphoric exhaustion and triumphant relief.
+          physical: Deep burns across arms and chest, ragged coughing, trembling knees collapsing against iron grating.
+        processing: The mechanical tyranny of the Hegemony's energy apparatus is broken, ending the age of parasitic extraction.
+      dilemma:
+        options:
+        - choice: Attempt to scavenge and patch the ruined thermal grid to maintain basic imperial power.
+          cost: Preserves residual syndicate infrastructure and authoritarian control.
+          risk: Leaves the citadels dependent on a dying, exploitative model.
+        - choice: Decommission the carinated impalers entirely, relying on low-yield harmonic heat vents.
+          cost: Demands radical austerity and an end to metropolitan expansion.
+          risk: Challenging survival conditions in the immediate winter of ash.
+      decision:
+        chosen_option: Permanently decommission the deep industrial impalers.
+        rationale: Humanity must adapt to the living planet's rhythm rather than forcing it into mechanical servitude.
+        new_goal: Deliver the complete seismo-philosophical cipher to Olar Vance to document the new planetary truth.
+    context: EC
+  - scene:
+      goal:
+        description: Olar Vance and Corren Vane collaborate to assemble and record the final acoustic lexicon of the mantle's prosody.
+        stakes:
+          external: Without the lexicon, future generations will repeat the catastrophe of invasive tectonic exploitation.
+          internal: Olar must confront the final legacy of his disgraced life work and forgive himself for past errors.
+      conflict:
+        opposition:
+          type: system
+          description: Degrading magnetic data storage and seismo-static interference threatening to erase the recording before completion.
+        escalation:
+          beats:
+          - Aftershocks rattle the laboratory, causing data spools to jam in their bronze runners.
+          - Olar's failing eyesight prevents him from reading the delicate wave oscillations on the drum.
+          - Corren connects her sensory perception directly to the recording stylus, bridging human insight and raw seismo-acoustics.
+      disaster:
+        outcome: Success
+        consequence:
+          plot: The seismo-harmonic cipher is successfully encoded into permanent basalt disks, solving the mystery of mantle dynamics forever.
+          character: Olar finds deep spiritual peace, knowing his life's errors have been redeemed through salvation of the future.
+    sequel:
+      reaction:
+        emotional:
+          immediate: Quiet reverence and profound, shared awe.
+          physical: Tears cutting paths through soot-stained cheeks; warm stillness in the cool subterranean air.
+        processing: "They understand the fundamental reality: the earth is an acoustic organism that communicates through heat and vibration."
+      dilemma:
+        options:
+        - choice: Conceal the basalt disks to keep the mantle's consciousness an esoteric secret.
+          cost: Deprives the broad populace of understanding their true relationship with the earth.
+          risk: A future syndicate could re-invent violent extraction technology.
+        - choice: Broadcast the recorded acoustic cipher indiscriminately over the civil broadcast horns.
+          cost: May induce mass panic among citizens conditioned to fear mantle acoustics.
+          risk: Social turbulence as imperial dogmas shatter overnight.
+      decision:
+        chosen_option: Broadcast the acoustic lexicon to every corner of Citadel One.
+        rationale: Truth is the only foundation upon which a new, non-exploitative civilization can be erected.
+        new_goal: Lead the citizenry from the toxic lower bastions out onto the newly stabilized caldera rim.
+    context: IC
+  - scene:
+      goal:
+        description: Corren Vane leads the diaspora of surviving workers and citizens out of the crumbling sub-crustal bastions toward the carinated caldera's daylight.
+        stakes:
+          external: Lingering tectonic structural failures in the lower tunnels could entomb thousands if the exodus falters.
+          internal: Corren must let go of her identity as an engineer of the old Hegemony and step into the unknown role of pioneer.
+      conflict:
+        opposition:
+          type: environment
+          description: Crumbling basalt transit shafts, sulfur pockets, and narrow cooling lava flows along the primary evacuation corridor.
+        escalation:
+          beats:
+          - A sudden rockfall seals the main elevator tube, forcing the crowd into an unmapped volcanic flue.
+          - Fearful citizens freeze as subterranean frequencies reverberate up through the stone.
+          - Corren vocalizes the mantle's soothing counter-frequency, quieting the tremors and clearing a path through the debris.
+      disaster:
+        outcome: Success
+        consequence:
+          plot: The population safely breaches the surface caldera, emerging under a cleared sky where magma flows peacefully in carved natural canals.
+          character: Corren feels the burden of sensory madness dissolve into harmonious unity with the living world.
+    sequel:
+      reaction:
+        emotional:
+          immediate: Overwhelming joy, liberation, and expansive tranquility.
+          physical: Basking in cool surface wind, inhaling sweet fresh air, shielding eyes from the morning sun.
+        processing: The Caldera Hegemony has fallen, but humanity has survived by learning to listen instead of dominate.
+      dilemma:
+        options:
+        - choice: Re-establish an administrative council modeled on the old Hegemony to maintain order.
+          cost: Risks resurrecting technocratic hierarchy and worker subjugation.
+          risk: Reverting to the old mindset of planetary exploitation.
+        - choice: Form an egalitarian seismo-commune dedicated to symbiotic living with mantle dynamics.
+          cost: Uncertain social structure with no historical precedent to guarantee stability.
+          risk: Vulnerability to factional fracturing in the harsh caldera environment.
+      decision:
+        chosen_option: Establish an egalitarian seismo-harmonic community on the rim of the caldera.
+        rationale: Only by aligning human governance with planetary resonance can long-term survival be assured.
+        new_goal: Construct a civilization founded on listening to the prosody of the living earth.
+    context: MC
+  discourse:
+    narration:
+      voice: third_person_heterodiegetic
+      level: extradiegetic
+      focalisation: zero_omniscient
+      reliability: reliable
+    language:
+      tone: austere, technical, and catastrophic
+      diction: technical_scientific
+      figures_of_speech:
+      - geological reification
+      - thermodynamic metaphor
+      - systemic personification
+      mode_balance: diegesis_dominant
+      sentence_rhythm: periodic_flowing
+      foregrounding: Synthesizing industrial metallurgy and deep-earth vulcanism with bureaucratic terminology to defamiliarize thermodynamic collapse.
+  pov: third_person_omniscient
+  image_prompt: A vast subterranean volcanopunk megacity built inside a colossal magma chamber, with polished basalt architecture, luminous orange lava canals, brass pressure conduits, and glowing volcanic vents under an ash-choked ceiling.
+  aesthetic:
+    art_style: analog grainy risograph print with stylized limited-color duotone sci-fi aesthetic
+    color_palette: "vintage vaporwave: twilight lavender, dusty dusty rose, and muted mint green"
+    composition: isometric cutaway architectural perspective revealing labyrinthine alien interior
+    lighting: pulsing alien bioluminescence illuminating damp organic cavern walls
+    mood: quiet contemplative solitude drifting through the silent void
+    subject_matter: An isometric architectural cutaway of a carinated mantle bastion and solitary observation chamber embedded within contorting tectonic strata.
+    prompt: Isometric cutaway architectural view revealing the labyrinthine subterranean interior of a carinated volcanic bastion deep within the mantle. Segmented basalt viaducts and kaolin-tiled damper chambers weave through damp, organic-textured cavern walls that pulse with an eerie, rhythmic cyan bioluminescence. Below, an exposed rift of incandescent white-gold magma casts long thermal shadows across mechanical brail-winches and brass acoustic telemetry dials. In a solitary observation pulpit, an austere, cloaked figure stands motionless, suspended in quiet contemplative solitude above the abyssal lithic chasm. Detailed architectural concept art, intricate cross-section detailing, hyper-detailed tectonic cross-strata, atmospheric sulfur haze.
+  cover_path: cover.png
+meta:
+  science_field:
+    name: Volcanology
+    description: Volcanoes
+  genre:
+    name: Volcanopunk
+    description: A speculative fiction subgenre centered on advanced civilizations, geological engineering, and survival scenarios shaped by volcanoes, exploring the harnessing of magma channels, pyroclastic energy, and planetary mantle dynamics for technology and narrative conflict.
+  vocabs:
+  - lex_category: verb.creation
+    word: animalize
+    definition: represent in the form of an animal
+  - lex_category: verb.creation
+    word: reduplicate
+    definition: form by reduplicationmake or do or perform again
+  - lex_category: noun.time
+    word: golden wedding anniversary
+    definition: the 50th wedding anniversary
+  - lex_category: adj.pert
+    word: Monophysite
+    definition: of or relating to Monophysitism
+  - lex_category: adj.pert
+    word: prosodic
+    definition: of or relating to the rhythmic aspect of language or to the suprasegmental phonemes of pitch and stress and juncture and nasalization and voicing
+  - lex_category: noun.artifact
+    word: garb
+    definition: clothing of a distinctive style or for a particular occasion
+  - lex_category: noun.artifact
+    word: chromolithograph
+    definition: a print made by chromolithography.
+  - lex_category: noun.communication
+    word: serial publication
+    definition: a periodical that appears at scheduled times
+  - lex_category: noun.event
+    word: departure
+    definition: a variation that deviates from the standard or normeuphemistic expressions for death
+  - lex_category: noun.event
+    word: Kentucky Derby
+    definition: an annual race for three-year-old horses; held at Churchill Downs in Louisville, Kentucky
+  - lex_category: noun.feeling
+    word: discouragement
+    definition: the feeling of despair in the face of obstacles
+  - lex_category: noun.phenomenon
+    word: brain wave
+    definition: (neurophysiology) rapid fluctuations of voltage between parts of the cerebral cortex that are detectable with an electroencephalograph
+  - lex_category: noun.phenomenon
+    word: wester
+    definition: wind that blows from west to east
+  - lex_category: noun.possession
+    word: PAYE
+    definition: the British system of withholding tax
+  - lex_category: adj.ppl
+    word: carinated
+    definition: having a ridge or shaped like a ridge or suggesting the keel of a ship
+  - lex_category: adj.ppl
+    word: posted
+    definition: publicly displayed
+  - lex_category: verb.body
+    word: desexualize
+    definition: make infertile
+  - lex_category: noun.body
+    word: teardrop
+    definition: a drop of the clear salty saline solution secreted by the lacrimal glands
+  - lex_category: noun.group
+    word: kitchen cabinet
+    definition: an inner circle of unofficial advisors to the head of a government
+  - lex_category: noun.group
+    word: bee
+    definition: a social gathering to carry out some communal task or to hold competitions
+  - lex_category: noun.process
+    word: elastic demand
+    definition: demand that increases or decreases as the price of a good or service decreases or increases.
+  - lex_category: noun.process
+    word: drift
+    definition: the gradual departure from an intended course due to external influences (as a ship or plane)a process of linguistic change over a period of time
+  - lex_category: noun.shape
+    word: concertina fold
+    definition: a continuous parallel folding in an accordion-like fashion, that is with folds alternatively made to the front and back in zig-zag folds.
+  - lex_category: noun.shape
+    word: zag
+    definition: an angular shape characterized by sharp turns in alternating directions
+  - lex_category: verb.cognition
+    word: skip
+    definition: bypass
+  - lex_category: verb.cognition
+    word: intend
+    definition: have in mind as a purposedesign or destine
+  - lex_category: verb.contact
+    word: dado
+    definition: cut a dado into or fit into a dado
+  - lex_category: verb.contact
+    word: needle
+    definition: prick with a needle
+  - lex_category: noun.act
+    word: arrival
+    definition: accomplishment of an objectivethe act of arriving at a certain place
+  - lex_category: noun.act
+    word: interaction
+    definition: a mutual or reciprocal action; interacting
+  - lex_category: noun.substance
+    word: kaolin
+    definition: a fine usually white clay formed by the weathering of aluminous minerals (as feldspar); used in ceramics and as an absorbent and as a filler (e.g., in paper)
+  - lex_category: noun.substance
+    word: atomic number 107
+    definition: a transuranic element with atomic number 107
+  - lex_category: verb.consumption
+    word: wet-nurse
+    definition: give suck to
+  - lex_category: verb.consumption
+    word: take out
+    definition: buy and consume food from a restaurant or establishment that sells prepared food
+  - lex_category: verb.motion
+    word: scrape
+    definition: bend the knees and bow in a servile manner
+  - lex_category: verb.motion
+    word: transgress
+    definition: pass beyond (limits or boundaries)
+  - lex_category: noun.person
+    word: highflier
+    definition: a person of great ability and ambition
+  - lex_category: noun.person
+    word: Rosa Melba Ponselle
+    definition: United States soprano (1897-1981)
+  - lex_category: noun.relation
+    word: SEbS
+    definition: the compass point that is one point south of southeast
+  - lex_category: verb.possession
+    word: whisker
+    definition: furnish with whiskers
+  - lex_category: verb.social
+    word: cast
+    definition: assign the roles of (a movie or a play) to actors
+  - lex_category: verb.social
+    word: pull someone's leg
+    definition: subject to a playful hoax or joke
+  - lex_category: verb.weather
+    word: precipitate
+    definition: fall from clouds
+  - lex_category: verb.weather
+    word: flare
+    definition: burn brightlyshine with a sudden light
+  - lex_category: adverb.all
+    word: harmonically
+    definition: ""
+  - lex_category: adverb.all
+    word: tongue-in-cheek
+    definition: ""
+  - lex_category: verb.change
+    word: foolproof
+    definition: proof against human misuse or error
+  - lex_category: verb.change
+    word: port
+    definition: modify (software) for use on a different machine or platform
+  - lex_category: noun.cognition
+    word: cross-purpose
+    definition: a contrary aim
+  - lex_category: noun.cognition
+    word: classicalism
+    definition: a movement in literature and art during the 17th and 18th centuries in Europe that favored rationality and restraint and strict forms
+  - lex_category: noun.motive
+    word: provocation
+    definition: something that incites or provokes; a means of arousing or stirring to action
+  - lex_category: noun.object
+    word: Anapurna
+    definition: a mountain in the Himalayas in Nepal (26,500 feet high)
+  - lex_category: noun.object
+    word: cirrostratus
+    definition: a thin uniform layer of hazy cloud at high altitude
+  - lex_category: noun.quantity
+    word: furlong
+    definition: a unit of length equal to 220 yards
+  - lex_category: noun.quantity
+    word: five
+    definition: the cardinal number that is the sum of four and one
+  - lex_category: noun.state
+    word: decomposition
+    definition: in a decomposed state
+  - lex_category: noun.state
+    word: periarteritis nodosa
+    definition: a progressive disease of connective tissue that is characterized by nodules along arteries; nodules may block the artery and result in inadequate circulation to the particular area
+  - lex_category: noun.attribute
+    word: comprehensibility
+    definition: the quality of comprehensible language or thought
+  - lex_category: noun.attribute
+    word: distance
+    definition: the property created by the space between two objects or pointssize of the gap between two places
+  - lex_category: verb.communication
+    word: garble
+    definition: make false by mutilation or addition; as of a message or story
+  - lex_category: verb.emotion
+    word: ferment
+    definition: be in an agitated or excited statework up into agitation or excitement
+  - lex_category: verb.perception
+    word: ache
+    definition: be the source of pain
+  - lex_category: verb.perception
+    word: reorientate
+    definition: orient once again, after a disorientation
+  - lex_category: verb.stative
+    word: fit the bill
+    definition: be what is needed or be good enough for what is required
+  - lex_category: verb.stative
+    word: uprise
+    definition: come into existence; take on form or shape
+  - lex_category: noun.animal
+    word: cochin
+    definition: Asian breed of large fowl with dense plumage and feathered legs
+  - lex_category: noun.location
+    word: Kalamazoo
+    definition: a town in southwest Michigan
+  - lex_category: noun.location
+    word: distance
+    definition: a distant region
+  - lex_category: adj.all
+    word: nonmotile
+    definition: (of spores or microorganisms) not capable of movement
+  - lex_category: adj.all
+    word: egregious
+    definition: conspicuously and outrageously bad or reprehensible
+  - lex_category: verb.competition
+    word: drop off
+    definition: retreat
+  - lex_category: verb.competition
+    word: brail
+    definition: haul fish aboard with brails
