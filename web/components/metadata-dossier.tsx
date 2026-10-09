@@ -13,6 +13,8 @@ import {
   Layers,
   ChevronDown,
   ChevronUp,
+  Workflow,
+  Activity,
 } from 'lucide-react';
 
 interface MetadataDossierProps {
@@ -49,6 +51,7 @@ export function MetadataDossier({
   const story = metadata.story;
   const meta = metadata.meta;
   const theme = story?.theme;
+  const plot = story?.plot;
   const setting = story?.setting;
   const structure = story?.structure;
   const characters = story?.characters || [];
@@ -56,6 +59,8 @@ export function MetadataDossier({
   const discourse = story?.discourse;
   const aesthetic = story?.aesthetic;
   const vocabs = meta?.vocabs || [];
+  const adverbTheme = meta?.adverb_theme ||
+    vocabs.filter((v) => v.lex_category === 'adverb.all').map((v) => v.word).join(', ');
 
   // Track expanded scene index (default to expanding the first scene)
   const [expandedScenes, setExpandedScenes] = useState<Record<number, boolean>>({
@@ -95,6 +100,11 @@ export function MetadataDossier({
           <span className="text-xs sm:text-sm font-mono font-medium px-3 py-1 sm:px-3.5 sm:py-1.5 rounded-full bg-muted text-foreground border border-border shadow-sm">
             {genre}
           </span>
+          {adverbTheme && (
+            <span className="text-xs sm:text-sm font-mono font-bold px-3 py-1 sm:px-3.5 sm:py-1.5 rounded-full bg-[#0a9396]/15 text-[#005f73] dark:text-[#94d2bd] border border-[#0a9396]/30 shadow-sm">
+              ✦ Theme: {adverbTheme}
+            </span>
+          )}
           <span className="text-xs sm:text-sm font-mono font-medium px-3 py-1 sm:px-3.5 sm:py-1.5 rounded-full bg-muted text-foreground border border-border shadow-sm">
             {readingTime}
           </span>
@@ -203,6 +213,54 @@ export function MetadataDossier({
             )}
           </div>
 
+          {/* Thematic Adverb Modality */}
+          {adverbTheme && (
+            <div className="p-4 sm:p-5 rounded-2xl bg-[#0a9396]/10 dark:bg-[#0a9396]/15 border border-[#0a9396]/30 shadow-sm flex items-center gap-2.5 flex-wrap">
+              <span className="text-xs sm:text-sm font-mono font-bold uppercase text-[#005f73] dark:text-[#94d2bd]">
+                Thematic Modality (Adverb Engine):
+              </span>
+              <span className="text-sm sm:text-base font-mono font-bold px-3 py-1 rounded-full bg-card text-[#005f73] dark:text-[#94d2bd] border border-border shadow-sm">
+                ✦ {adverbTheme}
+              </span>
+            </div>
+          )}
+
+          {/* Ideology, Morality, and Identity (Chapter 7: Theme) */}
+          {(theme.ideology || theme.morality || theme.identity) && (
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-3.5 pt-1">
+              {theme.ideology && (
+                <div className="p-4 rounded-2xl bg-card border border-border shadow-sm space-y-1">
+                  <span className="text-xs font-mono font-bold uppercase text-[#005f73] dark:text-[#94d2bd] block">
+                    Ideological Stance
+                  </span>
+                  <span className="font-mono text-sm font-bold text-foreground">
+                    {capitalizeWords(theme.ideology)}
+                  </span>
+                </div>
+              )}
+              {theme.morality && (
+                <div className="p-4 rounded-2xl bg-card border border-border shadow-sm space-y-1 md:col-span-2">
+                  <span className="text-xs font-mono font-bold uppercase text-[#bb3e03] dark:text-[#ee9b00] block">
+                    Ethical Stakes / Moral Choice
+                  </span>
+                  <p className="font-prose text-sm text-foreground/90 leading-relaxed break-words">
+                    {theme.morality}
+                  </p>
+                </div>
+              )}
+              {theme.identity && (
+                <div className="p-4 rounded-2xl bg-card border border-border shadow-sm space-y-1 md:col-span-3">
+                  <span className="text-xs font-mono font-bold uppercase text-[#0a9396] dark:text-[#94d2bd] block">
+                    Identity & Ontological Inquiry
+                  </span>
+                  <p className="font-prose text-sm text-foreground/90 leading-relaxed break-words">
+                    {theme.identity}
+                  </p>
+                </div>
+              )}
+            </div>
+          )}
+
           {theme.motifs && theme.motifs.length > 0 && (
             <div className="p-4 sm:p-5 rounded-2xl bg-card border border-border shadow-md flex items-center gap-2 flex-wrap">
               <span className="text-xs sm:text-sm font-mono text-muted-foreground uppercase font-bold">
@@ -218,6 +276,145 @@ export function MetadataDossier({
               ))}
             </div>
           )}
+        </section>
+      )}
+
+      {/* 2.5 Plot Architecture & Dramatic Tension */}
+      {plot && (
+        <section className="space-y-4">
+          <div className="flex items-center gap-2.5 text-[#005f73] dark:text-[#94d2bd] min-w-0 flex-1">
+            <Activity className="w-5 h-5 sm:w-6 sm:h-6 shrink-0" />
+            <h2 className="font-display font-bold text-lg sm:text-2xl uppercase tracking-wider text-foreground break-words min-w-0">
+              Plot Architecture & Dramatic Tension
+            </h2>
+          </div>
+
+          <div className="p-4 sm:p-7 lg:p-9 rounded-3xl bg-card border border-border shadow-xl space-y-6 relative overflow-hidden">
+            <div className="absolute top-0 left-0 right-0 h-[3px] bg-gradient-to-r from-[#005f73] via-[#0a9396] to-[#ee9b00]" />
+
+            {/* Conflict Agon */}
+            {plot.conflict && (
+              <div className="p-4 sm:p-5 rounded-2xl bg-muted/40 border border-border space-y-2">
+                <div className="flex items-center gap-2 flex-wrap">
+                  <span className="text-xs sm:text-sm font-mono uppercase font-bold text-[#bb3e03] dark:text-[#ee9b00]">
+                    Conflict Dynamics:
+                  </span>
+                  {plot.conflict.type && (
+                    <span className="px-3 py-1 rounded-full bg-[#bb3e03]/10 dark:bg-[#ee9b00]/15 text-[#bb3e03] dark:text-[#ee9b00] border border-[#bb3e03]/25 dark:border-[#ee9b00]/30 font-mono text-xs font-bold shadow-sm">
+                      {capitalizeWords(plot.conflict.type)}
+                    </span>
+                  )}
+                </div>
+                {(plot.conflict.agon || plot.conflict.description) && (
+                  <p className="text-base font-prose text-foreground leading-relaxed italic break-words pt-1">
+                    “{plot.conflict.agon || plot.conflict.description}”
+                  </p>
+                )}
+              </div>
+            )}
+
+            {/* Freytag's Arc Stages */}
+            {plot.arc && (
+              <div className="space-y-3">
+                <span className="text-xs sm:text-sm font-mono uppercase tracking-wider text-muted-foreground font-bold block">
+                  Freytag&apos;s Dramatic Pyramid:
+                </span>
+                <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-3.5">
+                  {plot.arc.exposition && (
+                    <div className="p-3.5 sm:p-4 rounded-2xl bg-card border border-border shadow-sm space-y-1">
+                      <span className="text-xs font-mono uppercase font-bold text-[#005f73] dark:text-[#94d2bd] block">
+                        1. Exposition
+                      </span>
+                      <p className="text-sm font-prose text-foreground leading-relaxed break-words">{plot.arc.exposition}</p>
+                    </div>
+                  )}
+                  {plot.arc.inciting_incident && (
+                    <div className="p-3.5 sm:p-4 rounded-2xl bg-card border border-border shadow-sm space-y-1">
+                      <span className="text-xs font-mono uppercase font-bold text-[#bb3e03] dark:text-[#ee9b00] block">
+                        2. Inciting Incident
+                      </span>
+                      <p className="text-sm font-prose text-foreground leading-relaxed break-words">{plot.arc.inciting_incident}</p>
+                    </div>
+                  )}
+                  {plot.arc.rising_action && (
+                    <div className="p-3.5 sm:p-4 rounded-2xl bg-card border border-border shadow-sm space-y-1">
+                      <span className="text-xs font-mono uppercase font-bold text-[#005f73] dark:text-[#94d2bd] block">
+                        3. Rising Action
+                      </span>
+                      <p className="text-sm font-prose text-foreground leading-relaxed break-words">{plot.arc.rising_action}</p>
+                    </div>
+                  )}
+                  {plot.arc.climax && (
+                    <div className="p-3.5 sm:p-4 rounded-2xl bg-card border border-border shadow-sm space-y-1 md:col-span-2 lg:col-span-1">
+                      <span className="text-xs font-mono uppercase font-bold text-[#bb3e03] dark:text-[#ee9b00] block">
+                        4. Climax
+                      </span>
+                      <p className="text-sm font-prose text-foreground leading-relaxed break-words font-medium">{plot.arc.climax}</p>
+                    </div>
+                  )}
+                  {plot.arc.falling_action && (
+                    <div className="p-3.5 sm:p-4 rounded-2xl bg-card border border-border shadow-sm space-y-1">
+                      <span className="text-xs font-mono uppercase font-bold text-[#005f73] dark:text-[#94d2bd] block">
+                        5. Falling Action
+                      </span>
+                      <p className="text-sm font-prose text-foreground leading-relaxed break-words">{plot.arc.falling_action}</p>
+                    </div>
+                  )}
+                  {plot.arc.resolution && (
+                    <div className="p-3.5 sm:p-4 rounded-2xl bg-card border border-border shadow-sm space-y-1">
+                      <span className="text-xs font-mono uppercase font-bold text-[#005f73] dark:text-[#94d2bd] block">
+                        6. Resolution
+                      </span>
+                      <p className="text-sm font-prose text-foreground leading-relaxed break-words">{plot.arc.resolution}</p>
+                    </div>
+                  )}
+                  {plot.arc.denouement && (
+                    <div className="p-3.5 sm:p-4 rounded-2xl bg-card border border-border shadow-sm space-y-1">
+                      <span className="text-xs font-mono uppercase font-bold text-muted-foreground block">
+                        7. Dénouement
+                      </span>
+                      <p className="text-sm font-prose text-foreground leading-relaxed break-words">{plot.arc.denouement}</p>
+                    </div>
+                  )}
+                </div>
+              </div>
+            )}
+
+            {/* Narratological Emplotment Mechanics */}
+            {(plot.order || plot.duration || plot.frequency) && (
+              <div className="grid grid-cols-1 sm:grid-cols-3 gap-3.5 pt-1 text-xs sm:text-sm font-mono">
+                {plot.order && (
+                  <div className="p-3.5 rounded-2xl bg-card border border-border shadow-sm">
+                    <span className="text-muted-foreground uppercase font-bold block mb-1">Temporal Order</span>
+                    <span className="font-semibold text-foreground break-words">{capitalizeWords(plot.order)}</span>
+                  </div>
+                )}
+                {plot.duration && (
+                  <div className="p-3.5 rounded-2xl bg-card border border-border shadow-sm">
+                    <span className="text-muted-foreground uppercase font-bold block mb-1">Narrative Duration</span>
+                    <span className="font-semibold text-foreground break-words">{capitalizeWords(plot.duration)}</span>
+                  </div>
+                )}
+                {plot.frequency && (
+                  <div className="p-3.5 rounded-2xl bg-card border border-border shadow-sm">
+                    <span className="text-muted-foreground uppercase font-bold block mb-1">Frequency</span>
+                    <span className="font-semibold text-foreground break-words">{capitalizeWords(plot.frequency)}</span>
+                  </div>
+                )}
+              </div>
+            )}
+
+            {plot.micro_emplotment && (
+              <div className="p-4 sm:p-5 rounded-2xl bg-muted/40 border border-border space-y-1">
+                <span className="text-xs sm:text-sm font-mono uppercase tracking-wider text-muted-foreground font-bold block">
+                  Micro-Emplotment Logic
+                </span>
+                <p className="text-base font-prose text-foreground leading-relaxed break-words">
+                  {plot.micro_emplotment}
+                </p>
+              </div>
+            )}
+          </div>
         </section>
       )}
 
@@ -291,12 +488,33 @@ export function MetadataDossier({
               )}
             </div>
 
-            {setting.function && (
-              <div className="flex items-center gap-2.5 pt-1 text-xs sm:text-sm font-mono flex-wrap">
-                <span className="text-muted-foreground uppercase font-bold">Narrative Setting Function:</span>
-                <span className="px-3 py-1 rounded-lg bg-muted text-foreground border border-border font-semibold shadow-sm">
-                  {capitalizeWords(setting.function)}
+            <div className="flex items-center gap-3 pt-1 text-xs sm:text-sm font-mono flex-wrap">
+              {setting.kind && (
+                <div className="flex items-center gap-2">
+                  <span className="text-muted-foreground uppercase font-bold">Setting Kind:</span>
+                  <span className="px-3 py-1 rounded-lg bg-[#005f73]/10 dark:bg-[#0a9396]/15 text-[#005f73] dark:text-[#94d2bd] border border-[#005f73]/25 dark:border-[#0a9396]/30 font-semibold shadow-sm">
+                    {capitalizeWords(setting.kind)}
+                  </span>
+                </div>
+              )}
+              {setting.function && (
+                <div className="flex items-center gap-2">
+                  <span className="text-muted-foreground uppercase font-bold">Narrative Setting Function:</span>
+                  <span className="px-3 py-1 rounded-lg bg-muted text-foreground border border-border font-semibold shadow-sm">
+                    {capitalizeWords(setting.function)}
+                  </span>
+                </div>
+              )}
+            </div>
+
+            {setting.verisimilitude && (
+              <div className="p-4 sm:p-5 rounded-2xl bg-muted/40 border border-border shadow-sm space-y-1">
+                <span className="text-xs sm:text-sm font-mono uppercase tracking-wider text-muted-foreground font-bold block">
+                  Verisimilitude & Reality Effect
                 </span>
+                <p className="text-base font-prose text-foreground leading-relaxed break-words">
+                  {setting.verisimilitude}
+                </p>
               </div>
             )}
           </div>
@@ -368,6 +586,41 @@ export function MetadataDossier({
                       </span>
                     )}
                   </div>
+
+                  {char.individuation && (
+                    <div className="grid grid-cols-1 sm:grid-cols-3 gap-2.5 pt-1 text-xs font-mono">
+                      {char.individuation.physical && (
+                        <div className="p-2.5 rounded-xl bg-muted/40 border border-border shadow-sm">
+                          <span className="text-[11px] text-[#005f73] dark:text-[#94d2bd] font-bold uppercase block mb-1">
+                            Physical Individuation
+                          </span>
+                          <span className="text-foreground font-prose text-xs sm:text-sm leading-relaxed break-words">
+                            {char.individuation.physical}
+                          </span>
+                        </div>
+                      )}
+                      {char.individuation.mental && (
+                        <div className="p-2.5 rounded-xl bg-muted/40 border border-border shadow-sm">
+                          <span className="text-[11px] text-[#005f73] dark:text-[#94d2bd] font-bold uppercase block mb-1">
+                            Mental Individuation
+                          </span>
+                          <span className="text-foreground font-prose text-xs sm:text-sm leading-relaxed break-words">
+                            {char.individuation.mental}
+                          </span>
+                        </div>
+                      )}
+                      {char.individuation.behavioural && (
+                        <div className="p-2.5 rounded-xl bg-muted/40 border border-border shadow-sm">
+                          <span className="text-[11px] text-[#005f73] dark:text-[#94d2bd] font-bold uppercase block mb-1">
+                            Behavioural Individuation
+                          </span>
+                          <span className="text-foreground font-prose text-xs sm:text-sm leading-relaxed break-words">
+                            {char.individuation.behavioural}
+                          </span>
+                        </div>
+                      )}
+                    </div>
+                  )}
                 </div>
 
                 <div className="space-y-3 pt-3 border-t border-border text-base">
@@ -409,7 +662,7 @@ export function MetadataDossier({
 
             {structure.type_use && (
               <div className="flex items-center gap-2.5 text-xs sm:text-sm font-mono flex-wrap">
-                <span className="text-muted-foreground uppercase font-bold">Disaster Structural Pattern:</span>
+                <span className="text-muted-foreground uppercase font-bold">Structural Pattern / Archetype:</span>
                 <span className="px-3 py-1 rounded-full bg-[#bb3e03]/10 dark:bg-[#ee9b00]/15 text-[#bb3e03] dark:text-[#ee9b00] font-bold border border-[#bb3e03]/25 dark:border-[#ee9b00]/30 shadow-sm">
                   {formatVal(structure.type_use)}
                 </span>
@@ -795,6 +1048,12 @@ export function MetadataDossier({
                       <span className="font-bold text-foreground text-sm sm:text-base break-words">{capitalizeWords(discourse.narration.reliability)}</span>
                     </div>
                   )}
+                  {discourse.narration.time && (
+                    <div className="p-3.5 sm:p-4 rounded-2xl bg-card border border-border shadow-sm min-w-0">
+                      <span className="text-[11px] text-muted-foreground uppercase block font-bold mb-1">Narrative Time</span>
+                      <span className="font-bold text-foreground text-sm sm:text-base break-words">{capitalizeWords(discourse.narration.time)}</span>
+                    </div>
+                  )}
                 </div>
               </div>
             )}
@@ -846,6 +1105,20 @@ export function MetadataDossier({
                 <ul className="list-disc list-inside space-y-1 font-prose text-base text-foreground leading-relaxed">
                   {discourse.language.figures_of_speech.map((fig, fIdx) => (
                     <li key={fIdx} className="break-words">{formatVal(fig)}</li>
+                  ))}
+                </ul>
+              </div>
+            )}
+
+            {/* Symbolism */}
+            {discourse.language?.symbolism && discourse.language.symbolism.length > 0 && (
+              <div className="p-4 sm:p-5 rounded-2xl bg-muted/40 border border-border space-y-2 shadow-sm">
+                <span className="font-mono text-xs sm:text-sm text-[#005f73] dark:text-[#94d2bd] uppercase font-bold block">
+                  Symbolism & Motifs
+                </span>
+                <ul className="list-disc list-inside space-y-1 font-prose text-base text-foreground leading-relaxed">
+                  {discourse.language.symbolism.map((sym, sIdx) => (
+                    <li key={sIdx} className="break-words">{formatVal(sym)}</li>
                   ))}
                 </ul>
               </div>

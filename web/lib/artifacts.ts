@@ -13,6 +13,9 @@ export interface StoryMetadata {
       central_premise?: string;
       speculative_inquiry?: string;
       motifs?: string[];
+      ideology?: string;
+      morality?: string;
+      identity?: string;
     };
     setting?: {
       macro?: string;
@@ -20,13 +23,35 @@ export interface StoryMetadata {
       micro?: string;
       topography?: string;
       atmosphere?: string;
+      kind?: string;
       function?: string;
       chronotope?: string;
+      verisimilitude?: string;
     };
     structure?: {
       kind?: string[];
       logic?: string[];
       type_use?: string;
+    };
+    plot?: {
+      conflict?: {
+        type?: string;
+        description?: string;
+        agon?: string;
+      };
+      arc?: {
+        exposition?: string;
+        inciting_incident?: string;
+        rising_action?: string;
+        climax?: string;
+        falling_action?: string;
+        resolution?: string;
+        denouement?: string;
+      };
+      order?: string;
+      duration?: string;
+      frequency?: string;
+      micro_emplotment?: string;
     };
     characters?: Array<{
       name?: string;
@@ -36,6 +61,11 @@ export interface StoryMetadata {
       complexity?: string;
       development?: string;
       characterisation?: string;
+      individuation?: {
+        physical?: string;
+        mental?: string;
+        behavioural?: string;
+      };
       description?: string;
       motivation?: string;
       conflict?: string;
@@ -58,6 +88,7 @@ export interface StoryMetadata {
       narration?: {
         voice?: string;
         level?: string;
+        time?: string;
         focalisation?: string;
         reliability?: string;
         speed?: string;
@@ -71,6 +102,7 @@ export interface StoryMetadata {
         mode_balance?: string;
         sentence_rhythm?: string;
         foregrounding?: string;
+        symbolism?: string[];
       };
       language_style?: {
         syntax?: string;
@@ -97,6 +129,7 @@ export interface StoryMetadata {
       word?: string;
       definition?: string;
     }>;
+    adverb_theme?: string;
   };
 }
 
@@ -122,6 +155,7 @@ export interface StoryItem {
   wordCount: number;
   contentMD: string;
   coverUrl: string | null;
+  adverbTheme?: string;
   metadata: StoryMetadata;
 }
 
@@ -220,12 +254,14 @@ export function getAllStories(): StoryItem[] {
               const pubCoverDir = path.resolve(process.cwd(), 'public', 'covers', String(year), String(month).padStart(2, '0'), String(day).padStart(2, '0'));
               fs.mkdirSync(pubCoverDir, { recursive: true });
               const destPath = path.join(pubCoverDir, 'cover.png');
-              try {
-                fs.copyFileSync(coverPath, destPath);
-                coverUrl = `/covers/${year}/${String(month).padStart(2, '0')}/${String(day).padStart(2, '0')}/cover.png`;
-              } catch (e) {
-                console.error(`Error copying cover ${coverPath}:`, e);
+              if (!fs.existsSync(destPath)) {
+                try {
+                  fs.copyFileSync(coverPath, destPath);
+                } catch (e) {
+                  console.error(`Error copying cover ${coverPath}:`, e);
+                }
               }
+              coverUrl = `/covers/${year}/${String(month).padStart(2, '0')}/${String(day).padStart(2, '0')}/cover.png`;
             }
 
             const words = contentMD.trim().split(/\s+/).filter(Boolean).length;
@@ -238,6 +274,9 @@ export function getAllStories(): StoryItem[] {
             const synopsis = metaData.story?.synopsis || blurb;
             const scienceField = metaData.meta?.science_field?.name || 'Speculative Science';
             const genre = metaData.meta?.genre?.name || 'Science Fiction';
+            const adverbTheme = metaData.meta?.adverb_theme ||
+              metaData.meta?.vocabs?.filter(v => v.lex_category === 'adverb.all').map(v => v.word).join(', ') ||
+              '';
 
             const dateStr = date.toLocaleDateString('en-US', {
               year: 'numeric',
@@ -268,6 +307,7 @@ export function getAllStories(): StoryItem[] {
               wordCount: words,
               contentMD,
               coverUrl,
+              adverbTheme,
               metadata: metaData,
             });
           }
