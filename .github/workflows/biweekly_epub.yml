@@ -1,0 +1,81 @@
+name: Bi-Weekly Stories Compilation
+
+on:
+  schedule:
+    - cron: '0 0 1,15 * *' # Bi-weekly on the 1st and 15th of each month at 00:00 UTC
+  workflow_dispatch:
+    inputs:
+      force:
+        description: 'Run bi-weekly compilation manually'
+        required: false
+        type: boolean
+        default: true
+
+jobs:
+  compile-and-release:
+    if: github.event_name == 'workflow_dispatch' || (github.event_name == 'schedule' && vars.ENABLE_BIWEEKLY_CRON == 'true')
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+    env:
+      GEMINI_API_KEY: ${{ secrets.GEMINI_API_KEY }}
+      GEMINI_MODEL: ${{ vars.GEMINI_MODEL }}
+      ARTIFACTS_DIR: ${{ vars.ARTIFACTS_DIR }}
+      GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - name: Set up Go
+        uses: actions/setup-go@v5
+        with:
+          go-version: '1.25'
+
+      - name: Build omni-archivist CLI
+        run: |
+          go version
+          go build -o omni-archivist .
+
+      - name: Check and compile unreleased weekly/bi-weekly anthologies
+        run: |
+          set -euo pipefail
+
+          echo "Querying available story weeks from artifacts..."
+          WEEKS_JSON=$(./omni-archivist compile weeks --dir "${ARTIFACTS_DIR:-artifacts}" --json)
+
+          COUNT=$(echo "$WEEKS_JSON" | jq '. | length')
+          echo "Found $COUNT available week(s) with stories."
+
+          echo "$WEEKS_JSON" | jq -c '.[]' | while read -r item; do
+            tag=$(echo "$item" | jq -r '.tag')
+            week=$(echo "$item" | jq -r '.week_number')
+            year=$(echo "$item" | jq -r '.year')
+            year_he=$(echo "$item" | jq -r '.year_he')
+            title=$(echo "$item" | jq -r '.title')
+            epub_file=$(echo "$item" | jq -r '.epub_file')
+            stories_count=$(echo "$item" | jq -r '.story_count')
+
+            echo "--------------------------------------------------------"
+            echo "Evaluating Volume: $title (Tag: $tag, Stories: $stories_count)"
+
+            if gh release view "$tag" >/dev/null 2>&1; then
+              echo "✓ Release '$tag' already exists on GitHub Releases. Skipping to avoid duplicate."
+            else
+              echo "✦ Release '$tag' does not exist yet. Compiling and releasing..."
+
+              ./omni-archivist compile epub \
+                --dir "${ARTIFACTS_DIR:-artifacts}" \
+                --year "$year" \
+                --week "$week" \
+                --output "$epub_file"
+
+              gh release create "$tag" "$epub_file" \
+                --title "$title" \
+                --notes "Omnibus collection of science fiction short stories curated by Omni Archivist for Week #$week, Year $year_he Human Era."
+
+              echo "✓ Successfully compiled and created release: $tag with asset $epub_file"
+            fi
+          done
