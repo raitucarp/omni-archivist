@@ -13,10 +13,10 @@ import (
 
 type SynopsisResult struct {
 	Synopsis    string             `yaml:"synopsis" json:"synopsis" jsonschema:"description=A brief overview of the story's plot, characters, and setting, 4 to 6 paragraphs"`
-	Logline     string             `yaml:"logline" json:"logline" jsonschema:"description=A one-sentence summary of the story's main plot"`
-	Blurb       string             `yaml:"blurb" json:"blurb" jsonschema:"description=A short summary or teaser of the story"`
-	Title       string             `yaml:"title" json:"title" jsonschema:"description=Title of story"`
-	Subtitle    string             `yaml:"subtitle" json:"subtitle" jsonschema:"description=Subtitle of title of story"`
+	Logline     string             `yaml:"logline" json:"logline" jsonschema:"description=A punchy, structurally diverse 1-2 sentence hook. Strictly FORBIDDEN to start with 'When...', 'In a world where...', 'In a post-... world', or 'As...'. Focus on an active protagonist, a unique premise, and a specific dramatic dilemma without existential disaster tropes."`
+	Blurb       string             `yaml:"blurb" json:"blurb" jsonschema:"description=An engaging 2-3 paragraph teaser. Strictly FORBIDDEN to open with 'In an era where...', 'In a world where...', or 'A sweeping/cerebral examination of...'. Begin with an immediate dramatic intrigue, provocative assertion, or striking sensory detail, highlighting curiosity, wonder, and philosophical tension."`
+	Title       string             `yaml:"title" json:"title" jsonschema:"description=A vibrant, distinctive title. Strictly AVOID cliché 'The [Adjective] [Noun]' or repetitive formulas like 'The ... Horizon' or 'The ... Protocol'. Use varied syntactic forms: evocative single words, poetic phrases, action verbs, metaphorical juxtapositions, or unusual questions."`
+	Subtitle    string             `yaml:"subtitle" json:"subtitle" jsonschema:"description=An evocative, poetic, or atmospheric secondary header. Strictly AVOID dry academic 'The [Science] of [Collapse]' formulas. Use lyrical counterpoints, contextual coordinates, or philosophical aphorisms."`
 	Theme       metadata.Theme     `yaml:"theme,omitempty" json:"theme,omitempty" jsonschema:"description=Core theme, premise, motifs, ideology, morality, and identity"`
 	Plot        metadata.Plot      `yaml:"plot,omitempty" json:"plot,omitempty" jsonschema:"description=Core plot conflict, Freytag dramatic arc, and emplotment dynamics"`
 	Discourse   metadata.Discourse `yaml:"discourse,omitempty" json:"discourse,omitempty" jsonschema:"description=Discourse narration, focalisation, and style"`
