@@ -2,10 +2,12 @@ package compile
 
 import (
 	"context"
+	"encoding/json"
 	"fmt"
 	"os"
 	"path/filepath"
 	"sort"
+	"strconv"
 	"strings"
 	"time"
 
@@ -53,18 +55,12 @@ func compileEpubAction(ctx context.Context, cmd *cli.Command) error {
 		rootDir = utils.ArtifactsDir()
 	}
 
-	now := time.Now()
-	yearHE := 10000 + now.Year()
-	_, weekNumber := now.ISOWeek()
-
-	outputPath := cmd.String("output")
-	if outputPath == "" {
-		outputPath = fmt.Sprintf("omni-archivist-%d-w%02d.epub", yearHE, weekNumber)
-	}
+	targetYear := int(cmd.Int("year"))
+	targetWeek := int(cmd.Int("week"))
 
 	fmt.Printf("Scanning stories in: %s\n", rootDir)
 
-	var stories []StoryItem
+	var allStories []StoryItem
 
 	err := filepath.Walk(rootDir, func(path string, info os.FileInfo, err error) error {
 		if err != nil {
@@ -77,7 +73,7 @@ func compileEpubAction(ctx context.Context, cmd *cli.Command) error {
 			dir := filepath.Dir(path)
 			storyItem, sErr := loadStoryItem(dir, path)
 			if sErr == nil && len(storyItem.StoryMD) > 0 {
-				stories = append(stories, storyItem)
+				allStories = append(allStories, storyItem)
 			}
 		}
 		return nil
@@ -87,14 +83,66 @@ func compileEpubAction(ctx context.Context, cmd *cli.Command) error {
 		return fmt.Errorf("failed scanning directory %s: %w", rootDir, err)
 	}
 
-	if len(stories) == 0 {
+	if len(allStories) == 0 {
 		return fmt.Errorf("no stories (story.md) found in %s", rootDir)
 	}
 
 	// Sort stories chronologically
-	sort.Slice(stories, func(i, j int) bool {
-		return stories[i].DirPath < stories[j].DirPath
+	sort.Slice(allStories, func(i, j int) bool {
+		return allStories[i].DirPath < allStories[j].DirPath
 	})
+
+	// Filter stories if targetYear or targetWeek specified
+	var stories []StoryItem
+	for _, s := range allStories {
+		if !s.Date.IsZero() {
+			sYear, sWeek := s.Date.ISOWeek()
+			if targetYear > 0 {
+				normYear := targetYear
+				if normYear > 10000 {
+					normYear -= 10000
+				}
+				if sYear != normYear && s.Date.Year() != normYear {
+					continue
+				}
+			}
+			if targetWeek > 0 && sWeek != targetWeek {
+				continue
+			}
+		}
+		stories = append(stories, s)
+	}
+
+	if len(stories) == 0 {
+		if targetYear > 0 || targetWeek > 0 {
+			return fmt.Errorf("no stories found matching year %d, week %d in %s", targetYear, targetWeek, rootDir)
+		}
+		return fmt.Errorf("no stories found in %s", rootDir)
+	}
+
+	now := time.Now()
+	var yearHE, weekNumber int
+
+	if targetYear > 0 && targetWeek > 0 {
+		normYear := targetYear
+		if normYear < 10000 {
+			normYear += 10000
+		}
+		yearHE = normYear
+		weekNumber = targetWeek
+	} else if len(stories) > 0 && !stories[len(stories)-1].Date.IsZero() {
+		lastStoryDate := stories[len(stories)-1].Date
+		yearHE = 10000 + lastStoryDate.Year()
+		_, weekNumber = lastStoryDate.ISOWeek()
+	} else {
+		yearHE = 10000 + now.Year()
+		_, weekNumber = now.ISOWeek()
+	}
+
+	outputPath := cmd.String("output")
+	if outputPath == "" {
+		outputPath = fmt.Sprintf("omni-archivist-%d-w%02d.epub", yearHE, weekNumber)
+	}
 
 	anthologyTitle := fmt.Sprintf("Omni Archivist #%d %d", weekNumber, yearHE)
 	fmt.Printf("Compiling %d stories into '%s' -> %s\n", len(stories), anthologyTitle, outputPath)
@@ -253,7 +301,7 @@ func generatePrefaceAndSubtitle(ctx context.Context, title string, yearHE, weekN
 
 	fallbackSubtitle := "A Curated Tapestry of Speculative Realities and Cosmic Inquiries"
 	fallbackPreface := fmt.Sprintf(
-		"Welcome to this weekly compilation from the **Omni Archivist**, recorded in the year **%d Human Era (HE)**.\n\n"+
+		"Welcome to this bi-weekly compilation from the **Omni Archivist**, recorded in the year **%d Human Era (HE)**.\n\n"+
 			"Twelve millennia have passed since humanity first traced the motions of the wandering stars and laid the foundations of civilization. In this anthology, we gather the narratives that map the periphery of human cognition, technological transcendence, and existential wonder.\n\n"+
 			"### Stories in this Volume\n\n%s\n\n"+
 			"May these dispatches offer a reflective aperture into the myriad possible futures of humankind.",
@@ -266,6 +314,22 @@ func generatePrefaceAndSubtitle(ctx context.Context, title string, yearHE, weekN
 func loadStoryItem(dir, storyMDPath string) (StoryItem, error) {
 	var item StoryItem
 	item.DirPath = dir
+
+	// Parse date from directory path (e.g. .../2026/10/08 or ...\2026\10\08)
+	cleanPath := filepath.ToSlash(filepath.Clean(dir))
+	parts := strings.Split(cleanPath, "/")
+	if len(parts) >= 3 {
+		yStr := parts[len(parts)-3]
+		mStr := parts[len(parts)-2]
+		dStr := parts[len(parts)-1]
+		if y, err := strconv.Atoi(yStr); err == nil && y > 1000 {
+			if m, err := strconv.Atoi(mStr); err == nil && m >= 1 && m <= 12 {
+				if d, err := strconv.Atoi(dStr); err == nil && d >= 1 && d <= 31 {
+					item.Date = time.Date(y, time.Month(m), d, 12, 0, 0, 0, time.UTC)
+				}
+			}
+		}
+	}
 
 	storyBytes, err := os.ReadFile(storyMDPath)
 	if err != nil {
@@ -288,4 +352,98 @@ func loadStoryItem(dir, storyMDPath string) (StoryItem, error) {
 	}
 
 	return item, nil
+}
+
+type WeekSummary struct {
+	Year       int      `json:"year"`
+	YearHE     int      `json:"year_he"`
+	WeekNumber int      `json:"week_number"`
+	PaddedWeek string   `json:"padded_week"`
+	Tag        string   `json:"tag"`
+	Title      string   `json:"title"`
+	EpubFile   string   `json:"epub_file"`
+	StoryCount int      `json:"story_count"`
+	StoryDirs  []string `json:"story_dirs,omitempty"`
+}
+
+func compileWeeksAction(ctx context.Context, cmd *cli.Command) error {
+	rootDir := cmd.String("dir")
+	if rootDir == "" {
+		rootDir = utils.ArtifactsDir()
+	}
+
+	type weekKey struct {
+		year int
+		week int
+	}
+
+	weekMap := make(map[weekKey][]StoryItem)
+
+	err := filepath.Walk(rootDir, func(path string, info os.FileInfo, err error) error {
+		if err != nil || info.IsDir() {
+			return nil
+		}
+		if filepath.Base(path) == "story.md" {
+			dir := filepath.Dir(path)
+			storyItem, sErr := loadStoryItem(dir, path)
+			if sErr == nil && len(storyItem.StoryMD) > 0 && !storyItem.Date.IsZero() {
+				sYear, sWeek := storyItem.Date.ISOWeek()
+				k := weekKey{year: sYear, week: sWeek}
+				weekMap[k] = append(weekMap[k], storyItem)
+			}
+		}
+		return nil
+	})
+
+	if err != nil {
+		return fmt.Errorf("failed scanning directory %s: %w", rootDir, err)
+	}
+
+	var keys []weekKey
+	for k := range weekMap {
+		keys = append(keys, k)
+	}
+
+	sort.Slice(keys, func(i, j int) bool {
+		if keys[i].year != keys[j].year {
+			return keys[i].year < keys[j].year
+		}
+		return keys[i].week < keys[j].week
+	})
+
+	var summaries []WeekSummary
+	for _, k := range keys {
+		sList := weekMap[k]
+		yearHE := 10000 + k.year
+		paddedWeek := fmt.Sprintf("%02d", k.week)
+		var dirs []string
+		for _, s := range sList {
+			dirs = append(dirs, s.DirPath)
+		}
+		summaries = append(summaries, WeekSummary{
+			Year:       k.year,
+			YearHE:     yearHE,
+			WeekNumber: k.week,
+			PaddedWeek: paddedWeek,
+			Tag:        fmt.Sprintf("v%d.w%d", yearHE, k.week),
+			Title:      fmt.Sprintf("Omni Archivist #%d %d", k.week, yearHE),
+			EpubFile:   fmt.Sprintf("omni-archivist-%d-w%s.epub", yearHE, paddedWeek),
+			StoryCount: len(sList),
+			StoryDirs:  dirs,
+		})
+	}
+
+	if cmd.Bool("json") {
+		b, mErr := json.MarshalIndent(summaries, "", "  ")
+		if mErr != nil {
+			return mErr
+		}
+		fmt.Println(string(b))
+		return nil
+	}
+
+	for _, s := range summaries {
+		fmt.Printf("%s\t%s\t%s\t(%d stories)\n", s.Tag, s.Title, s.EpubFile, s.StoryCount)
+	}
+	return nil
 }

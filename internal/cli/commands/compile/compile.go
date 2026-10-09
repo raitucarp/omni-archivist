@@ -31,8 +31,37 @@ func NewCompileCommand(ctx context.Context) *CompileCommand {
 				Aliases: []string{"o"},
 				Usage:   "Output filename for the compiled EPUB",
 			},
+			&cli.IntFlag{
+				Name:    "year",
+				Aliases: []string{"y"},
+				Usage:   "Filter stories by year (e.g. 2026 or 12026)",
+			},
+			&cli.IntFlag{
+				Name:    "week",
+				Aliases: []string{"w"},
+				Usage:   "Filter stories by ISO week number (1-53)",
+			},
 		},
 		Action: compileEpubAction,
+	}
+
+	weeksCommand := &cli.Command{
+		Name:    "weeks",
+		Aliases: []string{"w"},
+		Usage:   "List available weeks with stories in the repository",
+		Flags: []cli.Flag{
+			&cli.StringFlag{
+				Name:    "dir",
+				Aliases: []string{"d"},
+				Usage:   "Source directory of stories (defaults to ARTIFACTS_DIR or artifacts)",
+			},
+			&cli.BoolFlag{
+				Name:    "json",
+				Aliases: []string{"j"},
+				Usage:   "Output as JSON",
+			},
+		},
+		Action: compileWeeksAction,
 	}
 
 	pagesCommand := &cli.Command{
@@ -68,6 +97,7 @@ func NewCompileCommand(ctx context.Context) *CompileCommand {
 			Usage:   "Compile generated stories into publications",
 			Commands: []*cli.Command{
 				epubCommand,
+				weeksCommand,
 				pagesCommand,
 			},
 		},
