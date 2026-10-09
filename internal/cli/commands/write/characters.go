@@ -24,6 +24,8 @@ func writeCharactersAction(ctx context.Context, command *cli.Command) (err error
 	}
 
 	genkit.DefineSchemaFor[metadata.Story](gk)
+	genkit.DefineSchemaFor[metadata.CharacterIndividuation](gk)
+	genkit.DefineSchemaFor[metadata.Character](gk)
 	genkit.DefineSchemaFor[Characters](gk)
 	charactersPrompt := genkit.LookupDataPrompt[metadata.Story, *Characters](gk, "characters")
 

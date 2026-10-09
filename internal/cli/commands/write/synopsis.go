@@ -3,6 +3,7 @@ package write
 import (
 	"context"
 	"log"
+	"strings"
 
 	"github.com/firebase/genkit/go/genkit"
 	"github.com/raitucarp/omni-archivist/internal/metadata"
@@ -16,7 +17,8 @@ type SynopsisResult struct {
 	Blurb       string             `yaml:"blurb" json:"blurb" jsonschema:"description=A short summary or teaser of the story"`
 	Title       string             `yaml:"title" json:"title" jsonschema:"description=Title of story"`
 	Subtitle    string             `yaml:"subtitle" json:"subtitle" jsonschema:"description=Subtitle of title of story"`
-	Theme       metadata.Theme     `yaml:"theme,omitempty" json:"theme,omitempty" jsonschema:"description=Core theme, premise, and motifs"`
+	Theme       metadata.Theme     `yaml:"theme,omitempty" json:"theme,omitempty" jsonschema:"description=Core theme, premise, motifs, ideology, morality, and identity"`
+	Plot        metadata.Plot      `yaml:"plot,omitempty" json:"plot,omitempty" jsonschema:"description=Core plot conflict, Freytag dramatic arc, and emplotment dynamics"`
 	Discourse   metadata.Discourse `yaml:"discourse,omitempty" json:"discourse,omitempty" jsonschema:"description=Discourse narration, focalisation, and style"`
 	POV         string             `yaml:"pov" json:"pov" jsonschema:"enum=first_person,enum=third_person_limited,enum=third_person_omniscient,description=Story point of view determines the narrator's perspective, influencing reader intimacy and information access."`
 	ImagePrompt string             `yaml:"image_prompt" json:"image_prompt" jsonschema:"description=Prompt for generating a visual, an image that represents the story."`
@@ -33,15 +35,31 @@ func writeSynopsisAction(ctx context.Context, command *cli.Command) (err error) 
 		return err
 	}
 
+	// Ensure AdverbTheme is populated if empty from vocabs
+	if currentMetadata.Meta.AdverbTheme == "" {
+		var adverbs []string
+		for _, v := range currentMetadata.Meta.Vocabs {
+			if v.LexCategory == "adverb.all" {
+				adverbs = append(adverbs, v.Word)
+			}
+		}
+		if len(adverbs) > 0 {
+			currentMetadata.Meta.AdverbTheme = strings.Join(adverbs, ", ")
+		}
+	}
+
 	genkit.DefineSchemaFor[metadata.Meta](gk)
 	genkit.DefineSchemaFor[metadata.Theme](gk)
+	genkit.DefineSchemaFor[metadata.PlotConflict](gk)
+	genkit.DefineSchemaFor[metadata.PlotArc](gk)
+	genkit.DefineSchemaFor[metadata.Plot](gk)
 	genkit.DefineSchemaFor[metadata.Narration](gk)
 	genkit.DefineSchemaFor[metadata.LanguageStyle](gk)
 	genkit.DefineSchemaFor[metadata.Discourse](gk)
 	genkit.DefineSchemaFor[SynopsisResult](gk)
 	synopsisPrompt := genkit.LookupDataPrompt[metadata.Meta, *SynopsisResult](gk, "synopsis")
 
-	log.Println("==> Writing story synopsis, title, and discourse...")
+	log.Println("==> Writing story synopsis, title, theme, plot, and discourse...")
 	retrier := utils.NewPromptRetrier[*SynopsisResult]("Write Synopsis")
 
 	synopsisResult, err := retrier.Do(func() (*SynopsisResult, error) {
@@ -65,6 +83,7 @@ func writeSynopsisAction(ctx context.Context, command *cli.Command) (err error) 
 	currentMetadata.Story.Title = synopsisResult.Title
 	currentMetadata.Story.Subtitle = synopsisResult.Subtitle
 	currentMetadata.Story.Theme = &synopsisResult.Theme
+	currentMetadata.Story.Plot = &synopsisResult.Plot
 	currentMetadata.Story.Discourse = &synopsisResult.Discourse
 	currentMetadata.Story.POV = synopsisResult.POV
 	currentMetadata.Story.ImagePrompt = synopsisResult.ImagePrompt

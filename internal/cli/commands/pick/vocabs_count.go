@@ -86,13 +86,23 @@ func vocabsCompositionAction(ctx context.Context, cmd *cli.Command) (err error) 
 		}
 	}
 
+	// Guarantee that adverb.all always has at least 1-2 entries to serve as the story's thematic adverb
+	if len(vocabEntriesMap["adverb.all"]) == 0 {
+		vocabEntriesMap["adverb.all"] = gown.LexicalEntries(lexRes.Adverbs().Random(2))
+	}
+
 	currentMetadata.Meta.Vocabs = []metadata.Vocab{}
+	var adverbWords []string
 
 	for lexFile, entries := range vocabEntriesMap {
 		for _, entry := range entries {
 			vocab := metadata.Vocab{
 				LexCategory: lexFile,
 				Word:        entry.Lemma.WrittenForm,
+			}
+
+			if lexFile == "adverb.all" {
+				adverbWords = append(adverbWords, entry.Lemma.WrittenForm)
 			}
 
 			for _, synset := range entry.Synsets() {
@@ -104,6 +114,9 @@ func vocabsCompositionAction(ctx context.Context, cmd *cli.Command) (err error) 
 			currentMetadata.Meta.Vocabs = append(currentMetadata.Meta.Vocabs, vocab)
 		}
 	}
+
+	currentMetadata.Meta.AdverbTheme = strings.Join(adverbWords, ", ")
+	log.Printf("==> Selected Thematic Adverb(s): %s\n", currentMetadata.Meta.AdverbTheme)
 
 	err = metadata.Write(currentMetadata)
 	if err != nil {
