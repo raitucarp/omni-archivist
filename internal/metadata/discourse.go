@@ -4,6 +4,7 @@ package metadata
 type Narration struct {
 	Voice        string `yaml:"voice" json:"voice" jsonschema:"enum=first_person_autodiegetic,enum=first_person_homodiegetic,enum=third_person_heterodiegetic,enum=second_person,description=Narrative person and diegetic position"`
 	Level        string `yaml:"level" json:"level" jsonschema:"enum=extradiegetic,enum=intradiegetic,description=Narrative level: extradiegetic (external narrator) or intradiegetic (story within a story)"`
+	Time         string `yaml:"time,omitempty" json:"time,omitempty" jsonschema:"enum=ulterior,enum=anterior,enum=simultaneous,description=Time of narration (Chapter 5: Narration): ulterior (subsequent to events), anterior (prior/prophetic), or simultaneous (concurrent)"`
 	Focalisation string `yaml:"focalisation" json:"focalisation" jsonschema:"enum=zero_omniscient,enum=internal_fixed,enum=internal_variable,enum=external_objective,description=Focalisation: zero (omniscient), internal (fixed or variable), external (objective)"`
 	Reliability  string `yaml:"reliability" json:"reliability" jsonschema:"enum=reliable,enum=unreliable,description=Narrator reliability: reliable or unreliable"`
 }
@@ -16,6 +17,7 @@ type LanguageStyle struct {
 	ModeBalance     string   `yaml:"mode_balance" json:"mode_balance" jsonschema:"enum=mimesis_dominant,enum=balanced,enum=diegesis_dominant,description=Balance between mimesis (showing/scene) and diegesis (telling/summary)"`
 	SentenceRhythm  string   `yaml:"sentence_rhythm,omitempty" json:"sentence_rhythm,omitempty" jsonschema:"enum=syncopated_variable,enum=staccato_urgent,enum=periodic_flowing,enum=contemplative_loose,description=Syntactic structure and sentence cadence (e.g., syncopated variation between short visceral clauses and expansive compound-complex sentences)"`
 	Foregrounding   string   `yaml:"foregrounding,omitempty" json:"foregrounding,omitempty" jsonschema:"description=Techniques of linguistic foregrounding and defamiliarization to prevent cliché and standard prose patterns"`
+	Symbolism       []string `yaml:"symbolism,omitempty" json:"symbolism,omitempty" jsonschema:"description=Symbolic motifs, indexes, and semiotic signs used in the narrative"`
 }
 
 // Discourse encapsulates narrative discourse and language.

@@ -4,6 +4,7 @@ type Meta struct {
 	ScienceField ScienceField `yaml:"science_field" json:"science_field" jsonschema:"description=The field of science relevant to the story"`
 	Genre        SciFiGenre   `yaml:"genre" json:"genre" jsonschema:"description=The genre of the story, e.g., science fiction, fantasy, mystery"`
 	Vocabs       []Vocab      `yaml:"vocabs" json:"vocabs" jsonschema:"description=List of vocabulary words used in the story"`
+	AdverbTheme  string       `yaml:"adverb_theme,omitempty" json:"adverb_theme,omitempty" jsonschema:"description=The thematic adverb(s) selected from vocabulary that serve as the narrative central theme and modality"`
 }
 
 type MiceContext string
