@@ -22,6 +22,7 @@ jobs:
     env:
       GEMINI_API_KEY: ${{ secrets.GEMINI_API_KEY }}
       GEMINI_MODEL: ${{ vars.GEMINI_MODEL }}
+      IMAGEN_MODEL: ${{ vars.IMAGEN_MODEL || 'googleai/gemini-nano-banana-2.1' }}
       ARTIFACTS_DIR: ${{ vars.ARTIFACTS_DIR }}
 
     steps:

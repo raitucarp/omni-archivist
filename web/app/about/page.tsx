@@ -266,7 +266,7 @@ export default function AboutPage() {
                 </h3>
               </div>
               <p className="font-prose text-sm text-foreground/80 leading-relaxed">
-                Command: <code className="font-mono text-xs px-1.5 py-0.5 rounded bg-muted">write cover</code>. The system constructs an aesthetic vector combining randomized art mediums, photographic lenses, lighting scenarios, and color palettes, generating an evocative cover illustration using Gemini Flash Image / Imagen 3.
+                Command: <code className="font-mono text-xs px-1.5 py-0.5 rounded bg-muted">write cover</code>. The system constructs an aesthetic vector combining randomized art mediums, photographic lenses, lighting scenarios, and color palettes, generating an evocative cover illustration using Nano Banana 2.1 (<code className="font-mono text-xs">gemini-nano-banana-2.1</code>).
               </p>
             </div>
           </div>
@@ -439,7 +439,7 @@ export default function AboutPage() {
                 </li>
                 <li className="flex items-start gap-2">
                   <CheckCircle2 className="w-4 h-4 text-[#ee9b00] shrink-0 mt-0.5" />
-                  <span><strong>Google Gemini (<code className="font-mono text-xs">gemini-2.5-flash</code> / <code className="font-mono text-xs">gemini-3.1-flash-image</code> / Imagen 3):</strong> Advanced language reasoning and cover image generation.</span>
+                  <span><strong>Google Gemini (<code className="font-mono text-xs">gemini-2.5-flash</code> / Nano Banana 2.1 <code className="font-mono text-xs">gemini-nano-banana-2.1</code>):</strong> Advanced language reasoning and multimodal cover image generation.</span>
                 </li>
                 <li className="flex items-start gap-2">
                   <CheckCircle2 className="w-4 h-4 text-[#ee9b00] shrink-0 mt-0.5" />

@@ -82,14 +82,17 @@ func writeCoverAction(ctx context.Context, command *cli.Command) (err error) {
 	aesthetic.Prompt = promptResult.Prompt
 	log.Printf("Generated Cover Prompt: %s\n", aesthetic.Prompt)
 
-	// 3. Generate cover image using Gemini Flash Image / Imagen 3 / Imagen Fast via Genkit
+	// 3. Generate cover image using Nano Banana 2.1 (Gemini Nano Banana) via Genkit
 	imageModel := os.Getenv("IMAGEN_MODEL")
 	if imageModel == "" {
-		imageModel = "googleai/gemini-3.1-flash-image"
+		imageModel = "googleai/gemini-nano-banana-2.1"
 	}
 
 	modelCandidates := []string{
 		imageModel,
+		"googleai/gemini-nano-banana-2.1",
+		"gemini-nano-banana-2.1",
+		"googleai/gemini-3.1-flash-image",
 		"googleai/gemini-2.5-flash-image",
 		"googleai/imagen-3.0-generate-002",
 		"googleai/imagen-3.0-fast-generate-001",
@@ -115,7 +118,8 @@ func writeCoverAction(ctx context.Context, command *cli.Command) (err error) {
 				ai.WithModelName(m),
 				ai.WithPrompt(aesthetic.Prompt),
 			}
-			if strings.Contains(m, "image") && !strings.Contains(m, "imagen") {
+			// Gemini multimodal image generation models (Nano Banana, Flash Image) require IMAGE modality
+			if !strings.Contains(m, "imagen") {
 				opts = append(opts, ai.WithConfig(genai.GenerateContentConfig{
 					ResponseModalities: []string{"IMAGE", "TEXT"},
 				}))
