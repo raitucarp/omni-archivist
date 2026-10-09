@@ -20,13 +20,13 @@ You must provide 0-2 entries for each of the following:
 *   **Nouns:** noun.Tops, noun.act, noun.animal, noun.artifact, noun.attribute, noun.body, noun.cognition, noun.communication, noun.event, noun.feeling, noun.food, noun.group, noun.location, noun.motive, noun.object, noun.person, noun.phenomenon, noun.plant, noun.possession, noun.process, noun.quantity, noun.relation, noun.shape, noun.state, noun.substance, noun.time
 *   **Adjectives:** adj.all, adj.pert, adj.ppl
 *   **Verbs:** verb.body, verb.change, verb.cognition, verb.communication, verb.competition, verb.consumption, verb.contact, verb.creation, verb.emotion, verb.motion, verb.perception, verb.possession, verb.social, verb.stative, verb.weather
-*   **Adverbs:** adverb.all
+*   **Adverbs:** adverb.all (CRITICAL: MUST be 1 or 2. The chosen adverb(s) will serve as the narrative's central philosophical theme and governing modality).
 
 # INSTRUCTIONS
 1.  **Analyze** the Science Field and Genre descriptions provided.
 2.  **Brainstorm** terms that bridge the gap between hard science and fictional tropes.
 3.  **Format** the output as a clean list. State the category name followed by how many (e.g., **noun.artifact:** 2).
-4.  **Selection Criteria:** If a category is highly relevant to the science/genre, provide 2. If it is tangentially relevant, provide 1. If it is completely irrelevant to the specific prompt, you may provide 0.
+4.  **Selection Criteria:** If a category is highly relevant to the science/genre, provide 2. If it is tangentially relevant, provide 1. If it is completely irrelevant to the specific prompt, you may provide 0. **Always provide 1 or 2 for adverb.all** because the adverb dictates the story's thematic attitude.
 
 # INPUT DATA
 <science_field>

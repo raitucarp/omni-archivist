@@ -54,12 +54,15 @@ Avoid monotonous, rigid prose at all costs. Do NOT fall into a predictable repet
    - Follow the music of language: never chain multiple sentences of similar word counts together.
 
 3. **Syntactic Diversity & Opener Variation**:
-   - **Prohibited**: Do NOT begin consecutive sentences with identical Subject-Verb patterns (e.g., "Dr. Vance looked... She adjusted... The console beeped...").
+   - **Prohibited**: Do NOT begin consecutive sentences with identical Subject-Verb patterns (e.g., "The navigator examined... He recalibrated... The instrument pulsed...").
    - Open sentences with varied syntactic devices:
-     - **Prepositional & locative phrases**: "Across the vibrating titanium bulkhead,..."
-     - **Participial clauses**: "Tearing through the fractured casing,..."
-     - **Inversion & fronted adverbials**: "Down through six kilometers of bored peridotite plunged the carriage..."
+     - **Prepositional & locative phrases**: "Across the crystalline courtyard,..."
+     - **Participial clauses**: "Tracing the concentric equations along the threshold,..."
+     - **Inversion & fronted adverbials**: "Deep within the planetary archive resonated the subtle acoustic chime..."
      - **Conditional & concessive subordinate clauses**: "Though the telemetry held for a fractional millisecond,..."
+
+4. **Tone & Anti-Catastrophe Integrity**:
+   - Do NOT turn the scene into panic-driven disaster survival, screaming klaxons, or apocalyptic meltdown. Anchor narrative tension in interpersonal intrigue, intellectual stakes, atmospheric wonder, and the governing philosophical attitude of the story.
 
 # OUTPUT
 Output the scene text in clean markdown format (using paragraph breaks `\n\n`). Do not wrap in extra introductory or concluding chatter. Deliver vivid, publishable science fiction prose.

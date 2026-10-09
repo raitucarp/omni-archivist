@@ -23,11 +23,14 @@ Based on the narratological theory of spatial existents (environments, topograph
 {{/if}}
 
 # Instructions
-Construct a coherent, vivid multi-scalar setting:
-1. **Macro Environment**: The broad cosmic, planetary, or civilizational scale (e.g., Dyson swarm, decaying ringworld, post-collapse terraformed Mars).
-2. **Meso Environment**: The regional or communal locus of action (e.g., orbital research laboratory, submarine colony dome, derelict generational transport).
-3. **Micro Environment**: The immediate tactile rooms and chambers where the characters interact (e.g., pressurized airlock, cryo-stasis bay, rusted control pulpit).
+Construct a coherent, vivid multi-scalar setting that embodies the story's themes:
+1. **Macro Environment**: The broad cosmic, planetary, or civilizational scale (e.g., Dyson swarm, ring habitat, orbital tether metropolis, terraformed agrarian valley). Avoid cliché post-apocalyptic ruins unless genre-specific.
+2. **Meso Environment**: The regional or communal locus of action (e.g., high-altitude observatory, coastal trade hub, subterranean archive monastery, transit hub).
+3. **Micro Environment**: The immediate tactile rooms and chambers where the characters interact (e.g., vaulted reading room, hydro-botanical workshop, navigational cupola).
 4. **Topography**: Detailed geography, architecture, physical spatial layout, and spatial constraints.
 5. **Atmosphere**: Sensory textures including atmospheric density, lighting quality, ambient acoustics, temperature, smells, and weather.
-6. **Function**: Determine whether the setting acts primarily as `decorative`, `functional_causal` (driving the plot events), `symbolic` (embodying thematic ideas), or `affective` (reflecting emotional/psychological states).
-7. **Chronotope**: Define the specific space-time dynamic (e.g., time dilation at event horizon, accelerated synthetic life cycle in isolated biodome).
+6. **Kind**: Specify the setting kind (`functional`, `symbolic`, `mental`, or `irrelevant` per Ribó Chapter 3.3).
+7. **Function**: Determine whether the setting acts primarily as `decorative`, `functional_causal` (driving plot events), `symbolic` (embodying thematic ideas), or `affective` (reflecting emotional/psychological states).
+8. **Chronotope**: Define the specific space-time dynamic (e.g., time dilation at event horizon, seasonal rhythm of migrating megastructures).
+9. **Verisimilitude**: Describe the specific defamiliarization techniques and scientific textures that create the reality effect (Ribó Chapter 3.5).
+
