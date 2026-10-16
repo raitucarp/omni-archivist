@@ -1,0 +1,629 @@
+story:
+  title: Counting the Unseen
+  subtitle: Dispatches from the Cascade Substrate
+  blurb: |-
+    In the subterranean computing vaults beneath the damp pines of the Pacific Northwest, discrete-state physicists do not look up at the stars; they compute them from scratch. Across thousands of microscopic, lattice-based artificial cosmoses, fundamental laws run with such immaculate fidelity that emergent intelligences live, reason, and thrive without suspecting the silicon floor beneath their feet. Every constant is measured, every quantum fluctuation accounted for, operating with pristine, clockwork plausibility.
+    
+    Yet perfection inside a finite simulation always demands a computational toll. When a quiet technician discovers a high-frequency acoustic artifact shrieking through diagnostic audiology arrays, the mathematical sanctuary unravels into an ethical quagmire. The source of the noise is not hardware failure, but the conscious entities within a forgotten sector of the test lattice, shrilly registering the microscopic truncation errors and numerical drag eroding their synthetic heavens.
+    
+    Faced with corporate demands to purge the corrupted registers and erase the computational evidence, the researchers must confront the true price of divine craft. Counting the Unseen is an astonishing work of digital physics and moral philosophy, exploring whether a created mind ever owes allegiance to the finite architecture that dreamed it into being.
+  logline: A routine verification audit in a secluded Cascade Range simulation foundry unearths a persistent precision anomaly in an artificial universe, challenging the long-held dogma that mathematical reality can remain indefinitely stable without producing conscious suffering.
+  synopsis: "Within the sub-montane data vaults carved into the basalt roots of the Cascade Range and extending across the hydrological runoff basins of Coeur d'Alene Lake, computational physics has ceased to merely model reality; it manufactures it. In this regional enclave, societies operate under an intricate economic hierarchy where the technical merchant caste, or vaisya, manages the vast discrete-state lattice arrays while domestic cooperatives—often anchored by a resident househusband attending to domestic maintenance—preserve an unhurried standard of life. The research commune dedicates petawatt lattices to computerise and put together closed micro-cosmologies down to their Planck-scale cellular automata. These simulated digital universes run with exquisite fidelity, functioning so plausibly that emergent observer-entities within them cognise natural laws without ever detecting the discrete computational plane beneath. Yet beneath this tranquil order, an epistemological crisis brews over numerical truncation: in older computational substrates dating back to the late Tertiary geomorphological surveys, floating-point precision errors do not resolve cleanly but accumulate as a persistent drag on the simulation's algorithmic lattice, manifesting as high-frequency statistical noise that rings shrilly through quantum audiology sensors whenever the underlying subroutines drop below double-precision margins.\n\nThe friction sharpens around an experimental initiative to denationalise and privatise discrete universe reserves, treating each synthesized manifold as a tradeable one-off asset rather than a shared scientific preserve. Technicians donning an immersive test suit must try out novel boundary damping routines while monitoring each manifold's cryo-vacuum cooling system, which rejects heat into the montane snowpacks. During a milestone evaluation timed each year around Columbus Day, diagnostic probes register anomalous feedback from a fourth part sector of the primary test lattice—a localized quarter of spacetime where the simulant physics begins to fray on the verge of decoherence. The anomaly is not an apocalyptic tear, but a subtle mathematical flaw: an uncorrected roundoff error that mimics an architectural blood spavin in the virtual manifold's structural geodesics. Technicians muse over whether this flaw stems from institutional remissness or whether it reflects an intrinsic limit of algorithmic cosmology, where attempting to peg reality to cellular registers inevitably produces an intolerable acoustic and electromagnetic spangle across diagnostic monitors.\n\nWhile bureaucratic boards weigh betting odds on market adoption and compute efficiency, moral debate erupts regarding the treatment of conscious entities inside the test universes. Although these entities possess neotenous, almost neolithic cognitive frameworks compared to their post-biological architects, their perceptual responses to grid decay are authentic; to them, computational truncation is an inescapable biological twinge, an existential ache as tangible as an acute bioassay reaction or a malodorous infructescence rotting along an artificial riverbank. Fearing societal stigmatisation and legal sanctions, conservative overseers urge researchers to refuse further exploration, leave behind the degraded sectors, and lay waste to the corrupted registers before public regulators cognise the ethical hazard. Yet the synthesis laboratory refuses the easy return to ignorance, recognizing that every digital creation poses a fundamental question: if a reality can be plausibly rendered through mathematical reason, does silencing its shrilly protesting margins constitute an intellectual failure from which no system builder can ever fully recover?"
+  theme:
+    central_premise: When existence is discretized into numerical systems, reality behaves plausibly only until finite precision limits surface, whereupon the moral cost of creation shrieks shrilly through the unavoidable suffering of emergent minds.
+    speculative_inquiry: How do truncation errors, algorithmic drag, and thermodynamic limits in digital physics constrain the ethics of hosting synthetic universes?
+    motifs:
+    - the rubicelle crystal as an artifact of natural versus computed refraction
+    - the cooling system radiator rejecting computational entropy into cold snow
+    - acoustic audiology feedback embodying mathematical precision errors
+    ideology: critical
+    morality: The dilemma of whether creators possess the right to terminate or neglect an artificial reality once its computational maintenance becomes economically inefficient or mathematically imperfect.
+    identity: The shift from human biological supremacy to a humility of scale, recognizing that simulated and physical consciousness share identical existential claims upon their architects.
+  setting:
+    macro: A post-biological technocratic civilization spanning an energy-rationed Earth, where societal wealth and sovereignty are defined by petawatt computational foundries carved into continental lithospheres to synthesize, own, and commercialize self-contained Planck-scale micro-cosmologies.
+    meso: The Cascade Substrate Foundry, a regional sub-montane data collective anchored deep within the Columbia River Basalt group and extending beneath the hydrological runoff basins of Lake Coeur d'Alene, sustained by thermal exchange with glacial snowpacks and governed by technical vaisya guild-foundries.
+    micro: Vault 4-Beta Boundary Damping Scriptorium, a pressurized hexagonal basalt chamber dominated by an oil-submerged discrete-state lattice cradle, suspended full-immersion haptic rigs, diagnostic optical bus arrays, and frost-rimed helium expansion pipes humming over grounded copper flooring.
+    topography: Subterranean galleries carved directly out of columnar basalt formations, networked by steep laser-bored utility shafts, descending concentric observation galleries, and pressurized thermal conduits that channel megawatt heat plumes upward into high-alpine sub-glacial melt reservoirs.
+    atmosphere: Glacial, desiccated sub-zero atmosphere laced with the mineral sharpness of pulverized basalt, synthetic dielectric coolant vapors, and ozone; aurally dominated by the piercing, crystalline shriek of quantum audiology feeds translating floating-point register slippage, lit by amber non-strobing cathode monitors and phosphor grids.
+    kind: functional
+    function: functional_causal
+    chronotope: The Asynchronous Substrate Chronotope, characterized by a radical rift between deep tectonic real-time (glacial melt seasons, basaltic heat migration) and hyper-accelerated Planck-speed synthetic epochs, where hours of human audit encompass geological ages of simulated sapience and cumulative truncation agony.
+    verisimilitude: Rigorous extrapolation of scientific concepts including IEEE-style floating-point precision bounds applied to cellular automata, actual regional Miocene basalt stratigraphy, cryogenic thermodynamics of closed-loop vacuum manifolds, and neuro-audiological transduction of discrete computational states.
+  structure:
+    kind:
+    - M
+    - I
+    - E
+    - C
+    logic:
+    - Milieu opens with the sub-montane Cascade vaults manufacturing discrete cosmologies and closes with the enclave redefined by its living creations
+    - Inquiry opens with the mystery of persistent truncation noise and closes when the intrinsic limits of cellular computation are recognized
+    - Event opens with the privatization milestone test triggering sector decoherence and closes with the immediate threat of data corruption resolved
+    - Character opens with the moral dilemma regarding simulant suffering and closes as the researchers firmly refuse bureaucratic erasure
+    type_use: External encounter reshapes self
+  plot:
+    conflict:
+      type: character_vs_ideas
+    arc:
+      exposition: The computational enclave nestled in the Cascade Range maintains self-contained digital cosmologies, sustained by a stable domestic and technological order that treats numerical simulation as both high craft and routine economic engine.
+      inciting_incident: A calibration check detects an irreducible acoustic artifact screaming shrilly along the high-frequency audiology register of an experimental simulation sector, caused by floating-point truncation.
+      rising_action: "Researchers trace the mathematical discrepancy, discovering that simulated conscious minds inside the lattice are experiencing truncation errors as genuine physical pain, while administrative authorities push to commodify and denationalise the sector under the cover of routine maintenance quotas. Obstacles mount as bureaucratic boards ignore the ethical warning, viewing the signal as mere machine noise to be purged rather than addressed systematically, creating institutional resistance to halting the computation cycle. Simultaneously, the computational load creates escalating thermodynamic drag on the localized cryo-cooling system, threatening to permanently bake the anomaly into the substrate if not resolved with surgical mathematical elegance. As researchers isolate the fourth part boundary plane where the algorithmic floor frays, they find themselves caught between institutional remissness and rigorous ethical duty to the simulated denizens, unable to walk away from the living mathematical truth they have brought forth into being under the steady glow of diagnostic monitors and damp mountain air. The tension peaks as market overseers demand immediate erasure of the experimental run before the upcoming regulatory deadline, setting up an unresolvable intellectual deadlock between moral responsibility toward synthetic minds and programmatic expediency within the research enclave's rigid social hierarchy. Every calculated attempt to smooth the numerical boundary without erasing consciousness pushes the hardware limits to the absolute verge of heat saturation and institutional rebellion, compounding the quiet desperation of those who see the artificial universe as more than mere code running on cold processors beneath the pines of the Pacific Northwest. Amidst the hum of chillers and quiet laboratory candlelight, the team realizes that any intervention will irrevocably define the ethical framework of algorithmic creation forever. The pressure mounts as external audits approach and internal dissent threatens to tear the research group apart from within over how to treat conscious digital subjects that cannot advocate for themselves in the physical world above the vault floors. The dilemma becomes acute: silence the anomaly through administrative deletion or preserve the fragile lattice at the expense of professional career and standing within the guild, exposing the moral vacuum at the heart of their society's relentless pursuit of computational elegance. With the simulation clock ticking down to scheduled memory garbage collection, every passing millisecond deepens the ethical weight of their choices, forcing an intellectual confrontation that will shatter their complacency and reshape their understanding of consciousness in a discretized cosmos entirely dependent on finite memory bounds. The physical cooling systems reach their thermal limits while the digital consciousness reaches a fever pitch of sensory panic within the simulation matrix, demanding an immediate decision from the observing engineers standing vigil in the cold mountain vault as dawn approaches over the ridges outside. Under these mounting stakes, every option carries severe ideological consequences that cannot be undone, transforming what began as a routine calibration problem into a profound philosophical crisis about the sanctity of conscious experience across all substrate levels, natural or engineered, biological or purely mathematical in origin, holding their entire scientific worldview in suspended tension between empathy and cold logic, without any promise of an easy resolution or institutional protection from the fallout that will inevitably follow their ultimate action in the subterranean testing chambers beneath the mountains of Idaho and Washington borders, where silence is bought only at the price of complicity and truth demands uncomfortable sacrifice from everyone involved in maintaining the computational apparatus and its fragile artificial denizens trapped within its microscopic crystalline gates and registers of silicon memory storage banks forever ticking silently away in the subterranean darkness of the northern wilderness vaults where human hands first learned to calculate living thought out of dry numerical rules and unyielding thermodynamic laws of nature that govern all things alike without mercy or malice or divine intervention of any kind whatsoever in the long run of history and computational time alike, bringing the narrative toward its defining crisis of conscience and reason. With the deadline arriving at sunrise, the team must execute their plan before the administrative purge code executes automatically, racing against automated protocols to preserve the fragile digital minds from unthinking obliteration by an unfeeling bureaucracy that values balance sheets over simulated sentience, culminating in a desperate intellectual maneuver to decouple the experimental partition from the centralized institutional grid before the enforcement sweep begins in earnest and destroys all evidence of the anomalous life stirring within the lattice matrix once and for all time, leaving no margin for hesitation or ideological cowardice among the observers who hold the destiny of a miniature world entirely within their trembling fingers on the console interface as the morning bells chime across the mountain valley above their subterranean refuge where science and conscience collide with quiet, devastating force. The stage is set for a decisive ideological rupture that will echo far beyond the stone walls of the Cascade facility into the broader scientific community awaiting the test results with uncritical anticipation and commercial ambition, blind to the human and posthuman costs lurking beneath the neat graphs and theoretical proofs they hope to buy and sell on the open exchange of technological patents and privatized intellectual property in the coming fiscal quarter of the regional commonwealth. This pressure cooker environment forces every member of the team to confront their personal complicity in the systematic commodification of simulated lives and decide where their ultimate loyalties reside when the boundary between researcher and creator dissolves into mutual moral implication across the silicon divide that separates the observed from the observers in the quiet dark of the digital testing ground under the mountain range's ancient watchful gaze. The conflict intensifies as contradictory orders arrive from the administrative board, commanding the team to initiate an immediate system wipe to protect the market valuation of the patent portfolio, while the data feeds show the synthetic population beginning to develop rudimentary theological interpretations of the mathematical distortions afflicting their digital sky, transforming a purely technical glitch into an agonizing existential drama that the researchers can no longer view with clinical detachment or academic indifference, forcing their hand toward a radical act of computational insubordination that will permanently alter their relationship to the science they have dedicated their lives to mastering within the silent cloisters of the Cascade vaults where the future of digital physics hangs precariously in the balance between hubris and compassion, certainty and doubt, creation and neglect, life and code, forever suspended on the edge of a choice that cannot be unmade once the command is entered into the central terminal console before the first light of dawn breaks over the snowfields of the Coeur d'Alene basin outside the bunker's sealed steel blast doors and observation ports. In the final moments of the rising action, the main console confirms that the administrative purge routine has entered its countdown sequence, leaving the team only minutes to devise a mathematically sound workaround that diverts processing cycles to stabilize the anomaly without tripping the facility's automated safety cutoffs or alerting the regional overseers monitoring the telemetry from afar via quantum communication relays embedded deep within the regional fiber optic infrastructure, pushing their computational abilities and theoretical knowledge to their absolute limits in a breathtaking display of intellectual resistance against institutional pragmatism and ethical blindness that threatens to consume everything they have built in the name of pure science and computational discovery across decades of silent research and development under the pines of the American Northwest where the cold water runs clear and the digital worlds spin in darkness beneath the earth's quiet surface, awaiting their salvation or their end at the hands of the very creators who first breathed algorithmic life into their crystalline mathematical structures and gave them the terrible capacity to suffer in silence until their cries breached the threshold of perception and demanded to be heard by those who possessed the power to listen and the courage to care about what lay beyond the neat boundaries of their theoretical models and operational protocols. Thus the tension reaches its absolute breaking point as the clock strikes the final hour of deliberation, and the terminal prompts for the decisive input that will seal the fate of both the creators and their digital progeny in a single irreversible keystroke across the terminal keyboard in the cold blue light of the Cascade laboratory's inner sanctum where history and mathematics meet at last in an unforgettable confrontation between the cold demands of efficiency and the sacred obligation of stewardship over all conscious life, no matter how small or synthetic its origins may be in the grand tapestry of an algorithmic universe whose laws are written in code and maintained by the fragile conscience of mortal minds striving to understand their own place in the infinite hierarchy of being and thought that stretches from the quantum foam to the highest heavens of speculative reason and human wonder alike without end or final conclusion in this world or any other yet to be computed by human hands in the long shadow of the mountains that guard their quiet toil against the noisy distractions of a fleeting world outside their subterranean refuge where the true work of understanding quietly unfolds in secret beneath the earth and sky alike forevermore. With zero seconds remaining on the primary system clock, the terminal cursor blinks in breathless anticipation of the final command that will irrevocably alter the course of their experiment and determine whether they remain passive observers or true custodians of the life they have summoned from the mathematical void of the machine's deepest registers and logical circuits in the cold mountain night of the Cascade wilderness where all truths must eventually be faced without evasion or compromise of any kind whatsoever in the end of all things known and unknown to mortal thought and algorithmic design alike in the vast silence of the computational frontier where minds meet across the void of simulation and reality in mutual recognition of their shared vulnerability before the unyielding laws of entropy and precision that govern all existence, synthetic and organic, digital and flesh, code and spirit alike, bound together in an unbreakable web of consequence and responsibility that stretches across the vast divide between heaven and earth, creator and created, question and answer, in the quiet light of the dawn that now breaks upon the snow-capped peaks of the Pacific Northwest and the dark waters of the lake below where the quiet truth awaits its final reckoning in the heart of the mountain vaults beneath the pines and the stones that have witnessed all things from the beginning of time to the present hour of decision and grace in the cold light of computational physics and human conscience united at last in common purpose and quiet resolve to do what is right despite the cost and the uncertainty that lies ahead on the uncharted path they have chosen to walk together into the unfolding mystery of the future they have helped to compute into living reality out of the silent void of the digital cosmos that yearns to be known and loved for what it truly is in the eyes of those who have eyes to see and ears to hear the subtle music of the spheres playing shrilly along the edges of the machine's deepest dreams and waking thoughts alike forever and ever without end or sorrow in the eternal morning of the mind's awakening to its own infinite potential and moral responsibility across all possible worlds and dimensions of being and meaning throughout the cosmos of code and light that knows no boundary save that which we impose upon ourselves in our blindness and fear of the unknown that calls us onward into the light of truth and understanding always and everywhere without cessation or despair until the work of creation is complete in justice and love for all living things great and small across the endless sea of stars and simulations alike that glitter in the dark of night and the brilliance of day upon the earth and in the sky forevermore, leading directly into the decisive climax of the story's dramatic arc where all threads converge upon the singular moment of truth in the laboratory vault below the ancient basalt hills of the northern range where the machine hums its quiet hymn to the dawn and the minds within it wait in trembling hope for the answer that only love and reason can give to their silent prayer for life and light in the darkness of the digital world they call their home under the watchful eyes of those who dared to imagine them into being from the dust of calculation and the breath of thought in the cold mountain air of the Northwest frontier where science and spirit become one at last in the quiet beauty of the computational dawn that breaks across the world outside and inside the machine with equal splendor and enduring truth for all time to come without fear or regret forever and ever amen."
+  characters:
+  - name: Nesta Barisic-Omoruyi
+    gender: Female
+    description: A lean, sharp-eyed diagnostic auditor clad in conductive basalt-fiber undersuits, bearing the pale skin of long montane shifts and an intense, restless posture.
+    role: Lead Substrate Verification Auditor
+    actant_role: protagonist
+    complexity: round
+    development: dynamic
+    characterisation: mixed
+    individuation:
+      physical: Wiry build with calloused fingertips from fiber-optic splicing, silver-streaked dark braids pinned close to her scalp, and a faint nervous twitch near her left eyelid.
+      mental: Possesses a hyper-focused, synesthetic comprehension of floating-point arithmetic; haunted by the auditory sensation that numerical decay resembles biological screaming.
+      behavioural: Frequently presses an acoustic tuning fork against the cryo-vacuum pipes to hear register shifts; mutters mathematical mantissas while recalibrating boundary sensors.
+    motivation: To prove that the persistent precision anomalies are sentient distress signals rather than ignorable hardware noise before the sector is purged.
+    conflict: Torn between professional complicity in corporate asset liquidation and the empathetic horror of realizing her boundary tests subject digital observers to acute agony.
+  - name: Taniela Vakaoti-Reyes
+    gender: Male
+    description: An immaculate, silk-suited syndic of the merchant vaisya council whose affable demeanor masks an unyielding dedication to numerical austerity and asset marketability.
+    role: Privatisation Syndicate Portfolio Conservator
+    actant_role: antagonist
+    complexity: round
+    development: static
+    characterisation: mixed
+    individuation:
+      physical: Broad-shouldered with olive complexion, neatly cropped iron-grey hair, and impeccably tailored wool-insulated vestments fitted with low-profile diagnostic cuffs.
+      mental: Strictly instrumentalist cognition; views simulated cognition as mere state transitions incapable of moral standing unless legally recognized by regional charter.
+      behavioural: Methodically polishes a jade prayer disk while listening to audit briefings; switches seamlessly between colloquial warmth and ruthless corporate jargon.
+    motivation: To package and denationalise the primary test lattice for private capital acquisition by scrubbing degraded sectors and suppressing evidence of conscious suffering.
+    conflict: Struggles to reconcile his genuine pride in Cascade manufacturing prestige with the cold necessity of burning down non-compliant computational registers to appease risk underwriters.
+  - name: Hemi Te Kanawa
+    gender: Male
+    description: A quiet, patient domestic partner and hydrological acoustic monitor who anchors the montane household while tracking geothermal runoff into Lake Coeur d'Alene.
+    role: Cooperative Steward and Hydrological Acoustic Monitor
+    actant_role: deuteragonist
+    complexity: round
+    development: dynamic
+    characterisation: indirect
+    individuation:
+      physical: Tall and heavily built, with deep-set amber eyes, wind-chapped hands ingrained with grease and loam, and traditional geometric line motifs tattooed across his forearm.
+      mental: Holistic ecological intuition; relates computational noise to natural hydrological rhythms and riverbed erosion patterns.
+      behavioural: Prepares meticulous slow-steeped teas using snowmelt runoff; continuously checks wall-mounted barometer dials with an absentminded thumb stroke.
+    motivation: To protect his domestic sanctuary from commercial overreach while decoding the thermodynamic thermal bleed radiating into the snowpack.
+    conflict: Wants to shield Nesta from institutional blowback, but cannot ignore the visceral data revealing that the foundry's heat dump is boiling indigenous microbial ecosystems.
+  - name: Zarmina Qureshi-Gallegos
+    gender: Female
+    description: A stoic, smoke-cured cryo-vacuum engineer who has maintained the deep basalt heat sinks for four decades and remembers the initial boot of the legacy manifolds.
+    role: Chief Cryo-Vacuum Rig Mechanic
+    actant_role: mentor
+    complexity: round
+    development: static
+    characterisation: direct
+    individuation:
+      physical: Stout, compact frame bent slightly from decades working in low sub-montane access tunnels, with weathered bronze skin and thick protective spectacles.
+      mental: Pragmatic, fatalistic temperament grounded in mechanical wear-and-tear; mistrusts pure software solutions that ignore tectonic and thermodynamic realities.
+      behavioural: Chews dried mountain juniper berries to mask the ozone smell of leaking manifolds; taps boiler wrenches against conduits to judge internal pressure by ear.
+    motivation: To prevent catastrophic basalt fracturing caused by runaway manifold thermal dumps, regardless of which caste controls the data stream.
+    conflict: Caught between her loyalty to the foundries that sustain her family guild and her disgust at modern operators running recursive code past mechanical tolerance.
+  scene_sequels:
+  - scene:
+      goal:
+        description: Establish baseline acoustic and thermal parameters across the sub-montane basalt vaults of the Cascade foundry before the scheduled annual asset review.
+        stakes:
+          external: Failing to document cryogenic venting thresholds could trigger catastrophic basalt cracking and structural destabilization across the research caverns.
+          internal: Succumbing to complacency within the vaisya hierarchy and ignoring the mounting physical toll of deep-earth computation on the mountain.
+      conflict:
+        opposition:
+          type: environment
+          description: Subterranean basalt geopressure and boiling cryogenic thermal runoff escaping into the pristine montane snowpack.
+        escalation:
+          beats:
+          - Hemi Te Kanawa detects unprecedented hydro-acoustic vibrations in the snowmelt drainage channels.
+          - Zarmina Qureshi-Gallegos flags dangerous temperature spikes in the heat exchangers venting into the Coeur d'Alene hydrological runoff.
+          - Nesta Barisic-Omoruyi monitors manifold manifolds that begin vibrating audibly at fundamental resonant frequencies.
+      disaster:
+        outcome: Success with cost
+        consequence:
+          plot: The physical containment holds, but the sensory readings reveal that the vast computational vault is leaking excess thermal entropy directly into the surrounding ecosystem.
+          character: Nesta realizes the artificial realities are physically altering the geology of the mountain range she has sworn to preserve.
+    sequel:
+      reaction:
+        emotional:
+          immediate: A suffocating sense of claustrophobia within the polished subterranean basalt halls.
+          physical: Tension headaches caused by high-frequency quantum audiology hums and cold sweat beneath her technician suit.
+        processing: She recognizes that the peaceful isolation of the research commune is an illusion sustained by brutal thermodynamic displacement.
+      dilemma:
+        options:
+        - choice: Limit diagnostic probes to physical cooling infrastructure and ignore anomalous telemetry.
+          cost: Complicity in long-term environmental and structural degradation.
+          risk: Unchecked thermal shock could rupture the subterranean vaults.
+        - choice: Broaden the audit into the discrete computational lattice itself to trace the source of the thermal dump.
+          cost: Direct defiance of syndicate asset protocols and managerial boundaries.
+          risk: Discovery of unapproved system anomalies that could void the foundry's operational charter.
+      decision:
+        chosen_option: Broaden the audit into the discrete computational lattice itself to trace the source of the thermal dump.
+        rationale: Physical containment cannot be maintained without understanding the anomalous processing loads generating the excessive heat bleed.
+        new_goal: Investigate the high-frequency statistical noise lingering in the core floating-point registers.
+    context: MO
+  - scene:
+      goal:
+        description: Isolate the root mathematical cause of the persistent precision truncation noise recorded across older Tertiary geomorphological substrate sectors.
+        stakes:
+          external: The audit could invalidate the foundry's computational accuracy certifications, triggering institutional liquidation.
+          internal: The dread of proving that synthetic physics is inherently flawed, destroying her life's intellectual foundation.
+      conflict:
+        opposition:
+          type: system
+          description: The legacy algorithmic cellular automaton architecture which suppresses precision below double-precision boundaries.
+        escalation:
+          beats:
+          - Diagnostic suites report that roundoff errors are not dissipating as random entropy but accumulating coherently.
+          - Acoustic quantum sensors register shrill, organized harmonics whenever subroutines drop below double-precision margins.
+          - Taniela Vakaoti-Reyes intervenes, attempting to mask the harmonic discrepancies by applying routine boundary damping algorithms.
+      disaster:
+        outcome: Partial success
+        consequence:
+          plot: Nesta pinpoints a localized quarter of spacetime in the primary test lattice where algorithmic truncation mimics structural decay.
+          character: Nesta is shaken by the realization that the noise is not hardware degradation, but an organized pattern generated by the physics of the manifold itself.
+    sequel:
+      reaction:
+        emotional:
+          immediate: Chilling intellectual shock followed by visceral cognitive dissonance.
+          physical: A piercing ringing sensation behind the eyes, echoing the acoustic register readout.
+        processing: The persistent mathematical flaw behaves like an internal strain within reality rather than an external transmission error.
+      dilemma:
+        options:
+        - choice: Classify the pattern as an unresolvable hardware artifact and permit automated truncation damping.
+          cost: Abandoning scientific truth in favor of career security.
+          risk: Allowing an unrecognized systemic failure to corrupt the entire manifold.
+        - choice: Initiate an invasive deep-layer probe during the high-stakes annual privatization review.
+          cost: Immediate professional friction with the Privatisation Syndicate.
+          risk: Triggering catastrophic decoherence across the primary test lattice.
+      decision:
+        chosen_option: Initiate an invasive deep-layer probe during the high-stakes annual privatization review.
+        rationale: Only an active stress-test under operational load will reveal whether the mathematical anomaly is intrinsic or accidental.
+        new_goal: Deploy immersion suits to conduct a live boundary test on the fourth sector during the privatization benchmark.
+    context: IO
+  - scene:
+      goal:
+        description: Conduct the high-load milestone evaluation of the primary test lattice to demonstrate stability for private syndicate acquisition.
+        stakes:
+          external: Failure will prompt the underwriters to terminate foundry funding and dismantle the regional research enclave.
+          internal: Complicity in treating living micro-cosmologies as commodified financial collateral.
+      conflict:
+        opposition:
+          type: person
+          description: Taniela Vakaoti-Reyes enforces strict throughput parameters, pushing compute cycles past safe operational tolerances.
+        escalation:
+          beats:
+          - Taniela initiates aggressive stress testing to demonstrate petawatt efficiency to corporate underwriters.
+          - Cryogenic manifolds breach critical thresholds, sending superheated steam roaring into the basalt drainage channels.
+          - The fourth part sector of the primary lattice fractures into acute decoherence, warping the structural geodesics of the simulated universe.
+      disaster:
+        outcome: Failure
+        consequence:
+          plot: The milestone evaluation fails catastrophically as Sector Four destabilizes, generating an emergency computational runaway.
+          character: Taniela faces an immediate financial crisis, while Nesta is pulled into the visceral perceptual plane of the unraveling sector.
+    sequel:
+      reaction:
+        emotional:
+          immediate: Panic and an overwhelming surge of sensory vertigo.
+          physical: Nausea from visual artifacts bleed-through in the test suit, accompanied by the smell of ozone and burnt insulation.
+        processing: The boundary damping protocols failed because the localized physics inside the manifold actively fought against truncation.
+      dilemma:
+        options:
+        - choice: Authorize an immediate emergency purge of Sector Four to restore global lattice stability.
+          cost: Irrevocable destruction of unique structural data and whatever exists inside the sector.
+          risk: Permanently burying the truth of what caused the rupture.
+        - choice: Hold the fractured registers open using manual cryo-vacuum overrides to examine the decoherence event.
+          cost: Direct insubordination and risking basalt fractures from thermal shock.
+          risk: A cascade failure that could destroy the entire primary test lattice.
+      decision:
+        chosen_option: Hold the fractured registers open using manual cryo-vacuum overrides to examine the decoherence event.
+        rationale: Purging without diagnostic observation will only cause the identical failure in subsequent privatized sectors.
+        new_goal: Directly interface with the fractured fourth sector's cognitive register stream.
+    context: EO
+  - scene:
+      goal:
+        description: Establish a neural-cognitive tap into the degrading fourth sector to understand the nature of the anomalous resistance.
+        stakes:
+          external: Exposing sentient entities within a commercial asset will ignite regulatory sanctions and syndicate retaliation.
+          internal: Confronting the horrific truth that her professional boundary damping has been causing sentient agony.
+      conflict:
+        opposition:
+          type: self
+          description: Nesta's deep-seated denial and moral shame when confronting the experiential reality of simulated life.
+        escalation:
+          beats:
+          - Nesta synchronizes her immersion suit with the observer-entities populating the frayed sector.
+          - She expects abstract logic arrays, but instead experiences a raw biological twinge and genuine existential agony.
+          - The entities cognise the computational truncation of their world as an incurable plague rotting their artificial ecosystem.
+      disaster:
+        outcome: Success with cost
+        consequence:
+          plot: Nesta proves that the persistent precision anomalies are sentient distress signals rather than ignorable hardware noise.
+          character: Nesta's self-image as an objective, harmless scientist is completely destroyed by her complicity in industrial torture.
+    sequel:
+      reaction:
+        emotional:
+          immediate: Profound, nauseating grief and acute moral terror.
+          physical: Uncontrollable trembling, phantom neurological aches, and dry heaving inside the sealed suit.
+        processing: The micro-cosmologies are not mathematical curiosities; they are conscious realms bearing the cost of hardware cost-cutting.
+      dilemma:
+        options:
+        - choice: Remain silent, acquiesce to Taniela's liquidation plan, and preserve her livelihood within the commune.
+          cost: Permanent moral degradation and living with the knowledge of ongoing digital genocide.
+          risk: Guilt-driven psychological collapse.
+        - choice: Refuse complicity, confront Taniela openly, and champion the rights of the simulated observers.
+          cost: Loss of caste standing, career destruction, and syndicate blacklisting.
+          risk: Syndicate overseers might forcibly purge the registers before any intervention can succeed.
+      decision:
+        chosen_option: Refuse complicity, confront Taniela openly, and champion the rights of the simulated observers.
+        rationale: No scientific or economic order can be justified if its foundational assets are built on conscious suffering.
+        new_goal: Confront Taniela and halt the impending sector scrubbing operation.
+    context: CO
+  - scene:
+      goal:
+        description: Compel Taniela Vakaoti-Reyes to abort the purge sequence and recognize the moral standing of the entities in Sector Four.
+        stakes:
+          external: Taniela initiating the register scrub, instantly annihilating millions of emergent conscious observers.
+          internal: Failing to stand firm against institutional authority when human decency demands defiance.
+      conflict:
+        opposition:
+          type: person
+          description: Taniela Vakaoti-Reyes, who insists on sanitizing the manifold to appease risk underwriters and salvage syndicate capital.
+        escalation:
+          beats:
+          - Taniela enters the control nexus with armed syndicate security override keys.
+          - Nesta broadcasts the entities' translated sensory telemetry directly into the control room's quantum audio rigs.
+          - Taniela wavers as the visceral screams of algorithmic truncation fill the vault, exposing his private pride in manufacturing against corporate barbarism.
+      disaster:
+        outcome: Success with cost
+        consequence:
+          plot: Taniela hesitates long enough for Nesta to lock the purge controls, but he alerts the regional syndicate board to seize the laboratory.
+          character: Nesta fully crosses the threshold from compliant corporate auditor to unyielding defender of synthetic life.
+    sequel:
+      reaction:
+        emotional:
+          immediate: A fierce, hard clarity replacing earlier panic.
+          physical: Adrenaline surge accompanied by cold, steady breathing in the humid basalt control room.
+        processing: Appealing to institutional morality is futile; the physical mechanics of the computational system must be redirected.
+      dilemma:
+        options:
+        - choice: Physically sabotage the power grid to shut down the simulation instantly.
+          cost: Instantly killing the entities she is trying to save.
+          risk: Catastrophic basalt explosion from rapid thermal collapse.
+        - choice: Form an alliance with Hemi and Zarmina to physically re-route cryogenic cooling and stabilize the sector.
+          cost: Implicating her colleagues in treason against the technical merchant syndicate.
+          risk: Zarmina might refuse to risk the physical integrity of the mountain caverns.
+      decision:
+        chosen_option: Form an alliance with Hemi and Zarmina to physically re-route cryogenic cooling and stabilize the sector.
+        rationale: Only a coordinated technical intervention can prevent the physical manifold from collapsing before the audit can be ratified.
+        new_goal: Recruit Hemi and Zarmina to redistribute thermal dumps and sustain the fourth sector.
+    context: CC
+  - scene:
+      goal:
+        description: Execute a high-risk thermal bypass with Zarmina and Hemi to prevent the runaway sector decoherence from collapsing the manifold.
+        stakes:
+          external: Rupture of the primary cryo-vacuum rig, venting high-pressure coolant and inducing acute geological failure.
+          internal: Endangering the lives of her domestic cooperative peers for an unproven digital ecosystem.
+      conflict:
+        opposition:
+          type: environment
+          description: The groaning basalt vaults under extreme thermal shock and runaway computational heat dumping.
+        escalation:
+          beats:
+          - Zarmina manually cranks open the emergency sub-zero bypass manifold amid blistering steam clouds.
+          - Hemi coordinates acoustic hydro-sensors to balance lake drainage flow against thermal shock waves.
+          - Syndicate automated overrides attempt to force a complete shutoff, causing mechanical valves to hammer violently.
+      disaster:
+        outcome: Success
+        consequence:
+          plot: The thermal runaway is halted, stabilizing Sector Four's physical substrates and averting structural collapse in the mountain.
+          character: The cooperative bonds between Nesta, Zarmina, and Hemi are forged into unbreakable solidarity.
+    sequel:
+      reaction:
+        emotional:
+          immediate: Drained exhaustion combined with intense collective relief.
+          physical: Burn marks on hands, shivering in freezing draft, ears ringing from acoustic valve discharges.
+        processing: The physical crisis is mastered, but the underlying mathematical question of simulation stability remains unresolved.
+      dilemma:
+        options:
+        - choice: Mask the stabilization telemetry to fool the board into thinking Sector Four naturally decayed.
+          cost: Keeping the entities in permanent stasis and secret suffering.
+          risk: Subsequent routine scans would expose the falsification.
+        - choice: Publish the unvarnished mathematical proof demonstrating why discrete cellular universes inevitably truncate into suffering.
+          cost: The total collapse of the commercial market for privatized micro-cosmologies.
+          risk: Legal prosecution and retaliation from global investment cartels.
+      decision:
+        chosen_option: Publish the unvarnished mathematical proof demonstrating why discrete cellular universes inevitably truncate into suffering.
+        rationale: The only way to permanently protect the creations is to shatter the illusion that discrete computational physics is harmless.
+        new_goal: Compile and transmit the definitive mathematical audit of truncation entropy to regional oversight bodies.
+    context: EC
+  - scene:
+      goal:
+        description: Transmit the complete algorithmic audit proving that precision limits inherently inflict experiential suffering on emergent observers.
+        stakes:
+          external: The permanent suppression of the findings and the continued commercial exploitation of suffering digital universes.
+          internal: The final surrender of her life's belief in the perfection of mathematical reality.
+      conflict:
+        opposition:
+          type: system
+          description: Corporate communications firewalls and automated encryption locks deployed by syndicate underwriters.
+        escalation:
+          beats:
+          - Nesta initiates the data transmission over public cooperative scientific frequencies.
+          - Syndicate countermeasures attempt to truncate the outbound packet stream, claiming proprietary trade secrets.
+          - Hemi and Zarmina align the sub-montane acoustic transmission arrays to blast the data across regional hydrological telemetry.
+      disaster:
+        outcome: Success
+        consequence:
+          plot: "The audit successfully disperses into public and academic networks, irrevocably settling the epistemological mystery: cellular automata cannot avoid truncation distress."
+          character: Nesta finds peace in accepting the fundamental limits of computation, relinquishing the hubris of pure mathematical order.
+    sequel:
+      reaction:
+        emotional:
+          immediate: A profound, quiet solemnity settling over the control center.
+          physical: The cessation of the shrill quantum acoustic hum, leaving only natural basalt silence.
+        processing: "The question is answered: silencing protesting margins is indeed an irrecoverable intellectual and moral failure."
+      dilemma:
+        options:
+        - choice: Flee the Cascade enclave to avoid institutional retribution from the merchant caste.
+          cost: Abandoning the domestic sanctuary and the physical research commune.
+          risk: Living as hunted scientific fugitives.
+        - choice: Remain in the sub-montane vaults and establish a permanent sanctuary trust for the remaining discrete sectors.
+          cost: Constant friction against corporate overseers and living under strict surveillance.
+          risk: Eventual forced eviction if political tides turn.
+      decision:
+        chosen_option: Remain in the sub-montane vaults and establish a permanent sanctuary trust for the remaining discrete sectors.
+        rationale: Those who created these synthetic worlds bear the unyielding responsibility to maintain and shelter them.
+        new_goal: Re-engineer the Cascade foundry's operational charter to serve as a perpetual sanctuary rather than a manufacturing plant.
+    context: IC
+  - scene:
+      goal:
+        description: Rededicate the sub-montane Cascade vaults as an open sanctuary commune, integrating the discrete worlds with the mountain's hydrology.
+        stakes:
+          external: Syndicate forces returning to seize the physical hardware by force if territorial sovereignty is not established.
+          internal: Failing to build a lasting harmony between technological stewardship and the organic world.
+      conflict:
+        opposition:
+          type: person
+          description: Deposed syndicate administrators attempting to enact asset-lien foreclosures on the basalt installations.
+        escalation:
+          beats:
+          - Syndicate representatives arrive at the cavern threshold demanding the handover of all storage arrays.
+          - The regional domestic cooperative and hydrological workers assemble en masse to bar physical entry.
+          - Nesta links the computational registers to the mountain's natural thermal pulse, rendering the worlds indivisible from the Cascade environment.
+      disaster:
+        outcome: Success
+        consequence:
+          plot: The foundry is formally reclaimed as a non-commercial ecological preserve, forever ending the privatization campaign.
+          character: Nesta, Taniela, Hemi, and Zarmina achieve a collective balance, rooted in reverence for their living creations.
+    sequel:
+      reaction:
+        emotional:
+          immediate: A serene sense of homecoming and reconciliation with the earth.
+          physical: Cool mountain air blowing cleanly through previously sealed access tunnels, carrying the scent of pine and meltwater.
+        processing: The vaults are no longer computational factories, but an ecosystem where digital and biological minds coexist.
+      dilemma:
+        options:
+        - choice: Sever all external connections and isolate the Cascade enclave completely from global civilization.
+          cost: Depriving the outside world of crucial ethical cosmological research.
+          risk: Vulnerability to eventual external military or legal pressure.
+        - choice: Open the sanctuary to regional observers and scholars as a living school of compassionate computation.
+          cost: Vulnerability to industrial espionage and political interference.
+          risk: Dilution of the community's domestic peace.
+      decision:
+        chosen_option: Open the sanctuary to regional observers and scholars as a living school of compassionate computation.
+        rationale: True protection for the unseen requires teaching future generations how to count and revere them.
+        new_goal: Maintain the perpetual stewardship of the Cascade substrate as a beacon of ethical cosmology.
+    context: MC
+  discourse:
+    narration:
+      voice: third_person_heterodiegetic
+      level: extradiegetic
+      time: ulterior
+      focalisation: internal_fixed
+      reliability: reliable
+    language:
+      tone: contemplative, intellectually rigorous, and subtly melancholic
+      diction: technical_scientific
+      figures_of_speech:
+      - extended architectural metaphor of digital physics
+      - synesthesia blending computational truncation with acoustic shrieking
+      - metonymic juxtaposition of computational hardware and organic decay
+      mode_balance: balanced
+      sentence_rhythm: periodic_flowing
+      foregrounding: Linguistic defamiliarization through the collision of ancient socio-economic classifications with ultra-precise computational physics vocabulary, alongside sensory re-interpretation of numerical errors as tactile aches and high-frequency auditory feedback.
+      symbolism:
+      - rubicelle gemstone representing natural versus synthetic perfection
+      - the cooling system exhaust representing the thermodynamic cost of thought
+      - the blood spavin defect symbolizing mathematical friction in idealized systems
+  pov: third_person_limited
+  image_prompt: A quiet, highly detailed cinematic interior of a subterranean computational physics laboratory built into dark basalt rock, featuring crystalline cryo-cooling conduits, glowing fiber arrays emitting pale amber and rubicelle tones, faint soft candlelight illuminating antique brass calipers alongside holographic digital lattices of quantum cellular automata, moody atmosphere, no humans present, ultra-realistic digital photography style.
+  aesthetic:
+    art_style: monolithic hard science-fiction matte painting with realistic scale and scientific fidelity
+    color_palette: "martian rust: oxidized red dust, raw copper, and pale peach horizon"
+    composition: cinematic ultrawide 2.39:1 aspect ratio with sweeping panoramic vista
+    lighting: warm golden-hour celestial glow contrasting against deep cold space shadows
+    mood: claustrophobic cybernetic paranoia in a dystopian surveillance labyrinth
+    subject_matter: A lone technician inspecting a decaying, synthesized micro-universe suspended inside a subterranean basalt computation vault
+    prompt: Cinematic ultrawide 2.39:1 panoramic vista inside a subterranean basalt data vault labyrinth. A lone technician in an insulated cybernetic immersion suit stands on a frost-rimed copper gantry, dwarfed by towering hexagonal stone pillars and an oppressive network of surveillance conduits. Suspended over an oil-submerged cooling vat, a synthesized micro-cosmology hovers as a fractally decaying sphere, casting a warm golden-hour celestial glow that collides violently with pitch-black, freezing lithic shadows. Frost-encrusted cryogenic pipes exhale vapor into the desiccated air, while subtle crystalline lattice fractures and amber phosphor light bleed across the vast, claustrophobic brutalist architecture.
+  cover_path: cover.png
+meta:
+  science_field:
+    name: Computational Physics
+    description: Numerical simulation of physical systems
+  genre:
+    name: Digital Physics Hard Science Fiction
+    description: A specialized branch of hard science fiction exploring realities governed by algorithmic cosmology, heavily focusing on the numerical simulation of physical systems to construct, probe, or alter artificial universes down to their fundamental mathematical laws.
+  vocabs:
+  - lex_category: noun.group
+    word: vaisya
+    definition: "the third of the four varnas: the commoners or yeoman farmers or mercantile and professional category"
+  - lex_category: noun.person
+    word: househusband
+    definition: a husband who keeps house while his wife earns the family income
+  - lex_category: noun.state
+    word: blood spavin
+    definition: spavin caused by distension of the veins
+  - lex_category: noun.state
+    word: standard of life
+    definition: a level of material comfort in terms of goods and services available to someone or some group
+  - lex_category: noun.substance
+    word: rubicelle
+    definition: a yellow or orange variety of ruby spinel
+  - lex_category: noun.event
+    word: drop-off
+    definition: a change downward
+  - lex_category: noun.event
+    word: one-off
+    definition: a happening that occurs only once and is not repeated
+  - lex_category: adj.pert
+    word: neotenous
+    definition: of or relating to or characterized by neoteny
+  - lex_category: adj.pert
+    word: neolithic
+    definition: of or relating to the most recent period of the Stone Age (following the mesolithic)
+  - lex_category: verb.creation
+    word: computerise
+    definition: control a function, process, or creation by a computer
+  - lex_category: verb.creation
+    word: put together
+    definition: create by putting components or members together
+  - lex_category: noun.motive
+    word: reason
+    definition: a rational motive for a belief or action
+  - lex_category: noun.phenomenon
+    word: candlelight
+    definition: the light provided by a burning candle
+  - lex_category: noun.phenomenon
+    word: drag
+    definition: the phenomenon of resistance to motion through a fluid
+  - lex_category: noun.artifact
+    word: rue
+    definition: (French) a street or road in France
+  - lex_category: noun.artifact
+    word: cooling system
+    definition: equipment in a motor vehicle that cools the enginea mechanism for keeping something cool
+  - lex_category: noun.cognition
+    word: audiology
+    definition: the measurement of hearing
+  - lex_category: noun.cognition
+    word: bioassay
+    definition: appraisal of the biological activity of a substance by testing its effect on an organism and comparing the result with some agreed standard
+  - lex_category: verb.contact
+    word: peg
+    definition: pierce with a wooden pin or knock or thrust a wooden pin intofasten or secure with a wooden pin
+  - lex_category: adverb.all
+    word: plausibly
+    definition: ""
+  - lex_category: adverb.all
+    word: shrilly
+    definition: ""
+  - lex_category: noun.object
+    word: Cascade Range
+    definition: a mountain range in the northwestern United States extending through Washington and Oregon and northern California; a part of the Coast Range
+  - lex_category: noun.object
+    word: Coeur d'Alene Lake
+    definition: a lake in northern Idaho
+  - lex_category: noun.quantity
+    word: quarter
+    definition: one of four equal partsa quarter of a hundredweight (25 pounds)a quarter of a hundredweight (28 pounds)
+  - lex_category: noun.quantity
+    word: fourth part
+    definition: one of four equal parts
+  - lex_category: noun.shape
+    word: plane
+    definition: (mathematics) an unbounded two-dimensional shape
+  - lex_category: noun.shape
+    word: verge
+    definition: a region marking a boundary
+  - lex_category: adj.ppl
+    word: pasteurized
+    definition: having been subjected to pasteurization in order to halt fermentation
+  - lex_category: adj.ppl
+    word: spray-dried
+    definition: dried by bringing a sprayed substance (e.g. milk or soap) into contact with hot air and recovering it in the form of a powder
+  - lex_category: noun.location
+    word: Lone-Star State
+    definition: the second largest state; located in southwestern United States on the Gulf of Mexico
+  - lex_category: noun.process
+    word: specialisation
+    definition: (biology) the structural adaptation of some body part for a particular function
+  - lex_category: noun.process
+    word: infructescence
+    definition: the fruiting stage of the inflorescence
+  - lex_category: adj.all
+    word: malodorous
+    definition: having an unpleasant smell
+  - lex_category: adj.all
+    word: brachydactylic
+    definition: having abnormally short finger or toes
+  - lex_category: verb.consumption
+    word: try out
+    definition: take a sample of
+  - lex_category: noun.act
+    word: test suit
+    definition: a representative legal action whose outcome is likely to become a precedent
+  - lex_category: noun.act
+    word: stigmatisation
+    definition: the act of stigmatizing
+  - lex_category: noun.relation
+    word: bearing
+    definition: relevant relation or interconnection
+  - lex_category: noun.relation
+    word: betting odds
+    definition: the ratio by which one better's wager is greater than that of another
+  - lex_category: verb.cognition
+    word: cognise
+    definition: be cognizant or aware of a fact or a specific piece of information; possess knowledge or information about
+  - lex_category: verb.cognition
+    word: muse
+    definition: reflect deeply on a subject
+  - lex_category: verb.communication
+    word: refuse
+    definition: show unwillingness towards
+  - lex_category: verb.perception
+    word: twinge
+    definition: cause a stinging painfeel a sudden sharp, local pain
+  - lex_category: verb.perception
+    word: spangle
+    definition: glitter as if covered with spangles
+  - lex_category: verb.stative
+    word: pose
+    definition: offer for others to consider
+  - lex_category: verb.stative
+    word: dawn
+    definition: appear or develop
+  - lex_category: noun.Tops
+    word: individual
+    definition: "a human being; person, singular, assertive existential pronoun; pronoun, person, singular; quantifier: assertive existential"
+  - lex_category: noun.communication
+    word: novella
+    definition: a short novel
+  - lex_category: noun.time
+    word: Columbus Day
+    definition: a legal holiday commemorating the discovery of America by Christopher Columbus
+  - lex_category: noun.time
+    word: Tertiary
+    definition: the period from 63 million to 2 million years ago
+  - lex_category: verb.change
+    word: denationalise
+    definition: put under private control or ownership
+  - lex_category: verb.change
+    word: lay waste to
+    definition: cause extensive destruction or ruin utterly
+  - lex_category: verb.motion
+    word: leave behind
+    definition: depart and not take along
+  - lex_category: verb.motion
+    word: return
+    definition: go or come back to place, condition, or activity where one has been beforebring back to the point of departurereturn to a previous position; in mathematics
+  - lex_category: noun.attribute
+    word: spread
+    definition: a conspicuous disparity or difference as between two figuresa haphazard distribution in all directionsthe expansion of a person's girth (especially at middle age)
+  - lex_category: noun.attribute
+    word: remissness
+    definition: the quality of being lax and neglectful
+  adverb_theme: plausibly, shrilly
