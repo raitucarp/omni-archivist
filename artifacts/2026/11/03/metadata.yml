@@ -1,0 +1,607 @@
+story:
+  title: Before the Distillate Clears
+  subtitle: Notes on the Permeation of Interstellar Dust
+  blurb: |-
+    In the shadow of starless molecular nurseries, interstellar distillers gather primordial ice not with reckless speed, but through patient, physical immersion. Here, cosmochemistry is an artisanal craft of tactile discernment, where volatile grains spend centuries soaking inside porous mineral matrices before revealing their isotopic secrets. Understanding these primordial hydrocarbons cannot be reduced to distant telemetry; it demands direct, person-to-person transmission between generations of guild observers living aboard solitary extraction rigs.
+    
+    When a harvesting run in the cold envelope yields hydrocarbon lattices forming impossible octahedral symmetries, the long-standing consensus on galactic nucleosynthesis fractures. The measured energy levels and mass defects do not align with any known stellar furnace, pointing instead to an uncataloged pathway of cold molecular genesis. Faced with anomalous readings that dogmatic institutions dismiss as sensor degradation, an isolated refinery station must decide whether to discard the unclassifiable samples or challenge the core tenets of cosmic chemistry.
+    
+    Before the Distillate Clears is a meditation on the intimacy of discovery, the quiet weight of deep time, and the enduring human compulsion to decipher our origins from the silent dust between the stars.
+  logline: A routine spectrographic census across cold circumstellar envelopes unearths an impossible isotopic anomaly in polycyclic hydrocarbons, challenging the long-held dogma that nucleosynthetic mass defects follow immutable Galactic decay gradients.
+  synopsis: Across the cold perimeter of the Taurus Molecular Cloud, mobile cosmochemical refineries operate not through automated hegemony, but through an institutional culture of radical decentralization where knowledge is communicated strictly person-to-person. Within these sprawling extraction rigs, researchers examine how interstellar dust grains undergo protracted chemical accretion, soaking in ambient cryogenic volatiles over millennia until complex aromatic mantles mat up across porous mineral cores. The trade avoids bureaucratic automation to freewheel through empirical experimentation, compelling distillers to ratiocinate every anomaly in carbon-isotope fractionation directly against baseline stellar nucleosynthesis. When anomalous polycyclic hydrocarbon matrices, crystallizing as a perfect regular octahedron upon substrates of conductive FTO glass, reveal isotopic ratios that defy standard projection models, the guilds must reinvent their interpretive doctrines rather than dismiss the phenomenon as measurement noise or an erroneous belief inherited from early spectroscopic surveys. Every prime quantity of synthesized prebiotic condensate must be preserved in a vulcanized silicone rubber jug, insulated against the uninviting vacuum and shielded as carefully as blood laden with oxyhaemoglobin traversing an anatomical boundary. As vessels winterize their external collector wings and cross-docking berths await disembarkation protocols, observers analyze subtle shifts in each nuclear energy level and calculate the precise mass defect responsible for the strange chemical bonding. The historical precedent of early scientific societies—from the textile guilds of Lodz to private clinical academies on Harley Street—serves to teach these observers the sheer admirability of communal peer appraisal. Navigating this intellectual wrinkle in cosmochemical orthodoxy requires scholars to bring forth an institutional amendment to stellar enrichment theory. They reject the notion that complex molecules arise solely within a violent stellar inferno; instead, cold grain chemistry generates rich organic precursors whose physical geometries resemble delicate, folded wainscoting traced in wax crayon, evoking the surreal linework of Cocteau. Calculations involving the arccos of molecular bond angles clarify how ballistic micro-meteoroid collisions cause superficial acneiform pitting and wart-like catalytic nodules across dust collectors without compromising internal condensation chambers. Far from terrestrial river deltas like the Yangtze or the sub-arctic Mackenzie, and detached from terrestrial histories such as the medieval Christianisation of borderlands or planetary epidemics like chlamydia, these floating laboratories measure elapsed epochs through quiescent radio spectra. The crews see subtle aesthetic vibes in raw spectral data, watching baseline excitation signals steadily go up as primordial matter reveals its structural continuity from interstellar silts to the middle of emerging star systems.
+  theme:
+    central_premise: Genuine scientific comprehension requires prolonged, unhurried permeation within natural phenomena and intimate, person-to-person intellectual solidarity rather than detached computational extrapolation.
+    speculative_inquiry: How do non-equilibrium interstellar surface reactions at sub-kelvin temperatures synthesize prebiotic structural order without stellar nucleosynthetic mediation?
+    motifs:
+    - cryogenic condensation films
+    - octahedral crystal lattices
+    - manual distillation flasks
+    - optical spectra of hydrocarbon mantles
+    ideology: critical
+    morality: The duty to preserve scientific anomalies and pursue unvarnished material truth over institutional dogma and reputational comfort.
+    identity: The transition of human self-conception from masters of machine automation to patient participants within slow cosmic chemical cycles.
+  setting:
+    macro: The cold outer fringes of the Taurus Molecular Cloud, an undulating, light-starved star-forming complex stretching across dozens of parsecs of interstellar space, characterized by dense filaments of sub-kelvin silicates, dark nebular lanes obscuring background starlight, and scattered proto-stellar incubators whose long-wave infrared glows are muffled by vast sheets of primordial dust.
+    meso: A loosely tethered drift-guild flotilla of mobile cosmochemical refineries and long-baseline distillation barges, connected by cryogenic transfer trusses, unpressurized catenary bridges, and shared radio-quiescent drift paths, operating without centralized command as modular, independent extraction workshops.
+    micro: The Primary Distillation Vault of an artisanal refinery barge, an insulated, non-magnetic workshop dominated by cryogenic cold-finger condensation trees, vibration-damped optical benches mounted with fluorine-doped tin oxide (FTO) glass plates, storage racks for vulcanized silicone rubber carboys, and brass-trimmed mass spectrometer ports lined with manually annotated chalkboards.
+    topography: An orthogonal, skeletal superstructure of non-sparking beryllium-copper trussing wrapped in multi-layer gold-kapton thermal blankets. The central core consists of a cylindrical vacuum-isolated processing spine flanked by outward-projecting electrostatic dust collector wings whose micro-metered collector foils show dense acneiform cratering. Interstitial corridors are narrow, pressurized access ways lined with braided glycol loops, hand-cranked vacuum lockdoors, and zero-gravity handrails, terminating in a flared docking bay where distillation tenders berth at manual docking collars.
+    atmosphere: "An intensely controlled micro-climate within the pressurized compartments: chilled, bone-dry air filtered to class-10 cleanroom purity, carrying the faint, sharp tang of ozone, cold vulcanized rubber, and desorbed heavy alkanes. Ambient lighting is muted amber and monochrome sodium-safe glow to prevent photochemical degradation on collector slides. The acoustic profile is dominated by the rhythmic, low-frequency chug of liquid helium pulse-tube cryocoolers, punctuated by the metallic click of hand-actuated vacuum ball valves and the dull shudder of micrometeoroids against external deflector baffles."
+    kind: functional
+    function: functional_causal
+    chronotope: "The artisanal chronotope of deep-time distillation: a collision of cosmic epochs spanning millions of years of interstellar accretion and molecular cloud migration with the immediate, tactile tempo of human shift-work, hand-scored analytical runs, and oral guild succession, where spatial distance is measured by fractional isotopic drift across parsecs rather than linear velocity."
+    verisimilitude: "Rigorous grounding in physical chemistry, cryogenics, and surface science: detailed documentation of radical-radical surface catalysis at 10 Kelvin, conductive FTO glass substrates, anomalous mass defects in polycyclic aromatic hydrocarbon condensation, mechanical vulcanized elastomeric seals resistant to cosmic embrittlement, and manual, peer-reviewed spectroscopic calibration that defamiliarizes traditional high-tech automation in favor of historical guild craftmanship."
+  structure:
+    kind:
+    - M
+    - I
+    - C
+    - E
+    logic:
+    - "Milieu: Deposition begins across the cryogenic Taurus Molecular Cloud extraction rigs and concludes as winterized collector vessels seal their berths in quiescent radio spectra."
+    - "Inquiry: The anomaly of regular octahedral hydrocarbon matrices defying stellar nucleosynthesis opens the investigation, which closes when bond-angle and mass-defect calculations prove cold-grain enrichment."
+    - "Character: Guild distillers struggle between inherited orthodoxies and unautomated empirical instincts, resolving as they embrace a collective institutional amendment to their scientific identity."
+    - "Event: The delicate extraction and preservation of prime prebiotic condensate in vulcanized silicone jugs acts as the catalytic trial that validates the paradigm shift."
+    type_use: Classic exploratory literary SF / speculative fiction
+  plot:
+    conflict:
+      type: character_vs_ideas
+    arc:
+      exposition: Cosmochemical refinery vessels patrol the fringe of the Taurus Molecular Cloud, harvesting interstellar grain mantles through decentralized craft methods and apprentice-based knowledge systems.
+      inciting_incident: Refinery sensors detect polycyclic organic compounds within cold dust envelopes exhibiting impossible isotopic ratios and unexpected mass defects that contradict canonical nucleosynthetic models.
+      rising_action: Guild researchers carry out manual cryogenic distillations, facing pushback from central planetary institutes that advocate discarding the data as instrument contamination or anomalous noise on FTO collector plates.
+    order: chronological
+    duration: balanced_ellipsis
+    frequency: singulative
+    micro_emplotment: suspense_driven
+  characters:
+  - name: Sariha Batubara
+    gender: Female
+    description: A quiet, sharp-eyed mantle distiller whose hands are stained with cryogenic solvents. She evaluates stellar dust not through algorithmic models, but through the tactile, sensory craft of fractional condensation.
+    role: Senior Hydrocarbon Distiller & Collector Rig Lead
+    actant_role: protagonist
+    complexity: round
+    development: dynamic
+    characterisation: mixed
+    individuation:
+      physical: Compact, wiry build honed by crawling inside sub-kelvin collector sleeves; blunt calloused fingers marked with cold-contact keloids; wears a faded indigo aerogel smock.
+      mental: Possesses a synesthetic perception of chemical spectra, linking isotopic ratios to musical timbre; holds a deep aversion to automated black-box sensors.
+      behavioural: Habitually wipes glass slides on her wool lapel before inspecting them under oblique lamplight; pauses mid-sentence to listen to the mechanical drone of cryogenic pumps.
+    motivation: To prove that the anomalous octahedral hydrocarbon crystals grown upon her FTO plates are primordial relics of cold interstellar grain accretion, rather than anomalies or contaminants.
+    conflict: Internally wrestles with doubt regarding her own empirical senses against centuries of established stellar physics, while externally defending her rig's manual distillation practices from synod standardization.
+  - name: Kallol Bandyopadhyay
+    gender: Male
+    description: An aging substrate glassmaker and thermal mason who shapes conductive tin-oxide plates by hand, viewing glass annealing as an alchemical dialogue between heat and cold vacuum.
+    role: Master Glass-Smith and Substrate Fabricator
+    actant_role: mentor
+    complexity: round
+    development: static
+    characterisation: direct
+    individuation:
+      physical: Stooped posture with heavy shoulders; thick silver hair swept back; carries brass-rimmed inspection loupes slung around his neck like a rosary.
+      mental: Contemplative, patient to a fault, yet intensely stubborn; regards mathematics not as absolute truth, but as a scaffold for tangible material reality.
+      behavioural: Taps the edge of freshly annealed glass plates with an ivory tuning peg to gauge structural resonance; mutters archaic workshop mnemonics while adjusting burner flames.
+    motivation: To pass down the unwritten, artisanal methods of crystal substrate deposition before automated chemical vapor deposition renders the human touch obsolete.
+    conflict: Torn between his protective instinct over traditional guild lore and the realization that their current methods cannot explain the bizarre isotopic mass defect without radically updating their philosophy.
+  - name: Abeba Desta
+    gender: Non-binary
+    description: An exacting scribe and mass-balance cryptographer who documents every microgram of prebiotic distillate into vellum ledgers using carbon inks ground from spent cosmic dust.
+    role: Guild Registrar & Mass Defect Cryptographer
+    actant_role: foil
+    complexity: round
+    development: dynamic
+    characterisation: indirect
+    individuation:
+      physical: Tall and spare; closely cropped hair; dark eyes ringed with faint fatigue; wears a stiff linen coat with horn buttons and charcoal-dusted sleeves.
+      mental: Analytical and prone to panic when confronting untracked mass losses; comforted by symmetrical geometry and rigid tabular records.
+      behavioural: Incessantly counts syllables and calculates fractional mass balances on a handheld boxwood abacus whenever a conversation pauses.
+    motivation: To achieve an airtight, unimpeachable accounting of the Taurus Cloud's isotopic budgets that no external regulatory board can dispute.
+    conflict: Caught between a duty to report data discrepancies to the wider stellar trading networks and an allegiance to the rig's tight-knit collective that fears confiscation of their samples.
+  - name: Anahita Rostami
+    gender: Female
+    description: A seasoned itinerant assayer representing the regional stellar trade synod, equipped with precision optical interferometers and a mandate to enforce uniform nucleosynthetic models.
+    role: Synod Assayer & Orthodoxy Inspector
+    actant_role: opponent
+    complexity: round
+    development: dynamic
+    characterisation: mixed
+    individuation:
+      physical: Imposing, deliberate gait; hair bound in a tight oiled coil under a high-collared graphite-fiber coat; sharp cheekbones dusted with protective white zinc ointment.
+      mental: Dogmatically devoted to institutional stability as a shield against cosmic indifference, yet secretly starved for genuine intellectual discovery.
+      behavioural: Triple-taps the seal of every sample vial with a titanium stylus before reading optical densities; refuses to speak until all chamber fans have wound down.
+    motivation: To maintain coherent interstellar trade and safety standards across dispersed refineries by eliminating spurious, unverifiable chemical claims.
+    conflict: Her mandate requires her to debunk the rig's impossible octahedral condensates as measurement artifacts, but her own empirical background forces her to confront that the anomaly is genuine.
+  scene_sequels:
+  - scene:
+      goal:
+        description: Stabilize the rig's manual distillation condenser along the perimeter of the Taurus Molecular Cloud to secure pristine cryogenic interstellar dust samples.
+        stakes:
+          external: A failure to hold the collector's cryogenic baseline will boil off centuries of accreted interstellar grain mantles into the void.
+          internal: Admitting failure would substantiate Synod claims that manual artisanal distillation is an obsolete hazard.
+      conflict:
+        opposition:
+          type: environment
+          description: The harsh, quiescent cold front of the Taurus Cloud creates severe thermal gradients that threaten to shatter unautomated condenser manifolds.
+        escalation:
+          beats:
+          - Ambient helium pressures surge across the external baffle arrays, threatening premature vacuum blow-off.
+          - Manual cryo-valves ice over, forcing distillers to scrape frost directly from high-voltage sensor conduits.
+          - A sudden micro-meteoroid flutter scores the FTO glass viewing ports, warping thermal insulation.
+      disaster:
+        outcome: Success with cost
+        consequence:
+          plot: The collector rig secures a stable envelope of raw interstellar silt, but the intake manifold seals permanently off-line.
+          character: Sariha realizes their operational margins are razor-thin and that their isolation makes them exceptionally vulnerable.
+    sequel:
+      reaction:
+        emotional:
+          immediate: Exhaustion laced with defiant pride.
+          physical: Numbness in the fingertips, teeth chattering from cabin thermal bleeds, and acrid ozone stinging the throat.
+        processing: Sariha evaluates the cost of holding the rig against the pristine quiet of the Taurus cloud, recognizing that manual control demands total bodily sacrifice.
+      dilemma:
+        options:
+        - choice: Vent the outer chamber to reset thermal stress and lose volatile condensates.
+          cost: Sacrifice irreplaceable surface volatiles gathered across an eighty-hour sweep.
+          risk: Losing empirical validation for cold mantle accretion before analysis begins.
+        - choice: Lock down the collector wing manually and preserve the unanalyzed frost on raw FTO plates.
+          cost: Locking the crew inside a semi-depressurized workshop without auxiliary heating.
+          risk: Catastrophic rupture of the brittle glass collector array.
+      decision:
+        chosen_option: Lock down the collector wing manually and preserve the unanalyzed frost on raw FTO plates.
+        rationale: Empirical discovery requires physical artifacts; without the intact mantle, theoretical arguments are meaningless.
+        new_goal: Examine the preserved accretion layers on the FTO glass plates under micro-spectroscopy.
+    context: MO
+  - scene:
+      goal:
+        description: Analyze the anomalous geometric crystal matrices forming on the conductive FTO glass substrates to identify their isotopic ratios.
+        stakes:
+          external: Missing anomalous data means misinterpreting interstellar grain chemistry as standard circumstellar debris.
+          internal: Risking intellectual isolation by questioning foundational Galactic nucleosynthetic gradient models.
+      conflict:
+        opposition:
+          type: system
+          description: The cryptographic mass-defect ledger rejects the anomalous isotopic readings as sensor artifacts and corrupts the record.
+        escalation:
+          beats:
+          - Spectral peaks register an impossible excess of carbon-13 tightly bound within an octahedral symmetry.
+          - Abeba's diagnostic software flags the run as corrupted by terrestrial handling and attempts an automated purge.
+          - Kallol intervenes to mechanically freeze the write-heads, risking permanent damage to the rig's cryptography core.
+      disaster:
+        outcome: Partial success
+        consequence:
+          plot: The crystal's octahedral structure and mass defect are recorded, but the registry flags the dataset as unverified heresy.
+          character: Abeba is shaken by the undeniable empirical proof that their authoritative stellar models are fundamentally incomplete.
+    sequel:
+      reaction:
+        emotional:
+          immediate: Dizzying cognitive vertigo and acute professional dread.
+          physical: A tightening knot in the solar plexus and rapid, shallow breathing under the dim glow of cryptographic displays.
+        processing: Abeba calculates the statistical impossibility of the data being an artifact, realizing that interstellar cold grains synthesize complex rings independently of stars.
+      dilemma:
+        options:
+        - choice: Quarantine the anomalous reading as instrumental noise to preserve guild standing.
+          cost: Complicity in suppressing an epoch-making cosmological discovery.
+          risk: The guild's eventual loss of empirical credibility when external assayers detect it.
+        - choice: Publish the raw mass-defect ratios directly to the decentralized registrar network.
+          cost: Drawing immediate regulatory scrutiny and potential seizure from the Synod.
+          risk: Premature condemnation before the crystallization mechanism can be fully proven.
+      decision:
+        chosen_option: Publish the raw mass-defect ratios directly to the decentralized registrar network.
+        rationale: A registrar's ultimate allegiance is to isotopic reality, regardless of institutional disturbance.
+        new_goal: Defend the authenticity of the octahedral crystals against Synod Assayer Anahita Rostami.
+    context: IO
+  - scene:
+      goal:
+        description: Defend the manual deposition techniques and artisanal FTO substrate integrity to Synod Assayer Anahita Rostami.
+        stakes:
+          external: Synod decertification would force the immediate automated dismantling of the refinery rig.
+          internal: Kallol faces the obsolescence of his life's artisanal glass-craft if he cannot justify human touch.
+      conflict:
+        opposition:
+          type: person
+          description: Synod Assayer Anahita Rostami, determined to classify the unautomated plates as irregular contamination vectors.
+        escalation:
+          beats:
+          - Anahita demands a destructive spectrographic scrape of the regular octahedral hydrocarbon faces.
+          - Kallol physically blocks the robotic micro-tome, offering his own hand-annealed control plates instead.
+          - Anahita reveals an official decertification warrant, threatening immediate closure if standard protocols are resisted.
+      disaster:
+        outcome: Failure
+        consequence:
+          plot: Anahita rejects the guild's qualitative notes and demands a definitive physical extraction under strict assay conditions.
+          character: Kallol feels the crushing weight of institutional arrogance, questioning if artisanal knowledge can survive imperial metrics.
+    sequel:
+      reaction:
+        emotional:
+          immediate: Stifled indignation and bitter humiliation.
+          physical: Trembling hands clutching a glass-annealing rod, pulse pounding in his ears against the synthetic whir of Synod sensors.
+        processing: Kallol understands that pure tradition will not persuade the Synod; only flawless chemical extraction under hostile observation will force concession.
+      dilemma:
+        options:
+        - choice: Surrender the master plates to Anahita for standardized off-site automated dissolution.
+          cost: Loss of custody and the near-certain destruction of the delicate grain geometry.
+          risk: The anomaly will be written off as sample contamination during transit.
+        - choice: Perform an immediate manual extraction of the live prebiotic condensate in front of the assayer.
+          cost: Risking the entire harvest and rig safety in an unshielded open-manifold tap.
+          risk: Immediate, public failure resulting in instant rig impoundment and guild expulsion.
+      decision:
+        chosen_option: Perform an immediate manual extraction of the live prebiotic condensate in front of the assayer.
+        rationale: Only an unassailable demonstration of manual extraction under extreme cold can prove both the guild's competence and the anomaly's truth.
+        new_goal: Prepare the distillation column for a direct harvest of the condensate into vulcanized silicone jugs.
+    context: CO
+  - scene:
+      goal:
+        description: Transfer the volatile, prime prebiotic condensate from the collector manifold into insulated vulcanized silicone rubber jugs.
+        stakes:
+          external: A containment breach will flash-boil the unstable prebiotics into the cryogenic vacuum, destroying the proof.
+          internal: Sariha must overcome panic to perform fine-motor manual sealing in freezing, unpressurized gear.
+      conflict:
+        opposition:
+          type: environment
+          description: Rapid phase-change kinetics and vacuum sublimation threatening catastrophic valve freeze-up.
+        escalation:
+          beats:
+          - The condensate shifts phase prematurely, expanding against the manifold glass and cracking the primary line.
+          - Condensation vapor fogs the rig's unheated faceplates, obscuring the transfer meniscus.
+          - Micro-meteoroids strike the external housing, triggering mechanical vibration throughout the siphon.
+      disaster:
+        outcome: Partial success
+        consequence:
+          plot: The precious liquid distillate is secured within vulcanized jugs, but a micro-fracture vents the auxiliary stabilization chamber.
+          character: Sariha is physically drained, terrified that the volatile compounds degraded during the harrowing transfer.
+    sequel:
+      reaction:
+        emotional:
+          immediate: A visceral, trembling rush of relief cut short by panic over sample integrity.
+          physical: Lactic acid burn in the forearms, gloves slick with sub-zero condensate residue, cold sweat stinging the eyes.
+        processing: Sariha assesses the sealed rubber jugs, realizing that holding the liquid is only half the battle—the chamber rupture now exposes them to deep vacuum.
+      dilemma:
+        options:
+        - choice: Abandon the depressurizing bay immediately and seal the inner hatch, leaving the diagnostic gear behind.
+          cost: Loss of real-time isotopic monitoring equipment needed to track mass defects.
+          risk: Inability to verify if the condensate is decaying inside the insulated jugs.
+        - choice: Remain in the compromised bay to patch the manifold and calibrate isotopic monitoring sensors.
+          cost: Depleting emergency suit reserves in an environment peppered by micro-debris.
+          risk: Fatal suit puncture or severe asphyxiation before the hatch can be closed.
+      decision:
+        chosen_option: Remain in the compromised bay to patch the manifold and calibrate isotopic monitoring sensors.
+        rationale: The condensate's scientific value evaporates the moment real-time tracking ceases; the proof must remain unbroken.
+        new_goal: Seal the collector wing breach while keeping real-time mass-defect telemetry active.
+    context: EO
+  - scene:
+      goal:
+        description: Seal the breached bay and lock down the vulcanized silicone canisters amidst continuing micrometeoroid impacts.
+        stakes:
+          external: Structural failure of the collector wing will shear the storage racks and cast the vulcanized jugs into the interstellar cloud.
+          internal: Abeba must conquer paralyzing operational terror to execute high-stress manual sealing alongside Sariha.
+      conflict:
+        opposition:
+          type: environment
+          description: A relentless swarm of ballistic dust grains puncturing outer hull wainscoting and depressurizing the compartment.
+        escalation:
+          beats:
+          - A grain punctures the primary valve collar of the vulcanized silicone transfer line.
+          - Abeba manually shunts cryogenic resin into the leak, their protective glove bonding to the freezing metal.
+          - Structural struts groan under differential pressure, threatening to sever the docking clamps.
+      disaster:
+        outcome: Success with cost
+        consequence:
+          plot: The bay is hermetically sealed and the prebiotic jugs are locked in cold-storage, but Abeba suffers severe cold burns.
+          character: Abeba gains unshakable confidence in their empirical resilience, casting off fear of physical and institutional threats.
+    sequel:
+      reaction:
+        emotional:
+          immediate: A profound, cathartic stillness breaking through sheer terror.
+          physical: Numbness spreading through the left hand from the sub-zero resin seal, chest heaving inside the depressurized suit.
+        processing: Abeba sees that the physical trial is over; the matter is saved, insulated, and undeniable, resting safely in vulcanized rubber.
+      dilemma:
+        options:
+        - choice: Submit the sealed jugs to immediate Synod containment without preliminary bond-angle verification.
+          cost: Giving Anahita unilateral authority over the interpretation of the mass-defect data.
+          risk: The Synod assayer might downplay or reclassify the findings under trade-standard rubrics.
+        - choice: Demand an immediate joint open-air analysis within the rig's communal hall before docking.
+          cost: Straining relations with the Synod to the brink of armed jurisdictional conflict.
+          risk: Formal charges of insubordination against the entire collector rig crew.
+      decision:
+        chosen_option: Demand an immediate joint open-air analysis within the rig's communal hall before docking.
+        rationale: Empirical truth must be witnessed communally, rooted in peer appraisal rather than behind Synod vaults.
+        new_goal: Confront Anahita with the physical sample to force an empirical reckoning.
+    context: EC
+  - scene:
+      goal:
+        description: Reconcile the empirical evidence of cold-grain crystallization with Anahita's regulatory framework in the guild hall.
+        stakes:
+          external: Failure to convince Anahita means facing criminal charges of falsifying interstellar trade commodities.
+          internal: Anahita must confront the collapse of her dogmatic reliance on stellar-inferno nucleosynthesis.
+      conflict:
+        opposition:
+          type: person
+          description: Anahita Rostami struggles desperately against her own institutional mandate to discredit the anomaly.
+        escalation:
+          beats:
+          - Anahita inspects the perfect regular octahedron through an artisanal refractive loupe, finding zero dislocation defects.
+          - Kallol presents the historical precedents of early decentralized guild science, challenging her definition of safety.
+          - Anahita uncovers an unexplainable energy-level shift in the mass spectra that directly refutes high-temperature formation.
+      disaster:
+        outcome: Success
+        consequence:
+          plot: Anahita breaks with Synod dogma, agreeing to co-author an emergency amendment validating cold interstellar accretion.
+          character: Anahita transforms from an enforcer of rigid dogma into an active defender of decentralized empirical science.
+    sequel:
+      reaction:
+        emotional:
+          immediate: Dawning awe mingled with grief for lost certainties.
+          physical: A loosening in the jaw and neck, fingers trembling as she sets down the official regulatory seal.
+        processing: Anahita realizes her entire career was constructed around an incomplete cosmological picture, and that true stewardship requires embracing the unknown.
+      dilemma:
+        options:
+        - choice: File a standard assayer clearance report that omits the theoretical heresy to keep her post.
+          cost: Betraying the empirical miracle sitting before her eyes.
+          risk: Leaving interstellar refineries trapped under flawed nucleosynthetic paradigms.
+        - choice: Sign the guild's joint manifesto, declaring cold interstellar dust as an independent source of complex prebiotics.
+          cost: Endangering her standing and pension within the Synod hierarchy.
+          risk: Targeted regulatory retaliation against her and the Taurus collector collective.
+      decision:
+        chosen_option: Sign the guild's joint manifesto, declaring cold interstellar dust as an independent source of complex prebiotics.
+        rationale: Intellectual integrity cannot bow to administrative convenience when the universe reveals its true mechanics.
+        new_goal: Finalize the exact mathematical formulation of the bond angles and mass defects for interstellar publication.
+    context: CC
+  - scene:
+      goal:
+        description: Calculate the precise arccos bond angles and isotopic mass defect to prove cold-grain accretion over stellar-inferno origins.
+        stakes:
+          external: A mathematical flaw will allow conservative academies to dismiss the discovery as speculative mysticism.
+          internal: Sariha and Abeba must prove their artisanal, unautomated methods can yield unimpeachable mathematical rigor.
+      conflict:
+        opposition:
+          type: self
+          description: Lingering self-doubt and intellectual fatigue threatening to introduce calculation errors into the complex geometric proofs.
+        escalation:
+          beats:
+          - Initial geometric models fail to account for the regular octahedron's stability at 15 Kelvin.
+          - Abeba incorporates ballistic acneiform pitting data from collector plates to isolate catalytic surface reactions.
+          - Sariha maps the arccos of the anomalous bonding angles, revealing a perfect alignment with cold aromatic accretion.
+      disaster:
+        outcome: Success
+        consequence:
+          plot: The mathematical proof is watertight, formally rewriting interstellar organic chemistry to include cold accretion.
+          character: The crew experiences total vindication, shedding their defensive isolation in favor of intellectual triumph.
+    sequel:
+      reaction:
+        emotional:
+          immediate: A profound, reverent euphoria and mutual communion.
+          physical: Tears blurring tired eyes, deep steady breathing, the shared warmth of crowded hands around the ledger.
+        processing: Sariha realizes that their decentralized collective has permanently shifted humanity's understanding of cosmic material continuity.
+      dilemma:
+        options:
+        - choice: Monopolize the extraction method to ensure the rig's perpetual wealth and independence.
+          cost: Violating the guild's core philosophy of free, decentralized knowledge exchange.
+          risk: Creating a new corporate hegemony identical to the systems they resisted.
+        - choice: Broadcast the complete mathematical and technical protocol across all quiescent radio bands.
+          cost: Forfeiting commercial leverage over the prebiotic hydrocarbon market.
+          risk: Other rigs will copy the process without honoring the Taurus pioneers.
+      decision:
+        chosen_option: Broadcast the complete mathematical and technical protocol across all quiescent radio bands.
+        rationale: Scientific truth belongs to the collective expanse of humanity, not to intellectual hoarders.
+        new_goal: Prepare the rig for departure and winterize the collector wings as the survey cycle completes.
+    context: IC
+  - scene:
+      goal:
+        description: Execute the winterization protocols of the collector wings and dock with outbound trade vessels in quiescent radio spectra.
+        stakes:
+          external: Failure to properly winterize in the deep cloud could result in thermal stress cracking the primary hull during orbital transfer.
+          internal: Accepting the transition from active discovery to peaceful routine across the silent interstellar silts.
+      conflict:
+        opposition:
+          type: environment
+          description: The approaching deep cryogenic night of the Taurus Cloud, requiring total shutdown of non-essential systems.
+        escalation:
+          beats:
+          - Thermal blankets are manually battened down across the pitted collector hulls under zero illumination.
+          - The cross-docking berths hum with harmonic vibration as the outbound transport links up.
+          - Radio spectra fade into quiet background noise, leaving only ambient cosmic rays and settling condensation chambers.
+      disaster:
+        outcome: Success
+        consequence:
+          plot: The refinery enters quiescent winter configuration, its mission accomplished and its discovery safely dispatched.
+          character: Sariha looks out into the vast, silent dust grains, feeling deep harmony with the cold interstellar expanse.
+    sequel:
+      reaction:
+        emotional:
+          immediate: Serene contentment and deep, restorative peace.
+          physical: Warmth returning to the body inside thermal rest-linens, the soothing hum of quiescent station engines.
+        processing: Sariha reflects on the regular octahedrons resting safely in their vulcanized silicone rubber jugs, understanding that the universe builds beauty in the cold.
+      dilemma:
+        options:
+        - choice: Take a long shore-leave contract on a temperate inner system world.
+          cost: Leaving the cold frontier and the tight-knit guild community behind.
+          risk: Losing touch with the frontier distillation craft.
+        - choice: Remain with the rig through the long winterization cycle in the Taurus cloud.
+          cost: Enduring months of isolation, bitter cold, and meager rations.
+          risk: Further estrangement from baseline civilized comfort.
+      decision:
+        chosen_option: Remain with the rig through the long winterization cycle in the Taurus cloud.
+        rationale: Her purpose is tied to the quiet boundary where interstellar silt becomes life; there is nowhere else she belongs.
+        new_goal: Maintain the quiescent vigil and prepare the FTO glass plates for the next cosmic sweep.
+    context: MC
+  discourse:
+    narration:
+      voice: third_person_heterodiegetic
+      level: extradiegetic
+      time: ulterior
+      focalisation: internal_variable
+      reliability: reliable
+    language:
+      tone: contemplative, scholarly, and sensorially grounded
+      diction: technical_scientific
+      figures_of_speech:
+      - cosmochemical mineral metaphors
+      - tactile-cryogenic sensory analogies
+      - geometrical synecdoche
+      mode_balance: balanced
+      sentence_rhythm: syncopated_variable
+      foregrounding: Defamiliarization of cosmic space not as an empty void but as a dense, viscous chemical bath of cold synthesis; sensory translation of subatomic physics into guild craftsmanship.
+      symbolism:
+      - The regular octahedron as the triumph of natural order over institutional dogma
+      - Soaking as a philosophical posture of receptive, non-destructive observation
+      - The person-to-person transmission of truth against automated detachment
+  pov: third_person_limited
+  image_prompt: A cinematic, ultra-detailed wide interior shot of an astrochemical refinery habitat drifting in deep space near a dark molecular cloud. A large observation laboratory with dark-stained wainscoting and brass instruments contrast with cutting-edge cryo-spectrometers, fluorine-doped conductive glass plates, and glowing nebular mist visible through panoramic observation windows. Warm amber lamplight reflecting against cold, indigo-black outer space, quiet academic atmosphere, photorealistic hard science fiction aesthetic.
+  aesthetic:
+    art_style: Bauhaus constructivist minimalist sci-fi book jacket design with bold geometry
+    color_palette: "martian rust: oxidized red dust, raw copper, and pale peach horizon"
+    composition: centralized enigmatic artifact floating in zero gravity surrounded by intricate orbital debris
+    lighting: dramatic volumetric god rays cutting through dense swirling atmospheric dust and mist
+    mood: cosmic existential dread and awe before the incomprehensible scale of the universe
+    subject_matter: An anomalous, zero-gravity prebiotic hydrocarbon octahedron crystal floating amidst dense cryogenic interstellar dust and orbital drift debris.
+    prompt: A pristine, perfectly geometric regular octahedron crystal of dark, iridescent prebiotic hydrocarbon floats weightless at the focal center. Dramatic volumetric god rays slice through dense, swirling interstellar dust lanes and cryogenic vapor clouds, casting stark specular highlights across its micro-faceted obsidian faces. Surrounding the artifact, an intricate halo of suspended orbital debris, fractured conductive glass shards, and shimmering silicate ice grains drifts in microgravity. In the deep background looms the abyssal, light-starved void of the Taurus Molecular Cloud, pierced only by faint protostellar infrared embers. Muted monochromatic sodium-amber light contrasts against void blacks, evoking cosmic existential awe.
+  cover_path: cover.png
+meta:
+  science_field:
+    name: Cosmochemistry
+    description: Chemical composition of the universe
+  genre:
+    name: Astrochemical Hard Science Fiction
+    description: A hard science fiction niche centered on the exploration, extraction, and synthesis of non-terrestrial matter, deeply examining molecular clouds, cosmic isotopic abundances, and the broader chemical composition of the universe to drive narratives around primordial evolution, stellar nucleosynthesis, and extraterrestrial material science.
+  vocabs:
+  - lex_category: verb.cognition
+    word: ratiocinate
+    definition: reason methodologically and logically
+  - lex_category: verb.stative
+    word: freewheel
+    definition: live unhurriedly, irresponsibly, or freely
+  - lex_category: verb.consumption
+    word: recycle
+    definition: use again after processing
+  - lex_category: verb.creation
+    word: reinvent
+    definition: bring back into existencecreate anew and make over
+  - lex_category: verb.creation
+    word: crayon
+    definition: write, draw, or trace with a crayon
+  - lex_category: noun.act
+    word: disembarkation
+    definition: the act of passengers and crew getting off of a ship or aircraft
+  - lex_category: noun.cognition
+    word: erroneous belief
+    definition: a misconception resulting from incorrect information
+  - lex_category: noun.group
+    word: FTO
+    definition: a political movement that uses terror as a weapon to achieve its goals
+  - lex_category: noun.shape
+    word: regular octahedron
+    definition: an octahedron with eight equilateral triangles as faces
+  - lex_category: noun.location
+    word: Lodz
+    definition: a large city of central Poland
+  - lex_category: noun.location
+    word: Harley Street
+    definition: a street in central London where the consulting rooms of many physicians and surgeons are located
+  - lex_category: noun.process
+    word: projection
+    definition: (psychiatry) a defense mechanism by which your own traits and emotions are attributed to someone else
+  - lex_category: noun.process
+    word: decentralization
+    definition: the social process in which population and industry moves from urban centers to outlying districts
+  - lex_category: noun.quantity
+    word: prime quantity
+    definition: "a natural number that has exactly two distinct natural number divisors: 1 and itself"
+  - lex_category: noun.quantity
+    word: jug
+    definition: the quantity contained in a jug
+  - lex_category: noun.time
+    word: middle
+    definition: the point between the beginning and the end of a temporal period or process
+  - lex_category: adj.all
+    word: uninviting
+    definition: neither attractive nor temptingnot tempting
+  - lex_category: adj.all
+    word: pertinent
+    definition: having precise or logical relevance to the matter at handbeing of striking appropriateness and pertinence
+  - lex_category: verb.change
+    word: winterize
+    definition: prepare for winter
+  - lex_category: verb.change
+    word: mat up
+    definition: change texture so as to become matted and felt-like
+  - lex_category: verb.contact
+    word: wrinkle
+    definition: gather or contract into wrinkles or folds; puckermake wrinkles or creases on a smooth surface; make a pressed, folded or wrinkled line in; ‘crisp’ is archaicmake wrinkled or creased
+  - lex_category: verb.perception
+    word: bring forth
+    definition: bring out for display
+  - lex_category: noun.communication
+    word: amendment
+    definition: a statement that is added to or revises or improves a proposal or document (a bill or constitution etc.)
+  - lex_category: noun.phenomenon
+    word: energy level
+    definition: a definite stable energy that a physical system can have; used especially of the state of electrons in atoms or molecules
+  - lex_category: noun.phenomenon
+    word: mass defect
+    definition: the amount by which the mass of an atomic nucleus is less than the sum of the masses of its constituent particles
+  - lex_category: adj.ppl
+    word: elapsed
+    definition: (of time) having passed or slipped by
+  - lex_category: noun.artifact
+    word: vibes
+    definition: a percussion instrument similar to a xylophone but having metal bars and rotating disks in the resonators that produce a vibrato sound
+  - lex_category: noun.artifact
+    word: wainscoting
+    definition: a wainscoted wall (or wainscoted walls collectively)wooden panels that can be used to line the walls of a room
+  - lex_category: noun.person
+    word: Cocteau
+    definition: French writer and film maker who worked in many artistic media (1889-1963)
+  - lex_category: verb.motion
+    word: see
+    definition: come togetherconduct someone someplace
+  - lex_category: verb.motion
+    word: go up
+    definition: move upwardmove towardsbe erected, built, or constructedgo upward with gradual or continuous progresstravel up
+  - lex_category: adverb.all
+    word: person-to-person
+    definition: ""
+  - lex_category: adverb.all
+    word: soaking
+    definition: ""
+  - lex_category: verb.communication
+    word: teach
+    definition: impart skills or knowledge to
+  - lex_category: noun.attribute
+    word: admirability
+    definition: admirable excellence
+  - lex_category: noun.attribute
+    word: large
+    definition: a garment size for a large person
+  - lex_category: noun.event
+    word: Christianisation
+    definition: conversion to Christianity
+  - lex_category: noun.event
+    word: inferno
+    definition: a very intense and uncontrolled fire
+  - lex_category: noun.relation
+    word: arccos
+    definition: the inverse function of the cosine; the angle that has a cosine equal to a given number
+  - lex_category: noun.state
+    word: wart
+    definition: an imperfection in someone or something that is suggestive of a wart (especially in smallness or unattractiveness)
+  - lex_category: noun.state
+    word: chlamydia
+    definition: a sexually transmitted infection caused by bacteria of the genus Chlamydia
+  - lex_category: adj.pert
+    word: acneiform
+    definition: resembling acne
+  - lex_category: adj.pert
+    word: ballistic
+    definition: relating to or characteristic of the motion of objects moving under their own momentum and the force of gravity
+  - lex_category: noun.object
+    word: Yangtze
+    definition: the longest river of Asia; flows eastward from Tibet into the East China Sea near Shanghai
+  - lex_category: noun.object
+    word: Mackenzie
+    definition: a Canadian river; flows into the Beaufort Sea
+  - lex_category: noun.substance
+    word: silicone rubber
+    definition: made from silicone elastomers; retains flexibility resilience and tensile strength over a wide temperature range
+  - lex_category: noun.substance
+    word: oxyhaemoglobin
+    definition: the bright red hemoglobin that is a combination of hemoglobin and oxygen from the lungs
+  adverb_theme: person-to-person, soaking
