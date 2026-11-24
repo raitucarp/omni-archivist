@@ -2,7 +2,7 @@ import React from 'react';
 import Link from 'next/link';
 import { SiteHeader } from '@/components/site-header';
 import { getAllVolumes } from '@/lib/artifacts';
-import { ArrowRight } from 'lucide-react';
+import { ArrowRight, Download } from 'lucide-react';
 
 export default function HomePage() {
   const volumes = getAllVolumes();
@@ -80,13 +80,26 @@ export default function HomePage() {
                       </p>
                     </div>
 
-                    <Link
-                      href={`/volumes/${vol.id}/`}
-                      className="px-4 py-2 rounded-full bg-white/20 hover:bg-white/30 backdrop-blur-md border border-white/30 text-sm font-semibold transition-all inline-flex items-center gap-1.5 shrink-0"
-                    >
-                      <span>Volume Overview</span>
-                      <ArrowRight className="w-4 h-4" />
-                    </Link>
+                    <div className="flex flex-wrap items-center gap-2.5 shrink-0">
+                      {vol.epubUrl && (
+                        <a
+                          href={vol.epubUrl}
+                          download={vol.epubFileName ?? undefined}
+                          className="px-4 py-2 rounded-full bg-white text-[#001219] hover:bg-white/90 text-sm font-bold transition-all inline-flex items-center gap-1.5 shadow-sm shrink-0"
+                          title={`Download ${vol.title} EPUB`}
+                        >
+                          <Download className="w-4 h-4" />
+                          <span>EPUB{vol.epubSizeLabel ? ` (${vol.epubSizeLabel})` : ''}</span>
+                        </a>
+                      )}
+                      <Link
+                        href={`/volumes/${vol.id}/`}
+                        className="px-4 py-2 rounded-full bg-white/20 hover:bg-white/30 backdrop-blur-md border border-white/30 text-sm font-semibold transition-all inline-flex items-center gap-1.5 shrink-0"
+                      >
+                        <span>Volume Overview</span>
+                        <ArrowRight className="w-4 h-4" />
+                      </Link>
+                    </div>
                   </div>
 
                   {/* Stories list */}

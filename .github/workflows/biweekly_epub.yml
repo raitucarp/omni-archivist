@@ -1,15 +1,20 @@
-name: Bi-Weekly Stories Compilation
+name: Weekly Stories Compilation
 
 on:
   schedule:
-    - cron: '0 0 1,15 * *' # Bi-weekly on the 1st and 15th of each month at 00:00 UTC
+    - cron: '0 0 * * 1' # Weekly on Monday at 00:00 UTC
   workflow_dispatch:
     inputs:
       force:
-        description: 'Run bi-weekly compilation manually'
+        description: 'Run weekly compilation manually'
         required: false
         type: boolean
         default: true
+      include_current_week:
+        description: 'Also compile the current in-progress ISO week'
+        required: false
+        type: boolean
+        default: false
 
 jobs:
   compile-and-release:
@@ -22,12 +27,14 @@ jobs:
       GEMINI_MODEL: ${{ vars.GEMINI_MODEL }}
       ARTIFACTS_DIR: ${{ vars.ARTIFACTS_DIR }}
       GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+      INCLUDE_CURRENT_WEEK: ${{ inputs.include_current_week || 'false' }}
 
     steps:
       - name: Checkout repository
         uses: actions/checkout@v4
         with:
           fetch-depth: 0
+          persist-credentials: true
 
       - name: Set up Go
         uses: actions/setup-go@v5
@@ -39,12 +46,20 @@ jobs:
           go version
           go build -o omni-archivist .
 
-      - name: Check and compile unreleased weekly/bi-weekly anthologies
+      - name: Check and compile unreleased weekly anthologies
         run: |
           set -euo pipefail
 
+          ARTIFACTS_ROOT="${ARTIFACTS_DIR:-artifacts}"
+          EPUBS_DIR="$ARTIFACTS_ROOT/epubs"
+          mkdir -p "$EPUBS_DIR"
+
+          CURRENT_ISO_YEAR=$(date -u +%G)
+          CURRENT_ISO_WEEK=$((10#$(date -u +%V)))
+          echo "Current UTC ISO week: ${CURRENT_ISO_YEAR}-W${CURRENT_ISO_WEEK} (include_current_week=${INCLUDE_CURRENT_WEEK})"
+
           echo "Querying available story weeks from artifacts..."
-          WEEKS_JSON=$(./omni-archivist compile weeks --dir "${ARTIFACTS_DIR:-artifacts}" --json)
+          WEEKS_JSON=$(./omni-archivist compile weeks --dir "$ARTIFACTS_ROOT" --json)
 
           COUNT=$(echo "$WEEKS_JSON" | jq '. | length')
           echo "Found $COUNT available week(s) with stories."
@@ -57,25 +72,65 @@ jobs:
             title=$(echo "$item" | jq -r '.title')
             epub_file=$(echo "$item" | jq -r '.epub_file')
             stories_count=$(echo "$item" | jq -r '.story_count')
+            epub_path="$EPUBS_DIR/$epub_file"
 
             echo "--------------------------------------------------------"
             echo "Evaluating Volume: $title (Tag: $tag, Stories: $stories_count)"
 
+            if [ "$INCLUDE_CURRENT_WEEK" != "true" ]; then
+              if [ "$year" -gt "$CURRENT_ISO_YEAR" ] || { [ "$year" -eq "$CURRENT_ISO_YEAR" ] && [ "$week" -ge "$CURRENT_ISO_WEEK" ]; }; then
+                echo "⏳ Skipping in-progress week ${year}-W${week}. Will compile once the week finishes."
+                continue
+              fi
+            fi
+
             if gh release view "$tag" >/dev/null 2>&1; then
-              echo "✓ Release '$tag' already exists on GitHub Releases. Skipping to avoid duplicate."
+              if [ -f "$epub_path" ]; then
+                echo "✓ Release '$tag' and repo file '$epub_path' already exist. Skipping."
+              else
+                echo "↓ Release '$tag' exists on GitHub Releases, backfilling '$epub_path' into repository..."
+                if ! gh release download "$tag" --pattern "$epub_file" --dir "$EPUBS_DIR"; then
+                  echo "⚠ Asset '$epub_file' missing in release '$tag'. Recompiling and uploading..."
+                  ./omni-archivist compile epub \
+                    --dir "$ARTIFACTS_ROOT" \
+                    --year "$year" \
+                    --week "$week" \
+                    --output "$epub_path"
+                  gh release upload "$tag" "$epub_path" --clobber
+                fi
+                echo "✓ Synced '$epub_path' into repository."
+              fi
             else
               echo "✦ Release '$tag' does not exist yet. Compiling and releasing..."
 
               ./omni-archivist compile epub \
-                --dir "${ARTIFACTS_DIR:-artifacts}" \
+                --dir "$ARTIFACTS_ROOT" \
                 --year "$year" \
                 --week "$week" \
-                --output "$epub_file"
+                --output "$epub_path"
 
-              gh release create "$tag" "$epub_file" \
+              gh release create "$tag" "$epub_path" \
                 --title "$title" \
                 --notes "Omnibus collection of science fiction short stories curated by Omni Archivist for Week #$week, Year $year_he Human Era."
 
-              echo "✓ Successfully compiled and created release: $tag with asset $epub_file"
+              echo "✓ Successfully compiled and created release: $tag with asset $epub_path"
             fi
           done
+
+      - name: Commit and push weekly EPUBs to repository
+        run: |
+          set -euo pipefail
+          ARTIFACTS_ROOT="${ARTIFACTS_DIR:-artifacts}"
+          EPUBS_DIR="$ARTIFACTS_ROOT/epubs"
+
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+
+          git add "$EPUBS_DIR" || true
+          if git diff --staged --quiet; then
+            echo "No new EPUB files to commit."
+          else
+            git commit -m "chore(epub): publish weekly epub anthologies ($(date -u +%F))"
+            ref="${GITHUB_REF#refs/heads/}"
+            git push origin "HEAD:${ref}"
+          fi

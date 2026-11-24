@@ -167,6 +167,15 @@ export interface VolumeItem {
   dateRange: string;
   gradient: string;
   stories: StoryItem[];
+  epubUrl: string | null;
+  epubFileName: string | null;
+  epubSizeLabel: string | null;
+}
+
+function formatFileSize(bytes: number): string {
+  if (bytes < 1024) return `${bytes} B`;
+  if (bytes < 1024 * 1024) return `${Math.round(bytes / 1024)} KB`;
+  return `${(bytes / (1024 * 1024)).toFixed(1)} MB`;
 }
 
 function getArtifactsDir(): string {
@@ -329,6 +338,7 @@ export function getAllStories(): StoryItem[] {
 }
 
 export function getAllVolumes(): VolumeItem[] {
+  const artifactsDir = getArtifactsDir();
   const stories = getAllStories();
   const map = new Map<string, StoryItem[]>();
 
@@ -337,6 +347,9 @@ export function getAllVolumes(): VolumeItem[] {
     list.push(s);
     map.set(s.volumeId, list);
   }
+
+  const epubsSourceDir = path.join(artifactsDir, 'epubs');
+  const pubEpubsDir = path.resolve(process.cwd(), 'public', 'epubs');
 
   const volumes: VolumeItem[] = [];
   for (const [volId, volStories] of map.entries()) {
@@ -347,6 +360,28 @@ export function getAllVolumes(): VolumeItem[] {
       dateRange = `${last.dateStr} – ${first.dateStr}`;
     }
 
+    const expectedEpubName = `omni-archivist-${volId}.epub`;
+    const sourceEpubPath = path.join(epubsSourceDir, expectedEpubName);
+    let epubUrl: string | null = null;
+    let epubFileName: string | null = null;
+    let epubSizeLabel: string | null = null;
+
+    if (fs.existsSync(sourceEpubPath)) {
+      try {
+        const stat = fs.statSync(sourceEpubPath);
+        fs.mkdirSync(pubEpubsDir, { recursive: true });
+        const destEpubPath = path.join(pubEpubsDir, expectedEpubName);
+        if (!fs.existsSync(destEpubPath) || fs.statSync(destEpubPath).size !== stat.size) {
+          fs.copyFileSync(sourceEpubPath, destEpubPath);
+        }
+        epubUrl = `/epubs/${expectedEpubName}`;
+        epubFileName = expectedEpubName;
+        epubSizeLabel = formatFileSize(stat.size);
+      } catch (e) {
+        console.error(`Error copying EPUB ${sourceEpubPath}:`, e);
+      }
+    }
+
     volumes.push({
       id: volId,
       title: first.volumeTitle,
@@ -355,6 +390,9 @@ export function getAllVolumes(): VolumeItem[] {
       dateRange,
       gradient: computeGradient(volId),
       stories: volStories,
+      epubUrl,
+      epubFileName,
+      epubSizeLabel,
     });
   }
 

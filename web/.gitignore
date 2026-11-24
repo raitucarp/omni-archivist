@@ -2,6 +2,7 @@ node_modules/
 .next/
 out/
 public/covers/
+public/epubs/
 .DS_Store
 *.log
 

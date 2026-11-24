@@ -16,7 +16,7 @@ story:
     morality: The tension between enforcing mathematical limits for societal survival and permitting ontological transgression when those limits are proved arbitrary.
     identity: Collective and individual subjectivity defined entirely through graph-node adjacency and relational proximity rather than autonomous ego.
   setting:
-    macro: The Solar Turan Hive, a circumsolar extremal megastructure composed of billions of modular polyhedral graph nodes linked along calibrated planar orbits, strictly engineered to balance radiant dissipation and avoid dense topological cliques that trigger thermodynamic collapse.
+    macro: The Solar Turán Hive, a circumsolar extremal megastructure composed of billions of modular polyhedral graph nodes linked along calibrated planar orbits, strictly engineered to balance radiant dissipation and avoid dense topological cliques that trigger thermodynamic collapse.
     meso: The Gemini-Olympia counterweight complex, a hollowed, silver-grey balance-mass asteroid situated on the Hive's outer perimeter, housing civil administrative guilds, cartographic registries, and shadow-draped structural corries.
     micro: The Surveyor Registry and the Anomaly Vault within the Gemini-Olympia corrie, featuring cantilevered aerated-alloy drafting benches, vintage xerox folio carrels, and a pressurized sub-lattice pocket where biopolymer filaments weave through cold crystalline struts.
     topography: A multi-tiered geodesic trench network organized by strictly partitioned bipartite graphs, terminating in a shadowed asteroid hollow where an S-curved sub-lattice forms forbidden high-chromatic clusters that violate metric tensor assumptions.
@@ -24,7 +24,7 @@ story:
     kind: functional
     function: functional_causal
     chronotope: Bakhtinian threshold chronotope of the combinatorial vigil, wherein geological megastructure time and civil administrative ritual (meno mosso) collide with the instantaneous, disruptive emergence of an uncapped mathematical horizon.
-    verisimilitude: Cognitive estrangement grounded in the formal apparatus of extremal graph theory, Turan densities, and metric tensor variations, cross-textured with obsolete bureaucratic realia such as paper folios, currency vestiges, and ceremonial administrative decorum.
+    verisimilitude: Cognitive estrangement grounded in the formal apparatus of extremal graph theory, Turán densities, and metric tensor variations, cross-textured with obsolete bureaucratic realia such as paper folios, currency vestiges, and ceremonial administrative decorum.
   structure:
     kind:
     - M

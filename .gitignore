@@ -79,4 +79,5 @@ $RECYCLE.BIN/
 theory/
 test_stories/
 *.epub
+!artifacts/epubs/*.epub
 /public/

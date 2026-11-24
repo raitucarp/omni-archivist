@@ -3,7 +3,7 @@ import Link from 'next/link';
 import { notFound } from 'next/navigation';
 import { SiteHeader } from '@/components/site-header';
 import { getAllVolumes } from '@/lib/artifacts';
-import { ArrowLeft, ArrowRight } from 'lucide-react';
+import { ArrowLeft, ArrowRight, Download } from 'lucide-react';
 
 interface VolumePageProps {
   params: Promise<{ volumeId: string }>;
@@ -42,16 +42,29 @@ export default async function VolumePage({ params }: VolumePageProps) {
           className="p-8 sm:p-12 rounded-3xl shadow-2xl text-white relative overflow-hidden"
           style={{ background: volume.gradient }}
         >
-          <div className="space-y-3">
-            <span className="text-xs font-mono font-bold tracking-widest uppercase px-3 py-1 rounded-full bg-white/20 backdrop-blur-md border border-white/30 inline-block">
-              CURATED WEEKLY ANTHOLOGY
-            </span>
-            <h1 className="font-display font-black text-3xl sm:text-5xl drop-shadow-md">
-              {volume.title}
-            </h1>
-            <p className="text-base sm:text-lg font-mono opacity-90">
-              {volume.dateRange} • {volume.stories.length} Dispatches
-            </p>
+          <div className="flex flex-col sm:flex-row sm:items-end justify-between gap-6">
+            <div className="space-y-3">
+              <span className="text-xs font-mono font-bold tracking-widest uppercase px-3 py-1 rounded-full bg-white/20 backdrop-blur-md border border-white/30 inline-block">
+                CURATED WEEKLY ANTHOLOGY
+              </span>
+              <h1 className="font-display font-black text-3xl sm:text-5xl drop-shadow-md">
+                {volume.title}
+              </h1>
+              <p className="text-base sm:text-lg font-mono opacity-90">
+                {volume.dateRange} • {volume.stories.length} Dispatches
+              </p>
+            </div>
+
+            {volume.epubUrl && (
+              <a
+                href={volume.epubUrl}
+                download={volume.epubFileName ?? undefined}
+                className="px-5 py-3 rounded-full bg-white text-[#001219] hover:bg-white/90 text-sm font-bold transition-all inline-flex items-center gap-2 shadow-lg shrink-0 self-start sm:self-end"
+              >
+                <Download className="w-4 h-4" />
+                <span>Download EPUB{volume.epubSizeLabel ? ` (${volume.epubSizeLabel})` : ''}</span>
+              </a>
+            )}
           </div>
         </section>
 
